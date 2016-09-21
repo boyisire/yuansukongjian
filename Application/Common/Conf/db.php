@@ -1,25 +1,25 @@
 <?php
 $httpHost = strtolower($_SERVER['SERVER_NAME']);
 if( $httpHost==="kongjian.yuansuzhouqi.cn"){
-	$ip = '123.56.242.203';//（生产环境）
-	$dbname = 'yuansuzhouqi';
-	$dbUser = 'webdba';
-	$dbPwd = 'www.tiandiguoshi.com';
+	$ip = '**********';//（生产环境）
+	$dbname = '**********';
+	$dbUser = '**********';
+	$dbPwd = '**********';
 
 }elseif($httpHost ==="testkongjian.yuansuzhouqi.cn"){
-	$ip = '123.56.242.203';//（测试环境）
-	$dbname = 'test_yuansuzhouqi';
-	$dbUser = 'webdba';
-	$dbPwd = 'www.tiandiguoshi.com';
+	$ip = '**********';//（测试环境）
+	$dbname = '**********';
+	$dbUser = '**********';
+	$dbPwd = '**********';
 }else{
-/*	$ip = '192.168.0.15';//（线下环境）
-	$dbname = 'wordpress';
-	$dbUser = 'yuansuzhouqi';
+/*	$ip = '**********';//（线下环境）
+	$dbname = '**********';
+	$dbUser = '**********';
 	$dbPwd = '';*/
     $ip = 'localhost';//（线下环境）
-    $dbname = 'yuansuzhouqi';
-    $dbUser = 'tiandiguoshi';
-    $dbPwd  = 'tiandiguoshi';
+    $dbname = '**********';
+    $dbUser = '**********';
+    $dbPwd  = '**********';
 }
 return array(
 
@@ -30,7 +30,7 @@ return array(
     'DB_USER'               =>  $dbUser,     // 用户名
     'DB_PWD'                =>  $dbPwd,      // 密码
     'DB_PORT'               =>  '3306',     // 端口
-    'DB_PREFIX'             =>  'kj_',   // 数据库表前缀
+    'DB_PREFIX'             =>  '',   // 数据库表前缀
 //***********************************缓存设置**********************************
 	'DATA_CACHE_TIME'        => 1800,        // 数据缓存有效期s
 	'DATA_CACHE_PREFIX'      => 'mem_',      // 缓存前缀

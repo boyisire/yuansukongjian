@@ -1,0 +1,123 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+<div id="wrapper">
+    <{include file="./tpl/Cms/Public/left.html" /}>
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-4">
+            <h2>申请人列表</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="index.html">元素空间</a>
+                </li>
+                <li>
+                    <strong>申请人列表</strong>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="wrapper wrapper-content animated fadeInUp">
+
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>所有项目</h5>
+                        <div class="ibox-tools">
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row m-b-sm m-t-sm">
+                            <div class="col-md-1">
+                                <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> 刷新</button>
+                            </div>
+                            <div class="col-md-11">
+                            </div>
+                        </div>
+
+                        <div class="project-list">
+                            <table class="table table-hover">
+                                <tbody>
+                                <{foreach name="showList" item="vo" }>
+                                    <tr>
+                                        <td class="project-completion">
+                                            <small>申请人： <--{$vo.user_name}--></small><br/>
+                                        </td>
+                                        <td class="project-title">
+                                            <small>空间名称: <--{$vo.room_name}--></small><br/>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>申请时间: <--{$vo.add_name|date='Y-m-d',###}--></small>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>类型：
+                                                <{if condition="$vo.id neq ''"}>
+                                                <div class="de-requesting">
+                                                    空间主
+                                                </div>
+                                                <{elseif condition="$vo.room_id neq ''" /}>
+                                                <div class="de-request-succ">
+                                                    申请空间者
+                                                </div>
+                                                <{/if}>
+                                            </small>
+                                        </td>
+                                        <td class="project-actions">
+                                            <{if condition="$vo.id neq ''"}>
+                                            <div class="de-requesting">
+                                                <a href="__URL__/roomDetail/id/<--{$vo.id}-->" class="btn btn-white btn-sm"><i class="fa"></i> 详情 </a>
+                                            </div>
+                                            <{elseif condition="$vo.room_id neq ''" /}>
+                                            <div class="de-request-succ">
+                                                <a href="__URL__/projectDetail/id/<--{$vo.room_id}-->" class="btn btn-white btn-sm"><i class="fa"></i> 详情 </a>
+                                            </div>
+                                            <{/if}>
+                                        </td>
+                                    </tr>
+                                <{/foreach}>
+
+                                </tbody>
+                            </table>
+                            <div class="b-page">
+                                <--{$showPage}-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+</div>
+</div>
+</div>
+<{include file="./tpl/Cms/Public/footer.html" /}>
+<script>
+    $(document).ready(function(){
+
+        $('#loading-example-btn').click(function () {
+            btn = $(this);
+            simpleLoad(btn, true)
+
+            // Ajax example
+//                $.ajax().always(function () {
+//                    simpleLoad($(this), false)
+//                });
+
+            simpleLoad(btn, false)
+        });
+    });
+
+    function simpleLoad(btn, state) {
+        if (state) {
+            btn.children().addClass('fa-spin');
+            btn.contents().last().replaceWith(" Loading");
+        } else {
+            setTimeout(function () {
+                btn.children().removeClass('fa-spin');
+                btn.contents().last().replaceWith(" Refresh");
+            }, 2000);
+        }
+    }
+</script>
+

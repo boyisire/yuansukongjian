@@ -1,0 +1,68 @@
+<?php
+namespace Common\Model;
+use Common\Model\BaseModel;
+/**
+ * 用户投票记录信息model
+ * @使用表 kj_activity_user_count
+ * @author lushijun
+ * @time 2016-9-2
+ */
+class Activity_user_countModel extends BaseModel{
+	/**
+	 * 插入用户记录数据
+	 */
+	public function insertUserData($arr,$user){
+		$ip=get_client_ip();
+		$cookie=time()."yjact".implode('', explode('.',$ip)).get_rand_number(1,9999,1)[0];
+		$data=array(
+				'ip'=>$ip,
+				'add_time'=>time(),
+				'time_status'=>$arr['time_status'],
+				'cookie_name'=>$cookie,
+				'phone'=>$arr['phone'],
+				'pid'=>$user['uid'],
+				'from'=>$user['utype']
+		);
+		$res=$this->addData($data);
+		if($res){
+			cookie('yjname',$cookie,array('expire'=>3600,'prefix'=>''));
+		}
+		return $res;
+	}
+	/**
+	 * 获取所有用户分析数据
+	 */
+	public function selectUserCountGroup(){
+		return $this->selectGroupData('count(time_status) as num,time_status','','','time_status');
+	}
+	/**
+	 * 所有数据
+	 */
+	public function selectUserCountData(){
+		$result=$this->selectPageData();
+		if(!empty($result['list'])){
+			foreach($result['list'] as $key=>$val){
+				$result['list'][$key]['add_time']=date('Y-m-d H:i:s',$val['add_time']);
+				$result['list'][$key]['city']=$this->GetIpLookup($val['ip']);
+			}
+
+		}
+		return $result;
+	}
+	public function GetIpLookup($ip = ''){
+		$res = @curl_get_contents('http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=' . $ip);
+		if(empty($res)){ $city="没找到IP位置";}
+		$jsonMatches = array();
+		preg_match('#\{.+?\}#', $res, $jsonMatches);
+		if(!isset($jsonMatches[0])){ $city="没找到IP位置";}
+		$json = json_decode($jsonMatches[0], true);
+		if(isset($json['ret']) && $json['ret'] == 1){
+			$json['ip'] = $ip;
+			$city=$json['country']."-".$json['province'].'-'.$json['city'];
+			unset($json['ret']);
+		}else{
+			$city="没找到IP位置";
+		}
+		return $city;
+	}
+}

@@ -1,0 +1,71 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+       <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-9">
+                    <h2>我的信息</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="<--{:U('Cms/Index/index')}-->">主页</a>
+                        </li>
+                        <li>
+                            所有管理员
+                        </li>
+                        <li>
+                            <strong>管理员列表</strong>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row" style="padding:30px 30px; text-align:right;font-size:16px;font-weight:blod;">
+            	<div class="b_page"><--{$list['page']}--></div>
+            </div>
+                <div class="row">
+                <{volist name="list['list']" id="vo"}>
+                    <div class="col-lg-4">
+                        <div class="contact-box">
+                            <a href="profile.html">
+                                <div class="col-sm-4">
+                                    <div class="text-center">
+                                        <img src="__PUBLIC_UPLOAD__<--{$vo.user_header}-->" style="width:150px;height:150px;border-radius:50%;">
+                                        <div class="m-t-xs font-bold"><--{$vo.power_name}--></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h3><strong><--{$vo.nick_name}--></strong></h3>
+                                    <p><i class="fa fa-map-marker"></i> <--{$vo.login_ip}--></p>
+                                    <address>
+                            <strong> 最近登录:<--{$vo.login_time}--></strong><br>
+                            注册时间:<--{$vo.add_time}--><br>
+                           E-mail:<--{$vo.user_email}--><br>
+                            <abbr title="Phone">Tel:</abbr> <--{$vo.user_phone}-->
+                        </address>
+                                </div>
+                                <div class="clearfix"><a href="__URL__/edit?id=<--{$vo.id}-->" style="color:green;">修改</a>&nbsp;&nbsp;<a onclick="del(<--{$vo.id}-->);" style="color:red;">删除</a></div>
+                            </a>
+                        </div>
+                    </div>
+                    <{/volist}>
+                </div>
+            </div>
+            <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+        </div>
+    </div>
+    </div>
+<{include file="./tpl/Cms/Public/footer.html" /}>
+<script language='javascript'> 
+        function del(id){ 
+            if (false === confirm("是否真的要删除当前管理员吗?") )return; 
+            location.href = '__URL__/del?id=' + id; 
+        } 
+</script> 
+<script>
+        $(document).ready(function () {
+            $('.contact-box').each(function () {
+                animationHover(this, 'pulse');
+            });
+        });
+</script>

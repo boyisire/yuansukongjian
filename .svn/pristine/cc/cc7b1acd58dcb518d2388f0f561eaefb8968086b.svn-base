@@ -1,0 +1,59 @@
+*{
+ margin: 0;
+    padding: 0;
+}
+#main3,#main,#main2{
+    margin-left: 100px;
+}
+
+#all {
+    width: 1920px;
+    height: 1075px;
+    background-image: url(../../../images/home/activity/all.png);
+    position: relative;
+    background-size:100%;
+    background-repeat: no-repeat;
+    border-top: 1px solid #000;
+}
+
+.div3,.div2 {
+    width: 800px;
+    height: 377px;
+    background-image: url(../../../images/home/activity/background.png);
+    background-size: 100%;
+    position: absolute;
+    z-index: 2;
+    right:calc((100% - 1700px) / 2);
+    top:660px;
+}
+.div2{
+    left:calc((100% - 1700px) / 2);
+    top: 660px;;
+
+}
+.div1{
+    width: 1700px;
+    height: 800px;
+    background-image: url(../../../images/home/activity/background.png);
+    background-size: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 218px;
+    left:calc((100% - 1700px) / 2);
+}
+.tong-text{
+    color: #77fe04;
+    font-size: 30px;
+    float: left;
+    height: 200px;
+    width: 30px;
+    margin: 50px 0 0 50px;
+}
+.tong-text1{
+    font-size: 36px;
+    color: #c60611 !important;
+    width: 36px;
+}
+.tong-text2{
+    color: #ffcb00;
+}

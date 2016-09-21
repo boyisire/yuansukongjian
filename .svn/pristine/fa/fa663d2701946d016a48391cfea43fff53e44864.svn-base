@@ -1,0 +1,1644 @@
+[ 2016-09-04T10:01:28+08:00 ] ::1 /yuansukongjian/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `kj_areas_info` [ RunTime:0.0058s ]
+NOTIC: [8] Undefined variable: order E:\wamp\www\yuansukongjian\Application\Common\Model\AreasInfoModel.class.php 第 33 行.
+SQL: SELECT `area_id`,`parent_id`,`area_name`,`area_type` FROM `kj_areas_info` WHERE ( area_name like '中国%' and area_type=0 )  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: order E:\wamp\www\yuansukongjian\Application\Common\Model\AreasInfoModel.class.php 第 33 行.
+SQL: SELECT `area_id`,`parent_id`,`area_name`,`area_type` FROM `kj_areas_info` WHERE ( parent_id=1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0029s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\RoomInfoModel.class.php on line 80 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( is_del=0  and 1=1 and is_pass !=0  ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( is_del=0  and 1=1 and is_pass !=0  ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `kj_advantage_info` [ RunTime:0.0031s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (1,2) ) ORDER BY `sortord` desc  [ RunTime:0.0006s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (1) ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (4) ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (1,2,4,5,6,3,7,8,9) ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Common\Model\AdvantageInfoModel::getAdvantageInfo(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\IndexController.class.php on line 54 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\AdvantageInfoModel.class.php 第 51 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000330s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000445s ]
+NOTIC: [8] Undefined variable: EnvCfg E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d678f280cf84122e981f201997603ea5.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.115866s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.115965s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000632s ]
+
+[ 2016-09-04T10:38:59+08:00 ] ::1 /yuansukongjian/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM `kj_areas_info` [ RunTime:0.0236s ]
+NOTIC: [8] Undefined variable: order E:\wamp\www\yuansukongjian\Application\Common\Model\AreasInfoModel.class.php 第 33 行.
+SQL: SELECT `area_id`,`parent_id`,`area_name`,`area_type` FROM `kj_areas_info` WHERE ( area_name like '中国%' and area_type=0 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: order E:\wamp\www\yuansukongjian\Application\Common\Model\AreasInfoModel.class.php 第 33 行.
+SQL: SELECT `area_id`,`parent_id`,`area_name`,`area_type` FROM `kj_areas_info` WHERE ( parent_id=1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0027s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\RoomInfoModel.class.php on line 80 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( is_del=0  and 1=1 and is_pass !=0  ) LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( is_del=0  and 1=1 and is_pass !=0  ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `kj_advantage_info` [ RunTime:0.0020s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (1,2) ) ORDER BY `sortord` desc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (1) ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (4) ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (1,2,4,5,6,3,7,8,9) ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 1 for Common\Model\AdvantageInfoModel::getAdvantageInfo(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\IndexController.class.php on line 54 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\AdvantageInfoModel.class.php 第 51 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000302s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000401s ]
+NOTIC: [8] Undefined variable: EnvCfg E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d678f280cf84122e981f201997603ea5.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013299s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013395s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2016-09-04T10:39:03+08:00 ] ::1 /yuansukongjian/Home/Index/details/id/89
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+SQL: SHOW COLUMNS FROM `kj_slide_picture` [ RunTime:0.0034s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`room_id`,`png_url`,`sortord` FROM `kj_slide_picture` WHERE ( is_del=0 and room_id in (89) ) ORDER BY `sortord` desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0028s ]
+NOTIC: [2] Missing argument 3 for Common\Model\RoomInfoModel::showInfo(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\IndexController.class.php on line 91 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\RoomInfoModel.class.php 第 62 行.
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\RoomInfoModel.class.php on line 80 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( is_del=0  and id=89 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( is_del=0  and id=89 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_advantage_info` [ RunTime:0.0025s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (1,2) ) ORDER BY `sortord` desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_entry_check` [ RunTime:0.0022s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\entry_checkModel.class.php on line 424 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `rent_status` FROM `kj_entry_check` WHERE ( user_id = 4 and room_id = 89 ) ORDER BY `id` desc LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000293s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000411s ]
+NOTIC: [8] Undefined variable: EnvCfg E:\wamp\www\yuansukongjian\Runtime\Cache\Home\f1c75ad88696cebbb5985d714aaa5262.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037509s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037617s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000529s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000630s ]
+
+[ 2016-09-04T10:39:15+08:00 ] ::1 /yuansukongjian/home/form/indexEntry/id/89.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0034s ]
+SQL: SELECT `room_name` FROM `kj_room_info` WHERE ( id = 89 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000293s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000398s ]
+NOTIC: [8] Undefined variable: entryId E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 136 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 140 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 147 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 154 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 165 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 196 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 197 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 204 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 214 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037402s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037503s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000483s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000576s ]
+
+[ 2016-09-04T10:42:02+08:00 ] ::1 /yuansukongjian/home/form/indexEntry/id/89.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000629s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0031s ]
+SQL: SELECT `room_name` FROM `kj_room_info` WHERE ( id = 89 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000287s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000386s ]
+NOTIC: [8] Undefined variable: entryId E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 136 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 140 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 147 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 154 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 165 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 196 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 197 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 204 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 214 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009268s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009368s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000597s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000688s ]
+
+[ 2016-09-04T10:42:12+08:00 ] ::1 /yuansukongjian/home/form/indexEntry/id/89.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0029s ]
+SQL: SELECT `room_name` FROM `kj_room_info` WHERE ( id = 89 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000286s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000384s ]
+NOTIC: [8] Undefined variable: entryId E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 136 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 140 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 147 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 154 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 165 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 196 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 197 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 204 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 214 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008469s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008561s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001149s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001262s ]
+
+[ 2016-09-04T10:42:13+08:00 ] ::1 /yuansukongjian/home/form/indexEntry/id/89.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0030s ]
+SQL: SELECT `room_name` FROM `kj_room_info` WHERE ( id = 89 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000295s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000395s ]
+NOTIC: [8] Undefined variable: entryId E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 136 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 140 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 147 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 154 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 165 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 196 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 197 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 204 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 214 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009233s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009359s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000959s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000649s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2016-09-04T10:42:13+08:00 ] ::1 /yuansukongjian/home/form/indexEntry/id/89.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000872s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0028s ]
+SQL: SELECT `room_name` FROM `kj_room_info` WHERE ( id = 89 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000293s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000398s ]
+NOTIC: [8] Undefined variable: entryId E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 136 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 140 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 147 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 154 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 165 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 196 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 197 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 204 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 214 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009612s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009708s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000668s ]
+
+[ 2016-09-04T10:42:13+08:00 ] ::1 /yuansukongjian/home/form/indexEntry/id/89.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0022s ]
+SQL: SELECT `room_name` FROM `kj_room_info` WHERE ( id = 89 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000305s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000419s ]
+NOTIC: [8] Undefined variable: entryId E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 136 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 140 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 147 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 154 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 165 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 196 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 197 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 204 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 214 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008815s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008913s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000690s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000790s ]
+
+[ 2016-09-04T10:42:17+08:00 ] ::1 /yuansukongjian/home/form/indexEntry/id/89.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0026s ]
+SQL: SELECT `room_name` FROM `kj_room_info` WHERE ( id = 89 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000308s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000442s ]
+NOTIC: [8] Undefined variable: entryId E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 136 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 140 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 147 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 154 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 165 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 196 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 197 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 204 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 214 行.
+NOTIC: [8] Undefined variable: info E:\wamp\www\yuansukongjian\Runtime\Cache\Home\17606285472dd508f94af199c2b97931.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009238s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009334s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000726s ]
+
+[ 2016-09-04T11:39:10+08:00 ] ::1 /yuansukongjian/home/form/indexRoom.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+SQL: SHOW COLUMNS FROM `kj_areas_info` [ RunTime:0.0028s ]
+NOTIC: [8] Undefined variable: order E:\wamp\www\yuansukongjian\Application\Common\Model\AreasInfoModel.class.php 第 33 行.
+SQL: SELECT `area_id`,`parent_id`,`area_name`,`area_type` FROM `kj_areas_info` WHERE ( area_name like '中国%' and area_type=0 )  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: order E:\wamp\www\yuansukongjian\Application\Common\Model\AreasInfoModel.class.php 第 33 行.
+SQL: SELECT `area_id`,`parent_id`,`area_name`,`area_type` FROM `kj_areas_info` WHERE ( parent_id=1 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `kj_advantage_info` [ RunTime:0.0021s ]
+NOTIC: [2] Missing argument 1 for Common\Model\AdvantageInfoModel::getAdvantageInfo(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\FormController.class.php on line 31 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\AdvantageInfoModel.class.php 第 51 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000399s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000502s ]
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036329s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036429s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000659s ]
+
+[ 2016-09-04T11:39:36+08:00 ] ::1 /yuansukongjian/home/form/indexRoom.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: SHOW COLUMNS FROM `kj_areas_info` [ RunTime:0.0024s ]
+NOTIC: [8] Undefined variable: order E:\wamp\www\yuansukongjian\Application\Common\Model\AreasInfoModel.class.php 第 33 行.
+SQL: SELECT `area_id`,`parent_id`,`area_name`,`area_type` FROM `kj_areas_info` WHERE ( area_name like '中国%' and area_type=0 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: order E:\wamp\www\yuansukongjian\Application\Common\Model\AreasInfoModel.class.php 第 33 行.
+SQL: SELECT `area_id`,`parent_id`,`area_name`,`area_type` FROM `kj_areas_info` WHERE ( parent_id=1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_advantage_info` [ RunTime:0.0024s ]
+NOTIC: [2] Missing argument 1 for Common\Model\AdvantageInfoModel::getAdvantageInfo(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\FormController.class.php on line 31 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\AdvantageInfoModel.class.php 第 51 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000404s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000510s ]
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013593s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013685s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2016-09-04T11:41:30+08:00 ] ::1 /yuansukongjian/home/form/indexRoom.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM `kj_areas_info` [ RunTime:0.0374s ]
+NOTIC: [8] Undefined variable: order E:\wamp\www\yuansukongjian\Application\Common\Model\AreasInfoModel.class.php 第 33 行.
+SQL: SELECT `area_id`,`parent_id`,`area_name`,`area_type` FROM `kj_areas_info` WHERE ( area_name like '中国%' and area_type=0 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: order E:\wamp\www\yuansukongjian\Application\Common\Model\AreasInfoModel.class.php 第 33 行.
+SQL: SELECT `area_id`,`parent_id`,`area_name`,`area_type` FROM `kj_areas_info` WHERE ( parent_id=1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_advantage_info` [ RunTime:0.0026s ]
+NOTIC: [2] Missing argument 1 for Common\Model\AdvantageInfoModel::getAdvantageInfo(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\FormController.class.php on line 31 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\AdvantageInfoModel.class.php 第 51 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000406s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000509s ]
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+NOTIC: [8] Undefined variable: list E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d2cfe0ec6d2852e366080b5f50d01873.php 第 225 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013256s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000549s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2016-09-04T11:43:11+08:00 ] ::1 /yuansukongjian/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+SQL: SHOW COLUMNS FROM `kj_areas_info` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: order E:\wamp\www\yuansukongjian\Application\Common\Model\AreasInfoModel.class.php 第 33 行.
+SQL: SELECT `area_id`,`parent_id`,`area_name`,`area_type` FROM `kj_areas_info` WHERE ( area_name like '中国%' and area_type=0 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: order E:\wamp\www\yuansukongjian\Application\Common\Model\AreasInfoModel.class.php 第 33 行.
+SQL: SELECT `area_id`,`parent_id`,`area_name`,`area_type` FROM `kj_areas_info` WHERE ( parent_id=1 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0022s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\RoomInfoModel.class.php on line 80 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( is_del=0  and 1=1 and is_pass !=0  ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( is_del=0  and 1=1 and is_pass !=0  ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `kj_advantage_info` [ RunTime:0.0022s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (1,2) ) ORDER BY `sortord` desc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (1) ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (4) ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (1,2,4,5,6,3,7,8,9) ) ORDER BY `sortord` desc  [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Common\Model\AdvantageInfoModel::getAdvantageInfo(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\IndexController.class.php on line 54 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\AdvantageInfoModel.class.php 第 51 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000302s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000402s ]
+NOTIC: [8] Undefined variable: EnvCfg E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d678f280cf84122e981f201997603ea5.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013440s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000648s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000752s ]
+
+[ 2016-09-04T11:43:31+08:00 ] ::1 /yuansukongjian/Home/Index/details/id/88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+SQL: SHOW COLUMNS FROM `kj_slide_picture` [ RunTime:0.0036s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`room_id`,`png_url`,`sortord` FROM `kj_slide_picture` WHERE ( is_del=0 and room_id in (88) ) ORDER BY `sortord` desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0151s ]
+NOTIC: [2] Missing argument 3 for Common\Model\RoomInfoModel::showInfo(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\IndexController.class.php on line 91 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\RoomInfoModel.class.php 第 62 行.
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\RoomInfoModel.class.php on line 80 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( is_del=0  and id=88 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( is_del=0  and id=88 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `kj_advantage_info` [ RunTime:0.0154s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `kj_entry_check` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\entry_checkModel.class.php on line 424 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `rent_status` FROM `kj_entry_check` WHERE ( user_id = 4 and room_id = 88 ) ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000232s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000335s ]
+NOTIC: [8] Undefined variable: EnvCfg E:\wamp\www\yuansukongjian\Runtime\Cache\Home\f1c75ad88696cebbb5985d714aaa5262.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011632s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000675s ]
+
+[ 2016-09-04T11:56:00+08:00 ] ::1 /yuansukongjian/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000816s ]
+SQL: SHOW COLUMNS FROM `kj_areas_info` [ RunTime:0.0026s ]
+NOTIC: [8] Undefined variable: order E:\wamp\www\yuansukongjian\Application\Common\Model\AreasInfoModel.class.php 第 33 行.
+SQL: SELECT `area_id`,`parent_id`,`area_name`,`area_type` FROM `kj_areas_info` WHERE ( area_name like '中国%' and area_type=0 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: order E:\wamp\www\yuansukongjian\Application\Common\Model\AreasInfoModel.class.php 第 33 行.
+SQL: SELECT `area_id`,`parent_id`,`area_name`,`area_type` FROM `kj_areas_info` WHERE ( parent_id=1 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0024s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\RoomInfoModel.class.php on line 80 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( is_del=0  and 1=1 and is_pass !=0  ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( is_del=0  and 1=1 and is_pass !=0  ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `kj_advantage_info` [ RunTime:0.0031s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (1,2) ) ORDER BY `sortord` desc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0005s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (1) ) ORDER BY `sortord` desc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (4) ) ORDER BY `sortord` desc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0 and id in (1,2,4,5,6,3,7,8,9) ) ORDER BY `sortord` desc  [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Common\Model\AdvantageInfoModel::getAdvantageInfo(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\IndexController.class.php on line 54 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\AdvantageInfoModel.class.php 第 51 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`label_name`,`sortord` FROM `kj_advantage_info` WHERE ( is_del=0 and is_use=0  ) ORDER BY `sortord` desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000325s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000448s ]
+NOTIC: [8] Undefined variable: EnvCfg E:\wamp\www\yuansukongjian\Runtime\Cache\Home\d678f280cf84122e981f201997603ea5.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014751s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000783s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000878s ]
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0540s ]
+NOTIC: [8] Undefined index: status E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_user_countModel.class.php 第 20 行.
+NOTIC: [8] Undefined index: phone E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_user_countModel.class.php 第 22 行.
+SQL: INSERT INTO `kj_activity_user_count` (`ip`,`add_time`,`time_status`,`cookie_name`,`phone`) VALUES ('0.0.0.0','1472978345','0','1472978345yjact00009932','') [ RunTime:0.0581s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000615s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000990s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023433s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001295s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001649s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002462s ]
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/css/reset.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+ERR: 非法操作:css
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/css/mobileheader.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000431s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+ERR: 非法操作:css
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/css/toupiao.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+ERR: 非法操作:css
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/jquery-3.0.0.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+ERR: 非法操作:jquery-3.0.0.min.js
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/images/h5line-min.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/images/h5-RCcode-min.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000895s ]
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/images/h5ping_05-min.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-1-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/images/h5yao_05-min.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-2-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-3-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-4-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-5-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/images/WechatIMG1-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-6-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:39:05+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-7-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001006s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001292s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0024s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006728s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006835s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/jquery-3.0.0.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+ERR: 非法操作:jquery-3.0.0.min.js
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/images/h5line-min.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/images/h5-RCcode-min.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/images/h5yao_05-min.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/images/h5ping_05-min.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-1-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/images/WechatIMG1-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000511s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-7-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001044s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-3-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000737s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-5-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000632s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-6-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-2-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:35+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-4-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000728s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000931s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0273s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000341s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000561s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012540s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000916s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001238s ]
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/jquery-3.0.0.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000140s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+ERR: 非法操作:jquery-3.0.0.min.js
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/images/h5line-min.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/images/h5-RCcode-min.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/images/h5ping_05-min.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/images/h5yao_05-min.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-1-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-2-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-3-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-4-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-5-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-6-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/images/viewfile-7-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:44:38+08:00 ] ::1 /yuansukongjian/home/activity/images/WechatIMG1-min.jpeg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+ERR: 非法操作:images
+
+[ 2016-09-04T16:53:11+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001158s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0024s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000193s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000311s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006266s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006368s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000559s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000686s ]
+
+[ 2016-09-04T16:53:11+08:00 ] ::1 /yuansukongjian/home/activity/jquery-3.0.0.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+ERR: 非法操作:jquery-3.0.0.min.js
+
+[ 2016-09-04T16:55:28+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000784s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000925s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001118s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0089s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000317s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006295s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006403s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000838s ]
+
+[ 2016-09-04T16:55:28+08:00 ] ::1 /yuansukongjian/home/activity/jquery-3.0.0.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+ERR: 非法操作:jquery-3.0.0.min.js
+
+[ 2016-09-04T16:56:24+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0032s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000280s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005514s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005609s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000561s ]
+
+[ 2016-09-04T16:56:46+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001077s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0034s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000365s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000565s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010970s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011166s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000952s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001133s ]
+
+[ 2016-09-04T16:56:46+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0022s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000175s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000280s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005550s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000580s ]
+
+[ 2016-09-04T16:56:46+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0028s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000283s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006382s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000602s ]
+
+[ 2016-09-04T16:56:48+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000934s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001176s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0024s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000357s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007391s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000604s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000718s ]
+
+[ 2016-09-04T16:56:48+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0024s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006803s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000673s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000767s ]
+
+[ 2016-09-04T16:56:48+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0021s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005778s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000399s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000565s ]
+
+[ 2016-09-04T16:57:52+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000658s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0028s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000214s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000367s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008929s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000619s ]
+
+[ 2016-09-04T16:58:23+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0627s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000288s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000467s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009570s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009724s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000530s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000781s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000931s ]
+
+[ 2016-09-04T16:58:52+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0029s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005697s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2016-09-04T16:59:03+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0028s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000231s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000363s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008019s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000757s ]
+
+[ 2016-09-04T17:03:34+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0032s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000294s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000447s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000708s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000893s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000849s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001009s ]
+
+[ 2016-09-04T17:03:38+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000876s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000961s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001165s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0672s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000399s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000620s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014106s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014335s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000854s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001281s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001923s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002227s ]
+
+[ 2016-09-04T17:03:38+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0027s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006725s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006827s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001084s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001188s ]
+
+[ 2016-09-04T17:03:38+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000578s ]
+
+[ 2016-09-04T17:04:21+08:00 ] ::1 /yuansukongjian/home/activity/actIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0022s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 24 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id` FROM `kj_activity_user_count` WHERE `cookie_name` = '1472978345yjact00009932' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000322s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006416s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006510s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000340s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000473s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000561s ]
+
+[ 2016-09-04T17:04:28+08:00 ] ::1 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0487s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 135 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.1475s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0511s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0482s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 2 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `kj_activity_votes` [ RunTime:0.0314s ]
+SQL: SELECT * FROM `kj_activity_votes` WHERE `user_id` = '4' AND `cid` = '2' AND ( `add_time` >= '1472523917' AND `add_time` < '1474111800'  ) LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001593s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 83 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040361s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040637s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000833s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001285s ]
+
+[ 2016-09-04T17:04:43+08:00 ] ::1 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0026s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 135 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0021s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0024s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0022s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 2 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `kj_activity_votes` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `kj_activity_votes` WHERE `user_id` = '4' AND `cid` = '2' AND ( `add_time` >= '1472523917' AND `add_time` < '1474111800'  ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000402s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000518s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 83 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013292s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000830s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001278s ]
+

@@ -1,0 +1,146 @@
+@charset "utf-8";
+#re-main {
+    width: 1210px;
+    background-color: #fff;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    overflow: hidden;
+
+}
+
+#re-main h3 {
+    font-size: 26px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    margin-top: 133px;
+    margin-bottom: 80px;
+}
+
+.re-name {
+    width: 700px;
+    margin-left: 310px;
+    float: left;
+    margin-top: 30px;
+}
+
+.re-name > p {
+    float: left;
+    width: 105px;
+    font-size: 18px;
+    color: #333;
+    line-height: 40px;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.re-name > input {
+    float: left;
+    width: 334px;
+    height: 40px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.re-name > textarea {
+    width: 334px;
+    height: 126px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    resize: none;
+    background-color: #fff;
+}
+
+.re-room-right {
+    background-image: url(../../../images/home/entry/right.png);
+    width: 21px;
+    height: 21px;
+    margin: 10px 170px 0 10px;
+    display: none;
+    float: left;
+}
+
+.re-room-error {
+    display: none;
+}
+
+.re-image-error {
+    background-image: url(../../../images/home/entry/error.png);
+    width: 21px;
+    height: 21px;
+    margin: 10px 10px 0 10px;
+    float: left;
+}
+
+.re-choose {
+    width: 172px;
+    height: 40px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    float: left;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+}
+
+.re-choose-men {
+    width: 85px;
+    border-right: 1px solid #999999;
+    height: 38px;
+    float: left;
+    line-height: 40px;
+    text-align: center;
+}
+.re-choose-area {
+    width: 85px;
+    height: 38px;
+    float: left;
+    line-height: 40px;
+    text-align: center;
+}
+.re-choose-activate{
+    background-color: #f5894e;
+    color: #ffffff;
+    font-weight: bold;
+}
+.re-file {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #999;
+    border-radius: 17px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #3cb1f0;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 26px;
+    width: 335px;
+    height: 34px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.re-file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.re-file:hover {
+    color: #3cb1f0;
+}
+#re-submit{
+    width: 334px;
+    height: 40px;
+    color: #fff;
+    background-color: #3cb1f0;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin: 78px 445px 50px;
+    letter-spacing: 4px;
+}

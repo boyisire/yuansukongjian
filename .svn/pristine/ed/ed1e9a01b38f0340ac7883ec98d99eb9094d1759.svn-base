@@ -1,0 +1,414 @@
+<?php if (!defined('THINK_PATH')) exit();?><!--============== 公共头部信息 ===================-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><?php echo ($EnvCfg["title"]); ?></title>
+    <script type="text/javascript" src="/yuansukongjian/tpl/Public/js/public/jquery-1.7.2.js"></script>
+    <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/reset.css">
+      <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/header.css">
+    <link href="/yuansukongjian/tpl/Public/css/public/page.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<header id="masthead" class="site-header">
+
+    <nav id="top-header">
+        <div class="top-nav">
+            <div id="user-profile">
+                发现创业价值！
+            </div>
+            <div id="user-profile" style="float:right;padding-right:10px;">
+            <?php if(!empty($login_uid) && !empty($login_nick_name) && $login_is_login =='1'){?>
+             欢迎来到元素周期：&nbsp;<font color="#3e94a5 "><?php echo $login_nick_name;?></font>
+			  		&nbsp;|<a href="http://www.yuansuzhouqi.cn/usecenter.html">用户中心</a>
+	  	   	
+										<span class="nav-set">
+				 	<span class="nav-login">
+				 					 	|<a href="http://www.yuansuzhouqi.cn/wp-login.php?action=logout" title=""> 退出</a>
+										</span>
+				</span>
+
+            <?php }else{?>
+                <a href="http://www.yuansuzhouqi.cn/wp-login.php?action=register">注册</a>
+
+                <span class="nav-set">
+				 	<span class="nav-login">|<a href="http://www.yuansuzhouqi.cn/wp-login.php">登录</a></span>
+				</span>
+			<?php }?>
+            </div>
+        </div>
+    </nav><!-- #top-header -->
+
+    <div id="menu-box">
+        <div id="top-menu">
+            <span class="nav-search"><img src="/yuansukongjian/tpl/Public/images/home/iconseek.png" style="width: 30px" alt=""></span>
+            <span class="mobile-login"><a href="#login" id="login-mobile"><i class="fa-user fa-fontsize"></i>
+			</a>
+			</span>
+            <hgroup class="logo-site">
+                <h1 class="site-title">
+                    <a href="http://www.yuansuzhouqi.cn/"><img
+                            src="http://www.yuansuzhouqi.cn/wp-content/uploads/2016/06/220-50-logo-2.png"
+                            alt="元素周期"></a>
+                </h1>
+            </hgroup><!-- .logo-site -->
+
+            <div id="site-nav-wrap">
+                <div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close">×</a></div>
+                <nav id="site-nav" class="main-nav">
+                    <a href="#sidr-main" id="navigation-toggle" class="bars"><i class="fa-fontsize fa-bars"></i></a>
+                    <div class="menu-menu-1-container">
+                        <ul id="menu-menu-1" class="down-menu nav-menu sf-js-enabled sf-arrows">
+                            <li id="menu-item-6"
+                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-6">
+                                <a href="http://www.yuansuzhouqi.cn">元素首页</a></li>
+                            <li id="menu-item-45"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-45"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-information/">元素资讯</a>
+                            </li>
+                            <li id="menu-item-46"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-newinformation/">元素快讯</a>
+                            </li>
+                            <li id="menu-item-22"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-marvellous/">元素科技</a>
+                            </li>
+                            <li id="menu-item-852"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-852"><a
+                                    href="http://www.yuansuzhouqi.cn/fuhua.html">申请孵化</a></li>
+                        </ul>
+                    </div>
+                </nav><!-- #site-nav -->
+            </div><!-- #site-nav-wrap -->
+            <div class="clear"></div>
+        </div><!-- #top-menu -->
+    </div><!-- #menu-box -->
+</header>
+<div id="search-main">
+    <div id="searchbar">
+        <form method="get" id="searchform" action="http://www.yuansuzhouqi.cn/">
+            <input value="" name="s" id="s" placeholder="输入搜索内容" required="" type="text">
+            <button type="submit" id="searchsubmit">搜索</button>
+        </form>
+    </div>
+    <div class="clear"></div>
+</div>
+<script>
+     function BottomJumpPage() {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop != 0) {  //滚动到头部部执行事件
+           $('#menu-box').addClass('shadow');
+           $('#search-main').addClass('shadow');
+        }else {
+            $('#menu-box').removeClass('shadow');
+            $('#search-main').removeClass('shadow');
+        }
+    }
+    $(window).scroll(BottomJumpPage);
+    $('.nav-search').click(function () {
+        if ($('#search-main').is(":hidden")){
+            $('#search-main').show()
+        }else {
+            $('#search-main').hide()
+        }
+    })
+</script>
+</body>
+</html>
+
+<!--============== 本页独自引用部分 ===================-->
+<script type="text/javascript" src="/yuansukongjian/tpl/Public/js/public/jquery.cityselect.js"></script>
+<link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/homepage-index.css">
+<body>
+<!--============== 正文页面部分 ===================-->
+<div id="home-main">
+    <div id="home-the-left">
+        <div class="home-the-left-change" id="home-check-in">
+            <p class="home-the-left-change-p1">申请元素空间入住</p>
+            <p class="home-the-left-change-p2">全国数百家空间合作</p>
+            <p class="home-gt-icon"></p>
+        </div>
+        <a href="<?php echo U('home/form/indexRoom');?>">
+        <div class="home-the-left-change" id="home-cooperative">
+            <p class="home-the-left-change-p1">申请元素空间合作</p>
+            <p class="home-the-left-change-p2">发现优质项目、招租优质项目</p>
+            <p class="home-gt-icon"></p>
+        </div>
+        </a>
+        <p class="home-connection">邮件：kongjian@yuansuzhouqi.cn</p>
+        <p class="home-connection">电话：010-51078040</p>
+    </div>
+    <div id="home-the-right">
+        <div class="home-choose-city">
+            <p>选择位置：</p>
+            <div id="city">
+                <select class="prov" name="prov">
+                    <!-- <option value="北京2">北京</option> -->
+                </select>
+                <select class="city" name="city">
+                    <option value="北京">北京</option>
+                </select>
+                <select class="dist" name="dist">
+                    <option value="东城区">东城区</option>
+                </select>
+                <!-- <input type="hidden" value="{:U('Index/getAreaInfo')}" id="areaurl"> -->
+                <input type="hidden" value="/yuansukongjian/index.php/Home/Index/getAreaInfo" id="areaurl">
+                <input type="hidden" value="/yuansukongjian/index.php/Home/Index/index" id="showurl">
+                <!-- <select class="city" disabled="disabled"></select>
+                <select class="dist" disabled="disabled"></select> -->
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="home-choose-tab">
+            <p>选择标签：</p>
+            <div id="Ptag" style="width: 720px;float: left;-moz-user-select:none;" onselectstart="return false;">
+            <?php if(is_array($tags)): $i = 0; $__LIST__ = $tags;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tab): $mod = ($i % 2 );++$i;?><div class="home-tab" value="<?php echo ($tab["id"]); ?>">
+                    <?php echo ($tab["name"]); ?>
+                    <p></p>
+                </div><?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="main">
+            <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!--  <a href="/yuansukongjian/index.php/Home/Index/details/id/id"> -->
+            <input type="hidden" value="/yuansukongjian/index.php/Home/Index/details" id="detailurl">
+            <div class="home-list-detail" id="detailhref" onclick="showDetail(this,<?php echo ($vo["id"]); ?>)" style="cursor: pointer;">
+                <img src="/yuansukongjian/<?php echo ($vo["logo"]); ?>" alt="">
+                <div class="home-list-text">
+                    <div>
+                        <p class=home-list-name><?php echo ($vo["name"]); ?></p>
+                        <p class="home-list-iconaddress"></p>
+                        <p class="home-list-addressP"><?php echo ($vo["province"]); ?>·<?php echo ($vo["city"]); ?>·<?php echo ($vo["district"]); ?></p>
+
+                    </div>
+                    <div class="clear"></div>
+                    <div class="home-list-address">
+
+                         <p class="home-list-icontab"></p>
+                        <p class="home-list-advantage">标签：
+                            <?php if(is_array($vo["advantage"])): $i = 0; $__LIST__ = $vo["advantage"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo2): $mod = ($i % 2 );++$i; echo ($vo2["name"]); ?>&nbsp;<?php endforeach; endif; else: echo "" ;endif; ?>
+                        </p>
+                    </div>
+                    <div class="clear"></div>
+                    <p class="home-list-address-policy">优惠政策：<?php echo ($vo["privile"]); ?></p>
+                </div>
+                <div class="home-list-money">
+                    <p><span><?php echo ($vo["station"]); ?></span>元/月/工位</p>
+                    <p><span><?php echo ($vo["square"]); ?></span>元/天/平米</p>
+                </div>
+
+            </div><?php endforeach; endif; else: echo "" ;endif; ?>
+           <!--  </a> -->
+        </div>
+        <div class="b-page">
+            <?php echo ($page); ?>
+        </div>
+    </div>
+</div>
+
+<!--============== AJAX获取动态更新页面JS ===================-->
+ <script type="text/javascript">
+$('.home-tab').on('click', function () {
+    var taglist="";
+    var divP = $(this).find("p");
+    if ($(this).hasClass('home-tab-activate')) {
+        $(this).removeClass('home-tab-activate')
+    } else {
+        $(this).addClass('home-tab-activate')
+    }
+    if (divP.hasClass('home-tab-img-activate')) {
+        divP.removeClass('home-tab-img-activate')
+    } else {
+        divP.addClass('home-tab-img-activate')
+    }
+
+    $('#Ptag').children(".home-tab-activate").each(function(i,n){
+         var obj = $(n)
+         // alert($(n).attribute("value"));
+         taglist=taglist+obj.attr("value")+',';
+         //alert(taglist);
+    });
+    //根据标签内容，时时更新
+    showInfo(showurl,taglist);
+})
+
+var areaurl= $("#areaurl").val();
+var showurl= $("#showurl").val();
+/**
+ * [初始化加载地图信息]
+ * @method
+ * @author 大业
+ * @create 2016-08-19
+ * @param  {String} ){        prov_name [description]
+ * @return {[type]} [description]
+ */
+$(document).ready(function(){
+    /*省:prov */
+    prov_name ='中国';
+    queryArea(areaurl,prov_name,0,".prov");
+    /*市:city */
+    setTimeout('queryArea(areaurl,$("#prov_0").val(),1,".city")',1000);
+    /*区:dist*/
+    setTimeout('queryArea(areaurl,$("#city_0").val(),2,".dist")',2000);
+});
+
+//初始化
+var area= {
+    'prov':$(".prov").val(),
+    'city':$(".city").val(),
+    'dist':$(".dist").val()
+};
+var area;
+/*改变省份时*/
+$(".prov").change(function(){
+    //alert($(".prov").val());
+    /*市:city */
+    queryArea(areaurl,$(".prov").val(),1,".city");
+
+    /*区:dist*/
+    //queryArea(areaurl,$(".city").val(),2,".dist");
+    setTimeout('queryArea(areaurl,$(".city").val(),2,".dist")',100);
+
+    /*查询内容*/
+    setTimeout('showInfo(showurl);',200);
+    //showInfo(showurl,area);
+});
+
+/*改变城市时*/
+$(".city").change(function(){
+    //alert($(".prov").val());
+    /*区:dist*/
+    queryArea(areaurl,$(".city").val(),2,".dist");
+    /*查询内容*/
+    setTimeout('showInfo(showurl);',200);
+});
+
+/*改变县区*/
+$(".dist").change(function(){
+    /*查询内容*/
+    setTimeout('showInfo(showurl);',200);
+});
+
+/**
+ * [查询地图信息]
+ * @method queryArea
+ * @author 大业
+ * @create 2016-08-19
+ * @param  {[string]} url [访问地址]
+ * @param  {[string]} name [地区名称]
+ * @param  {[int]} type [地区类型]
+ * @param  {[string]} key [要修改的class]
+ * @return {[int]} [0]
+ */
+function queryArea(url,name,type,key)
+{
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: {'name':name,'type':type,'mark':1},
+        dataType: "json",
+        success: function(e){
+            var html = '';
+            $.each(e.data,function(k,v){
+                html +="<option id="+key.substr(1)+"_"+k+" value='"+v+"'>"+v+"</option>";
+            });
+            $(key).html(html);
+        }
+    });
+    return 0;
+}
+
+/**
+ * [AJAX查询数据]
+ * @method showInfo
+ * @author 大业
+ * @create 2016-08-19
+ * @param  {[string]} url [访问地址]
+ * @param  {[int]} advantage [选中标签]
+ * @return {[type]} [description]
+ */
+function showInfo(url,tags='')
+{
+    //地区信息
+    var area= {
+        'prov':$(".prov").val(),
+        'city':$(".city").val(),
+        'dist':$(".dist").val()
+    };
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: {'prov':area.prov,'city':area.city,'dist':area.dist,'tags':tags,'ajax':1},
+        dataType: "json",
+        success: function(e){
+            //alert(e.data.list);
+            //信息
+            var html='';
+            $.each(e.data.list,function(k,v){
+                var advantage='';
+                $.each(v.advantage,function(k1,v2){
+                        advantage+="&nbsp;"+v2['name'];
+                });
+                //alert(advantage);
+                html+='<a href="/yuansukongjian/index.php/Home/Index/details/id/'+v.id+'"><div class="home-list-detail"><img src="/yuansukongjian/'+v.logo+'" alt=""><div class="home-list-text"><div><p class="home-list-name">'+v.name+'</p><p class="home-list-icontab"></p><p class="home-list-advantage">标签：'+advantage+'</p></div><div class="clear"></div><div class="home-list-address"><p class="home-list-iconaddress"></p><p class="home-list-addressP">'+v.province+"·"+v.city+"·"+v.district+'</p></div><div class="clear"></div><p class="home-list-address-policy">优惠政策：'+v.privile+'</p></div><div class="home-list-money"><p><span>'+v.station+'</span>元/月/工位</p><p><span>'+v.square+'</span>元/天/平米</p></div></div></a>';
+            });
+            $(".main").html(html);
+            //分页
+            page=e.data.page;
+            $(".b-page").html(page);
+        }
+    });
+    return 0;
+}
+
+/**
+ * [跳转到详情页]
+ * @method showDetail
+ * @author 大业
+ * @create 2016-08-30
+ * @param  {[type]} obj [description]
+ * @param  {[type]} id [description]
+ * @return {[type]} [description]
+ */
+function showDetail(obj,id)
+{
+    //alert(id);
+    url=$("#detailurl").val();
+    location.href=url+"/id/"+id;
+}
+</script>
+
+<!--============== 尾部信息 ===================-->
+<style>
+    #colophon {
+        background: #fff;
+        position: relative;
+        width: auto;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.03);
+    }
+
+    .site-info {
+        text-align: center;
+        margin: 0 50px;
+        padding: 15px 0;
+    }
+
+    .add-info {
+        padding: 5px 0;
+        display: block;
+    }
+</style>
+<footer id="colophon" class="site-footer" role="contentinfo">
+
+    <div class="site-info">
+        <a href="http://www.yuansuzhouqi.cn/archives/112">关于我们</a>&nbsp; |&nbsp;&nbsp; <a
+            href="http://www.yuansuzhouqi.cn/archives/292">投稿须知</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a
+            href="http://www.yuansuzhouqi.cn/archives/288">创业报道</a> <span class="add-info">
+				©2016 &nbsp; 元素周期&nbsp; 版权所有&nbsp; 京ICP备16028512号-2							</span>
+    </div><!-- .site-info -->
+</footer>
+</body>
+</html>

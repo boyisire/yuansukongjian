@@ -1,0 +1,93 @@
+<?php
+/*************************************************
+ * file description
+ * @filename:           FormController.class.php
+ * @desc:               元素空间 -- 表单提交
+ * @tables:             [room_info;]
+ * @date:               2016-8-16
+ * @author:             大业
+ * @version:            v1.0
+ *************************************************/
+namespace Home\Controller;
+use Common\Controller\HomeBaseController;
+class FormController extends HomeBaseController{
+
+    /**
+     * [空间主申请主页]
+     * @method indexRoom
+     * @author 大业
+     * @create 2016-08-22
+     * @return [type] [description]
+     */
+    public function indexRoom()
+    {
+        echo "我是空间主，我要申请立项!";
+    }
+
+
+    /**
+     * [创业者申请入口]
+     * @method indexEntry
+     * @author 安然
+     * @create 2016-08-22
+     * @return [type] [description]
+     */
+    public function indexEntry()
+    {
+        //空间ID
+        $rid=I('id');
+        echo "欢迎来申请空间[$rid]";
+    }
+
+
+    /**
+     * [表单提交页]
+     * @method index
+     * @author 大业
+     * @create 2016-08-17
+     * @return [type] [description]
+     */
+    public function request()
+    {
+       echo "form requst!!!";
+       //logo文件上传判断
+
+       //空间图片上传判断
+       //先插表，取得记录ID列表
+       $path='./Upload/Home/RoomInfo';
+       upload_image($path);
+
+       $data = array(
+            'uid'   => I('uid'),
+            'room_name'   => I('name'),
+            'root_desc'   => I('desc'),
+            'root_logo'   => $FileLogo,//该处需要取文件
+            'room_location_province' => I('province'),
+            'room_location_city' => I('city'),
+            'room_location_county' => I('county'),
+            'room_addr' => I('addr'),
+            'room_linkman' => I('linkman'),
+            'room_mobile' => I('mobile'),
+            'room_price_station' => I('station'),
+            'room_price_square' => I('square'),
+            'room_privile' => I('privile'),
+            'room_advantage' => $TabList, //ID列表
+            'is_contact' => 0,
+            'is_pass' => 0,
+            'is_del' => 0,
+            'add_time' => time(),
+
+       );
+       //添加数据记录
+       $Res = D('RoomInfo')->addData($data);
+       if($Res){
+            $this->success('记录添加成功','xxxx');
+       }else{
+            $this->error('记录添加失败','xxxx');
+       }
+    }
+
+
+
+}
+

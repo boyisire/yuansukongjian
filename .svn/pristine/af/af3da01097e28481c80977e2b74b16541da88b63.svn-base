@@ -1,0 +1,466 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>亚杰国际创业音乐节</title>
+    <meta content="亚杰国际创业音乐节，亚杰，创业音乐节" name="description">
+    <script src="/yuansukongjian/tpl/Public/js/jquery/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/activity/phone/reset.css">
+    <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/activity/phone/mobileheader.css">
+</head>
+<body style="overflow:hidden;">
+<header id="masthead" class="site-header">
+
+    <nav id="top-header">
+        <div class="top-nav">
+            <div id="user-profile">
+                发现创业价值！
+            </div>
+            <div id="user-profile" style="float:right;padding-right:10px;">
+               <?php if(!empty($login_uid) && !empty($login_nick_name) && $login_is_login =='1'){?>
+             欢迎来到元素周期：&nbsp;<font color="#3e94a5 "><?php echo $login_nick_name;?></font>
+			  		&nbsp;|<a href="http://www.yuansuzhouqi.cn/usecenter.html">用户中心</a>
+
+										<span class="nav-set">
+				 	<span class="nav-login">
+				 					 	|<a href="http://www.yuansuzhouqi.cn/wp-login.php?action=logout" title=""> 退出</a>
+										</span>
+				</span>
+
+            <?php }else{?>
+                <a href="http://www.yuansuzhouqi.cn/wp-login.php?action=register">注册</a>
+
+                <span class="nav-set">
+				 	<span class="nav-login">|<a href="http://www.yuansuzhouqi.cn/wp-login.php">登录</a></span>
+				</span>
+			<?php }?>
+            </div>
+            <!--<ul class="default-menu"><li><a href="http://www.yuansuzhouqi.cn/wp-admin/nav-menus.php">设置菜单</a></li></ul>-->
+        </div>
+    </nav><!-- #top-header -->
+
+    <div id="menu-box">
+        <div id="top-menu">
+            <hgroup class="logo-site">
+                <p class="site-title">
+                    <a href="http://www.yuansuzhouqi.cn/"><img
+                            src="http://www.yuansuzhouqi.cn/wp-content/uploads/2016/06/220-50-logo-2.png"
+                            alt="元素周期"></a>
+                </p>
+            </hgroup><!-- .logo-site -->
+
+            <div id="site-nav-wrap">
+                <!-- <div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close">×</a></div>-->
+                <nav id="site-nav" class="main-nav">
+                    <a href="#sidr-main" id="navigation-toggle" class="bars"><i class="fa fa-bars" id="fa-fontsize"></i></a>
+                </nav><!-- #site-nav -->
+            </div><!-- #site-nav-wrap -->
+            <div class="clear"></div>
+        </div><!-- #top-menu -->
+    </div><!-- #menu-box -->
+</header>
+<div id="search-main" style="display: none;">
+    <div id="searchbar">
+        <ul id="menu-menu-1" class="down-menu nav-menu sf-js-enabled sf-arrows"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6"><a href="http://www.yuansuzhouqi.cn">元素首页</a></li>
+            <li id="menu-item-45" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-45"><a href="http://www.yuansuzhouqi.cn/archives/category/element-information/">元素资讯</a></li>
+            <li id="menu-item-46" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46"><a href="http://www.yuansuzhouqi.cn/archives/category/element-newinformation/">元素快讯</a></li>
+            <li id="menu-item-22" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22"><a href="http://www.yuansuzhouqi.cn/archives/category/element-marvellous/">元素科技</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+<link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/activity/yajie.css">
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<div id="title">
+    <div id="main">
+        <p>一次创投圈的年度盛事</p>
+        <p>一次创投圈和音乐圈的跨界碰撞</p>
+        <p>一次创业者们的集体发声</p>
+        <p class="line"></p>
+        <p class="found">主办方</p>
+        <p class="found">亚杰汇创始人俱乐部</p>
+        <p class="found">协办方</p>
+        <p class="found">元素周期 - 创业服务平台</p>
+        <p class="found">时间</p>
+        <p class="found triangle">2016.9.17</p>
+        <p class="found">地址</p>
+        <p class="found">北京科技大学奥林匹克体育馆</p>
+    </div>
+     <input type="hidden" id="corps_user" value="<?php if($userResult["user_mobile"] != ''): ?>1<?php else: ?>2<?php endif; ?>">
+     <input type="hidden" id="corps_cid" value="<?php echo ($cid); ?>">
+</div>
+<?php if(is_array($result)): $k = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($k % 2 );++$k;?><img src="/yuansukongjian/tpl/Public/images/home/activity/border_02.png" alt="" class="border-image">
+<div class="abc">
+    <div class="abc-main">
+        <p class="abc-title"><img src="/yuansukongjian/tpl/Public/images/home/activity/No.<?php echo ($k); ?>.png" alt=""> - <?php echo ($vo["corps_name"]); ?></p>
+        <div class="abc-button"><?php if($userResult != ''): if($user_votes == '1'): ?><a href="javascript:;" onclick="show('<?php echo ($vo["id"]); ?>');"><img class="abc-button-img" src="/yuansukongjian/tpl/Public/images/home/activity/vote.png" alt="<?php echo ($vo["corps_name"]); ?>"></a>
+        <?php else: ?>
+       	 	<a href="javascript:;"><img class="abc-button-img" src="/yuansukongjian/tpl/Public/images/home/activity/voteing.png" alt="<?php echo ($vo["corps_name"]); ?>"></a><?php endif; else: ?>
+        	<a href="javascript:;"><img class="abc-button-img" src="/yuansukongjian/tpl/Public/images/home/activity/voteing.png" alt="<?php echo ($vo["corps_name"]); ?>"></a><?php endif; ?></div>
+
+        <div class="clear"></div>
+        <p class="abc-team"><?php if($vo["child"] == ''): ?><span>暂无战队成员</span><?php else: if(is_array($vo['child'])): $i = 0; $__LIST__ = $vo['child'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$child): $mod = ($i % 2 );++$i;?><span><?php echo ($child["user_name"]); ?>-<?php echo ($child["user_dec"]); ?></span><?php endforeach; endif; else: echo "" ;endif; endif; ?></p>
+        <div class="abc-team-photos">
+            <img class="team-photo" src="/yuansukongjian<?php echo ($vo["corps_images"]); ?>" alt="<?php echo ($vo["corps_name"]); ?>">
+            <div class="down-color" >
+               <p> <img class="team-flame" src="/yuansukongjian/tpl/Public/images/home/activity/flame.png" alt="<?php echo ($vo["corps_name"]); ?>">&nbsp;<?php echo ($vo["corps_votes"]); ?>票</p>
+            </div>
+        </div>
+    </div>
+</div><?php endforeach; endif; else: echo "" ;endif; ?>
+     <input type="hidden" id="corps_ids">
+<style>
+    #colophon {
+        background: #fff;
+        position: relative;
+        width: auto;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.03);
+		margin:.65rem 0 0 0;
+    }
+
+    .site-info {
+        text-align: center;
+        margin: 0 50px;
+        padding: 15px 0;
+    }
+
+    .add-info {
+        padding: 5px 0;
+        display: block;
+    }
+</style>
+<footer id="colophon" class="site-footer" role="contentinfo">
+
+    <div class="site-info">
+        <a href="http://www.yuansuzhouqi.cn/archives/112">关于我们</a>&nbsp; |&nbsp;&nbsp; <a href="http://www.yuansuzhouqi.cn/archives/292">投稿须知</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a href="http://www.yuansuzhouqi.cn/archives/288">创业报道</a> 
+        <span class="add-info">
+				©2016 &nbsp; 元素周期&nbsp; 版权所有&nbsp; 京ICP备16028512号-2							
+		</span>
+    </div><!-- .site-info -->
+</footer>
+<div class="cd-popup">
+    <div class="cd-popup-container">
+        <p class="cd-title">请输入正确的手机号码</p>
+        <input type="text" class="cd-input" placeholder="  请输入手机号码" id="corps_phone">
+        <p class="number-wrong" id="wrong"></p>
+        <input type="button" id="corps_form" class="cd-submit cd-popup-close cd-popup-trigger3" value="确定">
+        <!--<a href="#0" class="cd-popup-close">close</a>-->
+    </div>
+</div>
+<div class="cd-popup3">
+    <div class="cd-popup-container3">
+    <style>
+		#sms_button{border:none;background:none;color:#fff;}	
+		
+		#colse_corps{color:#666;font-size:14px;padding-top:15px;}
+	</style>
+        <p class="cd-title1" id="corps_title1">验证码已送至手机</p>
+        <input type="hidden" id="old_phone">
+        <input type="text" class="cd-input1" placeholder="  请输入验证码" id="yjcodes">
+        <p class="count-down" id="btnSendCode"><button type="button" id="sms_button"></button></p>
+        
+        <div class="clear"></div>
+        <p class="number-wrong" id="phones"></p>
+        <input type="button" class="cd-submit cd-popup-close" value="确定" id="corps_code">
+		<?php if($userResult["user_mobile"] == ''): ?><a href="javascript:;" class="cd-popup-close" id="colse_corps">没有收到验证码?</a><?php endif; ?>
+    </div>
+</div>
+<div style="display:none;"><script src="http://s11.cnzz.com/z_stat.php?id=1259888140&web_id=1259888140 " language="JavaScript"></script>
+</body>
+
+<script type="text/javascript">
+    document.documentElement.style.fontSize = window.innerWidth / 3.75 + 'px';
+    function BottomJumpPage() {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop != 0) {  //滚动到头部部执行事件
+            $('#menu-box').addClass('shadow');
+            $('#search-main').addClass('shadow');
+        }else {
+            $('#menu-box').removeClass('shadow');
+            $('#search-main').removeClass('shadow');
+        }
+    }
+    $(window).scroll(BottomJumpPage);
+    $('#site-nav').click(function () {
+        if ($('#search-main').is(":hidden")){
+            $('#search-main').show()
+        }else {
+            $('#search-main').hide()
+        }
+    })
+    var InterValObj; //timer变量，控制时间
+    var count = 60; //间隔函数，1秒执行
+    var curCount;//当前剩余秒数
+            /*弹框JS内容*/
+            jQuery(document).ready(function($){
+
+                //关闭窗口
+                $('.cd-popup').on('click', function(event){
+                    if($(event.target).is('.cd-popup') ) {
+                        event.preventDefault();
+                        $(this).removeClass('is-visible');
+                    }
+                });
+                //ESC关闭
+                $(document).keyup(function(event){
+                    if(event.which=='27'){
+                        $('.cd-popup').removeClass('is-visible');
+                    }
+                });
+
+                //关闭窗口
+                $('.cd-popup3').on('click', function(event){
+                    if($(event.target).is('.cd-popup3') ) {
+                        event.preventDefault();
+                        $(this).removeClass('is-visible3');
+                    }
+                });
+                //ESC关闭
+                $(document).keyup(function(event){
+                    if(event.which=='27'){
+                        $('.cd-popup3').removeClass('is-visible3');
+                    }
+                });
+            });
+            function show(id){
+            	userCount(3);
+            	$("#corps_ids").val(id);
+            		$.ajax({
+            			type:"POST",
+            			url:"/yuansukongjian/Home/Activity/corpsA",
+            			data:{
+            				cid:$("#corps_cid").val()
+            			},
+            			dataType:"json",
+            			success:function(s){
+            				if(s.resutl =='1'){
+            					alert(s.data);
+            				}else if(s.result =='3'){
+                                $('.cd-popup').addClass('is-visible');
+            				}else{
+            					$("#corps_title1").html(s.data);
+            					$("#old_phone").val(s.msg);
+                                $('.cd-popup3').addClass('is-visible3');
+            				}
+            			}
+            		});
+            		
+            }
+            $("#corps_form").click(function(){
+            		var corps_phone=$.trim($("#corps_phone").val());  
+            		userCount(4,corps_phone);
+            		if(corps_phone !=''){
+            			if (corps_phone.match(/^(((13[0-9]{1})|(14[0-9]{1})|(17[0-7]{1})|(15[0-3]{1})|(15[5-9]{1})|(18[0-9]{1}))+\d{8})$/)) { 
+            				$.ajax({
+            					 url: "/yuansukongjian/Home/Activity/corpsS",  
+            			         type: "POST",
+            			         data:{corps_phone:corps_phone,cid:$("#corps_cid").val()},
+            			         dataType: "json",
+            			         success:function(s){
+            			        	if(s.result =='1'){
+            			        		$("#wrong").html(s.data);
+            			        	}else{
+            			        		$("#corps_title1").html("验证码已送至手机:"+corps_phone);
+            			        		curCount = count;
+	            	            　			　//设置button效果，开始计时
+	            	                	 $("#sms_button").attr("disabled", "true");
+	            	                	 $("#sms_button").html(curCount + "s");
+	            	                	 InterValObj = window.setInterval(SetRemainTime, 1000); 
+	            	                	 $("#old_phone").val(corps_phone);
+                                   		 $('.cd-popup3').addClass('is-visible3');
+                                   	  	 $('.cd-popup').removeClass('is-visible');
+                                   	  	 
+            			        	}
+            			         }
+            				});
+            			}else{
+            				$("#wrong").html("手机格式不正确!");
+            			}
+            		}else{
+            			$("#wrong").html("手机号码不能为空!");
+            		}
+            });
+			$("#sms_button").click(function(){
+				var corps_phone=$.trim($("#old_phone").val()); 
+				userCount(4,corps_phone);
+        		$.ajax({
+        			 url: "/yuansukongjian/Home/Activity/corpsS",  
+        			 type: "POST",
+        			 data:{corps_phone:corps_phone,cid:$("#corps_cid").val()},
+        			 dataType: "json",
+        			 success:function(s){
+        			        	if(s.result =='1'){
+        			        		$("#phones").html(s.data);
+        			        	}else{
+        			        		curCount = count;
+            	            　			　//设置button效果，开始计时
+            	             		$("#phones").html("验证码已发送，请查收");		 
+            	                 	$("#sms_button").attr("disabled", "true");
+            	                	 $("#sms_button").html(curCount + "s");
+            	                	 InterValObj = window.setInterval(SetRemainTime, 1000); 
+            	                 	$("#old_phone").val(corps_phone);
+                                 	$('.cd-popup3').addClass('is-visible3');
+                                 	$('.cd-popup').removeClass('is-visible');
+                                 	
+        			        	}
+        			}
+        		});
+			})
+			$("#corps_code").click(function(){
+				var corps_code = $("#yjcodes").val(); 
+				if(corps_code !=''){
+					$.ajax({
+						 url: "/yuansukongjian/Home/Activity/corpsC",  
+				         type: "POST",
+				         data:{corps_code:corps_code,cid:$("#corps_cid").val(),id: $("#corps_ids").val(),corps_phone:$("#old_phone").val(),corps_user:$("#corps_user").val()},
+				         dataType: "json",
+				         success:function(s){      	 
+				        	if(s.result =='1'){
+				        		$("#phones").html(s.data);
+				        	}else{
+				        		userCount(5);
+				        		location.href="/yuansukongjian/Home/Activity/view";
+				        	}
+				         }
+					});
+				}else{
+					$("#phones").html("验证码不能为空");
+				}
+			})
+			$("#colse_corps").click(function(){
+				var corps_phone=$.trim($("#old_phone").val()); 
+				$.ajax({
+					 url: "/yuansukongjian/Home/Activity/corpsD",  
+			         type: "POST",
+			         data:{phone:corps_phone},
+			         dataType: "json",
+			         success:function(s){ 
+			        	if(s.result =='1'){
+			        		 $('.cd-popup').addClass('is-visible');
+			                 $('.cd-popup3').removeClass('is-visible3');
+			        	}
+			         }
+				});
+               
+			});
+            //timer处理函数
+            function SetRemainTime() {
+                 if (curCount == 0) {                
+                       window.clearInterval(InterValObj);//停止计时器
+                       $("#sms_button").removeAttr("disabled");//启用按钮
+                       $("#sms_button").html("重新发");
+                 }else{
+                       curCount--;
+                      $("#sms_button").html(curCount + "s");
+                 }
+            }
+            function userCount(type,corps_phone){
+            	$.ajax({url:"/yuansukongjian/Home/Activity/corpsCount",type:"POST",data:{id:1,cid:10,status:type,corps_phone:corps_phone},dataType:"json",success:function(s){}});
+            }
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+//alert(location.href.split('#')[0]);
+		//错误信息配置 回调区域
+		wx.config({
+			debug: false,  //调试模式 true-弹出错误信息
+			appId: "<?php echo ($signPackage['appId']); ?>",			//根据签名包获取
+			timestamp: "<?php echo ($signPackage['timestamp']); ?>",		//根据签名包获取
+			nonceStr: "<?php echo ($signPackage['nonceStr']); ?>",		//根据签名包获取
+			signature: "<?php echo ($signPackage['signature']); ?>",	//根据签名包获取
+			jsApiList: [
+				// 所有要调用的 API 都要加到这个列表中
+				'getLocation',
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage',
+				'onMenuShareQQ',
+				'onMenuShareWeibo',
+				'onMenuShareQZone'
+			  ]
+		});
+	
+	
+		// 所有要调用的 API 都要加到这个列表中
+		wx.checkJsApi({
+			jsApiList: [
+				'getLocation',
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage',
+				'onMenuShareQQ',
+				'onMenuShareWeibo',
+				'onMenuShareQZone'
+			],
+	
+			success: function (res) {
+			}
+		}); 
+		wx.ready(function(){
+			wx.onMenuShareTimeline({
+			    title: '<?php echo ($login_nick_name); ?>邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    link: '<?php echo ($url); ?>/home/activity/actindex/ct/1/cu/<?php echo ($login_uid); ?>', // 分享链接
+			    imgUrl: '<?php echo ($url); ?>/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			        // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareAppMessage({
+			    title: '<?php echo ($login_nick_name); ?>邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声',
+			    link: '<?php echo ($url); ?>/home/activity/actindex/ct/2/cu/<?php echo ($login_uid); ?>', // 分享链接
+			    imgUrl: '<?php echo ($url); ?>/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    type: '', // 分享类型,music、video或link，不填默认为link
+			    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+			    success: function () { 
+			        // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareQQ({
+			    title: '<?php echo ($login_nick_name); ?>邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声', // 分享描述
+			    link: '<?php echo ($url); ?>/home/activity/actindex/ct/3/cu/<?php echo ($login_uid); ?>', // 分享链接
+			    imgUrl: '<?php echo ($url); ?>/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			       // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			       // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareWeibo({
+			    title: '<?php echo ($login_nick_name); ?>邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声', // 分享描述
+			    link: '<?php echo ($url); ?>/home/activity/actindex/ct/4/cu/<?php echo ($login_uid); ?>', // 分享链接
+			    imgUrl: '<?php echo ($url); ?>/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			       // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareQZone({
+			    title: '<?php echo ($login_nick_name); ?>邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声', // 分享描述
+			    link: '<?php echo ($url); ?>/home/activity/actindex/ct/5/cu/<?php echo ($login_uid); ?>', // 分享链接
+			    imgUrl: '<?php echo ($url); ?>/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			       // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+	  });
+</script>
+</html>

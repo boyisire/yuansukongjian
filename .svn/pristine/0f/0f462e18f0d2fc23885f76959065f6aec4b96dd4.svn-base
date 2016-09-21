@@ -1,0 +1,147 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+<div id="wrapper">
+    <{include file="./tpl/Cms/Public/left.html" /}>
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-4">
+            <h2>申请入住</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="index.html">元素空间</a>
+                </li>
+                <li>
+                    <strong>申请入住</strong>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="wrapper wrapper-content animated fadeInUp">
+
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>所有项目</h5><a href="__URL__/downFile?name=C:/wamp/www/YuanSuKongJian/aaa.docx">下载</a>
+                        <div class="ibox-tools">
+                            <!--<a href="projects.html" class="btn btn-primary btn-xs">创建新项目</a>-->
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="row m-b-sm m-t-sm">
+                            <div class="col-md-1">
+                                <button type="button" id="loading-example-btn" class="btn btn-white btn-sm"><i class="fa fa-refresh"></i> 刷新</button>
+                            </div>
+                            <div class="col-md-11">
+                                <div class="input-group">
+                                    <p style="width: 80px;height: 40px;line-height: 40px;text-align:center; border-radius: 5px; border: 2px solid  #eeeeee; float: left;margin-right: 20px;"><a href="__URL__/entryCheck">全部</a></p>
+                                    <p style="width: 80px;height: 40px;line-height: 40px;text-align:center; border-radius: 5px; border: 2px solid  #eeeeee; float: left;margin-right: 20px;"><a href="__URL__/entryCheck/sh/3">通过</a></p>
+                                    <p style="width: 80px;height: 40px;line-height: 40px;text-align:center; border-radius: 5px; border: 2px solid  #eeeeee; float: left;margin-right: 20px;"><a href="__URL__/entryCheck/sh/2">未通过</a></p>
+                                    <p style="width: 80px;height: 40px;line-height: 40px;text-align:center; border-radius: 5px; border: 2px solid  #eeeeee; float: left;margin-right: 20px;"><a href="__URL__/entryCheck/sh/1">未操作</a></p>
+                                    <p style="width: 80px;height: 40px;line-height: 40px;text-align:center; border-radius: 5px; border: 2px solid  #eeeeee; float: left;margin-right: 20px;"><a href="__URL__/entryCheck/sh/4">成交</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-list">
+                            <table class="table table-hover">
+                                <tbody>
+                                <{foreach name="showList" item="vo" }>
+                                    <tr>
+                                        <!--<td class="project-status">-->
+                                            <!--<span class="label label-primary"><&#45;&#45;{$vo.rent_status}&ndash;&gt;-->
+                                        <!--</td>-->
+                                        <td class="project-completion">
+                                            <small>申请人： <--{$vo.user_name}--></small><br/>
+                                            <small>申请电话： <--{$vo.user_phone}--></small>
+                                        </td>
+                                        <td class="project-title">
+                                            <small>申请的孵化器: <--{$vo.room_name}--></small><br/>
+                                            <small>空间业主： <--{$vo.room_user}--></small><br/>
+                                            <small>业主电话： <--{$vo.room_phone}--></small>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>申请时间: <--{$vo.company_name|date='Y-m-d',###}--></small>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>超时操作： <--{$vo.overtime}--></small><br/>
+                                            <{switch name="vo.relation_status"}>
+                                            <{case value="1"}><small style="color:green">已联系</small><{/case}>
+                                            <{case value="0"}><small style="color:red">未联系</small><{/case}>
+                                            <{default /}>-
+                                            <{/switch}>
+                                        </td>
+                                        <td class="project-completion">
+                                            <small>状态：
+                                                <{switch name="vo.rent_status"}>
+                                                    <{case value="1"}><small style="color:#bfbfbf">未操作</small><{/case}>
+                                                    <{case value="2"}><small style="color:red">未通过</small><{/case}>
+                                                    <{case value="3"}><small style="color:green">通过</small><{/case}>
+                                                    <{case value="4"}><small style="color:green">成交</small><{/case}>
+                                                    <{default /}>-
+                                                <{/switch}>
+                                            </small>
+                                        </td>
+                                        <td class="project-actions">
+                                            <a href="__URL__/projectDetail/id/<--{$vo.id}-->" class="btn btn-white btn-sm"><i class="fa"></i> 详情 </a>
+
+                                            <{switch name="vo.rent_status"}>
+                                            <{case value="1"}>
+                                                <a href="__URL__/saveIsPass/pass/3/id/<--{$vo.id}-->" class="btn btn-white btn-sm" onclick="return confirm('确定将此申请通过么?')"><i class="fa"></i> 通过 </a>
+                                                <a href="__URL__/saveIsPass/pass/2/id/<--{$vo.id}-->" class="btn btn-white btn-sm" onclick="return confirm('确定将此申请不通过么?')"><i class="fa"></i> 未通过 </a>
+                                            <{/case}>
+                                            <{case value="2"}><a href="__URL__/saveIsPass/pass/3/id/<--{$vo.id}-->" class="btn btn-white btn-sm" onclick="return confirm('确定将此申请通过么?')"><i class="fa"></i> 通过 </a><{/case}>
+                                            <{case value="3"}><a href="__URL__/saveIsPass/pass/2/id/<--{$vo.id}-->" class="btn btn-white btn-sm" onclick="return confirm('确定将此申请不通过么?')"><i class="fa"></i> 未通过 </a>
+                                            <a href="__URL__/confirmation/id/<--{$vo.id}-->" class="btn btn-white btn-sm" onclick="return confirm('确定将此申请成交么?')"><i class="fa"></i> 成交 </a><{/case}>
+                                            <{/switch}>
+                                            <{if condition='$user_power == 100'}><a href="__URL__/delEntry/id/<--{$vo.id}-->" class="btn btn-white btn-sm" onclick="return confirm('确定将此申请删除么?')"><i class="fa"></i> 删除 </a><{/if}>
+                                            <a href="__URL__/remarkPage/id/<--{$vo.id}-->" class="btn btn-white btn-sm"><i class="fa"></i> 备注 </a>
+                                        </td>
+                                    </tr>
+                                <{/foreach}>
+
+                                </tbody>
+                            </table>
+                            <div class="b-page">
+                                <--{$showPage}-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+</div>
+</div>
+</div>
+<{include file="./tpl/Cms/Public/footer.html" /}>
+<script>
+    $(document).ready(function(){
+
+        $('#loading-example-btn').click(function () {
+            btn = $(this);
+            simpleLoad(btn, true)
+
+            // Ajax example
+//                $.ajax().always(function () {
+//                    simpleLoad($(this), false)
+//                });
+
+            simpleLoad(btn, false)
+        });
+    });
+
+    function simpleLoad(btn, state) {
+        if (state) {
+            btn.children().addClass('fa-spin');
+            btn.contents().last().replaceWith(" Loading");
+        } else {
+            setTimeout(function () {
+                btn.children().removeClass('fa-spin');
+                btn.contents().last().replaceWith(" Refresh");
+            }, 2000);
+        }
+    }
+</script>
+

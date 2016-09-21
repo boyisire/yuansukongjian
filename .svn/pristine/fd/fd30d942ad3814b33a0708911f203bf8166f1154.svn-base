@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="__PUBLIC_JS__/public/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC_JS__/public/jquery.cityselect.js"></script>
+    <link rel="stylesheet" href="__PUBLIC_CSS__/home/homepage-index.css">
+    <link rel="stylesheet" href="__PUBLIC_CSS__/home/reset.css">
+</head>
+<body>
+<div id="home-main">
+    <div id="home-the-left">
+        <div class="home-the-left-change" id="home-check-in">
+            <p class="home-the-left-change-p1">申请元素空间入住</p>
+            <p class="home-the-left-change-p2">全国数百家空间合作</p>
+            <p class="home-gt-icon"></p>
+        </div>
+        <div class="home-the-left-change" id="home-cooperative">
+            <p class="home-the-left-change-p1">申请元素空间合作</p>
+            <p class="home-the-left-change-p2">发现优质项目、招租优质项目</p>
+            <p class="home-gt-icon"></p>
+        </div>
+        <p class="home-connection">邮件：kongjian@yuansuzhouqi.cn</p>
+        <p class="home-connection">电话：010-51078040</p>
+    </div>
+    <div id="home-the-right">
+        <div class="home-choose-city">
+            <p>选择位置：</p>
+            <div id="city">
+                <select class="prov"></select>
+                <select class="city" disabled="disabled"></select>
+                <select class="dist" disabled="disabled"></select>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="home-choose-tab">
+            <p>选择标签：</p>
+            <div style="width: 720px;float: left;-moz-user-select:none;" onselectstart="return false;">
+                <div class="home-tab">
+                    定期路演
+                    <p></p>
+                </div>
+                <div class="home-tab">
+                    定期路演
+                    <p></p>
+                </div>
+                <div class="home-tab">
+                    定期路演
+                    <p></p>
+                </div>
+                <div class="home-tab">
+                    定期路演
+                    <p></p>
+                </div>
+                <div class="home-tab">
+                    定期路演
+                    <p></p>
+                </div>
+                <div class="home-tab">
+                    定期路演
+                    <p></p>
+                </div>
+                <div class="home-tab">
+                    定期路演
+                    <p></p>
+                </div>
+                <div class="home-tab">
+                    定期路演
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <{foreach name="list" item="vo"}>
+        <div class="home-list-detail">
+            <img src="__PUBLIC_IMAGES__/home/kongjian.png" alt="">
+            <div class="home-list-text">
+                <div>
+                    <p class=home-list-name><--{$vo.name}--></p>
+                    <p class="home-list-icontab"></p>
+                    <p class="home-list-advantage">大咖导师 距离地铁近</p>
+                </div>
+                <div class="clear"></div>
+                <div class="home-list-address">
+                    <p class="home-list-iconaddress"></p>
+                    <p class="home-list-addressP">广东·深圳市·南山区</p>
+                </div>
+                <div class="clear"></div>
+                <p class="home-list-address-policy">优惠政策：场地满500平米减50平米，税收优惠，配套设施齐全</p>
+            </div>
+            <div class="home-list-money">
+                <p><span>2000</span>元/月/工位</p>
+                <p><span>10</span>元/天/平米</p>
+            </div>
+        </div>
+        <{/foreach}>
+
+        <div class="home-list-detail">
+            <img src="__PUBLIC_IMAGES__/home/kongjian.png" alt="">
+            <div class="home-list-text">
+                <div>
+                    <p class=home-list-name>弈投孵化器</p>
+                    <p class="home-list-icontab"></p>
+                    <p class="home-list-advantage">大咖导师 距离地铁近</p>
+                </div>
+                <div class="clear"></div>
+                <div class="home-list-address">
+                    <p class="home-list-iconaddress"></p>
+                    <p class="home-list-addressP">广东·深圳市·南山区</p>
+                </div>
+                <div class="clear"></div>
+                <p class="home-list-address-policy">优惠政策：场地满500平米减50平米，税收优惠，配套设施齐全</p>
+            </div>
+            <div class="home-list-money">
+                <p><span>2000</span>元/月/工位</p>
+                <p><span>10</span>元/天/平米</p>
+            </div>
+        </div>
+        <div class="home-list-detail">
+            <img src="__PUBLIC_IMAGES__/home/kongjian.png" alt="">
+            <div class="home-list-text">
+                <div>
+                    <p class=home-list-name>弈投孵化器</p>
+                    <p class="home-list-icontab"></p>
+                    <p class="home-list-advantage">大咖导师 距离地铁近</p>
+                </div>
+                <div class="clear"></div>
+                <div class="home-list-address">
+                    <p class="home-list-iconaddress"></p>
+                    <p class="home-list-addressP">广东·深圳市·南山区</p>
+                </div>
+                <div class="clear"></div>
+                <p class="home-list-address-policy">优惠政策：场地满500平米减50平米，税收优惠，配套设施齐全</p>
+            </div>
+            <div class="home-list-money">
+                <p><span>2000</span>元/月/工位</p>
+                <p><span>10</span>元/天/平米</p>
+            </div>
+        </div>
+        <div class="home-list-detail">
+            <img src="__PUBLIC_IMAGES__/home/kongjian.png" alt="">
+            <div class="home-list-text">
+                <div>
+                    <p class=home-list-name>弈投孵化器</p>
+                    <p class="home-list-icontab"></p>
+                    <p class="home-list-advantage">大咖导师 距离地铁近</p>
+                </div>
+                <div class="clear"></div>
+                <div class="home-list-address">
+                    <p class="home-list-iconaddress"></p>
+                    <p class="home-list-addressP">广东·深圳市·南山区</p>
+                </div>
+                <div class="clear"></div>
+                <p class="home-list-address-policy">优惠政策：场地满500平米减50平米，税收优惠，配套设施齐全</p>
+            </div>
+            <div class="home-list-money">
+                <p><span>2000</span>元/月/工位</p>
+                <p><span>10</span>元/天/平米</p>
+            </div>
+        </div>
+        <div class="home-list-detail">
+            <img src="__PUBLIC_IMAGES__/home/kongjian.png" alt="">
+            <div class="home-list-text">
+                <div>
+                    <p class=home-list-name>弈投孵化器</p>
+                    <p class="home-list-icontab"></p>
+                    <p class="home-list-advantage">大咖导师 距离地铁近</p>
+                </div>
+                <div class="clear"></div>
+                <div class="home-list-address">
+                    <p class="home-list-iconaddress"></p>
+                    <p class="home-list-addressP">广东·深圳市·南山区</p>
+                </div>
+                <div class="clear"></div>
+                <p class="home-list-address-policy">优惠政策：场地满500平米减50平米，税收优惠，配套设施齐全</p>
+            </div>
+            <div class="home-list-money">
+                <p><span>2000</span>元/月/工位</p>
+                <p><span>10</span>元/天/平米</p>
+            </div>
+        </div>
+        <div class="home-list-detail">
+            <img src="__PUBLIC_IMAGES__/home/kongjian.png" alt="">
+            <div class="home-list-text">
+                <div>
+                    <p class=home-list-name>弈投孵化器</p>
+                    <p class="home-list-icontab"></p>
+                    <p class="home-list-advantage">大咖导师 距离地铁近</p>
+                </div>
+                <div class="clear"></div>
+                <div class="home-list-address">
+                    <p class="home-list-iconaddress"></p>
+                    <p class="home-list-addressP">广东·深圳市·南山区</p>
+                </div>
+                <div class="clear"></div>
+                <p class="home-list-address-policy">优惠政策：场地满500平米减50平米，税收优惠，配套设施齐全</p>
+            </div>
+            <div class="home-list-money">
+                <p><span>2000</span>元/月/工位</p>
+                <p><span>10</span>元/天/平米</p>
+            </div>
+        </div>
+        <div class="home-list-detail">
+            <img src="__PUBLIC_IMAGES__/home/kongjian.png" alt="">
+            <div class="home-list-text">
+                <div>
+                    <p class=home-list-name>弈投孵化器</p>
+                    <p class="home-list-icontab"></p>
+                    <p class="home-list-advantage">大咖导师 距离地铁近</p>
+                </div>
+                <div class="clear"></div>
+                <div class="home-list-address">
+                    <p class="home-list-iconaddress"></p>
+                    <p class="home-list-addressP">广东·深圳市·南山区</p>
+                </div>
+                <div class="clear"></div>
+                <p class="home-list-address-policy">优惠政策：场地满500平米减50平米，税收优惠，配套设施齐全</p>
+            </div>
+            <div class="home-list-money">
+                <p><span>2000</span>元/月/工位</p>
+                <p><span>10</span>元/天/平米</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $("#city").citySelect({
+        url: "__PUBLIC_JS__/public/city.min.js",
+        prov: "北京", //省份
+        city: "东城区", //城市
+        dist: "岳麓区", //区县
+        nodata: "none" //当子集无数据时，隐藏select
+    });
+    $('.home-tab').on('click', function () {
+
+        var divP = $(this).find("p");
+        if ($(this).hasClass('home-tab-activate')) {
+            $(this).removeClass('home-tab-activate')
+        } else {
+            $(this).addClass('home-tab-activate')
+        }
+        if (divP.hasClass('home-tab-img-activate')) {
+            divP.removeClass('home-tab-img-activate')
+        } else {
+            divP.addClass('home-tab-img-activate')
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<?php
+/*************************************************
+ * file description
+ * @filename:           AdvantageInfoModel.class.php
+ * @desc:               空间优势特色信息表
+ * @tables:             [kj_advantage_info]
+ * @date:               2016-8-16
+ * @author:             大业
+ * @version:            v1.0
+ *************************************************/
+namespace Common\Model;
+use Common\Model\BaseModel;
+class AdvantageInfoModel extends BaseModel{
+
+	/**
+	 * [获取标签页信息]
+	 * @method getAdvantage
+	 * @author 大业
+	 * @create 2016-08-16
+	 * @param  [string] $ListID [查询条件]
+	 * @return [array] [标签名称]
+	 */
+	private function getInfo($condtion)
+	{
+        if(empty($condtion)){
+            $where = 'is_del=0 and is_use=0 ';
+        }else{
+            $where = 'is_del=0 and is_use=0 and '.$condtion;
+        }
+
+        $field = array('id',            //自增ID
+                       'label_name',    //标签名称
+                       'sortord',       //排序方式
+                       //'is_del',        //是否删除：0-未删 1-删除
+                       //'is_use',        //是否使用：0-使用 1-不使用
+                       //'add_time',      //添加时间
+        );
+        $order = 'sortord desc';
+        return $this->selectData($field,$where,$order);
+	}
+
+
+    /**
+     * [获取标签名称]
+     * @method getAdvantageName
+     * @author 大业
+     * @create 2016-08-16
+     * @param  [string] $ListID [查询的ID]
+     * @return [array] [标签名列表]
+     */
+    public function getAdvantageName($ListID)
+    {
+        $Names ='';
+        $where ='';
+        if(!empty($ListID)){
+            $where = 'id in ('.$ListID.')';
+        }
+        $Info = $this->getInfo($where);
+        if($Info){
+            foreach ($Info as $key => $value) {
+                $Names[$key] = $value['label_name'];
+            }
+        }
+        return  $Names;
+    }
+
+
+}

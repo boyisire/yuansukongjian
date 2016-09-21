@@ -1,0 +1,148 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.bm-form {
+	font-family: "PingFang SC", "Microsoft YaHei";
+	width: 100%;
+	color: #666;
+}
+
+.bm-h1 {
+	font-size: 0.4rem;
+	font-weight: bold;
+	text-align: center;
+	font-family: "PingFang SC", "Microsoft YaHei";
+	color: #666;
+}
+
+.bm-name-group {
+	width: 100%;
+	height: 1.1rem;
+}
+
+.bm-name {
+	font-size: 0.3rem;
+	text-align: center;
+	margin: 0.1rem auto;
+}
+
+.bm-form input {
+	display: block;
+	width: 2.5rem;
+	height: 0.4rem;
+	margin: 0 auto;
+	border-radius: 0.04rem;
+	border: 1px solid #666;
+	font-size: 0.15rem;
+}
+
+.bm-warn {
+	color: #cd0e22;
+	font-size: 0.15rem;
+	text-align: center;
+	margin-top: 0.1rem;
+}
+
+.bm-add-group select {
+	float: left;
+	width: 1rem;
+	height: 0.3rem;
+	margin: 0 0.125rem 0 0.1rem;
+	font-size: .15rem;
+}
+
+.bm-add-group {
+	width: 100%;
+	height: 1rem;
+}
+
+.bm-serve-group {
+	width: 100%;
+	height: 2.5rem;
+}
+
+.bm-serve-group textarea {
+	width: 2.5rem;
+	height: 1.5rem;
+	resize: none;
+	border-radius: 0.04rem;
+	margin: 0 auto;
+	display: block;
+	font-size: 0.15rem;
+	border: 1px solid #666;
+}
+
+.bm-profession-group {
+	width: 100%;
+	height: 0.95rem;
+}
+
+.bm-profession-group select {
+	display: block;
+	width: 2.5rem;
+	height: 0.3rem;
+	margin: 0 auto;
+	border-radius: 0.04rem;
+	font-size: 0.15rem;
+	border: 1px solid #666;
+	
+}
+
+.bm-link-group {
+	width: 100%;
+	height: 1rem;
+}
+
+.bm-men-group {
+	width: 100%;
+	height: 1.2rem;
+}
+
+
+.buf-file {
+	position: relative;
+	display: block;
+	background: #fff;
+	border: 1px solid #999;
+	border-radius: 17px;
+	padding: 0 12px;
+	overflow: hidden;
+	color: #3cb1f0;
+	text-decoration: none;
+	text-indent: 0;
+	line-height: 0.34rem;
+	width: 3.14rem;
+	height: .34rem;
+	font-size: .18rem;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 auto;
+}
+.buf-file input {
+	position: absolute;
+	right: 0;
+	top: 0;
+	opacity: 0;
+}
+.buf-file:hover {
+	color: #3cb1f0;
+}
+.bm-book-group{
+	width: 100%;
+	height: 1.5rem;
+}
+.bm-form input[type="submit"]{
+	width: 3.34rem;
+	height: 0.6rem;
+	background-color: #3cb1f0;
+	font-size: 0.18rem;
+	font-weight: bold;
+	color: #fff;
+	border: 0;
+	border-radius: 10px;
+	margin: 0.1rem auto 0.2rem;
+	display: block;
+	-webkit-appearance: none;
+}

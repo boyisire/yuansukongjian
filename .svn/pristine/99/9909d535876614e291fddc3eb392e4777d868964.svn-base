@@ -1,0 +1,26 @@
+<?php
+namespace Common\Model;
+use Common\Model\BaseModel;
+/**
+ * 用户信息附属表model
+ * @使用表 wp_usermeta
+ * @author lushijun
+ * @time 2016-8-24
+ */
+class UsermetaModel extends BaseModel{
+	/**
+	 * 获取用户头像
+	 */
+	public function findUserHeader($data){
+		if(empty($data)){
+			return "没找到用户";
+		}
+		$result=$this->findUserMetaData($data,"meta_value");
+		if(!empty($result)){
+			$header=unserialize($result[0]['meta_value'])['full'];
+		}else {
+			$header=__ROOT__."/Upload/Cms/user_header/profile_small.jpg";
+		}
+		return $header;
+	}
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="business.css">
+</head>
+<body id="bus-font-size">
+<div class="bus-banner">
+	<div style="width: 1210px;margin: 0 auto">
+		<button class="bus-button">
+			<a href="">项目报名</a>
+		</button>
+	</div>
+</div>
+<div class="bus-abstract">
+	<p style="font-size: 40px;color: #505163;margin-top: 60px;">节目概述</p>
+	<p class="bus-line"></p>
+	<p>《创客中国》是一档大型创投励志真人秀节目，节目汇聚新锐的投资人与新锐的创业者，</p>
+	<p>为资本与项目架起沟通合作的桥梁。</p>
+	<p>每个创业者面对四位投资人讲项目，说团队，展示个人能力以及创业故事，</p>
+	<p>看谁最终赢得投资人的亲睬，获得投资。</p>
+	<p>节目力求呈现一场充满激情和梦想的创业盛会，展示80、90最炫酷的创业想法，</p>
+	<p>探讨当代年亲人的未来选择以及财富观、价值观。</p>
+	<p style="margin-bottom: 60px">为创业者融资、融智、融势。</p>
+</div>
+<div class="bus-time">
+	<img src="images/bus-1.png" alt="" style="float: left">
+	<div class="bus-time1">
+		<p>节目播出平台：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内蒙古卫视</p>
+		<p>节目开播时间：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016年4月20日（周三）</p>
+		<p>节目播出时间：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;全年周播，每期首播重播</p>
+		<p style="text-align: center">共四次</p>
+		<p>重播：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每周四 12:30/00:30/04:30</p>
+	</div>
+	<div class="bus-time2">
+		<p>节目播出网络平台：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;乐视</p>
+		<p>节目时长：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60分钟</p>
+		<p>首播：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每周三 晚22：00至23：00</p>
+		<p>广告播出：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内蒙古广播电视台FM105.6</p>
+		<p>交通之声周日16:00-17:00</p>
+	</div>
+</div>
+<div class="bus-content">
+	<div class="bus-content1">
+		<img src="images/bus-2.png" alt="">
+		<div class="bus-content-text1">
+			<p>项目<span>投</span>资:</p>
+			<p>在这个创业最好的时代，创客云集的江湖，</p>
+			<p>投资人将从资本的角度，用户的角度，</p>
+			<p>人性的角度出发对创客的项目、产品进行</p>
+			<p>考察，并经过与其他投资人的激烈争夺，</p>
+			<p>有可能在现场与创客达成投资意向。</p>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="bus-content2">
+		<img src="images/bus-3.png" alt="">
+		<div class="bus-content-text2">
+			<p style="margin: 30px 0">产品体<span>验</span>:</p>
+			<p>投资人可以在创客介绍产品的过程中亲身体验，</p>
+			<p>这样对产品会有较为直观的感受，</p>
+			<p>从而也增强了节目的可视性。</p>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="bus-content1">
+		<img src="images/bus-4.png" alt="">
+		<div class="bus-content-text1">
+			<p style="margin: 30px 0">话题引<span>领</span>:</p>
+			<p>挑起话题、深入话题、延展话题；</p>
+			<p>需要从不同角度对创客进行提问，</p>
+			<p>了解他的产品、</p>
+			<p>经营理念一切有关创业的一些列问题。</p>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="bus-content2">
+		<img src="images/bus-5.png" alt="">
+		<div class="bus-content-text2">
+			<p style="margin: 30px 0">商道<span>挖</span>掘:</p>
+			<p>创投F4通过与创客的深度交流，</p>
+			<p>挖掘创业者的创业故事，</p>
+			<p>并分享自己的真实故事与人生感悟。</p>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="bus-content1">
+		<img src="images/bus-6.png" alt="">
+		<div class="bus-content-text1">
+			<p style="margin: 20px 0 20px"><span>帮</span>住创客:</p>
+			<p>投资人可以站在过来人的角度对创客的项目方向</p>
+			<p>以及产品细节或者经营方式等等方面提供一些建</p>
+			<p>议和帮助，指出不足，答疑解惑，即使对有些创</p>
+			<p>客极不喜欢，也不要表现出不屑，要有包容性，</p>
+			<p>让创业者能有所收获，感受到一种力量给节目营</p>
+			<p>造一种温暖的感觉。</p>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div>
+	<img src="images/bus-f4.png" alt="" style="display: block;margin: 100px auto 50px;">
+</div>
+<div>
+	<img src="images/bus-yuan.png" alt="" style="display: block;margin: 0 auto 70px;">
+</div>
+<div class="bus-down"></div>
+</body>
+</html>

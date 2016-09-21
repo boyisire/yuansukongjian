@@ -1,0 +1,31 @@
+<?php
+namespace Common\Controller;
+use Common\Controller\BaseController;
+/**
+ * Home基类控制器
+ */
+class HomeBaseController extends BaseController{
+	/**
+	 * 初始化方法
+	 */
+    public $uid;
+	public function _initialize(){
+		parent::_initialize();
+	}
+
+    /**
+     * [加载公共构造函数]
+     * @method __construct
+     * @author 大业
+     * @create 2016-08-29
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->uid=6;
+    }
+
+
+
+}
+

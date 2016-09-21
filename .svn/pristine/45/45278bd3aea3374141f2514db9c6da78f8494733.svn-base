@@ -1,0 +1,88 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+        <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="wrapper wrapper-content">
+                <div class="row">
+                
+                    <div class="col-lg-9 animated fadeInRight">
+                        <div class="mail-box-header">
+                            <div class="pull-right tooltip-demo">
+                                <a href="__URL__/index" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="放弃"><i class="fa fa-times"></i> 返回列表</a>
+                            </div>
+                            <h2>
+                    修改标签--<--{$list.label_name}-->
+                </h2>
+                        </div>
+                        <div class="mail-box">
+  <form class="form-horizontal" method="post" action="__URL__/update">
+<input type="hidden" name="id" value="<--{$list.id}-->">
+                            <div class="mail-body">
+
+                              
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">标签名称：</label>
+
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" name="label_name" value="<--{$list.label_name}-->">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">排序：</label>
+
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" name="sortord" value="<--{$list.sortord}-->">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                     	 <label class="col-sm-2 control-label">是否删除
+                                        </label>
+
+                                        <div class="col-sm-10">
+                                            <div class="radio">
+                                                <label>
+                                              
+                                                    <input type="radio"  value="0" id="optionsRadios1" name="is_del" <{if condition="$list.is_del eq '0'"}>checked="checked"<{/if}>>否</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" value="1" id="optionsRadios2" name="is_del" <{if condition="$list.is_del eq '1'"}>checked="checked"<{/if}>>是</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                      <div class="form-group">
+                                     	 <label class="col-sm-2 control-label">是否使用
+                                        </label>
+
+                                        <div class="col-sm-10">
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio"  value="0" id="optionsRadios1" name="is_use" <{if condition="$list.is_use eq '0'"}>checked="checked"<{/if}>>是</label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" value="1" id="optionsRadios2" name="is_use" <{if condition="$list.is_use eq '1'"}>checked="checked"<{/if}>>否</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                              
+
+                            </div>
+                            <div class="mail-body text-right tooltip-demo">
+                                <button class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top"><i class="fa fa-reply"></i> 保存</button>
+                            </div>
+                            <div class="clearfix"></div>
+
+  </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+        </div>
+    </div>
+    </div>
+
+<{include file="./tpl/Cms/Public/footer.html" /}>

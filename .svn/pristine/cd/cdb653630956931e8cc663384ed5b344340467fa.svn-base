@@ -1,0 +1,257 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>亚杰手机专题</title>
+    <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/activity/yajieMobile.css">
+</head>
+<body>
+<nav id="mo-banner">
+    <!--<div style="margin: 1.63rem auto 0;width: 3rem;height: .45rem;">
+        <div class="Organizers"><img class="yajie-image" src="images/yajie.png" alt="">
+            <p>亚杰汇创始人俱乐部 <span>(主办方)</span></p></div>
+        <div class="Organizers"><img class="yuansu-image" src="images/yuansuzhouqi.png" alt="">
+            <p>元素周期 <span>(协办方 )</span></p></div>
+        <p class="clear"></p>
+        <p class="mo-address">地点：北京科技大学奥运馆 时间：2016年9月17 </p>
+    </div>-->
+</nav>
+<div class="page1">
+    <p class="page1-title">为创业喝彩 为摇滚狂欢</p>
+    <p class="page1-text">第一届亚杰国际创业音乐节九月与大家见面，</p>
+    <p class="page1-text">激情不灭创业不止，第一届亚杰国际创业音乐节-新长征路上</p>
+    <p class="page1-text">的创业将于2016年9月17日在海淀区</p>
+    <p class="page1-text">北京科技大学奥运馆开唱。亚杰汇国际创业音乐节由</p>
+    <p class="page1-text">亚杰创始人俱乐部、北京元素周期联合举办，</p>
+    <p class="page1-text">10支创业队伍带着理想与激情为创业开唱，</p>
+    <p class="page1-text">为摇滚呐喊。更有老帮菜乐队，青山资本创始人张野，</p>
+    <p class="page1-text">最强大脑中国队长王峰，演艺明星黄小蕾倾情加入。</p>
+    <p class="page1-text">这是一次创投圈的年度盛事，一次创投圈的音乐跨界碰撞，</p>
+    <p class="page1-text">一次创业者们的集体狂欢，40位创始人，10位投资人，</p>
+    <p class="page1-text">20首经典曲目同台演绎，精彩开场。</p>
+</div>
+<div class="page2">
+    <div class="cast1">
+        <div class="cast cast-border">
+            <div class="cast-Co-name cast-Co-name1"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>包焗强</span> <span class="cast-men-Co">微车</span></p>
+                <p class="cast-men-name"><span>袁文辉</span> <span class="cast-men-Co" >小鱼儿科技</span></p>
+                <p class="cast-men-name"><span>李晓光   </span> <span class="cast-men-Co">优才学院</span></p>
+                <p class="cast-men-name"><span>张建林   </span> <span class="cast-men-Co">星客多</span></p>
+                <p class="cast-men-name"><span>陈爱华   </span> <span class="cast-men-Co">想象传媒</span></p>
+            </div>
+        </div>
+        <div class="cast cast-border">
+            <div class="cast-Co-name cast-Co-name2"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>汪&nbsp;&nbsp;&nbsp;璐     </span> <span class="cast-men-Co">达晨创投</span>
+                </p>
+                <p class="cast-men-name"><span>毛靖翔   </span> <span class="cast-men-Co">米 趣</span></p>
+                <p class="cast-men-name"><span>陈艺超   </span> <span class="cast-men-Co">游戏多</span></p>
+                <p class="cast-men-name"><span>贾建强      </span> <span class="cast-men-Co">6人游旅行</span></p>
+                <p class="cast-men-name"><span>杨金鑫   </span> <span class="cast-men-Co">举佳爽</span></p>
+            </div>
+        </div>
+    </div>
+    <div id="page2-1">
+        <div class="cast cast-border">
+            <div class="cast-Co-name cast-Co-name3"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>张晋巍     </span> <span class="cast-men-Co">凹凸教育</span></p>
+                <p class="cast-men-name"><span>李&nbsp;&nbsp;&nbsp;白   </span> <span class="cast-men-Co">夸克未来</span></p>
+                <p class="cast-men-name"><span>凌&nbsp;&nbsp;&nbsp;敏   </span> <span class="cast-men-Co">声韵天下</span></p>
+                <p class="cast-men-name"><span>郑洁甫      </span> <span class="cast-men-Co">校 宝</span></p>
+                <p class="cast-men-name"><span>陈&nbsp;&nbsp;&nbsp;庆   </span> <span class="cast-men-Co">举智慧流佳爽</span>
+                </p>
+            </div>
+        </div>
+        <div class="cast" style="border-top: 1px solid #707070">
+            <div class="cast-Co-name cast-Co-name4"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>付健忠</span> <span class="cast-men-Co">集结号</span></p>
+                <p class="cast-men-name"><span>高&nbsp;&nbsp;&nbsp;巍   </span> <span class="cast-men-Co">金婴汇</span></p>
+                <p class="cast-men-name"><span>杨&nbsp;&nbsp;&nbsp;光   </span> <span class="cast-men-Co">皮皮互娱</span></p>
+                <p class="cast-men-name"><span>周&nbsp;&nbsp;&nbsp;可	      </span> <span
+                        class="cast-men-Co">华谊兄弟</span></p>
+                <p class="cast-men-name"><span>朱其民   </span> <span class="cast-men-Co">聪明文化</span></p>
+            </div>
+        </div>
+        <div class="cast cast-border">
+            <div class="cast-Co-name cast-Co-name5"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>胡厚舒</span> <span class="cast-men-Co">钱图无限</span></p>
+                <p class="cast-men-name"><span>韩泽峻</span> <span class="cast-men-Co">加气助手</span></p>
+                <p class="cast-men-name"><span>郑海卿</span> <span class="cast-men-Co">车 锐</span></p>
+                <p class="cast-men-name"><span>段&nbsp;&nbsp;&nbsp;彬</span> <span class="cast-men-Co">高手互娱</span></p>
+                <p class="cast-men-name"><span>王&nbsp;&nbsp;&nbsp;波</span> <span class="cast-men-Co">星河互联</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="cast2">
+        <div class="cast cast-border">
+            <div class="cast-Co-name cast-Co-name6"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>肖&nbsp;&nbsp;&nbsp;竞</span> <span class="cast-men-Co">蜥蜴时尚</span></p>
+                <p class="cast-men-name"><span>于&nbsp;&nbsp;&nbsp;涵 </span> <span class="cast-men-Co">高比格科技</span></p>
+                <p class="cast-men-name"><span>王&nbsp;&nbsp;&nbsp;晟    </span> <span class="cast-men-Co">艺朵教育司</span>
+                </p>
+                <p class="cast-men-name"><span>苏&nbsp;&nbsp;&nbsp;娟   </span> <span class="cast-men-Co">她 她 她</span></p>
+                <p class="cast-men-name"><span>孙梦婉   </span> <span class="cast-men-Co">罗藤银河</span></p>
+            </div>
+        </div>
+        <div class="cast cast-border">
+            <div class="cast-Co-name cast-Co-name7"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>程&nbsp;丹</span> <span class="cast-men-Co">禅蕴体育</span>
+                </p>
+                <p class="cast-men-name"><span>罗志文   </span> <span class="cast-men-Co">亿 盟</span></p>
+                <p class="cast-men-name"><span>金小钱   </span> <span class="cast-men-Co">投 后</span></p>
+                <p class="cast-men-name"><span>殷志远      </span> <span class="cast-men-Co">兰雅迪</span></p>
+                <p class="cast-men-name"><span>韦永勇   </span> <span class="cast-men-Co">律动乐器</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="page2-2">
+        <div class="cast cast-border">
+            <div class="cast-Co-name cast-Co-name8"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>李&nbsp;&nbsp;&nbsp;汪</span> <span class="cast-men-Co">木薯科技</span></p>
+                <p class="cast-men-name"><span>沈&nbsp;&nbsp;&nbsp;洋</span> <span class="cast-men-Co">爱殿别墅</span></p>
+                <p class="cast-men-name"><span>李艺娴</span> <span class="cast-men-Co">闲着文化</span></p>
+                <p class="cast-men-name"><span>陆晓霖</span> <span class="cast-men-Co">心福利</span></p>
+                <p class="cast-men-name"><span>蒋&nbsp;&nbsp;&nbsp;昀</span> <span class="cast-men-Co">富 米</span>
+                </p>
+            </div>
+        </div>
+        <div class="cast" style="border-top: 1px solid #707070">
+            <div class="cast-Co-name cast-Co-name9"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>刘晓彤</span> <span class="cast-men-Co">界 面</span></p>
+                <p class="cast-men-name"><span>宋&nbsp;&nbsp;&nbsp;笛   </span> <span class="cast-men-Co">经济观察报</span></p>
+                <p class="cast-men-name"><span>刘珍妮</span> <span class="cast-men-Co">新京报</span></p>
+                <p class="cast-men-name"><span>蔡鹏程</span> <span class="cast-men-Co">钛媒体</span></p>
+                <p class="cast-men-name"><span>苑&nbsp;&nbsp;&nbsp;晶</span> <span class="cast-men-Co">投资家</span></p>
+            </div>
+        </div>
+        <div class="cast cast-border">
+            <div class="cast-Co-name cast-Co-name10"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>周家杰 </span> <span class="cast-men-Co">恭喜发车</span></p>
+                <p class="cast-men-name"><span>王昭赢  </span> <span class="cast-men-Co">送姜科技</span></p>
+                <p class="cast-men-name"><span>赵&nbsp;&nbsp;&nbsp;亮</span> <span class="cast-men-Co">量化信息</span></p>
+                <p class="cast-men-name"><span>倪&nbsp;&nbsp;&nbsp;梦</span> <span class="cast-men-Co">翼展科技</span></p>
+                <p class="cast-men-name"><span>赵&nbsp;&nbsp;&nbsp;明</span> <span class="cast-men-Co">MissCandy</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page3">
+    <div class="cast-guest">
+        <img src="/yuansukongjian/tpl/Public/images/home/activity/line.png" alt="">
+        <p style="float: left;margin: 0 0.2rem 0">特约嘉宾</p>
+        <img class="rotate" src="/yuansukongjian/tpl/Public/images/home/activity/line.png" alt="">
+    </div>
+    <div class="cast-guests cast-guests1">
+        <img src="/yuansukongjian/tpl/Public/images/home/activity/huang.png" alt="">
+        <p style="width: 1.91rem;float: left;">黄小蕾：特邀演出嘉宾 统和天成董事长
+            中国内地女演员，制片人，导演北京电影学院表演学系学士，北京电影学院金融投资总裁班2013清华EMBA硕士亚杰商会摇篮计划第九期学员。</p>
+    </div>
+    <div class="cast-guests cast-guests2">
+        <img src="/yuansukongjian/tpl/Public/images/home/activity/wang.png" alt="">
+        <p style="width: 1.91rem;float: right;margin-top: 0.2rem;">王峰:摇篮明星嘉宾 ,摇篮计划
+            第10期 ,世界记忆大师 ,世界脑力锦标赛总冠军,《最强大脑》中国队长,东方巨龙教育创始人.</p>
+    </div>
+    <div class="cast-guests cast-guests3">
+        <img src="/yuansukongjian/tpl/Public/images/home/activity/zhang.png" alt="">
+        <p style="width: 1.91rem;float: left;margin-top: 0.5rem;">张野 :特邀演出嘉宾， 青山资本创始人</p>
+    </div>
+    <img class="laobangcai" src="/yuansukongjian/tpl/Public/images/home/activity/lao.png" alt="">
+    <img src="/yuansukongjian/tpl/Public/images/home/activity/supermens.png" alt="" style="width:3.75rem;">
+    <p class="cast-process">活动流程 </p>
+    <div class="cast-time">
+        <p class="cast-time-p">18:00-19:00</p>
+        <p>观众入场，演出嘉宾候场</p>
+        <p class="clear"></p>
+        <p class="cast-time-p">19:00-19:10</p>
+        <p class="cast-time-pright">VCR开场，rococo乐队开唱</p>
+        <p class="clear"></p>
+        <p class="cast-time-p">19:10-19:40</p>
+        <p class="cast-time-pright">创投战队表演 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            (3个战队，每队演唱2首歌曲） </p>
+        <p class="clear"></p>
+        <p class="cast-time-p">19:40-19:50</p>
+        <p class="cast-time-pright">观众投票</p>
+        <p class="clear"></p>
+        <p class="cast-time-p" style="margin-top: 0.2rem">19:50-20:00</p>
+        <p class="cast-time-pright" style="margin-top: 0.2rem">老帮菜乐队表演,创投大佬直播秀互动</p>
+        <p class="clear"></p>
+        <p class="cast-time-p">20:00-20:30</p>
+        <p class="cast-time-pright">创投战队表演 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            (3个战队，每队演唱2首歌曲） </p>
+        <p class="clear"></p>
+        <p class="cast-time-p">20:30-20:40</p>
+        <p class="cast-time-pright">观众投票</p>
+        <p class="clear"></p>
+        <p class="cast-time-p" style="margin-top: 0.2rem">20:40-20:50 </p>
+        <p class="cast-time-pright" style="margin-top: 0.2rem">特邀嘉宾表演，美女直播秀互动 </p>
+        <p class="clear"></p>
+        <p class="cast-time-p">20:50-21:30 </p>
+        <p class="cast-time-pright">创投战队表演 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            (4个战队，每队演唱2首歌曲） </p>
+        <p class="clear"></p>
+        <p class="cast-time-p">21:30-21:40 </p>
+        <p class="cast-time-pright">观众投票、史上最不专业音乐评审投票及点评</p>
+        <p class="clear"></p>
+        <p class="cast-time-p">21:40-22:00</p>
+        <p class="cast-time-pright">创始人歌曲串烧</p>
+        <p class="clear"></p>
+        <p class="cast-time-p" style="margin-top: 0.2rem">22:00-22:20</p>
+        <p class="cast-time-pright" style="margin-top: 0.2rem">公布PK积分榜、冠亚季军颁奖 </p>
+        <p class="clear"></p>
+        <p class="cast-time-p">22:20-22:30 </p>
+        <p class="cast-time-pright">惊喜嘉宾登场，压轴演出，千人大合唱</p>
+        <p class="clear"></p>
+        <p class="cast-time-p">22:30 </p>
+        <p class="cast-time-pright">谢幕，退场 </p>
+    </div>
+
+    <div class="cast-down">
+        <p style="margin-top: 0.3rem">摇滚与创业生长于在骨子里的信念 ，</p>
+        <p>创业与音乐有着太多的共通之处，</p>
+        <p>摇滚独立思考，相信自己，相信梦想。</p>
+        <p>而创业有一股永不停歇的激情，</p>
+        <p>是一种人生态度，更是种人生哲学。带着梦想与激情</p>
+        <p>谱写新创业路上的摇滚，第一届亚杰国际创业音乐节</p>
+        <p>主办方亚杰创始人俱乐部负责人表示，</p>
+        <p>我们希望通过音乐节，链接创业者，</p>
+        <p>将创业精神与摇滚精神跨界融合，打造首个</p>
+        <p>专属于创业圈的音乐节，</p>
+        <p>为创业路上的孤单摸爬滚打的“造梦人”</p>
+        <p>带来一次激情与梦想齐飞的音乐之旅！</p>
+       <p class="cast-link"></p> 
+        <button class="cast-button" style="margin: 0 0.5rem 0 0.58rem" onclick='javascript:window.location.href="http://www.wpiao.cn/Project/ProjectDetails?id=1725&type=&rurl=/Home/Index#baidutuiguang&wwj";'>点击购票</button>
+        <button class="cast-button" onclick='javascript:window.location.href="/yuansukongjian/Home/Activity/actIndex";'>战队投票</button>
+    </div>
+
+</div>
+<script type="text/javascript">
+    document.documentElement.style.fontSize = window.innerWidth / 3.75 + 'px'
+</script>
+</body>
+</html>

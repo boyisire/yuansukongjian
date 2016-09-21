@@ -1,0 +1,167 @@
+<?php
+/*************************************************
+ * file description
+ * @filename:           makerChinaController.class.php(原控制器名:Customer)
+ * @desc:               创客中国节目信息登记
+ * @tables:             [kj_innovate_customer;]
+ * @date:               2016-9-8
+ * @author:             大业
+ * @version:            v1.0
+ *************************************************/
+namespace Home\Controller;
+use Common\Controller\HomeBaseController;
+class MakerChinaController extends HomeBaseController{
+
+    /**
+     * [创客中国节目主页]
+     * @method index
+     * @author 大业
+     * @create 2016-09-08
+     * @return [type] [description]
+     */
+    public function index()
+    {
+        echo "XXXX";exit;
+        //环境配置
+        $EnvCfg['title'] = '创客中国';
+        //获取创客中国活动信息
+        $where = "act_name like '%".$EnvCfg['title']."%'";
+        $activeInfo = D('Activity')->findData($where);
+        dump($activeInfo);exit;
+        //需要取活动信息表中的数据:活动名称，活动ID,开始和结束时间
+        $this->assign('activeInfo',$activeInfo);
+        $this->display('indexPc');
+    }
+
+
+    /**
+     * [创客中国节目表单登记页]
+     * @method index
+     * @author 大业
+     * @create 2016-09-08
+     * @return [type] [description]
+     */
+    public function register()
+    {
+        //环境配置
+        $EnvCfg['title']= '创客中国';
+        $EnvCfg['aid']  = I('aid');
+
+        //省信息
+        $area_prov = D('AreasInfo')->getAreaName('中国',0);
+
+        //行业信息
+        $industry = D('IndustryInfo')->showInfoName();
+
+        //融资阶段说明
+        $financing = D('FinancingInfo')->showInfoName();
+
+        $this->assign('EnvCfg'      ,$EnvCfg);
+        $this->assign('area_prov'   ,$area_prov);
+        $this->assign('industry'    ,$industry);
+        $this->assign('financing'   ,$financing);
+        $this->display();
+    }
+
+
+    /**
+     * [接受表单登记信息]
+     * @method acceptForm
+     * @author 大业
+     * @create 2016-09-08
+     * @return [type] [description]
+     */
+    public function acceptForm()
+    {
+        $data = array(
+            'uid'                       => $this->uid,      //用户ID
+            'aid'                       => I('aid'),        //活动ID
+            'ic_company_name'           => I('name'),       //公司名称
+            'ic_company_desc'           => I('desc'),       //公司描述
+            'ic_position_prov'          => I('prov'),       //位置-省
+            'ic_position_city'          => I('city'),       //位置-市
+            'ic_position_dist'          => I('dist'),       //位置-区
+            'ic_subordinate_industry'   => I('industry'),   //所属行业
+            'ic_product_link'           => I('product'),    //产品链接
+            'ic_financing_stage'        => I('financing'),  //融资阶段
+            'ic_principal'              => I('principal'),  //负责人
+            'ic_mobile'                 => I('mobile'),     //手机号
+            'ic_prospectus'             => I('prospectus'), //企划书
+            'add_time'                  => time(),          //添加时间
+       );
+
+        //表单校验
+        $CheckRes = $this->verifyForm($data);
+        if($CheckRes['code'] != 200){
+            /*$cookie['code']="201";
+            $cookie['con']="1";
+            $cookie['msg']="提交失败";
+            $cookie['error']=$CheckRes['msg'];
+            cookie('yskjM',$cookie,array('expire'=>3600,'prefix'=>''));*/
+            ajax_return($CheckRes['msg'],"表单校验失败",$CheckRes['code']);
+        }else{
+            $res = D('InnovateCustomer')->addData($data);
+            if($res){
+                ajax_return($res,"数据插入成功!",0);
+            }else{
+                ajax_return($res,"数据插入失败!",1);
+            }
+        }
+    }
+
+
+    /**
+     * [验证表单信息]
+     * @method verifyForm
+     * @author 大业
+     * @create 2016-09-08
+     * @param  [array] $data [验证的数据]
+     * @return [boole] [true/false]
+     */
+    private function verifyForm($data)
+    {
+        //校验公司名称
+        $CheckRes = checkRule('name',$data['ic_company_name']);
+        if($CheckRes['code'] != 200){
+            return array('code' => $CheckRes['code'],'msg' => "企业名称".$CheckRes['msg']);
+        }
+
+        //校验负责人
+        $CheckRes = checkRule('name',$data['ic_principal']);
+        if($CheckRes['code'] != 200){
+            return array('code' => $CheckRes['code'],'msg' => "负责人".$CheckRes['msg']);
+        }
+
+        //校验手机号
+        $CheckRes = checkRule('mobile',$data['ic_mobile']);
+        if($CheckRes['code'] != 200){
+            return array('code' => $CheckRes['code'],'msg' => $CheckRes['msg']);
+        }
+
+        //校验企划书
+
+        return array('code' => $CheckRes['code'],'msg' => $CheckRes['msg']);
+    }
+
+
+    /**
+     * [成功失败跳转页]
+     * @method message
+     * @author 大业
+     * @create 2016-09-08
+     * @return [type] [description]
+     */
+    public function message(){
+       /* $data=cookie('yskjM');
+        $id = preg_replace('/\D/s', '', $data['url']);
+        if($id){
+            $roonName = D('RoomInfo')->getRoomInfo($id,room_name);
+            $this->assign('roonName',$roonName);
+        }
+        $this->assign('data',$data);*/
+        $this->display();
+    }
+
+
+}
+

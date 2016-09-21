@@ -1,0 +1,135 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<link rel="stylesheet" type="text/css" href="__ADMIN_CSS__/stylesheets/normalize.css" media="screen">
+<link rel="stylesheet" type="text/css" href="__ADMIN_CSS__/stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="__ADMIN_CSS__/stylesheets/github-light.css" media="screen">
+<script type="text/javascript" src="__ADMIN_JS__/jedate/jedate.js"></script>
+<body>
+    <div id="wrapper">
+       <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="wrapper wrapper-content">
+                <div class="row">
+                 
+                    <div class="col-lg-9 animated fadeInRight">
+                        <div class="mail-box-header">
+                            <div class="pull-right tooltip-demo">
+                              
+                                <a href="__URL__/index" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> 返回列表</a>
+                            </div>
+                            <h2>
+                    所有活动
+                </h2>
+                        </div>
+                        <div class="mail-box">
+
+
+                            <div class="mail-body">
+
+                           <form action="__URL__/insertAct" method="post" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">活动名称：</label>
+
+                                        <div class="col-sm-10">
+                                            <input type="text" name="act_name" class="form-control" placeholder="请输入活动名称">
+                                        </div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-sm-2 control-label">投票模式：</label>
+
+                                        <div class="col-sm-10">
+                                            <input type="radio" name="is_time"  value="1" checked>一种时间段模式
+                                            <input type="radio" name="is_time" value="2">二种时间段模式（<font color="red">注：当需要一种时间判断活动时间的选择1种模式，二种模式开始结束时间可以不选择</font>）
+                                           
+                                        </div>
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-sm-2 control-label">一种开始时间：</label>
+
+                                        <div class="col-sm-2">
+                                            <input type="text" name="start_time" class="form-control" id="indate" type="text" placeholder="请选择"  readonly>
+                                        </div>
+                                        <label class="col-sm-2 control-label">一种结束时间：</label>
+
+                                        <div class="col-sm-2">
+                                            <input type="text" name="end_time" class="form-control" id="dateinfo" type="text" placeholder="请选择"  readonly>
+                                        </div>
+                                        
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-sm-2 control-label">二种开始时间：</label>
+
+                                        <div class="col-sm-2">
+                                            <input type="text" name="start_time2" class="form-control" id="indate1" type="text" placeholder="请选择"  readonly>
+                                        </div>
+                                        <label class="col-sm-2 control-label">二种结束时间：</label>
+
+                                        <div class="col-sm-2">
+                                            <input type="text" name="end_time2" class="form-control" id="indate2" type="text" placeholder="请选择"  readonly>
+                                        </div>
+                                        
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-sm-2 control-label">活动排序：</label>
+
+                                        <div class="col-sm-10">
+                                            <input type="text" name="is_sort" class="form-control" value="100">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">是否显示：</label>
+
+                                        <div class="col-sm-10">
+                                            <input type="radio" name="is_show"  value="1" checked>是
+                                            <input type="radio" name="is_show" value="2">否
+                                           
+                                        </div>
+                                    </div>
+                         
+
+                            </div>
+                            <div class="mail-body text-right tooltip-demo">
+                                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-reply"></i> 保存</button>
+                                <!-- <a href="mailbox.html" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Discard email"><i class="fa fa-times"></i> 放弃</a>
+                                <a href="mailbox.html" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Move to draft folder"><i class="fa fa-pencil"></i> 存为草稿</a> -->
+                            </div>
+                            </form>
+                            <div class="clearfix"></div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+        </div>
+    </div>
+    </div>
+  <script type="text/javascript">  
+        jeDate({
+			dateCell:"#dateinfo",
+			isinitVal:true,
+			isTime:true, //isClear:false,
+			minDate:"2014-09-19 00:00:00"
+		})
+		 jeDate({
+			dateCell:"#indate",
+			isinitVal:true,
+			isTime:true, //isClear:false,
+			minDate:"2014-09-19 00:00:00"
+		})
+		jeDate({
+			dateCell:"#indate1",
+			isinitVal:true,
+			isTime:true, //isClear:false,
+			minDate:"2014-09-19 00:00:00"
+		})
+		jeDate({
+			dateCell:"#indate2",
+			isinitVal:true,
+			isTime:true, //isClear:false,
+			minDate:"2014-09-19 00:00:00"
+		})
+  </script>
+  <{include file="./tpl/Cms/Public/footer.html" /}>
+

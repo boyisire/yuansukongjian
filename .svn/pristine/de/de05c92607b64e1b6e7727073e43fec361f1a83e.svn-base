@@ -1,0 +1,189 @@
+<?php
+namespace Common\Model;
+use Think\Model;
+/**
+ * 基础model
+ */
+class BaseModel extends Model{
+
+    /**
+     * 添加数据
+     * @param  array $data  添加的数据
+     * @return int          新增的数据id
+     */
+    public function addData($data){
+        // 去除键值首尾的空格
+        foreach ($data as $k => $v) {
+            $data[$k]=trim($v);
+        }
+        $id=$this->add($data);
+        return $id;
+    }
+
+    /**
+     * 修改数据
+     * @param   array   $map    where语句数组形式
+     * @param   array   $data   数据
+     * @return  boolean         操作是否成功
+     */
+    public function editData($map,$data){
+        // 去除键值首位空格
+        foreach ($data as $k => $v) {
+            $data[$k]=trim($v);
+        }
+        $result=$this->where($map)->save($data);
+        return $result;
+    }
+
+    /**
+     * 删除数据
+     * @param   array   $map    where语句数组形式
+     * @return  boolean         操作是否成功
+     */
+    public function deleteData($map){
+        if (empty($map)) {
+            die('where为空的危险操作');
+        }
+        $result=$this->where($map)->delete();
+        return $result;
+    }
+
+    /**
+     * 数据排序
+     * @param  array $data   数据源
+     * @param  string $id    主键
+     * @param  string $order 排序字段
+     * @return boolean       操作是否成功
+     */
+    public function orderData($data,$id='id',$order='order_number'){
+        foreach ($data as $k => $v) {
+            $v=empty($v) ? null : $v;
+            $this->where(array($id=>$k))->save(array($order=>$v));
+        }
+        return true;
+    }
+    /**
+     * 获取一条数据
+     * @param  array $where  条件
+     * @param  string $field 查询内容
+     * @return array       返回数据
+     * @author lushijun
+     * @time   2016-8-12
+     */
+    public function findData($where,$field){
+    	if (empty($where)) {
+    		die('where为空的危险操作');
+    	}
+    	if(empty($field)){
+    		$field="*";
+    	}
+    	$result=$this->field($field)->where($where)->find();
+    	return $result;
+    }
+
+
+    /**
+     * [获取所有数据]
+     * @method selectData
+     * @author 大业
+     * @create 2016-08-16
+     * @param  [string] $field [查询字段]
+     * @param  [string] $where [查询条件]
+     * @param  [string] $field [排序条件]
+     * @param  [string] $pages [分页信息][ARGV:countNum,limitNum,startNum,endNum]
+     * @return [array] [查询信息]
+     */
+    public function selectData($field='*',$where='1=1',$order='',$pages)
+    {
+        //不需要分页信息时，正常查询
+        if(empty($pages)){
+            $result = $this->field($field)->where($where)->order($order)->select();
+        }else{
+            //带样式的分页，页面展示
+            if($pages->listRows != 0 ){
+                //$page = new_page ($pageSet['countNum'],$pageSet['limitNum']);
+                $result = $this
+                        ->field($field)
+                        ->where($where)
+                        ->limit($pages->firstRow.','.$pages->listRows)
+                        ->order($order)
+                        ->select();
+                $data = array(
+                    'info'=>$result,
+                    'page'=>$pages->show()
+                );
+                return $data;
+            }else{
+                //不带样式的分页，AJAX取数
+                $result = $this
+                        ->field($field)
+                        ->where($where)
+                        ->limit($pages['startNum'],$pages['endNum'])
+                        ->order($order)
+                        ->select();
+            }
+        }
+        return $result;
+    }
+
+
+    /**
+     * [统计表记录数]
+     * @method countData
+     * @author 大业
+     * @create 2016-08-16
+     * @param  [string] $condition [查询条件]
+     * @return [type] [description]
+     */
+    function countData($where)
+    {
+        if(empty($where)){
+            $cnt = $this->count();
+        }else{
+            $cnt = $this->where($where)->count();
+        }
+        return $cnt;
+    }
+
+
+    /**
+     * 获取分页数据
+     * @param  subject  $model  model对象
+     * @param  array    $map    where条件
+     * @param  string   $order  排序规则
+     * @param  integer  $limit  每页数量
+     * @param  integer  $field  $field
+     * @return array            分页数据
+     */
+    public function getPage($model,$map,$order='',$limit=10,$field=''){
+        $count=$model
+            ->where($map)
+            ->count();
+        $page=new_page($count,$limit);
+        // 获取分页数据
+        if (empty($field)) {
+            $list=$model
+                ->where($map)
+                ->order($order)
+                ->limit($page->firstRow.','.$page->listRows)
+                ->select();
+        }else{
+            $list=$model
+                ->field($field)
+                ->where($map)
+                ->order($order)
+                ->limit($page->firstRow.','.$page->listRows)
+                ->select();
+        }
+        $data=array(
+            'data'=>$list,
+            'page'=>$page->show()
+            );
+        return $data;
+    }
+
+
+
+
+
+}

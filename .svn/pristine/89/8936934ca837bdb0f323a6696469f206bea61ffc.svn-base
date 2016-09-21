@@ -1,0 +1,374 @@
+<?php if (!defined('THINK_PATH')) exit();?><!--============== 公共头部信息 ===================-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><?php echo ($EnvCfg["title"]); ?></title>
+    <script type="text/javascript" src="/yuansukongjian/tpl/Public/js/public/jquery-1.7.2.js"></script>
+    <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/reset.css">
+      <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/header.css">
+    <link href="/yuansukongjian/tpl/Public/css/public/page.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<header id="masthead" class="site-header">
+
+    <nav id="top-header">
+        <div class="top-nav">
+            <div id="user-profile">
+                发现创业价值！
+            </div>
+            <div id="user-profile" style="float:right;padding-right:10px;">
+            <?php if(!empty($login_uid) && !empty($login_nick_name) && $login_is_login =='1'){?>
+             欢迎来到元素周期：&nbsp;<font color="#3e94a5 "><?php echo $login_nick_name;?></font>
+			  		&nbsp;|<a href="http://www.yuansuzhouqi.cn/usecenter.html">用户中心</a>
+	  	   	
+										<span class="nav-set">
+				 	<span class="nav-login">
+				 					 	|<a href="http://www.yuansuzhouqi.cn/wp-login.php?action=logout" title=""> 退出</a>
+										</span>
+				</span>
+
+            <?php }else{?>
+                <a href="http://www.yuansuzhouqi.cn/wp-login.php?action=register">注册</a>
+
+                <span class="nav-set">
+				 	<span class="nav-login">|<a href="http://www.yuansuzhouqi.cn/wp-login.php">登录</a></span>
+				</span>
+			<?php }?>
+            </div>
+        </div>
+    </nav><!-- #top-header -->
+
+    <div id="menu-box">
+        <div id="top-menu">
+            <span class="nav-search"><img src="/yuansukongjian/tpl/Public/images/home/iconseek.png" style="width: 30px" alt=""></span>
+            <span class="mobile-login"><a href="#login" id="login-mobile"><i class="fa-user fa-fontsize"></i>
+			</a>
+			</span>
+            <hgroup class="logo-site">
+                <h1 class="site-title">
+                    <a href="http://www.yuansuzhouqi.cn/"><img
+                            src="/yuansukongjian/tpl/Public/images/home/220-50-logo-2.png"
+                            alt="元素周期"></a>
+                </h1>
+            </hgroup><!-- .logo-site -->
+
+            <div id="site-nav-wrap">
+                <div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close">×</a></div>
+                <nav id="site-nav" class="main-nav">
+                    <a href="#sidr-main" id="navigation-toggle" class="bars"><i class="fa-fontsize fa-bars"></i></a>
+                    <div class="menu-menu-1-container">
+                        <ul id="menu-menu-1" class="down-menu nav-menu sf-js-enabled sf-arrows">
+                            <li id="menu-item-6"
+                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-6">
+                                <a href="http://www.yuansuzhouqi.cn">元素首页</a></li>
+                            <li id="menu-item-45"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-45"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-information/">元素资讯</a>
+                            </li>
+                            <li id="menu-item-46"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-newinformation/">元素快讯</a>
+                            </li>
+                            <li id="menu-item-22"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-marvellous/">元素科技</a>
+                            </li>
+                            <li id="menu-item-852"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-852"><a
+                                    href="http://www.yuansuzhouqi.cn/fuhua.html">申请孵化</a></li>
+                        </ul>
+                    </div>
+                </nav><!-- #site-nav -->
+            </div><!-- #site-nav-wrap -->
+            <div class="clear"></div>
+        </div><!-- #top-menu -->
+    </div><!-- #menu-box -->
+</header>
+<div id="search-main">
+    <div id="searchbar">
+        <form method="get" id="searchform" action="http://www.yuansuzhouqi.cn/">
+            <input value="" name="s" id="s" placeholder="输入搜索内容" required="" type="text">
+            <button type="submit" id="searchsubmit">搜索</button>
+        </form>
+    </div>
+    <div class="clear"></div>
+</div>
+<script>
+     function BottomJumpPage() {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop != 0) {  //滚动到头部部执行事件
+           $('#menu-box').addClass('shadow');
+           $('#search-main').addClass('shadow');
+        }else {
+            $('#menu-box').removeClass('shadow');
+            $('#search-main').removeClass('shadow');
+        }
+    }
+    $(window).scroll(BottomJumpPage);
+    $('.nav-search').click(function () {
+        if ($('#search-main').is(":hidden")){
+            $('#search-main').show()
+        }else {
+            $('#search-main').hide()
+        }
+    })
+</script>
+</body>
+</html>
+
+<!--============== 本页独自引用部分 ===================-->
+<link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/entry/request.css">
+<link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/entry/reset.css">
+<script type="text/javascript" src="/yuansukongjian/tpl/Public/js/home/jquery.form.min.js"></script>
+<script type="text/javascript" src="/yuansukongjian/tpl/Public/js/home/zyupload-1.0.0.min.js"></script>
+<script type="text/javascript" src="/yuansukongjian/tpl/Public/js/home/teamwork.js"></script>
+<style>
+    .demo--radio {
+        display: none
+    }
+</style>
+<body>
+<div id="re-main">
+    <form action="/yuansukongjian/Home/Form/acceptEntry" method="post" enctype="multipart/form-data" name="RoomForm" id="RoomForm">
+        <h3>申请入驻“<?php echo ($room_name); ?>”</h3>
+        <input type="hidden" name="entryId" value="<?php echo ($entryId); ?>">
+        <input type="hidden" name="room_id" value="<?php echo ($rid); ?>">
+        <div class="re-name">
+            <p>公司名称:</p>
+            <input type="text" placeholder="&nbsp;&nbsp;选填" id="company_name" name="company_name" value="<?php echo ($info["company_name"]); ?>">
+            <div>
+                <div class="re-room-right" id="companyName"></div>
+            </div>
+        </div>
+        <div class="re-name">
+            <p>简介:</p>
+            <textarea placeholder="&nbsp;&nbsp;描述一下贵公司主要的商业模式、产品、业务" id="company_intro" name="company_intro" ><?php echo ($info["company_intro"]); ?></textarea>
+            <div style="display: inline-block;">
+                <div class="re-room-right" id="companyIntro" style="margin: -110px 0 0 3px;"></div>
+            </div>
+        </div>
+        <div class="re-name re-men" >
+            <p>联系人:</p>
+            <input type="text" placeholder="&nbsp;&nbsp;不能为空或少于两个字" id="company_person" value="<?php echo ($info["company_person"]); ?>" name="company_person">
+            <div>
+                <div class="re-room-right"></div>
+                <div class="re-room-error">
+                    <p class="re-image-error"></p>
+                    <p style="line-height: 40px">不能为空或少于两个字 </p>
+                </div>
+            </div>
+        </div>
+        <div class="re-name re-num" >
+            <p>手机号:</p>
+            <input type="text" placeholder="&nbsp;&nbsp;请填写正确的手机号" id="company_phone" value="<?php echo ($info["company_phone"]); ?>" name="company_phone">
+            <div>
+                <div class="re-room-right"></div>
+                <div class="re-room-error">
+                    <p class="re-image-error"></p>
+                    <p style="line-height: 40px">请填写正确的手机号 </p>
+                </div>
+            </div>
+        </div>
+        <div class="re-name">
+            <p>寻租类型:</p>
+            <div class="re-choose">
+                <div class="re-choose-men re-choose-activate radio">
+                    <label class="demo--label re-choose-men">
+                        <input type="radio" checked="" value="1" class="demo--radio" id="optionsRadios1" name="rent_type">
+                    <span class="demo--radioInput"> </span>
+                        <span>工位</span>
+                        </label>
+                </div>
+                <div class="re-choose-area radio">
+                    <label class="demo--label re-choose-area">
+                        <input type="radio" checked="" value="2" class="demo--radio" id="optionsRadios2" name="rent_type">
+                        <span class="demo--radioInput"> </span>
+                    <span>面积</span>
+                    </label>
+                </div>
+            </div>
+            <!--</div>-->
+        </div>
+        <div class="re-name">
+            <p>&nbsp;</p>
+            <input type="text" placeholder="&nbsp;&nbsp;请填写您大约需要多少个工位" id="re-work" value="<?php echo ($info["rent_number"]); ?>"  name="rent_number">
+            <input type="text" placeholder="&nbsp;&nbsp;请填写您大约需要多少面积" style="display: none;" id="re-area" value="<?php echo ($info["rent_number"]); ?>"  name="rent_numbers">
+            <div>
+                <div class="re-room-right" id="companyNumber"></div>
+            </div>
+        </div>
+        <div class="re-name">
+            <p>公司地址:</p>
+            <input type="text" placeholder="&nbsp;&nbsp;选填" id="company_address" value="<?php echo ($info["company_address"]); ?>" name="company_address">
+            <div>
+                <div class="re-room-right" id="companyAddress"></div>
+            </div>
+            <div>
+            </div>
+        </div>
+        <div class="re-name re-book" style="position: relative">
+            <p>商业计划书:</p>
+            <div>
+                <?php if($info["company_prospectus"] == ''): ?><a href="javascript:;" class="re-file">
+                    <span id="htmlcs">点击上传PDF、PPT、word文件</span>
+                    <input type="file" name="company_prospectus" id="" value="<?php echo ($info["company_prospectus"]); ?>" onchange="filefujianChange(this);">
+                </a>
+                <?php else: ?>
+
+                <a href="javascript:;" class="re-file">
+                    <span id="htmlcs">点击上传PDF、PPT、word文件</span>
+                    <input type="file" name="company_prospectus" id="" value="" onchange="filefujianChange(this);">
+                </a>
+                &nbsp;&nbsp;&nbsp;<p style="font-size: 18px;margin-left: 160px;margin-top: 20px;">已上传文件：<?php echo ($info["company_prospectus"]); ?></p><br/><br/><?php endif; ?>
+            </div>
+            <div style="position: absolute;left: 468px;bottom: 13px;">
+                <div class="re-room-right"></div>
+                <div class="re-room-error">
+                    <p class="re-image-error"></p>
+                    <p style="line-height: 40px">请上传正确的计划书 </p>
+                </div>
+            </div>
+        </div>
+        <input type="button" value="提交申请" id="re-submit" style="cursor:auto">
+    </form>
+</div>
+<script>
+    function filefujianChange(target) {
+        var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
+        var fileSize = 0;
+        if (isIE && !target.files) {
+            var filePath = target.value;
+            var fileSystem = new ActiveXObject("Scripting.FileSystemObject");
+            var file = fileSystem.GetFile(filePath);
+            fileSize = file.Size;
+        } else {
+            fileSize = target.files[0].size;
+        }
+        var size = fileSize / 1024;
+        if (size > 10000) {
+            alert("附件不能大于10M");
+            target.value = "";
+            return false;
+        }
+        var name = target.value;
+        var fileName = name.substring(name.lastIndexOf(".") + 1).toLowerCase();
+        var Name = name.substring(name.lastIndexOf("\\") + 1).toLowerCase();
+        if (fileName != "pdf" && fileName != "ppt" && fileName != "docx" && fileName != "doc" && fileName != "pps" && fileName != "dps" && fileName != "pptxs") {
+            $('.re-book .re-room-right').hide();
+            $('.re-book .re-room-error').show();
+            target.value = "";
+            return
+        } else {
+            $('#htmlcs').html(Name);
+            $('.re-book .re-room-error').hide();
+            $('.re-book .re-room-right').show();
+        }
+    }
+    $(function () {
+        var men = $('#company_person'),
+                regex = /^[1][3|4|5|7|8][\d]{9}$/,
+                num = $('#company_phone');
+        men.blur(function () {
+            var x = men.val();
+            if (x == ""||x.length <2) {
+                $('#re-submit').attr('disabled','disabled');
+                $('.re-men .re-room-right').hide();
+                $('.re-men .re-room-error').show();
+            } else {
+                $('#re-submit').removeAttr("disabled");
+                $('.re-men .re-room-error').hide();
+                $('.re-men .re-room-right').show();
+            }
+        });
+        num.blur(function () {
+            var x = num.val();
+            if (!regex.test(x)){
+                $('#re-submit').attr('disabled','disabled');
+                $('.re-num .re-room-right').hide();
+                $('.re-num .re-room-error').show();
+            }else{
+                $('#re-submit').removeAttr("disabled");
+                $('.re-num .re-room-error').hide();
+                $('.re-num .re-room-right').show();
+            }
+        })
+    });
+    $('.re-choose-men').click(function () {
+        $('.re-choose-area').removeClass('re-choose-activate');
+        $('#re-area').hide();
+        $(this).addClass('re-choose-activate');
+        $('#re-work').show()
+    });
+    $('.re-choose-area').click(function () {
+        $('.re-choose-men').removeClass('re-choose-activate');
+        $('#re-work').hide();
+        $(this).addClass('re-choose-activate');
+        $('#re-area').show()
+    })
+        $('#company_name').blur(function () {
+            if($('#company_name').val().length > 0){
+                $('#companyName').show();
+            }else{
+                $('#companyName').hide();
+            }
+        });
+        $('#re-work').blur(function () {
+            if($('#re-work').val().length > 0){
+                $('#companyNumber').show();
+            }else{
+                $('#companyNumber').hide();
+            }
+        });
+        $('#re-area').blur(function () {
+            if($('#re-area').val().length > 0){
+                $('#companyNumber').show();
+            }else{
+                $('#companyNumber').hide();
+            }
+        });
+        $('#company_intro').blur(function () {
+            if($('#company_intro').val().length > 0){
+                $('#companyIntro').show();
+            }else{
+                $('#companyIntro').hide();
+            }
+        });
+        $('#company_address').blur(function () {
+            if($('#company_address').val().length > 0){
+                $('#companyAddress').show();
+            }else{
+                $('#companyAddress').hide();
+            }
+        });
+    $('#re-submit').click(function () {
+        var x = $('#company_person').val();
+        if (x == ""||x.length <2) {
+            $('#re-submit').attr('disabled','disabled');
+            $('.re-men .re-room-right').hide();
+            $('.re-men .re-room-error').show();
+            return false;
+        } else {
+            $('#re-submit').removeAttr("disabled");
+            $('.re-men .re-room-error').hide();
+            $('.re-men .re-room-right').show();
+        }
+        var regex = /^[1][3|4|5|7|8][\d]{9}$/;
+        var x = $('#company_phone').val();
+        if (!regex.test(x)){
+            $('#re-submit').attr('disabled','disabled');
+            $('.re-num .re-room-right').hide();
+            $('.re-num .re-room-error').show();
+            return false;
+        }else{
+            $('#re-submit').removeAttr("disabled");
+            $('.re-num .re-room-error').hide();
+            $('.re-num .re-room-right').show();
+        }
+        $('#RoomForm').submit();
+    });
+
+</script>
+</body>
+</html>

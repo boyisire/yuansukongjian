@@ -1,0 +1,141 @@
+<?php
+/*************************************************
+ * file description
+ * @filename:           InnovateCustomerModel.class.php
+ * @desc:               创客中国登记表
+ * @tables:             [kj_innovate_customer]
+ * @date:               2016-09-09
+ * @author:             大业
+ * @version:            v1.0
+ *************************************************/
+namespace Common\Model;
+use Common\Model\BaseModel;
+class InnovateCustomerModel extends BaseModel{
+
+	/**
+	 * [查询表 innovate_customer 信息]
+	 * @method getInfo
+	 * @author 大业
+	 * @create 2016-09-09
+	 * @param  [type] $condtion [查询条件]
+	 * @param  [type] $pageSet [分页信息]
+	 * @return [type] [description]
+	 */
+	public function getInfo($condtion,$pageSet)
+	{
+        $where = $condtion;
+        $field = array(
+        	'id',						//自增ID
+        	'uid',						//用户ID
+        	'aid',						//活动ID
+			'ic_company_name',			//公司名称
+			'ic_company_desc',			//公司描述
+			'ic_position_prov',			//位置-省
+			'ic_position_city',			//位置-市
+			'ic_position_dist',			//位置-区
+			'ic_subordinate_industry',	//所属行业
+			'ic_product_link',			//产品链接
+			'ic_financing_stage',		//融资阶段
+			'ic_principal',				//负责人
+			'ic_mobile',				//联系方式
+			'ic_prospectus', 			//企划书
+			'is_contact', 				//0-未联系 1-联系
+			'is_pass', 					//0-未操作 1-通过 2-未通过
+			'is_del', 					//0-未删除 1-删除
+			'add_time',					//添加时间
+        );
+        $order = 'id desc';
+        return $this->selectPageData($field,$where,$order,10);
+	}
+
+	/**
+	 * [根据用户ID显示查询的信息]
+	 * @method showInfo
+	 * @author 大业
+	 * @create 2016-08-16
+	 * @param  [int] $id [记录ID]
+	 * @param  [int] $uid [用户ID]
+	 * @param  [int] $rid [活动ID]
+	 * @param  [string] $search [搜索信息]
+	 * @param  [string] $style [格式化数据样式]
+	 * @return [array] [输出信息]
+	 */
+	public function showInfo($id,$aid,$uid=null,$search,$style)
+	{
+		//查询条件(传入参数为空时,取所有未删除的数据)
+		$where = 'is_del=0 ';
+		//记录ID
+		if(!empty($id)){
+			$where = $where.' and id='.$id;
+		}
+		//活动ID
+		if(!empty($aid)){
+			$where = $where.' and aid='.$aid;
+		}
+		//用户ID
+		if(!empty($uid)){
+			$where = $where.' and uid='.$uid;
+		}
+		//查询条件
+		if(!empty($search)){
+			$where = $where.' and '.$search;
+		}
+		//dump($where);
+		//取表数据
+		$Info = $this->getInfo($where);
+
+		//将显示的信息进行转换并输出
+		$List = $this->fmtInfo($Info['list'],$style);
+		return array('list'=>$List,'page'=>$Info['page']);
+	}
+
+
+	/**
+	 * [格式化输出信息]
+	 * @method fmtInfo
+	 * @author 大业
+	 * @create 2016-08-17
+	 * @param  [array] $info [要格式的信息]
+	 * @param  [string] $mark [常用:common,后台:cms,前台:home(默认)]
+	 * @return [array] [返回信息]
+	 */
+	private function fmtInfo($info,$style)
+	{
+		if(empty($info)){return null;}
+
+		//常用数据
+		if($mark == 'common'){
+			foreach ($info as $key => $value) {
+				$List[$key]['aid'] 		= $value['aid'];
+				$List[$key]['uid'] 		= $value['uid'];
+				$List[$key]['name'] 	= $value['ic_company_name'];
+				$List[$key]['principal']= $value['ic_prospectus'];
+				$List[$key]['mobile'] 	= $value['ic_mobile'];
+			}
+
+		}else{
+			foreach ($info as $key => $value) {
+				$List[$key]['id'] 		= $value['id'];
+				$List[$key]['aid'] 		= $value['aid'];
+				$List[$key]['uid'] 		= $value['uid'];
+				$List[$key]['name'] 	= $value['ic_company_name'];
+				$List[$key]['desc'] 	= $value['ic_company_desc'];
+				$List[$key]['prov'] 	= $value['ic_position_prov'];
+				$List[$key]['city'] 	= $value['ic_position_city'];
+				$List[$key]['dist']		= $value['ic_position_dist'];
+				$List[$key]['industry'] = $value['ic_subordinate_industry'];
+				$List[$key]['product'] 	= $value['ic_product_link'];
+				$List[$key]['financing']= $value['ic_financing_stage'];
+				$List[$key]['principal']= $value['ic_principal'];
+				$List[$key]['mobile'] 	= $value['ic_mobile'];
+				$List[$key]['prospectus']= $value['ic_prospectus'];
+				$List[$key]['is_contact']= $value['is_contact'];
+				$List[$key]['is_pass'] 	= $value['is_pass'];
+				$List[$key]['is_del'] 	= $value['is_del'];
+				$List[$key]['add_time'] = $value['add_time'];
+			}
+		}
+		return $List;
+	}
+
+}

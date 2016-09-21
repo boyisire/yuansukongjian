@@ -1,0 +1,172 @@
+<?php
+namespace Common\Model;
+use Common\Model\BaseModel;
+/**
+ * 用户登录操作model
+ * @使用表 cms_account
+ */
+class entry_checkModel extends BaseModel{
+
+	/**
+	 * 查看申请入住页面列表
+	 * @param   array           当前用户id
+	 * @return	boolean			操作是否成功
+	 * @return  msg             提示信息
+	 * @author  zhanganran
+	 * @time    2016-8-17
+	 */
+	public function showList($where){
+		$showList = $this->selectPageData('',$where,'add_time','1');
+		foreach ($showList['list'] as $k=>$v){
+			//用户名
+			$showList['list'][$k]['user_name'] = D('RoomInfo')->getUserInfo($v['user_id'])['user_nicename']?D('RoomInfo')->getUserInfo($v['user_id'])['user_nicename']:'-';
+			//用户手机号
+			$showList['list'][$k]['user_phone'] = D('RoomInfo')->getUserInfo($v['user_id'])['user_mobile']?D('RoomInfo')->getUserInfo($v['user_id'])['user_mobile']:'-';
+			//关于空间用户的，空间名称，空间联系人，联系人手机号
+			$condition = 'id='.$v['room_id'];
+			$showList['list'][$k]['room_name'] = D('RoomInfo')->getInfo($condition)['list'][0]['room_name']?D('RoomInfo')->getInfo($condition)['list'][0]['room_name']:'-';
+			$showList['list'][$k]['room_user'] = D('RoomInfo')->getInfo($condition)['list'][0]['room_linkman']?D('RoomInfo')->getInfo($condition)['list'][0]['room_linkman']:'-';
+			$showList['list'][$k]['room_phone'] = D('RoomInfo')->getInfo($condition)['list'][0]['room_mobile']?D('RoomInfo')->getInfo($condition)['list'][0]['room_mobile']:'-';
+			//超时操作
+//			dump($this->time_tran($v['add_time']));
+			$showList['list'][$k]['overtime'] = $this->time_tran($v['add_time']);
+		}
+		return $showList;
+	}
+
+	/**
+	 * 超时操作
+	 */
+	private function time_tran($the_time){
+		$now_time = date("Y-m-d H:i:s",time());
+		$now_time = strtotime($now_time);
+//		$show_time = strtotime($the_time);
+		$show_time = $the_time;
+		$dur = $now_time - $show_time;
+		if($dur < 0){
+			return $the_time;
+		}else{
+			if($dur < 60){
+				return $dur.'秒';
+			}else{
+				if($dur < 3600){
+					return floor($dur/60).'分钟';
+				}else{
+					if($dur < 86400){
+						return floor($dur/3600).'小时';
+					}else{
+						if($dur < 259200){//3天内
+							return floor($dur/86400).'天';
+						}elseif($dur > 259200){
+							return "<p style='color:red'>".floor($dur/86400)."天".floor($dur/86400/3600)."小时".floor($dur/86400/3600/60)."分钟</p>";
+						}else{
+							return "-天-小时-分";
+						}
+					}
+				}
+			}
+		}
+	}
+	/**
+	 * 查看申请入住详情页面列表
+	 * @param   array           当前用户id
+	 * @return	boolean			操作是否成功
+	 * @return  msg             提示信息
+	 * @author  zhanganran
+	 * @time    2016-8-19
+	 */
+	public function showInfo($id){
+		$condition = "id = ".$id;
+		$showInfo['list'] = $this->findData($condition);
+		$showInfo['list']['room_name'] = D('RoomInfo')->getInfo($condition)['list'][0]['room_name']?D('RoomInfo')->getInfo($condition)['list'][0]['room_name']:'-';
+		$showInfo['list']['room_user'] = D('RoomInfo')->getInfo($condition)['list'][0]['room_linkman']?D('RoomInfo')->getInfo($condition)['list'][0]['room_linkman']:'-';
+
+		//查找备注表内信息
+		$conditions['type'] = array('eq','2');
+		$conditions['r_id'] = array('eq',$id);
+		$showInfo['remark'] = D('operation_subsidiary')->showList($conditions);
+		foreach ($showInfo['remark'] as $k => $v){
+			$showInfo['remark'][$k]['user_name'] = D('RoomInfo')->getUserInfo($v['user_id'])['user_nicename']?D('RoomInfo')->getUserInfo($v['user_id'])['user_nicename']:'-';
+		}
+		return $showInfo;
+	}
+
+	/**
+	 * 修改是否已经联系
+	 * @param   array           当前用户id，是否联系
+	 * @return	boolean			操作是否成功
+	 * @return  msg             提示信息
+	 * @author  zhanganran
+	 * @time    2016-8-19
+	 */
+	public function saveRelation($condition,$save){
+		$isSave = $this->editData($condition,$save);
+		return $isSave;
+	}
+
+	/**
+	 * 修改是否通过
+	 * @param   array           当前用户id，是否联系
+	 * @return	boolean			操作是否成功
+	 * @return  msg             提示信息
+	 * @author  zhanganran
+	 * @time    2016-8-22
+	 */
+	public function saveIsPass($condition,$save){
+		$isSave = $this->editData($condition,$save);
+		return $isSave;
+	}
+
+	/**
+	 * 删除操作
+	 * @param   array           当前用户id，是否联系
+	 * @return	boolean			操作是否成功
+	 * @return  msg             提示信息
+	 * @author  zhanganran
+	 * @time    2016-8-22
+	 */
+	public function delEntry($condition,$id){
+		$isSave = $this->deleteData($condition);
+		if($isSave){
+			$entryName = $this->findData($condition,'company_name');
+			$add['type'] = 2;
+			$add['r_id'] = $id;
+			$add['user_id'] = $_SESSION['s_uinfo']['uid'];
+			$add['op_type'] = '2';
+			$add['op_desc'] = $_SESSION['s_uinfo']['user_name']."在".date('Y-m-d H:i:s',time())."删除了".$entryName['company_name']."的申请信息";
+			$add['add_time'] = time();
+			$addRemark = D('operation_subsidiary')->addRemark($add);
+		}
+		return $isSave;
+	}
+
+	/**
+	 * 申请人列表
+	 * @param   array           当前用户id，是否联系
+	 * @return	boolean			操作是否成功
+	 * @return  msg             提示信息
+	 * @author  zhanganran
+	 * @time    2016-8-23
+	 */
+	public function proposer($where){
+		$showList = $this->selectData('user_id,room_id,add_time',$where,'add_time','1');
+		foreach($showList as $k=>$v){
+			$showList[$k]['room_name'] = D('RoomInfo')->getRoomInfo($v['room_id'],'room_name');
+		}
+		return $showList;
+	}
+
+	/**
+	 * 整合数据
+	 * @param   array           二维数组 需要修改的数组
+	 * @return	boolean			整合后数据
+	 * @author  zhanganran
+	 * @time    2016-8-23
+	 */
+	public function concordance($list){
+		foreach ($list as $k=>$v){
+			$list[$k]['user_name'] = D('RoomInfo')->getUserInfo($v['user_id'])['user_nicename'];
+		}
+		return $list;
+	}
+}

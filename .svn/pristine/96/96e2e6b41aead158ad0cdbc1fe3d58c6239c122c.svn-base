@@ -1,0 +1,62 @@
+<?php
+/*************************************************
+ * file description
+ * @filename:           IndexController.class.php
+ * @desc:               后台-空间合作控制器
+ * @tables:             [room_info;wp_user]
+ * @date:               2016-8-17
+ * @author:             大业
+ * @version:            v1.0
+ *************************************************/
+namespace Cms\Controller;
+use Common\Controller\CmsBaseController;
+
+
+class SymbiosisController extends CmsBaseController{
+
+    /**
+     * [空间合作主页]
+     * @method index
+     * @author 大业
+     * @create 2016-08-17
+     * @return [void] [description]
+     */
+	public function index(){
+		// 分配菜单数据
+        $uid=6;
+        $Info = D('RoomInfo')->showInfo($uid,$rid,$search,$style='cms');
+
+        //dump($Info['info']);exit;
+		echo "SymbiosisController!!";
+        $TestInfo="wo shi yi tiao ce shi shu ju!";
+        $this->assign('TestInfo',$TestInfo);
+        $this->assign('Info',$Info['info']);
+        $this->assign('Page',$Info['page']);
+        $this->display('index');
+
+    }
+
+
+    /**
+     * [根据空间ID修改其状态为:删除]
+     * @method delData
+     * @author 大业
+     * @create 2016-08-17
+     * @param  [type] $rid [description]
+     * @return [type] [description]
+     */
+    public function delData($rid)
+    {
+        if(empty($rid)){return false;}
+        $where='id='.$rid;
+        $data='is_del=1';
+        $Res = D('RoomInfo')->editData($where,$data);
+        if($Res){
+            echo "删除成功!";
+        }else{
+            echo "删除失败!";
+        }
+
+    }
+
+}

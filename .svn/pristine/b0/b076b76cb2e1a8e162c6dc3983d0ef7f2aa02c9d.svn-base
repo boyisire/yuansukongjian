@@ -1,0 +1,90 @@
+<?php
+namespace Cms\Controller;
+use Common\Controller\CmsBaseController;
+/**
+ * 后台首页控制器
+ */
+class SpaceController extends CmsBaseController{
+	/**
+	 * 首页
+	 */
+	public function index(){
+		// 分配菜单数据
+		$this->display();
+	}
+	
+	/**
+	* 申请入住列表页面
+	*/
+	public function entryCheck(){
+		if($_REQUEST['sh']){
+			$where['rent_status'] = $_REQUEST['sh'];
+		}else{
+			$where = '1=1';
+		}
+		$showList = D('entry_check')->showList($where);
+		$this->assign('showList',$showList['list']);
+		$this->assign('showPage',$showList['page']);
+		$this->display();
+	}
+
+	/**
+	 * 申请入住详情页面
+	 */
+	public function projectDetail(){
+		$id = I('id');
+		if($id){
+			$showInfo = D('entry_check')->showInfo($id);
+			$this->assign('showInfo',$showInfo['list']);
+			$this->assign('showInfoRemark',$showInfo['remark']);
+		}else{
+			$this->error('参数错误','entryCheck');
+		}
+		$this->display();
+	}
+
+	/**
+	 * 提交备注
+	 */
+	public function getRemark(){
+		$post = I();
+		if($post){
+			$post['optionsRadios'] = $post['optionsRadios'] == 1?$post['optionsRadios']:'0';
+			$condition = "id = ".$post['productId'];
+			$save['relation_status'] = $post['optionsRadios'];
+			$saveRelation = D('entry_check')->saveRelation($condition,$save);
+			$add['type'] = 2;
+			$add['r_id'] = $post['productId'];
+			$add['user_id'] = $_SESSION['s_uinfo']['uid'];
+			$add['op_type'] = '6';
+			$add['op_desc'] = $post['remark'];
+			$add['add_time'] = time();
+			$addRemark = D('operation_subsidiary')->addRemark($add);
+			if($addRemark){
+				$this->success('备注成功',"projectDetail/id/{$_POST['productId']}");
+			}else{
+				$this->error('备注失败',"projectDetail/id/{$_POST['productId']}");
+			}
+		}else{
+			$this->error('参数错误',"projectDetail/id/{$_POST['productId']}");
+		}
+	}
+
+	/**
+	 * 修改申请通过不通过
+	 */
+	public function saveIsPass(){
+		$id = I('id');
+		if($id){
+			$showInfo = D('entry_check')->saveIsPass($id);
+			if($showInfo){
+				$this->success('修改成功',"entryCheck");
+			}else{
+				$this->error('修改失败',"entryCheck");
+			}
+		}else{
+			$this->error('参数错误','entryCheck');
+		}
+
+	}
+}

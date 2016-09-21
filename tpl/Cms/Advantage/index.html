@@ -1,0 +1,126 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+     <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="wrapper wrapper-content">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content mailbox-content">
+                                <div class="file-manager">
+                                    <a class="btn btn-block btn-primary compose-mail" href="__URL__/add">添加标签</a>
+                                    <div class="space-25"></div>
+                                    <!-- <h5>文件夹</h5>
+                                    <ul class="folder-list m-b-md" style="padding: 0">
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-inbox "></i> 收件箱 <span class="label label-warning pull-right">16</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-envelope-o"></i> 发信</a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-certificate"></i> 重要</a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-file-text-o"></i> 草稿 <span class="label label-danger pull-right">2</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-trash-o"></i> 垃圾箱</a>
+                                        </li>
+                                    </ul>-->
+                                    <h5>分类</h5>
+                                    <ul class="category-list" style="padding: 0">
+                                        <li>
+                                            <a href="__URL__/index/is_use/2"> <i class="fa fa-circle text-navy"></i> 使用中</a>
+                                        </li>
+                                        <li>
+                                            <a href="__URL__/index/is_use/1"> <i class="fa fa-circle text-danger"></i> 已暂停</a>
+                                        </li>
+  <li>
+                                            <a href="__URL__/index/is_del/2"> <i class="fa fa-circle text-primary"></i>已删除</a>
+                                        </li>
+                                        <li>
+                                            <a href="__URL__/index/is_del/1"> <i class="fa fa-circle text-info"></i> 未删除</a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 animated fadeInRight">
+                        <div class="mail-box-header">
+
+                            <form method="get" action="__URL__/index" class="pull-right mail-search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-sm" name="search_name" placeholder="搜索标签名称">
+                                    <div class="input-group-btn">
+                                        <button type="submit" class="btn btn-sm btn-primary">
+                                            搜索
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <h2>
+                    标签列表(<?php echo count($list['list']);?>)
+                </h2>
+                            <div class="mail-tools tooltip-demo m-t-md">
+                                <div class="btn-group pull-right" style="padding:30px 30px; text-align:right;font-size:16px;font-weight:blod;">
+                                                 
+            	<div class="b_page"><--{$list['page']}--></div>
+           
+                                </div>
+                                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="刷新邮件列表"><i class="fa fa-refresh"></i> 刷新</button>
+  <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="标为垃圾邮件"><i class="fa fa-trash-o"></i> 
+                                </button>
+                
+                            </div>
+                        </div>
+                        <div class="mail-box">
+
+                            <table class="table table-hover table-mail">
+                                <tbody>
+                                    <tr class="unread">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact">标签名称
+                                        </td>
+                                        <td class="mail-ontact">排序
+                                        </td>
+                                        <td class="mail-ontact">标签状态</td>
+                                         <td class="mail-ontact">是否使用</td>
+                                        <td class="mail-ontact">操作</td>
+                                    </tr>
+                                    <{volist name="list['list']" id="vo"}>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><--{$vo.label_name}-->
+                                        </td>
+                                        <td class="mail-ontact"><--{$vo.sortord}-->
+                                        </td>
+                                       <td class="mail-ontact"><{if condition="$vo.is_del eq '1'"}><i class="fa fa-circle text-primary"></i>已删除<{else /}><i class="fa fa-circle text-info"></i>未删除<{/if}></td>
+                                         <td class="mail-ontact"><{if condition="$vo.is_use eq '0'"}><i class="fa fa-circle text-navy"></i>使用中<{else /}><i class="fa fa-circle text-danger"></i>暂停使用<{/if}></td>
+                                        <td class="mail-ontact">
+                                            <a href="__URL__/edit/id/<--{$vo.id}-->" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a><br/><a href="__URL__/del/id/<--{$vo.id}-->" class="btn btn-white btn-sm" onclick="if(confirm('确定删除这个标签吗?')==false)return false;"><i class="fa fa-trash-o"></i> 删除 </a></td>
+                                    </tr>
+                                    <{/volist}>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+        </div>
+    </div>
+    </div>
+
+<{include file="./tpl/Cms/Public/footer.html" /}>

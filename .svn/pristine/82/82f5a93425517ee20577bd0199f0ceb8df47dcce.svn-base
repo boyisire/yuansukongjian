@@ -1,0 +1,160 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>亚杰手机专题</title>
+    <script src="/yuansukongjian/tpl/Public/js/jquery/jquery-1.7.2.min.js"></script>
+     <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/activity/phone/reset.css">
+    <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/activity/phone/mobileheader.css">
+</head>
+<body>
+<header id="masthead" class="site-header">
+
+    <nav id="top-header">
+        <div class="top-nav">
+            <div id="user-profile">
+                发现创业价值！
+            </div>
+            <div id="user-profile" style="float:right;padding-right:10px;">
+                <a href="http://www.yuansuzhouqi.cn/wp-login.php?action=register">注册</a>
+                <!--<a href="usereg.html">立即注册</a>-->
+
+                <span class="nav-set">
+				 	<span class="nav-login">
+				 						|<a
+                            href="http://www.yuansuzhouqi.cn/wp-login.php?redirect_to=http%3A%2F%2Fwww.yuansuzhouqi.cn">登录</a>
+										</span>
+				</span>
+            </div>
+            <!--<ul class="default-menu"><li><a href="http://www.yuansuzhouqi.cn/wp-admin/nav-menus.php">设置菜单</a></li></ul>-->
+        </div>
+    </nav><!-- #top-header -->
+
+    <div id="menu-box">
+        <div id="top-menu">
+            <hgroup class="logo-site">
+                <p class="site-title">
+                    <a href="http://www.yuansuzhouqi.cn/"><img
+                            src="http://www.yuansuzhouqi.cn/wp-content/uploads/2016/06/220-50-logo-2.png"
+                            alt="元素周期"></a>
+                </p>
+            </hgroup><!-- .logo-site -->
+
+            <div id="site-nav-wrap">
+                <!-- <div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close">×</a></div>-->
+                <nav id="site-nav" class="main-nav">
+                    <a href="#sidr-main" id="navigation-toggle" class="bars"><i class="fa fa-bars" id="fa-fontsize"></i></a>
+                </nav><!-- #site-nav -->
+            </div><!-- #site-nav-wrap -->
+            <div class="clear"></div>
+        </div><!-- #top-menu -->
+    </div><!-- #menu-box -->
+</header>
+<div id="search-main" style="display: none;">
+    <div id="searchbar">
+        <ul id="menu-menu-1" class="down-menu nav-menu sf-js-enabled sf-arrows"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6"><a href="http://www.yuansuzhouqi.cn">元素首页</a></li>
+            <li id="menu-item-45" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-45"><a href="http://www.yuansuzhouqi.cn/archives/category/element-information/">元素资讯</a></li>
+            <li id="menu-item-46" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46"><a href="http://www.yuansuzhouqi.cn/archives/category/element-newinformation/">元素快讯</a></li>
+            <li id="menu-item-22" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22"><a href="http://www.yuansuzhouqi.cn/archives/category/element-marvellous/">元素科技</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="h5-head">
+    <div class="h5-head1"></div>
+    <div class="h5-page1"></div>
+    <div class="h5-page2">
+        <p class="page2-title">主办方</p>
+        <p class="page2-text">亚杰汇创始人俱乐部</p>
+        <p class="page2-title">协办方</p>
+        <p class="page2-text">元素周期 - 创业服务平台</p>
+        <p class="page2-title">时间</p>
+        <p class="page2-text page2-line">2016.9.17</p>
+        <p class="page2-title">地址</p>
+        <p class="page2-text">北京科技大学奥林匹克体育馆</p>
+    </div>
+</div>
+<div class="h5-ranking">
+    <div class="h5-ranking-text">
+        <p><span class="h5-team">第1名战队</span><span class="h5-DB">在决赛中增加XXXX分贝</span></p>
+        <p><span class="h5-team">第2名战队</span><span class="h5-DB">在决赛中增加XXXX分贝</span></p>
+        <p><span class="h5-team">第3名战队</span><span class="h5-DB">在决赛中增加XXXX分贝</span></p>
+        <p><span class="h5-team">第4名战队</span><span class="h5-DB">在决赛中增加XXXX分贝</span></p>
+        <p><span class="h5-team">第5名战队</span><span class="h5-DB">在决赛中增加XXXX分贝</span></p>
+        <p><span class="h5-team">第6名战队</span><span class="h5-DB">在决赛中增加XXXX分贝</span></p>
+        <p><span class="h5-team">第7名战队</span><span class="h5-DB">在决赛中增加XXXX分贝</span></p>
+        <p><span class="h5-team">第8名战队</span><span class="h5-DB">在决赛中增加XXXX分贝</span></p>
+        <p><span class="h5-team">第9名战队</span><span class="h5-DB">在决赛中增加XXXX分贝</span></p>
+        <p><span class="h5-team">第10名战队</span><span class="h5-DB">在决赛中增加XXXX分贝</span></p>
+    </div>
+</div>
+<div class="h5-mens">
+    <h2>特邀嘉宾</h2>
+    <img src="/yuansukongjian/tpl/Public/images/home/activity/h5line-min.png" alt="">
+    <div class="clear"></div>
+    <div class="h5-men">
+    </div>
+    <div class="h5-men" style="background-image: url(/yuansukongjian/tpl/Public/images/home/activity/h5ping_05-min.png);">
+    </div>
+    <div class="h5-men" style="background-image: url(/yuansukongjian/tpl/Public/images/home/activity/h5yao_05-min.png);">
+    </div>
+</div>
+<div class="h5-teams">
+    <h2>参赛队伍</h2>
+    <img src="/yuansukongjian/tpl/Public/images/home/activity/h5line-min.png" alt="">
+    <div class="clear"></div>
+    <div style="height: 5.6rem;background-color: #000;">
+        <div class="h5-team-ever h5-team-ever1" style="background-image: url(/yuansukongjian/tpl/Public/images/home/activity/h5-one.png);"></div>
+        <div class="h5-team-ever" style="background-image: url(/yuansukongjian/tpl/Public/images/home/activity/h5-two.png);"></div>
+        <div class="h5-team-ever h5-team-ever1" style="background-image: url(/yuansukongjian/tpl/Public/images/home/activity/h5-three.png);"></div>
+        <div class="h5-team-ever" style="background-image: url(/yuansukongjian/tpl/Public/images/home/activity/h5-four.png);"></div>
+        <div class="h5-team-ever h5-team-ever1" style="background-image: url(/yuansukongjian/tpl/Public/images/home/activity/h5-five.png);"></div>
+        <div class="h5-team-ever" style="background-image: url(/yuansukongjian/tpl/Public/images/home/activity/h5-six.png);"></div>
+        <div class="h5-team-ever h5-team-ever1" style="background-image: url(/yuansukongjian/tpl/Public/images/home/activity/h5-seven.png);"></div>
+        <div class="h5-team-ever" style="background-image: url(/yuansukongjian/tpl/Public/images/home/activity/h5-eight.png);"></div>
+        <div class="h5-team-ever h5-team-ever1" style="background-image: url(/yuansukongjian/tpl/Public/images/home/activity/h5-nine.png);"></div>
+        <div class="h5-team-ever" style="background-image: url(/yuansukongjian/tpl/Public/images/home/activity/h5-ten.png);"></div>
+    </div>
+    <div class="h5-voteing">
+        <h2>官方投票</h2>
+        <img src="/yuansukongjian/tpl/Public/images/home/activity/h5line-min.png" alt="">
+        <div class="clear"></div>
+        <img src="/yuansukongjian/tpl/Public/images/home/activity/h5-RCcode-min.png" onclick="userCount();" style="display: block;width: 1.425rem;margin: 0.4rem 1.16rem 0.25rem">
+        <p style="font-size: 0.13rem">扫描二维码进入官方投票通道</p>
+        <p style="font-size: 0.13rem;color: #434343;margin-top: 0.55rem">元素周期－创业服务平台 提供技术支持</p>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    document.documentElement.style.fontSize = window.innerWidth / 3.75 + 'px'
+
+    function BottomJumpPage() {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop != 0) {  //滚动到头部部执行事件
+            $('#menu-box').addClass('shadow');
+            $('#search-main').addClass('shadow');
+        }else {
+            $('#menu-box').removeClass('shadow');
+            $('#search-main').removeClass('shadow');
+        }
+    }
+    $(window).scroll(BottomJumpPage);
+    $('#site-nav').click(function () {
+        if ($('#search-main').is(":hidden")){
+            $('#search-main').show()
+        }else {
+            $('#search-main').hide()
+        }
+    })
+    function userCount(){
+		$.ajax({url:"/yuansukongjian/Home/Activity/corpsCount",type:"POST",data:{id:1,cid:10,status:2},dataType:"json",success:function(s){}});
+	}
+</script>
+</body>
+</html>

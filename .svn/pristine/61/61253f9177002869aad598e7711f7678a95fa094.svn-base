@@ -1,0 +1,262 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<style>
+    #re-main {
+        width: 1210px;
+        background-color: #fff;
+        margin: 0 auto;
+        border: 1px solid transparent;
+        overflow: hidden;
+
+    }
+
+    #re-main h3 {
+        font-size: 26px;
+        text-align: center;
+        color: #333;
+        font-weight: bold;
+        margin-top: 133px;
+        margin-bottom: 80px;
+    }
+
+    .re-name {
+        width: 670px;
+        margin-left: 310px;
+        float: left;
+        margin-top: 30px;
+    }
+
+    .re-name > p {
+        float: left;
+        width: 105px;
+        font-size: 18px;
+        color: #333;
+        line-height: 40px;
+        text-align: right;
+        margin-right: 30px;
+    }
+
+    .re-name > input {
+        float: left;
+        width: 334px;
+        height: 40px;
+        border: 1px solid #999;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+
+    .re-name > textarea {
+        width: 334px;
+        height: 126px;
+        border: 1px solid #999;
+        border-radius: 4px;
+        resize: none;
+        background-color: #fff;
+    }
+
+    .re-room-right {
+        background-image: url(images/right.png);
+        width: 21px;
+        height: 21px;
+        margin: 10px 170px 0 10px;
+        display: none;
+        float: left;
+    }
+
+    .re-room-error {
+        display: none;
+    }
+
+    .re-image-error {
+        background-image: url(images/error.png);
+        width: 21px;
+        height: 21px;
+        margin: 10px 10px 0 10px;
+        float: left;
+    }
+
+    .re-choose {
+        width: 172px;
+        height: 40px;
+        border: 1px solid #999;
+        border-radius: 4px;
+        float: left;
+        font-size: 18px;
+        color: #999;
+        cursor: pointer;
+    }
+
+    .re-choose-men {
+        width: 86px;
+        border-right: 1px solid #999999;
+        height: 38px;
+        float: left;
+        line-height: 40px;
+        text-align: center;
+    }
+    .re-choose-area {
+        width: 84px;
+        height: 38px;
+        float: left;
+        line-height: 40px;
+        text-align: center;
+    }
+    .re-choose-activate{
+        background-color: #f5894e;
+        color: #ffffff;
+        font-weight: bold;
+    }
+    .re-file {
+        position: relative;
+        display: inline-block;
+        background: #fff;
+        border: 1px solid #999;
+        border-radius: 17px;
+        padding: 4px 12px;
+        overflow: hidden;
+        color: #3cb1f0;
+        text-decoration: none;
+        text-indent: 0;
+        line-height: 26px;
+        width: 314px;
+        height: 34px;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        margin-left: 10px;
+    }
+    .re-file input {
+        position: absolute;
+        font-size: 100px;
+        right: 0;
+        top: 0;
+        opacity: 0;
+    }
+    .re-file:hover {
+        color: #3cb1f0;
+    }
+    #re-submit{
+        width: 334px;
+        height: 40px;
+        color: #fff;
+        background-color: #3cb1f0;
+        font-size: 18px;
+        font-weight: 500;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        margin: 78px 445px 50px;
+        letter-spacing: 4px;
+    }
+
+</style>
+<body>
+<div id="wrapper">
+    <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-sm-4">
+                    <h2>申请入住</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">主页</a>
+                        </li>
+                        <li>
+                            <strong>修改项目</strong>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px">
+                <div class="feed-activity-list">
+                    <div class="feed-element">
+                        <div class="form-group">
+                            <form action="__URL__/doSaveEntry" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="entryId" value="<--{$info.id}-->">
+                                <div class="re-name">
+                                    <p>公司名称:</p>
+                                    <input type="text" placeholder="&nbsp;&nbsp;选填" name="company_name" value="<--{$info.company_name}-->">
+                                </div>
+                                <div class="re-name">
+                                    <p>简介:</p>
+                                    <textarea placeholder="&nbsp;&nbsp;描述一下贵公司主要的商业模式、产品、业务" name="company_intro" value=""><--{$info.company_intro}--></textarea>
+                                </div>
+                                <div class="re-name re-men" >
+                                    <p>联系人:</p>
+                                    <input type="text" placeholder="&nbsp;&nbsp;不能为空或少于两个字" id="re-men" value="<--{$info.company_person}-->" name="company_person">
+                                    <div>
+                                        <div class="re-room-right"></div>
+                                        <div class="re-room-error">
+                                            <p class="re-image-error"></p>
+                                            <p style="line-height: 40px">不能为空或少于两个字 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="re-name re-num" >
+                                    <p>手机号:</p>
+                                    <input type="text" placeholder="&nbsp;&nbsp;请填写正确的手机号" id="re-num" value="<--{$info.company_phone}-->" name="company_phone">
+                                    <div>
+                                        <div class="re-room-right"></div>
+                                        <div class="re-room-error">
+                                            <p class="re-image-error"></p>
+                                            <p style="line-height: 40px">请填写正确的手机号 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="re-name">
+                                    <p>寻租类型:</p>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" checked="" value="1" id="optionsRadios1" name="rent_type">工位</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" value="2" id="optionsRadios2" name="rent_type">面积</label>
+                                    </div>
+                                </div>
+                                <div class="re-name">
+                                    <p>&nbsp;</p>
+                                    <input type="text" placeholder="&nbsp;&nbsp;工位/面积" value="<--{$info.rent_number}-->  " id="re-work" name="rent_number">
+                                </div>
+                                <div class="re-name">
+                                    <p>公司地址:</p>
+                                    <input type="text" placeholder="&nbsp;&nbsp;选填" value="<--{$info.company_address}-->" name="company_address">
+                                    <div>
+                                    </div>
+                                </div>
+                                <div class="re-name re-book">
+                                    <p>商业计划书:</p>
+                                    <div>
+                                        <{if condition="$info.company_prospectus == ''"}>
+                                        <a href="javascript:;" class="re-file">点击上传PDF、PPT、word文件
+                                            <input type="file" name="company_prospectus" id="" value="<--{$info.company_prospectus}-->" onchange="filefujianChange(this);">
+                                        </a>
+                                        <{else/}>
+                                        &nbsp;&nbsp;&nbsp;<span style="font-size: 18px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已上传文件：<--{$info.company_prospectus}--></span><br/><br/>
+                                        <a href="javascript:;" class="re-file">点击上传PDF、PPT、word文件
+                                            <input type="file" name="company_prospectus" id="" value="" onchange="filefujianChange(this);">
+                                        </a>
+
+                                        <{/if}>
+                                    </div>
+                                    <div style="position: relative;left: 467px;bottom: 44px;">
+                                        <div class="re-room-right"></div>
+                                        <div class="re-room-error">
+                                            <p class="re-image-error"></p>
+                                            <p style="line-height: 40px">请上传正确的计划书 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-4 col-sm-offset-2">
+                                        <button class="btn btn-primary" type="submit">保存内容</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    <{include file="./tpl/Cms/Public/footer_us.html" /}>
+        </div>
+    </div>
+    </div>
+<{include file="./tpl/Cms/Public/footer.html" /}>

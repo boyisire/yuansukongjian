@@ -1,0 +1,202 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+        <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>用户数据分析</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="<--{:U('Cms/Index/index')}-->">主页</a>
+                        </li>
+                        <li>
+                            <a>用户数据分析</a>
+                        </li>
+                        <li>
+                            <strong>图表显示</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+          
+            <div class="wrapper wrapper-content animated fadeInRight">
+              
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>用户投票分析</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                   
+                                   
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    
+                               <p style="height:35px;line-height:35px;font-size:18px;font-weight:bold;">图示数据</p>
+    <div id="main" style="height:600px;"></div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>用户分析详细数据</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+
+                                                <th>ID</th>
+                                                <th>访问IP</th>
+                                                <th>电话</th>
+                                                <th>区域</th>
+                                                <th>时间</th>
+                                                <th>用户轨迹</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <{volist name="result['list']" id="vo"}>
+                                            <tr>
+                                                <td>
+                                                    <--{$vo.id}-->
+                                                </td>
+                                                <td><--{$vo.ip}--></td>
+                                                <td><--{$vo.phone}-->
+                                                </td>
+                                                <td><--{$vo.city}--></td>
+                                                <td><--{$vo.add_time}--></td>
+                                                <td><img src="__HOME_IMAGES__/activity/<--{$vo.time_status}-->.jpg" width="314" height="25"></td>
+                                            </tr>
+                                           <{/volist}>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="ibox-content">
+                            <--{$result['page']}-->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+           <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+        </div>
+    </div>
+
+
+    </div>
+<script src="__PUBLIC_JS__/public/echarts.min.js"></script>
+    <script src="__PUBLIC_JS__/jquery/jquery-1.7.2.min.js"></script>
+   <{include file="./tpl/Cms/Public/footer.html" /}>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main')),
+        data = [{value: <--{$count['dianjitoupiao']}-->, name: '点击投票'},
+	                {value: <--{$count['tianxieshouji']}-->, name: '填写手机号'},
+	                {value: <--{$count['querentoupiao']}-->, name: '确认投票'},
+	                {value: <--{$count['guanzhuweixin']}-->, name: '关注微信'},
+	                {value: <--{$count['canyuyonghu']}-->, name: '参与用户'}],
+        option = {
+        	    tooltip: {
+        	        trigger: 'item',
+        	        formatter: "{a} <br/>{b} : {c}%"
+        	    },
+        	   
+        	    legend: {
+        	        data: ['参与用户','关注微信','点击投票','填写手机号','确认投票']
+        	    },
+        	    calculable: true,
+        	    series: [
+        	        {
+        	            name:'漏斗图',
+        	            type:'funnel',
+        	            left: '10%',
+        	            top: 60,
+        	            //x2: 80,
+        	            bottom: 60,
+        	            width: '80%',
+        	            height:'80%',
+        	            // height: {totalHeight} - y - y2,
+        	            min: 0,
+        	            max: 100,
+        	            minSize: '0%',
+        	            maxSize: '100%',
+        	            sort: 'descending',
+        	            gap: 2,
+        	            label: {
+        	                normal: {
+        	                    show: true,
+        	                    position: 'inside'
+        	                },
+        	                emphasis: {
+        	                    textStyle: {
+        	                        fontSize: 20
+        	                    }
+        	                }
+        	            },
+        	            labelLine: {
+        	                normal: {
+        	                    length: 10,
+        	                    lineStyle: {
+        	                        width: 1,
+        	                        type: 'solid'
+        	                    }
+        	                }
+        	            },
+        	            itemStyle: {
+        	                normal: {
+        	                    borderColor: '#fff',
+        	                    borderWidth: 1
+        	                }
+        	            }
+        	        }
+        	    ]
+        	},
+			updateData = function(data){
+				option.series[0].data = data;
+	        	// 使用刚指定的配置项和数据显示图表
+	        	myChart.setOption(option);
+	        };
+	        setInterval(function(){
+	        	$.ajax({
+					 url: "__URL__/ajaxIndex",  
+			         type: "POST",
+			         data:{cid:'',id: ''},
+			         dataType: "json",
+			         success:function(s){ 
+			        
+			         }
+				});
+	        	
+	        }, 1000);
+	        updateData(data);
+    </script>

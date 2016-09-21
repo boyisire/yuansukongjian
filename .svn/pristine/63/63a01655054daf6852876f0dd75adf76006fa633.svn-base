@@ -1,0 +1,196 @@
+<!--============== 公共头部信息 ===================-->
+<{include file="./tpl/Home/Public/header.html" /}>
+<!--============== 本页独自引用部分 ===================-->
+<!--<script type="text/javascript" src="__PUBLIC_JS__/home/entry/jquery-3.0.0.min.js"></script>-->
+<link rel="stylesheet" href="__PUBLIC_CSS__/home/entry/request.css">
+<link rel="stylesheet" href="__PUBLIC_CSS__/home/entry/reset.css">
+<style>
+
+    .demo--radio {
+        display: none
+    }
+
+
+
+</style>
+<body>
+<div id="re-main">
+    <form action="__URL__/acceptEntry" method="post" enctype="multipart/form-data">
+        <h3>申请入驻“宏泰创新空间”</h3>
+        <input type="hidden" name="entryId" value="<--{$entryId}-->">
+        <input type="hidden" name="room_id" value="<--{$rid}-->">
+        <div class="re-name">
+            <p>公司名称:</p>
+            <input type="text" placeholder="&nbsp;&nbsp;选填" name="company_name" value="<--{$info.company_name}-->">
+        </div>
+        <div class="re-name">
+            <p>简介:</p>
+            <textarea placeholder="&nbsp;&nbsp;描述一下贵公司主要的商业模式、产品、业务" name="company_intro" ><--{$info.company_intro}--></textarea>
+        </div>
+        <div class="re-name re-men" >
+            <p>联系人:</p>
+            <input type="text" placeholder="&nbsp;&nbsp;不能为空或少于两个字" id="re-men" value="<--{$info.company_person}-->" name="company_person">
+            <div>
+                <div class="re-room-right"></div>
+                <div class="re-room-error">
+                    <p class="re-image-error"></p>
+                    <p style="line-height: 40px">不能为空或少于两个字 </p>
+                </div>
+            </div>
+        </div>
+        <div class="re-name re-num" >
+            <p>手机号:</p>
+            <input type="text" placeholder="&nbsp;&nbsp;请填写正确的手机号" id="re-num" value="<--{$info.company_phone}-->" name="company_phone">
+            <div>
+                <div class="re-room-right"></div>
+                <div class="re-room-error">
+                    <p class="re-image-error"></p>
+                    <p style="line-height: 40px">请填写正确的手机号 </p>
+                </div>
+            </div>
+        </div>
+        <div class="re-name">
+            <p>寻租类型:</p>
+            <!--<div class="re-choose">-->
+            <!--<div class="radio">
+                <label class="demo&#45;&#45;label">
+                    <input type="radio" checked="" value="1" class="demo&#45;&#45;radio" id="optionsRadios1" name="rent_type">
+                    <span class="demo&#45;&#45;radioInput"> </span>
+                    <span style="    position: relative;top: -32px;left: 20px;">工位</span>
+                </label>
+            </div>-->
+            <!--<div class="radio">
+                <label class="demo&#45;&#45;label">
+                    <input type="radio" checked="" value="1" class="demo&#45;&#45;radio" id="optionsRadios2" name="rent_type">
+                    <span class="demo&#45;&#45;radioInput"> </span>
+                    <span style="    position: relative;top: -32px;left: 20px;">面积</span>
+                </label>
+            </div>-->
+            <div class="re-choose">
+                <div class="re-choose-men re-choose-activate radio">
+                    <label class="demo--label re-choose-men">
+                        <input type="radio" checked="" value="1" class="demo--radio" id="optionsRadios1" name="rent_type">
+                    <span class="demo--radioInput"> </span>
+                        <span>工位</span>
+                        </label>
+                </div>
+                <div class="re-choose-area radio">
+                    <label class="demo--label re-choose-area">
+                        <input type="radio" checked="" value="1" class="demo--radio" id="optionsRadios2" name="rent_type">
+                        <span class="demo--radioInput"> </span>
+                    <span>面积</span>
+                    </label>
+                </div>
+            </div>
+            <!--</div>-->
+        </div>
+        <div class="re-name">
+            <p>&nbsp;</p>
+            <input type="text" placeholder="&nbsp;&nbsp;请填写您大约需要多少个工位/面积" id="re-work" value="<--{$info.rent_number}-->"  name="rent_number">
+            <input type="text" placeholder="&nbsp;&nbsp;请填写您大约需要面积" style="display: none;" id="re-area" value="<--{$info.rent_number}-->"  name="rent_number"   >
+        </div>
+        <div class="re-name">
+            <p>公司地址:</p>
+            <input type="text" placeholder="&nbsp;&nbsp;选填" value="<--{$info.company_address}-->" name="company_address">
+            <div>
+            </div>
+        </div>
+        <div class="re-name re-book">
+            <p>商业计划书:</p>
+            <div>
+                <{if condition="$info.company_prospectus == ''"}>
+                <a href="javascript:;" class="re-file">点击上传PDF、PPT、word文件
+                    <input type="file" name="company_prospectus" id="" value="<--{$info.company_prospectus}-->" onchange="filefujianChange(this);">
+                </a>
+                <{else/}>
+                &nbsp;&nbsp;&nbsp;<span style="font-size: 18px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已上传文件：<--{$info.company_prospectus}--></span><br/><br/>
+                <a href="javascript:;" class="re-file">点击上传PDF、PPT、word文件
+                    <input type="file" name="company_prospectus" id="" value="" onchange="filefujianChange(this);">
+                </a>
+
+                <{/if}>
+                <!--<a href="javascript:;" class="re-file">点击上传PDF、PPT、word文件-->
+                    <!--<input type="file" name="" id="" onchange="filefujianChange(this);">-->
+                <!--</a>-->
+            </div>
+            <div style="position: relative;left: 467px;bottom: 44px;">
+                <div class="re-room-right"></div>
+                <div class="re-room-error">
+                    <p class="re-image-error"></p>
+                    <p style="line-height: 40px">请上传正确的计划书 </p>
+                </div>
+            </div>
+        </div>
+        <input type="submit" value="提交申请" id="re-submit">
+    </form>
+</div>
+<script>
+    function filefujianChange(target) {
+        var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
+        var fileSize = 0;
+        if (isIE && !target.files) {
+            var filePath = target.value;
+            var fileSystem = new ActiveXObject("Scripting.FileSystemObject");
+            var file = fileSystem.GetFile(filePath);
+            fileSize = file.Size;
+        } else {
+            fileSize = target.files[0].size;
+        }
+        var size = fileSize / 1024;
+        if (size > 10000) {
+            alert("附件不能大于10M");
+            target.value = "";
+            return
+        }
+        var name = target.value;
+        var fileName = name.substring(name.lastIndexOf(".") + 1).toLowerCase();
+        if (fileName != "pdf" && fileName != "ppt" && fileName != "docx") {
+            $('.re-book .re-room-right').hide();
+            $('.re-book .re-room-error').show();
+            target.value = "";
+            return
+        } else {
+            $('.re-book .re-room-error').hide();
+            $('.re-book .re-room-right').show();
+        }
+    }
+    $(function () {
+        var men = $('#re-men'),
+                regex = /^[1][3|4|5|7|8][\d]{9}$/,
+                num = $('#re-num');
+        men.blur(function () {
+            var x = men.val();
+            if (x == ""||x.length <2) {
+                $('.re-men .re-room-right').hide();
+                $('.re-men .re-room-error').show();
+            } else {
+                $('.re-men .re-room-error').hide();
+                $('.re-men .re-room-right').show();
+            }
+        });
+        num.blur(function () {
+            var x = num.val();
+            if (!regex.test(x)){
+                $('.re-num .re-room-right').hide();
+                $('.re-num .re-room-error').show();
+            }else{
+                $('.re-num .re-room-error').hide();
+                $('.re-num .re-room-right').show();
+            }
+        })
+    });
+    $('.re-choose-men').click(function () {
+        $('.re-choose-area').removeClass('re-choose-activate');
+        $('#re-area').hide();
+        $(this).addClass('re-choose-activate');
+        $('#re-work').show()
+    });
+    $('.re-choose-area').click(function () {
+        $('.re-choose-men').removeClass('re-choose-activate');
+        $('#re-work').hide();
+        $(this).addClass('re-choose-activate');
+        $('#re-area').show()
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<?php if (!defined('THINK_PATH')) exit();?><!--============== 公共头部信息 ===================-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>亚杰国际创业音乐节</title>
+    <meta content="亚杰国际创业音乐节，亚杰，创业音乐节" name="description">
+    <script src="/yuansukongjian/tpl/Public/js/jquery/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/activity/phone/reset.css">
+    <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/activity/phone/mobileheader.css">
+</head>
+<body style="overflow:hidden;">
+<header id="masthead" class="site-header">
+
+    <nav id="top-header">
+        <div class="top-nav">
+            <div id="user-profile">
+                发现创业价值！
+            </div>
+            <div id="user-profile" style="float:right;padding-right:10px;">
+               <?php if(!empty($login_uid) && !empty($login_nick_name) && $login_is_login =='1'){?>
+             欢迎来到元素周期：&nbsp;<font color="#3e94a5 "><?php echo $login_nick_name;?></font>
+			  		&nbsp;|<a href="http://www.yuansuzhouqi.cn/usecenter.html">用户中心</a>
+
+										<span class="nav-set">
+				 	<span class="nav-login">
+				 					 	|<a href="http://www.yuansuzhouqi.cn/wp-login.php?action=logout" title=""> 退出</a>
+										</span>
+				</span>
+
+            <?php }else{?>
+                <a href="http://www.yuansuzhouqi.cn/wp-login.php?action=register">注册</a>
+
+                <span class="nav-set">
+				 	<span class="nav-login">|<a href="http://www.yuansuzhouqi.cn/wp-login.php">登录</a></span>
+				</span>
+			<?php }?>
+            </div>
+            <!--<ul class="default-menu"><li><a href="http://www.yuansuzhouqi.cn/wp-admin/nav-menus.php">设置菜单</a></li></ul>-->
+        </div>
+    </nav><!-- #top-header -->
+
+    <div id="menu-box">
+        <div id="top-menu">
+            <hgroup class="logo-site">
+                <p class="site-title">
+                    <a href="http://www.yuansuzhouqi.cn/"><img
+                            src="http://www.yuansuzhouqi.cn/wp-content/uploads/2016/06/220-50-logo-2.png"
+                            alt="元素周期"></a>
+                </p>
+            </hgroup><!-- .logo-site -->
+
+            <div id="site-nav-wrap">
+                <!-- <div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close">×</a></div>-->
+                <nav id="site-nav" class="main-nav">
+                    <a href="#sidr-main" id="navigation-toggle" class="bars"><i class="fa fa-bars" id="fa-fontsize"></i></a>
+                </nav><!-- #site-nav -->
+            </div><!-- #site-nav-wrap -->
+            <div class="clear"></div>
+        </div><!-- #top-menu -->
+    </div><!-- #menu-box -->
+</header>
+<div id="search-main" style="display: none;">
+    <div id="searchbar">
+        <ul id="menu-menu-1" class="down-menu nav-menu sf-js-enabled sf-arrows"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6"><a href="http://www.yuansuzhouqi.cn">元素首页</a></li>
+            <li id="menu-item-45" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-45"><a href="http://www.yuansuzhouqi.cn/archives/category/element-information/">元素资讯</a></li>
+            <li id="menu-item-46" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46"><a href="http://www.yuansuzhouqi.cn/archives/category/element-newinformation/">元素快讯</a></li>
+            <li id="menu-item-22" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22"><a href="http://www.yuansuzhouqi.cn/archives/category/element-marvellous/">元素科技</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+<!--============== 本页独自引用部分 ===================-->
+<link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/MakerChina/phone/BusinessMobile.css">
+<body>
+<div class="bu-banner">
+	<div class="bu-banner-btn">
+		<?php if($EnvCfg['showFlag'] == 1): ?><a href="/yuansukongjian/Home/MakerChina/register/aid/<?php echo ($EnvCfg["aid"]); ?>">
+          	<p>免费报名</p>
+        </a><?php endif; ?>
+		<!-- <a href=""><p>项目报名</p></a> -->
+	</div>
+</div>
+<div class="bu-roughly">
+	<div class="bu-roughly-msg">
+		<h1>节目概述</h1>
+		<p>    《创客中国》是一档大型创投励志真人秀节目，节目汇聚新锐的投资人与新锐的创业者，为资本与项目架起沟通合作的桥梁。每个创业者面对四位投资人讲项目，说团队，展示个人能力以及创业故事，看谁最终赢得投资人的亲睬，获得投资。节目力求呈现一场充满激情和梦想的创业盛会，展示80、90最炫酷的创业想法，探讨当代年亲人的未来选择以及财富观、价值观。为创业者融资、融智、融势。</p>
+	</div>
+</div>
+<div class="bu-message">
+	<div class="bu-message-text">
+		<h1>播出时间</h1>
+		<h2>&Air time</h2>
+		<p>节目播出平台：内蒙古卫视 </p>
+		<p>节目开播时间：（2016年4月20日周三）</p>
+		<p>节目播出时间：全年周播，每期首播</p>
+		<p>重播共四次</p>
+		<p>重播：每周四 12:30/00:30/04:30</p>
+		<p>节目播出网络平台：乐视</p>
+		<p>节目时长：60分钟</p>
+		<p>首播：每周三 晚22：00至23：00</p>
+		<p>广告播出：内蒙古广播电视台FM105.6</p>
+		<p>交通之声周日16:00-17:00</p>
+	</div>
+</div>
+<div class="bu-superiority">
+	<div class="bu-invest">
+		<img src="/yuansukongjian/tpl/Public/images/home/MakerChina/phone/bu-money.png" alt="" style="width: 1.875rem;">
+		<p class="bu-invest-title">项目<span>投</span>资:</p>
+		<p class="bu-invest-text">在这个创业最好的时代，创客云集的江湖，投资人将从资本的角度，用户的角度，人性的角度出发对创客的项目、产品进行考察，并经过与其他投资人的激烈争夺，有可能在现场与创客达成投资意向。</p>
+	</div>
+	<div class="bu-experience">
+		<img src="/yuansukongjian/tpl/Public/images/home/MakerChina/phone/bu-experience.png" alt="" style="width: 1.875rem;float: right">
+		<p class="bu-experience-title">产品体<span>验</span>:</p>
+		<p class="bu-experience-text">投资人可以在创客介绍产品的过程中亲身体验，这样对产品会有较为直观的感受，从而也增强了节目的可视性。</p>
+	</div>
+	<div class="bu-invest">
+		<img src="/yuansukongjian/tpl/Public/images/home/MakerChina/phone/bu-topic.png" alt="" style="width: 1.875rem;">
+		<p class="bu-invest-title">话题引<span>领</span>:</p>
+		<p class="bu-invest-text">挑起话题、深入话题、延展话题；需要从不同角度对创客进行提问，了解他的产品、经营理念一切有关创业的一些列问题。</p>
+	</div>
+	<div class="bu-experience">
+		<img src="/yuansukongjian/tpl/Public/images/home/MakerChina/phone/bu-excavate.png" alt="" style="width: 1.875rem;float: right">
+		<p class="bu-experience-title">商道<span>挖</span>掘:</p>
+		<p class="bu-experience-text">创投F4通过与创客的深度交流，挖掘创业者的创业故事，并分享自己的真实故事与人生感悟。</p>
+	</div>
+	<div class="bu-invest">
+		<img src="/yuansukongjian/tpl/Public/images/home/MakerChina/phone/bu-create.png" alt="" style="width: 1.875rem;">
+		<p class="bu-invest-title"><span>帮</span>住创客:</p>
+		<p class="bu-invest-text">投资人可以站在过来人的角度对创客的项目方向以及产品细节或者经营方式等等方面提供一些建议和帮助，指出不足，答疑解惑，即使对有些创客极不喜欢，也不要表现出不屑，要有包容性，让创业者能有所收获，感受到一种力量给节目营造一种温暖的感觉。</p>
+	</div>
+</div>
+<div class="bu-super">
+	<p style="font-size: 0.18rem;color: #282f4b;display: inline-block">创投</p><p style="color: #c04639;display: inline-block; font-size: 0.3rem;width: 2.9rem;border-bottom: 3px solid #d2d2d2;">F4</p>
+	<div class="bu-super1">
+		<img src="/yuansukongjian/tpl/Public/images/home/MakerChina/phone/bu-gao.png" alt="" style="width: 1.28rem;">
+		<div class="bu-super1-text">
+			<p class="bu-super1-text-p"><span>高鹏：</span>厚持集团创始人、董事长，先后获得清华大学工学学士，经济学硕士，文学博士学位。厚持集团创团是是多元化的投资企业集团，基金管理总规模是20亿元。</p>
+		</div>
+	</div>
+	<div class="bu-super2">
+		<img src="/yuansukongjian/tpl/Public/images/home/MakerChina/phone/bu-liu.png" alt="" style="width: 1.28rem;float: right">
+		<div class="bu-super2-text">
+			<p class="bu-super2-text-p"><span>刘纲：</span>中国本土首批风险基金管理人和创业板最成功的创投人之一，拥14年创业投资基金管理经验，参与创建湘财政券直投部门。</p>
+		</div>
+	</div>
+	<div class="bu-super1">
+		<img src="/yuansukongjian/tpl/Public/images/home/MakerChina/phone/bu-ai.png" alt="" style="width: 1.28rem;">
+		<div class="bu-super1-text">
+			<p class="bu-super1-text-p"><span>艾迪：</span>联创永宣董事长。最活跃的中国女投资人之一，募集和管理基金VC/PE规模超过100亿人民币。曾荣获中国创投委颁发的2105创业投资家突出成就奖</p>
+		</div>
+	</div>
+	<div class="bu-super2">
+		<img src="/yuansukongjian/tpl/Public/images/home/MakerChina/phone/bu-wang.png" alt="" style="width: 1.28rem;float: right">
+		<div class="bu-super2-text">
+			<p class="bu-super2-text-p"><span>王岑：</span>现任宏杉资本创始人。曾任天图资本高级合伙人、投委会成员，华鸿创投集团执行董事以及美国AM-TD证券分析交易员。</p>
+		</div>
+	</div>
+</div>
+<div class="bu-Mr-yuan"></div>
+<div class="bu-down"></div>
+
+
+<script type="text/javascript">
+	document.documentElement.style.fontSize = window.innerWidth / 3.75 + 'px'
+</script>
+</body>
+</html>

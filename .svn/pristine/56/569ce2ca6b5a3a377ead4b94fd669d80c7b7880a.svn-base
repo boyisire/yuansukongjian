@@ -1,0 +1,805 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+
+    <title>元素空间后台管理-www.yuansuzhouqi.cn</title>
+    <link href="/yuansukongjian/tpl/Public/css/public/page.css" rel="stylesheet" type="text/css" />
+    <link href="/yuansukongjian/tpl/Public/css/cms/bootstrap.min.css?v=3.4.0" rel="stylesheet">
+    <link href="/yuansukongjian/tpl/Public/css/cms/font-awesome/css/font-awesome.css?v=4.3.0" rel="stylesheet">
+
+
+    <!-- Gritter -->
+    <link href="/yuansukongjian/tpl/Public/js/cms/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <link href="/yuansukongjian/tpl/Public/css/cms/animate.css" rel="stylesheet">
+    <link href="/yuansukongjian/tpl/Public/css/cms/style.css?v=2.2.0" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="nav-header">
+
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="/yuansukongjian<?php echo $user_header;?>" height="64" width="64"/>
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                                <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $nick_name;?></strong>
+                             </span> <span class="text-muted text-xs block"><?php echo $power_name;?> <b class="caret"></b></span> </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="<?php echo U('Cms/Manager/upload');?>">修改头像</a>
+                                </li>
+                                <li><a href="<?php echo U('Cms/Manager/index');?>">个人资料</a>
+                                </li>
+                                <?php if($user_power =='100'){?>
+                                <li><a href="<?php echo U('Cms/Member/index');?>">人员管理</a>
+                                </li>
+                                <?php }?>
+                               <!--  <li><a href="mailbox.html">信箱</a>
+                                </li> -->
+                                <li class="divider"></li>
+                                <li><a href="<?php echo U('Cms/Index/loginOut');?>">安全退出</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            H+
+                        </div>
+
+                    </li>
+                    <li class="active">
+                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">主页</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="index_1.html">后台首页</a>
+                            </li>
+                            <!-- <li><a href="index_2.html">主页示例二</a>
+                            </li>
+                            <li><a href="index_3.html">主页示例三</a>
+                            </li>
+                            <li><a href="index_4.html">主页示例四</a>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <!--<li>
+                        <a href="layouts.html"><i class="fa fa-columns"></i> <span class="nav-label">布局</span><span class="label label-danger pull-right">2.0</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html#"><i class="fa fa fa-globe"></i> <span class="nav-label">v2.0新增</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="toastr_notifications.html">Toastr通知</a>
+                            </li>
+                            <li><a href="nestable_list.html">嵌套列表</a>
+                            </li>
+                            <li><a href="timeline_v2.html">时间轴</a>
+                            </li>
+                            <li><a href="forum_main.html">论坛</a>
+                            </li>
+                            <li><a href="code_editor.html">代码编辑器</a>
+                            </li>
+                            <li><a href="modal_window.html">模态窗口</a>
+                            </li>
+                            <li><a href="validation.html">表单验证</a>
+                            </li>
+                            <li><a href="tree_view_v2.html">树形视图</a>
+                            </li>
+                            <li><a href="chat_view.html">聊天窗口</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="index.html#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">图表</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="graph_echarts.html">百度ECharts</a>
+                            </li>
+                            <li><a href="graph_flot.html">Flot</a>
+                            </li>
+                            <li><a href="graph_morris.html">Morris.js</a>
+                            </li>
+                            <li><a href="graph_rickshaw.html">Rickshaw</a>
+                            </li>
+                            <li><a href="graph_peity.html">Peity</a>
+                            </li>
+                            <li><a href="graph_sparkline.html">Sparkline</a>
+                            </li>
+                        </ul>
+                    </li>-->
+                   <li>
+
+                        <a href="index.html#"><i class="fa fa-sitemap"></i> <span class="nav-label">空间用户</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="<?php echo U('Cms/Users/index');?>">用户列表</a>
+                            </li>
+                            <!-- <li><a href="lockscreen.html">登录超时</a>
+                            </li>
+                            <li><a href="404.html">404页面</a>
+                            </li>
+                            <li><a href="500.html">500页面</a>
+                            </li>
+                            <li><a href="empty_page.html">空白页</a>
+                            </li>-->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="index.html#"><i class="fa fa-edit"></i> <span class="nav-label">空间管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                           <!--  <li><a href="<{:U('Cms/Space/index')}>">元素空间</a>
+                            </li> -->
+                            <li><a href="<?php echo U('Cms/Space/entryCheck');?>">申请入驻</a>
+                            </li>
+                            <li><a href="<?php echo U('Cms/Advantage/index');?>">空间标签</a>
+                            </li>
+                            <li><a href="<?php echo U('Cms/Symbiosis/index');?>">空间合作</a>
+                            </li>
+                            <!--<li><a href="<&#45;&#45;{:U('Cms/Space/proposer')}&ndash;&gt;">申请人列表</a>-->
+                            </li>
+                            <!-- <li><a href="form_webuploader.html">百度WebUploader</a>
+                            </li>
+                            <li><a href="form_file_upload.html">文件上传</a>
+                            </li>
+                            <li><a href="form_editors.html">富文本编辑器</a>
+                            </li>
+                            <li><a href="form_simditor.html">simditor</a>
+                            </li>
+                            <li><a href="form_avatar.html">头像裁剪上传</a>
+                            </li>
+                            <li><a href="layerdate.html">日期选择器layerDate</a>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span class="label label-warning pull-right">16</span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="<?php echo U('Cms/Sendsms/index');?>">收件箱</a>
+                            </li>
+                        </ul>
+                    </li>
+                   <!--  <li>
+                        <a href="widgets.html"><i class="fa fa-flask"></i> <span class="nav-label">小工具</span></a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="index.html#"><i class="fa fa-desktop"></i> <span class="nav-label">页面</span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="contacts.html">联系人</a>
+                            </li>
+                            <li><a href="profile.html">个人资料</a>
+                            </li>
+                            <li><a href="projects.html">项目</a>
+                            </li>
+                            <li><a href="project_detail.html">项目详情</a>
+                            </li>
+                            <li><a href="file_manager.html">文件管理器</a>
+                            </li>
+                            <li><a href="calendar.html">日历</a>
+                            </li>
+                            <li><a href="faq.html">帮助中心</a>
+                            </li>
+                            <li><a href="timeline.html">时间轴</a>
+                            </li>
+                            <li><a href="pin_board.html">标签墙</a>
+                            </li>
+                            <li><a href="invoice.html">单据</a>
+                            </li>
+                            <li><a href="login.html">登录</a>
+                            </li>
+                            <li><a href="register.html">注册</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="index.html#"><i class="fa fa-flask"></i> <span class="nav-label">UI元素</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="typography.html">排版</a>
+                            </li>
+                            <li><a href="icons.html">字体图标</a>
+                            </li>
+                            <li><a href="iconfont.html">阿里巴巴矢量图标库</a>
+                            </li>
+                            <li><a href="draggable_panels.html">拖动面板</a>
+                            </li>
+                            <li><a href="buttons.html">按钮</a>
+                            </li>
+                            <li><a href="tabs_panels.html">选项卡 & 面板</a>
+                            </li>
+                            <li><a href="notifications.html">通知 & 提示</a>
+                            </li>
+                            <li><a href="badges_labels.html">徽章，标签，进度条</a>
+                            </li>
+                            <li><a href="layer.html">Web弹层组件layer</a>
+                            </li>
+                            <li><a href="tree_view.html">树形视图</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="grid_options.html"><i class="fa fa-laptop"></i> <span class="nav-label">栅格</span></a>
+                    </li>-->
+                    <li>
+                        <a href="index.html#"><i class="fa fa-table"></i> <span class="nav-label">活动管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="<?php echo U('Cms/Activity/index');?>">活动管理</a>
+                            </li>
+                            <li><a href="<?php echo U('Cms/InnoCustomer/index');?>">创客中国</a>
+                            </li>
+                            <li><a href="<?php echo U('Cms/ActivityInfo/index');?>">亚杰活动</a>
+                            </li>
+                            <li><a href="<?php echo U('Cms/ActivityInfo/echart');?>" target="_blank">投票图示</a>
+                            </li>
+                            <li><a href="<?php echo U('Cms/ActivityInfo/user_echart');?>" target="_blank">用户分析</a>
+                            </li>
+							<li><a href="http://kongjian.yuansuzhouqi.cn/home/activity/index" target="_blank">大屏展示</a>
+							</li>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="index.html#"><i class="fa fa-table"></i> <span class="nav-label">信息管理</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="<?php echo U('Cms/Advantage/index');?>">标签管理</a>
+                            <li><a href="<?php echo U('Cms/IndustryInfo/index');?>">行业管理</a>
+                            </li>
+                            <li><a href="#">融资管理</a>
+                            </li>
+                            </li>
+                            <li><a href="#" target="_blank">位置管理</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="index.html#"><i class="fa fa-picture-o"></i> <span class="nav-label">我的信息</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                         	<li><a href="<?php echo U('Cms/Manager/upload');?>">我的头像</a>
+                            </li>
+                             <li><a href="<?php echo U('Cms/Manager/index');?>">我的资料</a>
+                            </li>
+                            <li><a href="<?php echo U('Cms/Manager/password');?>">修改密码</a>
+                            </li>
+                            <?php if($user_power =='100'){?>
+	                            <li><a href="<?php echo U('Cms/Member/index');?>">所有管理员</a>
+	                            </li>
+	                           <li><a href="<?php echo U('Cms/Member/add');?>">添加管理员</a>
+	                            </li>
+ 							 <?php }?>
+                        </ul>
+                    </li>
+
+                    <!-- <li>
+                        <a href="index.html#"><i class="fa fa-sitemap"></i> <span class="nav-label">菜单 </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="index.html#">三级菜单 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="index.html#">三级菜单 01</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#">三级菜单 01</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#">三级菜单 01</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li><a href="index.html#">二级菜单</a>
+                            </li>
+                            <li>
+                                <a href="index.html#">二级菜单</a>
+                            </li>
+                            <li>
+                                <a href="index.html#">二级菜单</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="webim.html"><i class="fa fa-comments"></i> <span class="nav-label">即时通讯</span><span class="label label-danger pull-right">New</span></a>
+                    </li>
+                    <li>
+                        <a href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">CSS动画</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html#"><i class="fa fa-cutlery"></i> <span class="nav-label">工具 </span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="form_builder.html">表单构建器</a>
+                            </li>
+                        </ul>
+                    </li>-->
+                </ul>
+
+            </div>
+        </nav>
+         <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                   <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="javascript:;"><i class="fa fa-bars"></i> </a>
+                         <!-- <form role="search" class="navbar-form-custom" method="post" action="search_results.html">
+                            <div class="form-group">
+                                <input type="text" placeholder="请输入您需要查找的内容 …" class="form-control" name="top-search" id="top-search">
+                            </div>
+                        </form>-->
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message"><a href="index.html" title="返回首页"><i class="fa fa-home"></i></a>欢迎使用元素空间后台</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="index.html#">
+                                <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div class="media-body">
+                                            <small class="pull-right">46小时前</small>
+                                            <strong>小四</strong> 项目已处理完结
+                                            <br>
+                                            <small class="text-muted">3天前 2014.11.8</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div class="media-body ">
+                                            <small class="pull-right text-navy">25小时前</small>
+                                            <strong>国民岳父</strong> 这是一条测试信息
+                                            <br>
+                                            <small class="text-muted">昨天</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="mailbox.html">
+                                            <i class="fa fa-envelope"></i>  <strong> 查看所有消息</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="index.html#">
+                                <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> 您有16条未读消息
+                                            <span class="pull-right text-muted small">4分钟前</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-qq fa-fw"></i> 3条新回复
+                                            <span class="pull-right text-muted small">12分钟钱</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>查看所有 </strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="<?php echo U('Cms/Index/loginOut');?>">
+                                <i class="fa fa-sign-out"></i> 退出
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>用户数据分析</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="<?php echo U('Cms/Index/index');?>">主页</a>
+                        </li>
+                        <li>
+                            <a>用户数据分析</a>
+                        </li>
+                        <li>
+                            <strong>图表显示</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+          
+            <div class="wrapper wrapper-content animated fadeInRight">
+              
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>用户投票分析</h5>
+                            </div>
+                            <div class="ibox-content">
+                               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    
+                               <p style="height:35px;line-height:35px;font-size:18px;font-weight:bold;">图示数据</p>
+   								<div class="echarts" id="echarts-funnel-chart" style="height:600px;"></div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                            </div>
+                            <div class="ibox-content">
+                               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    
+                               <p style="height:35px;line-height:35px;font-size:18px;font-weight:bold;">来源分析</p>
+    							 <div class="echarts" id="echarts-pie-chart" style="height:600px;"></div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+
+                            </div>
+                            <div class="ibox-content">
+                               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    
+                               <p style="height:35px;line-height:35px;font-size:18px;font-weight:bold;">用户结构图</p>
+    							 <div class="echarts" id="echarts-force-chart" style="height:600px;"></div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5 style="width:700px;">用户分析详细数据&nbsp;&nbsp;<a href="/yuansukongjian/Cms/ActivityInfo/user_echart">所有用户</a>&nbsp;|&nbsp;<a href="/yuansukongjian/Cms/ActivityInfo/user_echart/time_status/1">参与用户</a>&nbsp;|&nbsp;<a href="/yuansukongjian/Cms/ActivityInfo/user_echart/time_status/2">关注微信</a>&nbsp;|&nbsp;<a href="/yuansukongjian/Cms/ActivityInfo/user_echart/time_status/3">参与投票</a>&nbsp;|&nbsp;<a href="/yuansukongjian/Cms/ActivityInfo/user_echart/time_status/4">填手机号</a>&nbsp;|&nbsp;<a href="/yuansukongjian/Cms/ActivityInfo/user_echart/time_status/5">确认投票</a>&nbsp;|&nbsp;<a href="/yuansukongjian/Cms/ActivityInfo/user_echart/time_status/5">创客中国</a>&nbsp;|&nbsp;<a href="/yuansukongjian/Cms/ActivityInfo/user_excle" target="_blank">生成EXCL格式文件</a></h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+
+                                                <th>ID</th>
+                                                <th>访问IP</th>
+                                                <th>电话</th>
+                                                <th>区域</th>
+                                                <th>时间</th>
+                                                <th>用户轨迹</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php if(is_array($result['list'])): $i = 0; $__LIST__ = $result['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                                                <td>
+                                                    <?php echo ($vo["id"]); ?>
+                                                </td>
+                                                <td><?php echo ($vo["ip"]); ?></td>
+                                                <td><?php echo ($vo["phone"]); ?>
+                                                </td>
+                                                <td><?php echo ($vo["city"]); ?></td>
+                                                <td><?php echo ($vo["add_time"]); ?></td>
+                                                <td><img src="/yuansukongjian/tpl/Public/images/home/activity/<?php echo ($vo["time_status"]); ?>.jpg" width="314" height="25"></td>
+                                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="ibox-content">
+                            <font color="red">当前数据总数：<?php echo ($listCount); ?></font><?php echo ($result['page']); ?>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                           <div class="footer">
+                    <div class="pull-right">
+                        By：元素周期技术部
+                    </div>
+                    <div>
+                        <strong>Copyright</strong> 元素空间 &copy; 2016
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+
+    </div>
+	<script src="/yuansukongjian/tpl/Public/js/public/echarts.min.js"></script>
+    <script src="/yuansukongjian/tpl/Public/js/jquery/jquery-1.7.2.min.js"></script>
+     <!-- ECharts -->
+    <script src="/yuansukongjian/tpl/Public/js/cms/plugins/echarts/echarts-all.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="/yuansukongjian/tpl/Public/js/cms/hplus.js?v=2.2.0"></script>
+    <script src="/yuansukongjian/tpl/Public/js/cms/plugins/pace/pace.min.js"></script>
+       <!-- Mainly scripts -->
+    <script src="/yuansukongjian/tpl/Public/js/cms/jquery-2.1.1.min.js"></script>
+    <script src="/yuansukongjian/tpl/Public/js/cms/bootstrap.min.js?v=3.4.0"></script>
+    <script src="/yuansukongjian/tpl/Public/js/cms/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="/yuansukongjian/tpl/Public/js/cms/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="/yuansukongjian/tpl/Public/js/cms/hplus.js?v=2.2.0"></script>
+    <script src="/yuansukongjian/tpl/Public/js/cms/plugins/pace/pace.min.js"></script>
+</body>
+
+</html>
+
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+	        var funnelChart = echarts.init(document.getElementById("echarts-funnel-chart"));
+	        var funneloption = {
+	            title : {
+	                text: '投票漏斗图'
+	            },
+	            tooltip : {
+	                trigger: 'item',
+	                formatter: "{a} <br/>{b} : {c}%"
+	            },
+	            legend: {
+	                data : ['参与用户','关注微信','点击投票','填写手机号','确认投票','创客中国']
+	            },
+	            calculable : true,
+	            series : [
+	                {
+	                    name:'漏斗图',
+	                    type:'funnel',
+	                    left: '10%',
+	                    top: 60,
+	                    //x2: 80,
+	                    bottom: 60,
+	                    width: '60%',
+	                    // height: {totalHeight} - y - y2,
+	                    min: 0,
+	                    max: 100,
+	                    minSize: '0%',
+	                    maxSize: '100%',
+	                    sort: 'descending',
+	                    gap: 2,
+	                    label: {
+	                        normal: {
+	                            show: true,
+	                            position: 'inside'
+	                        },
+	                        emphasis: {
+	                            textStyle: {
+	                                fontSize: 20
+	                            }
+	                        }
+	                    },
+	                    labelLine: {
+	                        normal: {
+	                            length: 10,
+	                            lineStyle: {
+	                                width: 1,
+	                                type: 'solid'
+	                            }
+	                        }
+	                    },
+	                    itemStyle: {
+	                        normal: {
+	                            borderColor: '#fff',
+	                            borderWidth: 1
+	                        }
+	                    },
+	                    data:[
+							{value:<?php echo ($count['number']['markchina']); ?>, name:'创客中国-<?php echo ($count['markchina']); ?>'},
+	                        {value:<?php echo ($count['number']['querentoupiao']); ?>, name:'确认投票<?php echo ($count['querentoupiao']); ?>'},
+	                        {value:<?php echo ($count['number']['tianxieshouji']); ?>, name:'填写手机号<?php echo ($count['tianxieshouji']); ?>'},
+	                        {value:<?php echo ($count['number']['dianjitoupiao']); ?>, name:'点击投票<?php echo ($count['dianjitoupiao']); ?>'},
+	                        {value:<?php echo ($count['number']['guanzhuweixin']); ?>, name:'关注微信<?php echo ($count['guanzhuweixin']); ?>'},
+	                        {value:100, name:'参与用户<?php echo ($count['canyuyonghu']); ?>'}
+	                    ]
+	                }
+	            ]
+	        };
+	                        
+	        funnelChart.setOption(funneloption); 
+	        var pieChart = echarts.init(document.getElementById("echarts-pie-chart"));
+	        var pieoption = {
+	            title : {
+	                text: '某站点用户访问来源',
+	                subtext: '纯属虚构',
+	                x:'center'
+	            },
+	            tooltip : {
+	                trigger: 'item',
+	                formatter: "{a} <br/>{b} : {c} ({d}%)"
+	            },
+	            legend: {
+	                orient : 'vertical',
+	                x : 'left',
+	                data:['朋友圈', '朋友', 'QQ', 'QQ微博', 'QQ空间', '其他']
+	            },
+	            calculable : true,
+	            series : [
+	                {
+	                    name:'访问来源',
+	                    type:'pie',
+	                    radius : '55%',
+	                    center: ['50%', '60%'],
+	                    data:[
+	                        {value:<?php echo ($a[1]); ?>, name:'朋友圈'},
+	                        {value:<?php echo ($a[2]); ?>, name:'朋友'},
+	                        {value:<?php echo ($a[3]); ?>, name:'QQ'},
+	                        {value:<?php echo ($a[4]); ?>, name:'QQ微博'},
+	                        {value:<?php echo ($a[5]); ?>, name:'QQ空间'},
+	                        {value:<?php echo ($a[6]); ?>, name:'其他'}
+	                    ]
+	                }
+	            ]
+	        };
+	        pieChart.setOption(pieoption); 
+			//树形结构人物关系图
+	var forceChart = echarts.init(document.getElementById("echarts-force-chart"));
+    var forceoption ={
+        title : {
+            text: '人物关系：元素周期',
+            subtext: '数据来自于亚杰活动',
+            x:'right',
+            y:'bottom'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: '{a} : {b}'
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                restore : {show: true},
+                magicType: {show: true, type: ['force', 'chord']},
+                saveAsImage : {show: true}
+            }
+        },
+        legend: {
+            x: 'left',
+            data:['家人','朋友']
+        },
+        series : [
+            {
+            	type:'force',
+                name : "人物关系",
+                ribbonType: false,
+                categories : [
+                    {
+                        name: '人物'
+                    },
+                    {
+                        name: '家人'
+                    },
+                    {
+                        name:'朋友'
+                    }
+                ],
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            textStyle: {
+                                color: '#333'
+                            }
+                        },
+                        nodeStyle : {
+                            brushType : 'both',
+                            borderColor : 'rgba(255,215,0,0.4)',
+                            borderWidth : 1
+                        },
+                        linkStyle: {
+                            type: 'curve'
+                        }
+                    },
+                    emphasis: {
+                        label: {
+                            show: false
+                            // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+                        },
+                        nodeStyle : {
+                            //r: 30
+                        },
+                        linkStyle : {}
+                    }
+                },
+                useWorker: false,
+                minRadius : 15,
+                maxRadius : 25,
+                gravity: 1.1,
+                scaling: 1.1,
+                roam: 'move',
+                nodes:[
+                       {category:0, name: '乔布斯', value : 10},
+                       {category:3, name: '张山-乔布斯',value : 2},
+                       {category:1, name: '丽萨-乔布斯',value : 2},
+                       {category:1, name: '保罗-乔布斯',value : 3},
+                       {category:1, name: '克拉拉-乔布斯',value : 3},
+                       {category:1, name: '劳伦-鲍威尔',value : 7},
+                       {category:2, name: '史蒂夫-沃兹尼艾克',value : 5},
+                       {category:2, name: '奥巴马',value : 8},
+                       {category:2, name: '比尔-盖茨',value : 9},
+                       {category:2, name: '乔纳森-艾夫',value : 4},
+                       {category:2, name: '蒂姆-库克',value : 4},
+                       {category:2, name: '龙-韦恩',value : 1},
+                ],
+                links : [
+                         {source : '张三-乔布斯', target : '乔布斯', weight : 1, name: '女儿'},
+                         {source : '丽萨-乔布斯', target : '乔布斯', weight : 1, name: '女儿'},
+                         {source : '保罗-乔布斯', target : '乔布斯', weight : 2, name: '父亲'},
+                         {source : '克拉拉-乔布斯', target : '乔布斯', weight : 1, name: '母亲'},
+                         {source : '劳伦-鲍威尔', target : '乔布斯', weight : 2},
+                         {source : '史蒂夫-沃兹尼艾克', target : '乔布斯', weight : 3, name: '合伙人'},
+                         {source : '奥巴马', target : '乔布斯', weight : 1},
+                         {source : '比尔-盖茨', target : '乔布斯', weight : 6, name: '竞争对手'},
+                         {source : '乔纳森-艾夫', target : '乔布斯', weight : 1, name: '爱将'},
+                         {source : '蒂姆-库克', target : '乔布斯', weight : 1},
+                         {source : '龙-韦恩', target : '乔布斯', weight : 1},
+                         {source : '克拉拉-乔布斯', target : '保罗-乔布斯', weight : 1},
+                         {source : '奥巴马', target : '保罗-乔布斯', weight : 1},
+                         {source : '奥巴马', target : '克拉拉-乔布斯', weight : 1},
+                         {source : '奥巴马', target : '劳伦-鲍威尔', weight : 1},
+                         {source : '奥巴马', target : '史蒂夫-沃兹尼艾克', weight : 1},
+                         {source : '比尔-盖茨', target : '奥巴马', weight : 6},
+                         {source : '比尔-盖茨', target : '克拉拉-乔布斯', weight : 1},
+                         {source : '蒂姆-库克', target : '奥巴马', weight : 1}
+                     ]
+            }
+        ]
+    };
+    forceChart.setOption(forceoption); 
+    </script>

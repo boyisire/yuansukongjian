@@ -1,0 +1,158 @@
+<?php
+/*************************************************
+ * file description
+ * @filename:           AdvantageInfoModel.class.php
+ * @desc:               空间优势特色信息表
+ * @tables:             [kj_advantage_info]
+ * @date:               2016-8-16
+ * @author:             大业
+ * @version:            v1.0
+ *************************************************/
+namespace Common\Model;
+use Common\Model\BaseModel;
+class AdvantageInfoModel extends BaseModel{
+
+	/**
+	 * [获取标签页信息]
+	 * @method getAdvantage
+	 * @author 大业
+	 * @create 2016-08-16
+	 * @param  [string] $ListID [查询条件]
+	 * @return [array] [标签名称]
+	 */
+	private function getInfo($condtion)
+	{
+        if(empty($condtion)){
+            $where = 'is_del=0 and is_use=0 ';
+        }else{
+            $where = 'is_del=0 and is_use=0 and '.$condtion;
+        }
+
+        $field = array('id',            //自增ID
+                       'label_name',    //标签名称
+                       'sortord',       //排序方式
+                       //'is_del',        //是否删除：0-未删 1-删除
+                       //'is_use',        //是否使用：0-使用 1-不使用
+                       //'add_time',      //添加时间
+        );
+        $order = 'sortord desc';
+        return $this->selectData($field,$where,$order);
+	}
+
+
+    /**
+     * [获取标签信息]
+     * @method getAdvantageName
+     * @author 大业
+     * @create 2016-08-16
+     * @param  [string] $ListID [查询的ID]
+     * @return [array] [标签名列表]
+     */
+    public function getAdvantageInfo($ListID)
+    {
+        $Names ='';
+        $where ='';
+        if(!empty($ListID)){
+            $where = 'id in ('.trim($ListID,',').')';
+        }
+        $Info = $this->getInfo($where);
+        if($Info){
+            foreach ($Info as $key => $value) {
+                //$Infos[$value['id']] = $value['label_name'];
+                $Infos[$key]['name']= $value['label_name'];
+                $Infos[$key]['id']  = $value['id'];
+            }
+        }
+        return  $Infos;
+    }
+	/**
+	 * 空间标签添加操作
+	 * @author lushijun
+	 * @time 2016-8-25
+	 */
+    public function insertAdvantageInfo($data){
+    	if(empty($data['label_name'])){
+    		return array('code'=>'201','msg'=>'标签名称不能为空');
+    	}
+    	if(empty($data['sortord'])){
+    		$data['sortord']="100";
+    	}
+    	$result=$this->addData($data);
+    	if($result){
+    		return array('code'=>'200','成功');
+    	}else{
+    		return array('code'=>'202','msg'=>'标签添加失败');
+    	}
+    }
+    /**
+     * 获取所有空间标签信息，带分页
+     * @author lushijun
+     * @time 2016-8-25
+     */
+    public function getAdvantageList($data){
+    	if(!empty($data['search_name'])){
+    		$where['label_name']=array('like',"%".$data['search_name']."%");
+    	}
+    	if(!empty($data['is_use'])){
+    		if($data['is_use'] =='2'){
+    			$data['is_use']="0";
+    		}
+    		$where['is_use']=array('eq',$data['is_use']);
+    	}
+    	if(!empty($data['is_del'])){
+    		if($data['is_del'] =='2'){
+    			$data['is_del']="0";
+    		}
+    		$where['is_del']=array('eq',$data['is_del']);
+    	}
+    	$result=$this->selectPageData('*',$where,'',14);
+    	return $result;
+    }
+    /**
+     * 获取一条空间标签信息
+     * @author lushijun
+     * @time 2016-8-25
+     */
+    public function findAdvantageRow($id){
+    	if(empty($id)){
+    		return array('code'=>'201','msg'=>'错误操作，没有找到数据');
+    	}
+    	$list=$this->findData(array('id'=>$id));
+    	if(empty($list)){
+    		return array('code'=>'202','msg'=>'没有找到信息');
+    	}
+    	return array('code'=>'200','msg'=>$list);
+    }
+	/**
+	 * 修改空间标签信息操作
+	 * @author lushijun
+	 * @time 2016-8-25
+	 */
+    public function updateAdvantageInfo($data,$id){
+    	if(empty($id)){
+    		return array('code'=>'201','msg'=>'错误操作，没找到要修改的数据');
+    	}
+    	$result=$this->editData(array('id'=>$id), $data);
+    	if($result){
+    		return array('code'=>'200','msg'=>'成功');
+    	}else{
+    		return array('code'=>'202','msg'=>'空间标签修改失败');
+    	}
+    }
+    /**
+     * 删除空间标签操作
+     * @author lushijun
+     * @time 2016-8-25
+     */
+    public function delAdvantageInfo($id){
+    	if(empty($id)){
+    		return array('code'=>'201','msg'=>'错误操作，没找到要删除的数据');
+    	}
+    	$result=$this->deleteData(array('id'=>$id));
+    	if($result){
+    		return array('code'=>'200','msg'=>'成功');
+    	}else{
+    		return array('code'=>'202','msg'=>'删除失败');
+    	}
+    }
+}

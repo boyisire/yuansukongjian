@@ -1,0 +1,387 @@
+<{include file="./tpl/Home/Public/phone_header.html" /}>
+<link rel="stylesheet" href="__HOME_CSS__/activity/yajie.css">
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<div id="title">
+    <div id="main">
+        <p>一次创投圈的年度盛事</p>
+        <p>一次创投圈和音乐圈的跨界碰撞</p>
+        <p>一次创业者们的集体发声</p>
+        <p class="line"></p>
+        <p class="found">主办方</p>
+        <p class="found">亚杰汇创始人俱乐部</p>
+        <p class="found">协办方</p>
+        <p class="found">元素周期 - 创业服务平台</p>
+        <p class="found">时间</p>
+        <p class="found triangle">2016.9.17</p>
+        <p class="found">地址</p>
+        <p class="found">北京科技大学奥林匹克体育馆</p>
+    </div>
+     <input type="hidden" id="corps_user" value="<{if condition="$userResult.user_mobile neq ''"}>1<{else /}>2<{/if}>">
+     <input type="hidden" id="corps_cid" value="<--{$cid}-->">
+</div>
+<{volist name="result" id="vo" key="k"}>
+<img src="__HOME_IMAGES__/activity/border_02.png" alt="" class="border-image">
+<div class="abc">
+    <div class="abc-main">
+        <p class="abc-title"><img src="__HOME_IMAGES__/activity/No.<--{$k}-->.png" alt=""> - <--{$vo.corps_name}--></p>
+        <div class="abc-button"><{if condition="$userResult neq ''"}>
+        <{if condition="$user_votes eq '1'"}>
+        	<a href="javascript:;" onclick="show('<--{$vo.id}-->');"><img class="abc-button-img" src="__HOME_IMAGES__/activity/vote.png" alt="<--{$vo.corps_name}-->"></a>
+        <{else /}>
+       	 	<a href="javascript:;"><img class="abc-button-img" src="__HOME_IMAGES__/activity/voteing.png" alt="<--{$vo.corps_name}-->"></a>
+        <{/if}><{else /}>
+        	<a href="javascript:;"><img class="abc-button-img" src="__HOME_IMAGES__/activity/voteing.png" alt="<--{$vo.corps_name}-->"></a>
+        <{/if}></div>
+
+        <div class="clear"></div>
+        <p class="abc-team"><{if condition="$vo.child eq ''"}><span>暂无战队成员</span><{else /}><{volist name="vo['child']" id="child"}><span><--{$child.user_name}-->-<--{$child.user_dec}--></span><{/volist}><{/if}></p>
+        <div class="abc-team-photos">
+            <img class="team-photo" src="__PUBLIC_UPLOAD__<--{$vo.corps_images}-->" alt="<--{$vo.corps_name}-->">
+            <div class="down-color" >
+               <p> <img class="team-flame" src="__HOME_IMAGES__/activity/flame.png" alt="<--{$vo.corps_name}-->">&nbsp;<--{$vo.corps_votes}-->票</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<{/volist}>
+     <input type="hidden" id="corps_ids">
+<style>
+    #colophon {
+        background: #fff;
+        position: relative;
+        width: auto;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.03);
+		margin:.65rem 0 0 0;
+    }
+
+    .site-info {
+        text-align: center;
+        margin: 0 50px;
+        padding: 15px 0;
+    }
+
+    .add-info {
+        padding: 5px 0;
+        display: block;
+    }
+</style>
+<footer id="colophon" class="site-footer" role="contentinfo">
+
+    <div class="site-info">
+        <a href="http://www.yuansuzhouqi.cn/archives/112">关于我们</a>&nbsp; |&nbsp;&nbsp; <a href="http://www.yuansuzhouqi.cn/archives/292">投稿须知</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a href="http://www.yuansuzhouqi.cn/archives/288">创业报道</a> 
+        <span class="add-info">
+				©2016 &nbsp; 元素周期&nbsp; 版权所有&nbsp; 京ICP备16028512号-2							
+		</span>
+    </div><!-- .site-info -->
+</footer>
+<div class="cd-popup">
+    <div class="cd-popup-container">
+        <p class="cd-title">请输入正确的手机号码</p>
+        <input type="text" class="cd-input" placeholder="  请输入手机号码" id="corps_phone">
+        <p class="number-wrong" id="wrong"></p>
+        <input type="button" id="corps_form" class="cd-submit cd-popup-close cd-popup-trigger3" value="确定">
+        <!--<a href="#0" class="cd-popup-close">close</a>-->
+    </div>
+</div>
+<div class="cd-popup3">
+    <div class="cd-popup-container3">
+    <style>
+		#sms_button{border:none;background:none;color:#fff;}	
+		
+		#colse_corps{color:#666;font-size:14px;padding-top:15px;}
+	</style>
+        <p class="cd-title1" id="corps_title1">验证码已送至手机</p>
+        <input type="hidden" id="old_phone">
+        <input type="text" class="cd-input1" placeholder="  请输入验证码" id="yjcodes">
+        <p class="count-down" id="btnSendCode"><button type="button" id="sms_button">剩余60S</button></p>
+        
+        <div class="clear"></div>
+        <p class="number-wrong" id="phones"></p>
+        <input type="button" class="cd-submit cd-popup-close" value="确定" id="corps_code">
+		<{if condition="$userResult.user_mobile eq ''"}>
+        	<a href="javascript:;" class="cd-popup-close" id="colse_corps">没有收到验证码?</a>
+        <{/if}>
+    </div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+    document.documentElement.style.fontSize = window.innerWidth / 3.75 + 'px';
+    function BottomJumpPage() {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop != 0) {  //滚动到头部部执行事件
+            $('#menu-box').addClass('shadow');
+            $('#search-main').addClass('shadow');
+        }else {
+            $('#menu-box').removeClass('shadow');
+            $('#search-main').removeClass('shadow');
+        }
+    }
+    $(window).scroll(BottomJumpPage);
+    $('#site-nav').click(function () {
+        if ($('#search-main').is(":hidden")){
+            $('#search-main').show()
+        }else {
+            $('#search-main').hide()
+        }
+    })
+    var InterValObj; //timer变量，控制时间
+    var count = 60; //间隔函数，1秒执行
+    var curCount;//当前剩余秒数
+            /*弹框JS内容*/
+            jQuery(document).ready(function($){
+
+                //关闭窗口
+                $('.cd-popup').on('click', function(event){
+                    if($(event.target).is('.cd-popup') ) {
+                        event.preventDefault();
+                        $(this).removeClass('is-visible');
+                    }
+                });
+                //ESC关闭
+                $(document).keyup(function(event){
+                    if(event.which=='27'){
+                        $('.cd-popup').removeClass('is-visible');
+                    }
+                });
+
+                //关闭窗口
+                $('.cd-popup3').on('click', function(event){
+                    if($(event.target).is('.cd-popup3') ) {
+                        event.preventDefault();
+                        $(this).removeClass('is-visible3');
+                    }
+                });
+                //ESC关闭
+                $(document).keyup(function(event){
+                    if(event.which=='27'){
+                        $('.cd-popup3').removeClass('is-visible3');
+                    }
+                });
+            });
+            function show(id){
+            	$("#corps_ids").val(id);
+            		$.ajax({
+            			type:"POST",
+            			url:"__URL__/corpsA",
+            			data:{
+            				cid:$("#corps_cid").val()
+            			},
+            			dataType:"json",
+            			success:function(s){
+            				userCount(3);
+            				if(s.resutl =='1'){
+            					alert(s.data);
+            				}else if(s.result =='3'){
+                                $('.cd-popup').addClass('is-visible');
+            				}else{
+            					$("#corps_title1").html(s.data);
+            					$("#old_phone").val(s.msg);
+                                $('.cd-popup3').addClass('is-visible3');
+            				}
+            			}
+            		});
+            		
+            }
+            $("#corps_form").click(function(){
+            		var corps_phone=$.trim($("#corps_phone").val());  
+            		if(corps_phone !=''){
+            			if (corps_phone.match(/^(((13[0-9]{1})|(14[0-9]{1})|(17[0-7]{1})|(15[0-3]{1})|(15[5-9]{1})|(18[0-9]{1}))+\d{8})$/)) { 
+            				$.ajax({
+            					 url: "__URL__/corpsS",  
+            			         type: "POST",
+            			         data:{corps_phone:corps_phone,cid:$("#corps_cid").val()},
+            			         dataType: "json",
+            			         success:function(s){
+            			        	if(s.result =='1'){
+            			        		$("#wrong").html(s.data);
+            			        	}else{
+            			        		$("#corps_title1").html("验证码已送至手机:"+corps_phone);
+            			        		curCount = count;
+	            	            　			　//设置button效果，开始计时
+	            	                	 $("#sms_button").attr("disabled", "true");
+	            	                	 $("#sms_button").html("剩余" + curCount + "秒");
+	            	                	 InterValObj = window.setInterval(SetRemainTime, 1000); 
+	            	                	 $("#old_phone").val(corps_phone);
+                                   		 $('.cd-popup3').addClass('is-visible3');
+                                   	  	 $('.cd-popup').removeClass('is-visible');
+                                   	  	 userCount(4,corps_phone);
+            			        	}
+            			         }
+            				});
+            			}else{
+            				$("#wrong").html("手机格式不正确!");
+            			}
+            		}else{
+            			$("#wrong").html("手机号码不能为空!");
+            		}
+            });
+			$("#sms_button").click(function(){
+				var corps_phone=$.trim($("#old_phone").val()); 
+        		$.ajax({
+        			 url: "__URL__/corpsS",  
+        			 type: "POST",
+        			 data:{corps_phone:corps_phone,cid:$("#corps_cid").val()},
+        			 dataType: "json",
+        			 success:function(s){
+        			        	if(s.result =='1'){
+        			        		$("#phones").html(s.data);
+        			        	}else{
+        			        		curCount = count;
+            	            　			　//设置button效果，开始计时
+            	             		$("#phones").html("验证码已发送，请查收");		 
+            	                 	$("#sms_button").attr("disabled", "true");
+            	                	 $("#sms_button").html("剩余" + curCount + "秒");
+            	                	 InterValObj = window.setInterval(SetRemainTime, 1000); 
+            	                 	$("#old_phone").val(corps_phone);
+                                 	$('.cd-popup3').addClass('is-visible3');
+                                 	$('.cd-popup').removeClass('is-visible');
+                                 	userCount(4,corps_phone);
+        			        	}
+        			}
+        		});
+			})
+			$("#corps_code").click(function(){
+				var corps_code = $("#yjcodes").val(); 
+				if(corps_code !=''){
+					$.ajax({
+						 url: "__URL__/corpsC",  
+				         type: "POST",
+				         data:{corps_code:corps_code,cid:$("#corps_cid").val(),id: $("#corps_ids").val(),corps_phone:$("#old_phone").val(),corps_user:$("#corps_user").val()},
+				         dataType: "json",
+				         success:function(s){      	 
+				        	if(s.result =='1'){
+				        		$("#phones").html(s.data);
+				        	}else{
+				        		userCount(5);
+				        		location.href="__URL__/view";
+				        	}
+				         }
+					});
+				}else{
+					$("#phones").html("验证码不能为空");
+				}
+			})
+			$("#colse_corps").click(function(){
+                $('.cd-popup').addClass('is-visible1');
+                $('.cd-popup3').removeClass('is-visible3');
+			});
+            //timer处理函数
+            function SetRemainTime() {
+                 if (curCount == 0) {                
+                       window.clearInterval(InterValObj);//停止计时器
+                       $("#sms_button").removeAttr("disabled");//启用按钮
+                       $("#sms_button").html("重新发");
+                 }else{
+                       curCount--;
+                      $("#sms_button").html("剩余" + curCount + "S");
+                 }
+            }
+            function userCount(type,corps_phone){
+            	$.ajax({url:"__URL__/corpsCount",type:"POST",data:{id:1,cid:10,status:type,corps_phone:corps_phone},dataType:"json",success:function(s){}});
+            }
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+//alert(location.href.split('#')[0]);
+		//错误信息配置 回调区域
+		wx.config({
+			debug: false,  //调试模式 true-弹出错误信息
+			appId: "<--{$signPackage['appId']}-->",			//根据签名包获取
+			timestamp: "<--{$signPackage['timestamp']}-->",		//根据签名包获取
+			nonceStr: "<--{$signPackage['nonceStr']}-->",		//根据签名包获取
+			signature: "<--{$signPackage['signature']}-->",	//根据签名包获取
+			jsApiList: [
+				// 所有要调用的 API 都要加到这个列表中
+				'getLocation',
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage',
+				'onMenuShareQQ',
+				'onMenuShareWeibo',
+				'onMenuShareQZone'
+			  ]
+		});
+	
+	
+		// 所有要调用的 API 都要加到这个列表中
+		wx.checkJsApi({
+			jsApiList: [
+				'getLocation',
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage',
+				'onMenuShareQQ',
+				'onMenuShareWeibo',
+				'onMenuShareQZone'
+			],
+	
+			success: function (res) {
+			}
+		}); 
+		wx.ready(function(){
+			wx.onMenuShareTimeline({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    link: '<--{$url}-->/home/activity/actindex/ct/1/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			        // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareAppMessage({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声',
+			    link: '<--{$url}-->/home/activity/actindex/ct/2/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    type: '', // 分享类型,music、video或link，不填默认为link
+			    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+			    success: function () { 
+			        // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareQQ({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声', // 分享描述
+			    link: '<--{$url}-->/home/activity/actindex/ct/3/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			       // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			       // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareWeibo({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声', // 分享描述
+			    link: '<--{$url}-->/home/activity/actindex/ct/4/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			       // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareQZone({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声', // 分享描述
+			    link: '<--{$url}-->/home/activity/actindex/ct/5/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			       // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+	  });
+</script>
+</html>

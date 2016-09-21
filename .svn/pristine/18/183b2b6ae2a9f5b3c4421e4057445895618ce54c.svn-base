@@ -1,0 +1,172 @@
+<?php
+/*************************************************
+ * file description
+ * @filename:           IndexController.class.php
+ * @desc:               后台-空间合作控制器
+ * @tables:             [room_info;wp_user]
+ * @date:               2016-8-17
+ * @author:             大业
+ * @version:            v1.0
+ *************************************************/
+namespace Cms\Controller;
+use Common\Controller\CmsBaseController;
+
+
+class SymbiosisController extends CmsBaseController{
+
+    /**
+     * [空间合作主页]
+     * @method index
+     * @author 大业
+     * @create 2016-08-17
+     * @return [void] [description]
+     */
+	public function index(){
+		// 分配菜单数据
+        $uid=6;
+        $Info = D('RoomInfo')->showInfo($uid,$rid,$search,$style='cms');
+        $cntNum=D('RoomInfo')->getCountNum();
+        //dump($Info['info']);exit;
+		echo "SymbiosisController!!";
+        $TestInfo="wo shi yi tiao ce shi shu ju!";
+        $this->assign('TestInfo',$TestInfo);
+        $this->assign('cntNum'  ,$cntNum);
+        $this->assign('list'    ,$Info['list']);
+        $this->assign('page'    ,$Info['page']);
+        $this->display('index');
+
+    }
+
+
+    /**
+     * [空间状态修改页面]
+     * @method RoomStatus
+     * @author 大业
+     * @create 2016-08-24
+     */
+    public function RoomStatus()
+    {
+        $data['uid']    = 6;//I('uid');
+        $data['rid']    = 1;//I('rid');
+        $data['status'] =I('status');
+        $this->assign('data',$data);
+        $this->display('status');
+    }
+
+
+    /**
+     * [接受并修改空间状态]
+     * @method ModifyStatus
+     * @author 大业
+     * @create 2016-08-24
+     */
+    public function ModifyStatus()
+    {
+        $recData['uid']    = I('uid');
+        $recData['rid']    = I('rid');
+        $recData['status'] = I('status');
+        $recData['desc']   = I('desc');
+
+        if(empty($recData['uid']) || empty($recData['rid'])){
+            $this->error('传入参数有误!');
+            exit;
+        }
+
+        //修改空间状态
+        $where  = 'id = '.$recData['rid'];
+        $upData = array('is_pass' => $recData['status']);
+        $res = D('RoomInfo')->editData($where,$upData);
+        if($res !==false){
+            //发送短信并登记
+            $smsRes = $this->recordSMS($recData['rid'],$recData['status']);
+            if($smsRes){
+                echo "短信发送成功！";
+            }else{
+                echo "短信发送失败！";
+            }
+        }else{
+            echo "空间状态修改错误!";
+        }
+
+        //登记操作信息
+         $status = 3;
+         if($recData['status'] == 2){
+            $status = 4;//未通过
+         }
+         $data = array(
+            'type'      => 1, //类型：1-空间操作 2-入住操作
+            'r_id'      => $recData['rid'],
+            'user_id'   => $recData['uid'],
+            'op_type'   => $status,//3-通过 4-未通过
+            'op_desc'   => $recData['desc'],
+            'add_time'  => time(),
+        );
+        $res = D('operation_subsidiary')->addRemark($data);
+    }
+
+
+    /**
+     * [发送并记录短信信息]
+     * @method recordSMS
+     * @author 大业
+     * @create 2016-08-24
+     * @param  [int] $rid [空间ID]
+     * @param  [int] $status [空间状态:1-通过 2-拒绝]
+     * @return [boole] [成功/失败]
+     */
+    private function recordSMS($rid,$status)
+    {
+        //取得空间信息[空间名,空间联系人,联系方式]
+        $info  = D('RoomInfo')->showInfo('',$rid,'','common')['list'][0];
+        $phone = $info['mobile'];
+        $value = array($info['name']);
+        $templ = C('SMS_TEMPLATE')['KJZ_Apply_Succ'];
+        //如果状态为2时,说明申核未通过
+        if($status == 2){
+             $templ = C('SMS_TEMPLATE')['KJZ_Apply_Erro'];
+        }
+        //手机号+空间名称+模版号
+        $sendRes = sendSMS($phone,$value[0],$templ);
+        dump($sendRes);
+        if($sendRes == 200){
+            //查询发送的短信内容:模版号+传入值
+            $smsDesc = querySMS($templ,$value);
+            $smsData = array(
+                'sms_desc'   => $smsDesc,
+                'sms_status' => $status,
+                'sms_type'   => 2, //操作类型：1-验证码 2-系统消息 3-审核消息
+                'accept_user'=> $info['user_id'],
+                'send_time'  => time(),
+            );
+            //写入短信记录表
+            D('sms_info')->addData($smsData);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+    /**
+     * [根据空间ID修改其状态为:删除]
+     * @method delData
+     * @author 大业
+     * @create 2016-08-17
+     * @param  [type] $rid [description]
+     * @return [type] [description]
+     */
+    public function delData($rid)
+    {
+        if(empty($rid)){return false;}
+        $where='id='.$rid;
+        $data='is_del=1';
+        $Res = D('RoomInfo')->editData($where,$data);
+        if($Res){
+            echo "删除成功!";
+        }else{
+            echo "删除失败!";
+        }
+
+    }
+
+}

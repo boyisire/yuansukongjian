@@ -1,0 +1,205 @@
+@charset "utf-8";
+body {
+    background-color: #f1f1f1;
+}
+
+#de-main {
+    width: 1210px;
+    background-color: #fff;
+    margin: 20px auto 0;
+}
+
+.de-particular {
+    width: 1000px;
+    height: 150px;
+    position: absolute;
+    color: #fff;
+    left: 100px;
+    bottom: 0;
+}
+
+.de-SBI-name {
+    font-size: 40px;
+    font-weight: bold;
+    float: left;
+    width: 940px;
+    height: 44px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 41px;
+}
+
+.de-iconaddress {
+    background-image: url(../../../images/home/detail/address-icon.png);
+    width: 16px;
+    height: 26px;
+    float: left;
+    margin-right: 20px;
+    margin-left: 0px;
+    margin-top:10px;
+}
+.de-particular a{
+	color:#fff !important;
+}
+.de-address {
+    font-size: 20px;
+    margin-top:10px;
+}
+
+.de-privilege {
+    margin-top: 20px;
+}
+
+.de-privilege-tab {
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+    line-height: 30px;
+
+}
+
+.de-privilege-p {
+    font-size: 14px;
+    font-weight: bold;
+    width: 350px;
+    float: left;
+    line-height: 30px;
+}
+
+.de-icon-privilege {
+    background-image: url(../../../images/home/detail/privilege-tab-icon.png);
+    width: 21px;
+    height: 21px;
+    float: left;
+    margin-right: 12px;
+}
+
+.de-advantage {
+    margin-left: 5px;
+    float: left;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.de-youhui {
+    float: left;
+    width: 381px;
+    margin-top: 30px;
+}
+
+.de-money {
+    position: absolute;
+    right: 210px;
+    top: 50px;
+}
+
+.de-money span {
+    color: #f5894e;
+    font-size: 40px;
+}
+
+.de-money p {
+    margin-left: 30px;
+    float: left;
+    font-weight: bold;
+
+}
+.de-request{
+    width: 145px;
+    height: 46px;
+    border-radius: 4px;
+    background-color: #3cb1f0;
+    font-size: 24px;
+    text-align: center;
+    line-height: 46px;
+    position: absolute;
+    right: -23px;
+    top: 40px;
+    cursor: pointer;
+    font-weight: 300;
+}
+.de-request-succ{
+    width: 145px;
+    height: 46px;
+    border-radius: 4px;
+    background-color: #3cf040;
+    font-size: 24px;
+    text-align: center;
+    line-height: 46px;
+    position: absolute;
+    right: -23px;
+    top: 40px;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.de-request-erro{
+    width: 145px;
+    height: 46px;
+    border-radius: 4px;
+    background-color: red;
+    font-size: 24px;
+    text-align: center;
+    line-height: 46px;
+    position: absolute;
+    right: -23px;
+    top: 40px;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.de-requesting{
+    width: 145px;
+    height: 46px;
+    border-radius: 4px;
+    background-color: #f0b73c;
+    font-size: 24px;
+    text-align: center;
+    line-height: 46px;
+    position: absolute;
+    right: -23px;
+    top: 40px;
+    cursor: pointer;
+    font-weight: 300;
+}
+.de-introduction{
+    margin: 40px auto 0;
+    width: 1000px;
+}
+.de-introduction-title {
+    font-size: 24px;
+    color: #333;
+    line-height: 28px;
+}
+.de-blue{
+    width: 4px;
+    height: 28px;
+    background-color: #37aae8;
+    float: left;
+    margin-right: 15px;
+}
+.de-company{
+    font-size: 20px;
+    color: #333;
+    line-height: 35px;
+    margin-top: 25px;
+    letter-spacing: 5px;
+	word-wrap: break-word;
+	overflow:hidden;
+text-indent:2em;
+}
+#allmap{
+    margin: 20px 0 50px;
+    width: 967px;
+    height: 434px;
+}
+.de-modal-opacity{
+	 width: 1210px;
+    height: 170px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    background-color: #000;
+    opacity: 0.3;
+}

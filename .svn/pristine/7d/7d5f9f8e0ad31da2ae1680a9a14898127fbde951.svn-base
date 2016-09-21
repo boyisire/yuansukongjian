@@ -1,0 +1,202 @@
+<{include file="./tpl/Home/Public/phone_header.html" /}>
+<div class="h5-head">
+    <div class="h5-head1"></div>
+    <div class="h5-page1"></div>
+    <div class="h5-page2">
+        <p class="page2-title">主办方</p>
+        <p class="page2-text">亚杰汇创始人俱乐部</p>
+        <p class="page2-title">协办方</p>
+        <p class="page2-text">元素周期 - 创业服务平台</p>
+        <p class="page2-title">时间</p>
+        <p class="page2-text page2-line">2016.9.17</p>
+        <p class="page2-title">地址</p>
+        <p class="page2-text">北京科技大学奥林匹克体育馆</p>
+    </div>
+</div>
+<div class="h5-ranking">
+    <div class="h5-ranking-text">
+        <p class="h5-team">按照网络投票数</p>
+        <p class="h5-team">决出网络人气歌王</p>
+        <p class="h5-team">获得终极神秘大奖</p>
+    </div>
+    <div class="h5-mens">
+        <h2>投票时间</h2>
+        <img src="__HOME_IMAGES__/activity/h5line-min.png" alt="" class="img-line">
+        <div class="clear"></div>
+        <p class="h5-team" style="font-weight: bold">第一阶段</p>
+        <p class="h5-team">9月9日 — 9月17日19点</p>
+        <p class="h5-team">一个手机号投一票</p>
+        <p class="h5-team" style="margin-top: 0.2rem;font-weight: bold">第二阶段</p>
+        <p class="h5-team">9月17日19点 — 音乐节结束</p>
+        <p class="h5-team">一个手机号投一票</p>
+        <p class="h5-team" style="font-size: 0.15rem">（第一阶段已投票用户可再次投票）</p>
+    </div>
+
+</div>
+<div class="h5-mens">
+    <h2>特邀嘉宾</h2>
+    <img src="__HOME_IMAGES__/activity/h5line-min.png" alt="" class="img-line">
+    <div class="clear"></div>
+    <div class="h5-men">
+    </div>
+    <div class="h5-men" style="background-image: url(__HOME_IMAGES__/activity/h5ping_05-min.png);">
+    </div>
+    <div class="h5-men" style="background-image: url(__HOME_IMAGES__/activity/h5yao_05-min.png);">
+    </div>
+</div>
+<div class="h5-teams">
+    <h2>参赛队伍</h2>
+    <img src="__HOME_IMAGES__/activity/h5line-min.png" alt="" class="img-line">
+    <div class="clear"></div>
+    <div style="height: 5.6rem;background-color: #000;">
+        <div class="h5-team-ever h5-team-ever1" style="background-image: url(__HOME_IMAGES__/activity/h5-one.png);"></div>
+        <div class="h5-team-ever" style="background-image: url(__HOME_IMAGES__/activity/h5-two.png);"></div>
+        <div class="h5-team-ever h5-team-ever1" style="background-image: url(__HOME_IMAGES__/activity/h5-three.png);"></div>
+        <div class="h5-team-ever" style="background-image: url(__HOME_IMAGES__/activity/h5-four.png);"></div>
+        <div class="h5-team-ever h5-team-ever1" style="background-image: url(__HOME_IMAGES__/activity/h5-five.png);"></div>
+        <div class="h5-team-ever" style="background-image: url(__HOME_IMAGES__/activity/h5-six.png);"></div>
+        <div class="h5-team-ever h5-team-ever1" style="background-image: url(__HOME_IMAGES__/activity/h5-seven.png);"></div>
+        <div class="h5-team-ever" style="background-image: url(__HOME_IMAGES__/activity/h5-eight.png);"></div>
+        <div class="h5-team-ever h5-team-ever1" style="background-image: url(__HOME_IMAGES__/activity/h5-nine.png);"></div>
+        <div class="h5-team-ever" style="background-image: url(__HOME_IMAGES__/activity/h5-ten.png);"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="h5-voteing">
+        <h2>官方投票</h2>
+        <img src="__HOME_IMAGES__/activity/h5line-min.png" alt="" class="img-line">
+        <div class="clear"></div>
+        <img src="__HOME_IMAGES__/activity/h5-RCcode-min.png" onclick="userCount();" style="display: block;width: 1.425rem;margin: 0.4rem auto 0.25rem">
+        <p style="font-size: 0.13rem">长按二维码进入官方投票通道</p>
+        <p style="font-size: 0.13rem;color: #434343;margin-top: 0.55rem">元素周期－创业服务平台 提供技术支持</p>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    document.documentElement.style.fontSize = window.innerWidth / 3.75 + 'px'
+
+    function BottomJumpPage() {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop != 0) {  //滚动到头部部执行事件
+            $('#menu-box').addClass('shadow');
+            $('#search-main').addClass('shadow');
+        }else {
+            $('#menu-box').removeClass('shadow');
+            $('#search-main').removeClass('shadow');
+        }
+    }
+    $(window).scroll(BottomJumpPage);
+    $('#site-nav').click(function () {
+        if ($('#search-main').is(":hidden")){
+            $('#search-main').show()
+        }else {
+            $('#search-main').hide()
+        }
+    })
+    function userCount(){
+		$.ajax({url:"__URL__/corpsCount",type:"POST",data:{id:1,cid:10,status:2},dataType:"json",success:function(s){}});
+	}
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+//alert(location.href.split('#')[0]);
+		//错误信息配置 回调区域
+		wx.config({
+			debug: false,  //调试模式 true-弹出错误信息
+			appId: "<--{$signPackage['appId']}-->",			//根据签名包获取
+			timestamp: "<--{$signPackage['timestamp']}-->",		//根据签名包获取
+			nonceStr: "<--{$signPackage['nonceStr']}-->",		//根据签名包获取
+			signature: "<--{$signPackage['signature']}-->",	//根据签名包获取
+			jsApiList: [
+				// 所有要调用的 API 都要加到这个列表中
+				'getLocation',
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage',
+				'onMenuShareQQ',
+				'onMenuShareWeibo',
+				'onMenuShareQZone'
+			  ]
+		});
+	
+	
+		// 所有要调用的 API 都要加到这个列表中
+		wx.checkJsApi({
+			jsApiList: [
+				'getLocation',
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage',
+				'onMenuShareQQ',
+				'onMenuShareWeibo',
+				'onMenuShareQZone'
+			],
+	
+			success: function (res) {
+			}
+		}); 
+		wx.ready(function(){
+			wx.onMenuShareTimeline({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    link: '<--{$url}-->/home/activity/actindex/ct/1/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			        // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareAppMessage({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声',
+			    link: '<--{$url}-->/home/activity/actindex/ct/2/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    type: '', // 分享类型,music、video或link，不填默认为link
+			    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+			    success: function () { 
+			        // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareQQ({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声', // 分享描述
+			    link: '<--{$url}-->/home/activity/actindex/ct/3/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			       // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			       // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareWeibo({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声', // 分享描述
+			    link: '<--{$url}-->/home/activity/actindex/ct/4/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			       // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareQZone({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声', // 分享描述
+			    link: '<--{$url}-->/home/activity/actindex/ct/5/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			       // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+	  });
+</script>
+</body>
+</html>

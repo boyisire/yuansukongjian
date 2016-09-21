@@ -1,0 +1,290 @@
+<?php
+/*************************************************
+ * file description
+ * @filename:           RoomInfoModel.class.php
+ * @desc:               空间信息表
+ * @tables:             [kj_room_info]
+ * @date:               2016-8-16
+ * @author:             大业
+ * @version:            v1.0
+ *************************************************/
+namespace Common\Model;
+use Common\Model\BaseModel;
+class RoomInfoModel extends BaseModel{
+
+	/**
+	 * [获取表[room_info]的信息]
+	 * @method getInfo
+	 * @author 大业
+	 * @create 2016-08-16
+	 * @param  [string] $condtion [查询条件]
+	 * @return [array] [查询信息]
+	 */
+	public function getInfo($condtion,$pageSet)
+	{
+        $where = $condtion;
+        $field = array('id',            		//自增ID
+                       'user_id',    			//发布人用户ID
+                       'room_name',       		//空间名称
+                       'room_desc',        		//空间描述
+                       'room_logo',        		//空间LOGO
+                       'room_location_province',//空间位置-省
+                       'room_location_city',	//空间位置-市
+                       'room_location_district',//空间位置-县
+                       'room_addr',				//空间地址
+                       'room_linkman',			//空间联系人
+                       'room_mobile',			//空间联系方式
+                       'room_price_station', 	//空间工位价格/每个
+                       'room_price_square', 	//空间平米价格/每平
+                       'room_privile', 			//空间优惠政策
+                       'room_advantage',		//空间优势特色(存标签表ID值）
+                       'is_contact', 			//0-未联系 1-联系
+                       'is_pass', 				//0-未操作 1-通过 2-未通过
+                       'is_del', 				//0-未删除 1-删除
+                       'add_time',				//添加时间
+        );
+        $order = 'id desc';
+        return $this->selectPageData($field,$where,$order,10);
+	}
+
+
+	/**
+	 * [根据用户ID显示查询的信息]
+	 * @method showInfo
+	 * @author 大业
+	 * @create 2016-08-16
+	 * @param  [int] $uid [用户ID]
+	 * @param  [int] $rid [空间ID]
+	 * @param  [string] $search [搜索信息]
+	 * @param  [string] $style [输出样式控制标识:home/cms]
+	 * @return [array] [输出信息]
+	 */
+	public function showInfo($uid=null,$rid,$search,$style='home')
+	{
+		//查询条件(传入参数为空时,取所有未删除的数据)
+		$where = 'is_del=0 ';
+		//用户ID
+		if(!empty($uid)){
+			$where = $where.' and user_id='.$uid;
+		}
+		//空间ID
+		if(!empty($rid)){
+			$where = $where.' and id='.$rid;
+		}
+		//查询条件
+		if(!empty($search)){
+			$where = $where.' and '.$search;
+		}
+
+		//取表数据
+		$Info = $this->getInfo($where);
+
+		//将显示的信息进行转换并输出
+		$List = $this->fmtInfo($Info['list'],$style);
+		return array('list'=>$List,'page'=>$Info['page']);
+	}
+
+
+	/**
+	 * [格式化输出信息]
+	 * @method fmtInfo
+	 * @author 大业
+	 * @create 2016-08-17
+	 * @param  [array] $info [要格式的信息]
+	 * @param  [string] $mark [常用:common,后台:cms,前台:home(默认)]
+	 * @return [array] [返回信息]
+	 */
+	private function fmtInfo($info,$mark)
+	{
+		if(empty($info)){return null;}
+		//常用数据
+		if($mark == 'common'){
+			foreach ($info as $key => $value) {
+				$List[$key]['id'] 		= $value['id'];
+				$List[$key]['user_id'] 	= $value['user_id'];
+				$List[$key]['name'] 	= $value['room_name'];
+				$List[$key]['linkman'] 	= $value['room_linkman'];
+				$List[$key]['mobile'] 	= $value['room_mobile'];
+			}
+		//后台取数
+		}else if($mark == 'cms'){
+			foreach ($info as $key => $value) {
+				$List[$key]['id'] 		= $value['id'];
+				$List[$key]['uid']		= $value['id'];
+				$List[$key]['user_name']= $this->getUserInfo($value['user_id'])['user_nicename'];
+				$List[$key]['add_time']	= $value['add_time'];
+				$List[$key]['name'] 	= $value['room_name'];
+				$List[$key]['addr'] 	= $value['room_addr'];
+				$List[$key]['linkman'] 	= $value['room_linkman'];
+				$List[$key]['mobile'] 	= $value['room_mobile'];
+				$List[$key]['is_contact']= $value['is_contact'];
+				$List[$key]['is_pass'] 	= $value['is_pass'];
+				$List[$key]['is_del'] 	= $value['is_del'];
+			}
+
+		//前台取数
+		}else{
+			foreach ($info as $key => $value) {
+				$List[$key]['id'] 		= $value['id'];
+				$List[$key]['uid'] 		= $value['user_id'];
+				$List[$key]['name'] 	= $value['room_name'];
+				$List[$key]['desc'] 	= $value['room_desc'];
+				$List[$key]['logo'] 	= $value['room_logo'];
+				$List[$key]['province']	= $value['room_location_province'];
+				$List[$key]['city'] 	= $value['room_location_city'];
+				$List[$key]['district'] = $value['room_location_district'];
+				$List[$key]['addr'] 	= $value['room_addr'];
+				$List[$key]['linkman'] 	= $value['room_linkman'];
+				$List[$key]['mobile'] 	= $value['room_mobile'];
+				$List[$key]['station'] 	= $value['room_price_station'];
+				$List[$key]['square'] 	= $value['room_price_square'];
+				$List[$key]['privile'] 	= $value['room_privile'];
+				$value['room_advantage'] = $value['room_advantage'] ? $value['room_advantage'] : '999999999';
+				$List[$key]['advantage']= D('AdvantageInfo')->getAdvantageInfo($value['room_advantage']);
+				$List[$key]['tags']		= $value['room_advantage'];
+				$List[$key]['is_contact']= $value['is_contact'];
+				$List[$key]['is_pass'] 	= $value['is_pass'];
+				$List[$key]['is_del'] 	= $value['is_del'];
+				$List[$key]['add_time'] = $value['add_time'];
+			}
+
+		}
+		return $List;
+	}
+
+	/**
+	 * [统计表数据信息]
+	 * @method getCountNum
+	 * @author 大业
+	 * @create 2016-08-24
+	 * @param  [string] $condition [传入条件]
+	 * @return [arrayh] [返回统计信息]
+	 */
+	public function getCountNum($condition)
+	{
+		if(empty($condition)){
+			$condition='1 = 1';
+		}
+		$where = $condition.' and is_del != 1';
+		$cntNum['all'] = $this->countData($where);
+		$where = $condition.' and is_del != 1 and is_pass != 0';
+		$cntNum['use'] = $this->countData($where);
+		$where = $condition.' and is_del != 1 and is_pass = 0';
+		$cntNum['unuse']=$this->countData($where);
+		return $cntNum;
+	}
+
+	/**
+	 * [根据UserID 获取用户信息]
+	 * @method getUserInfo
+	 * @author 大业
+	 * @create 2016-08-17
+	 * @param  [int] $uid [用户ID]
+	 * @return [array] [返回用户信息]
+	 */
+	public function getUserInfo($uid)
+	{
+		if(empty($uid)){return null;}
+		$where = 'id = '.$uid;
+		$field=array(
+			'id',			//userID
+			'user_login',	//登录名
+			'user_nicename',//登录昵称
+			'display_name',	//显示的名称
+			'user_email',	//邮箱
+			'user_status',	//状态
+			'user_mobile',  //手机号
+		);
+		// 实例化一个model对象 没有对应任何数据表
+		$Model = new \think\Model();
+		$res = $Model
+			 ->table('wp_users')
+			 ->field($field)
+			 ->where($where)
+			 ->find();
+		return $res;
+	}
+
+	/**
+	 * [根据room_id 获取空间信息]
+	 * @method getRoomInfo
+	 * @author zhanganran
+	 * @create 2016-08-23
+	 * @param  [int] $rid [用户ID]
+	 * @return [array] [返回用户信息]
+	 */
+	public function getRoomInfo($rid,$field)
+	{
+		if(empty($rid)){return null;}
+		$where = 'id = '.$rid;
+		//$field=$field;
+		// 实例化一个model对象 没有对应任何数据表
+		$res = $this
+			->where($where)
+			->getField($field);
+		return $res;
+	}
+
+	/**
+	 * [获取表[room_info]的信息]
+	 * @method getRoomsInfo
+	 * @author zhanganran
+	 * @create 2016-08-16
+	 * @param  [string] $condtion [查询条件]
+	 * @return [array] [查询信息]
+	 */
+	public function getRoomsInfo($where,$field)
+	{
+		//$where = $condtion;
+		//$field=$field;
+		$order = 'id desc';
+		return $this->selectData($field,$where,$order);
+	}
+	/**
+	 * 获取分组用户id
+	 * @group 分组条件
+	 * @type 返回数据类型  1所有 2只返回id 3只返回个数
+	 * @return array
+	 * @author lushijun
+	 * @time 2016-8-24
+	 */
+	public function getUserIdGroup($field,$where,$order,$group,$type){
+		$result=$this->selectGroupData($field,$where,$order,$group);
+		if($type =='2'){
+			//分解数据，返回
+			foreach($result as $val){
+				$arr[]=$val['user_id'];
+			}
+			//return implode(',', $arr);
+			return $arr;
+		}elseif($type =='3'){
+			//分解数据，返回
+			foreach($result as $val){
+				$arr[]=$val['num'];
+			}
+			return $arr;
+			//return implode(',', $arr);
+		}else{
+			return $result;
+		}
+
+	}
+	/**
+	 * 根据用户id获取当前用户发布的空间个数
+	 * @data array
+	 * @author lushijun
+	 * @time 2016-8-24
+	 */
+	public function getRoomFromUser($data){
+		if(empty($data)){
+			return "0";
+		}else {
+			$count=$this->countData($data);
+			if(empty($count)){
+				return "0";
+			}else{
+				return $count;
+			}
+		}
+	}
+}

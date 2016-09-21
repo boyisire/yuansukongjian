@@ -1,0 +1,252 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+    <{include file="./tpl/Cms/Public/left.html" /}>
+
+<link rel="stylesheet" href="__PUBLIC_CSS__/home/Form/teamwork.css">
+<link rel="stylesheet" href="__PUBLIC_CSS__/home/Form/zyupload-1.0.0.min.css">
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>创客合作</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">创客管理</a>
+            </li>
+            <li>
+                <a>创客合作</a>
+            </li>
+            <li>
+                <strong>创客编辑</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>编辑空间信息 <small>请谨慎处理</small></h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="form_basic.html#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <!-- <ul class="dropdown-menu dropdown-user">
+                                <li><a href="form_basic.html#">选项1</a>
+                                </li>
+                                <li><a href="form_basic.html#">选项2</a>
+                                </li>
+                            </ul> -->
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+<!-- ==========================正文表单=============================== -->
+    <div class="ibox-content">
+        <form method="post" class="form-horizontal" action="__URL__/modifyForm" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<--{$list.id}-->">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">公司名称</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" value="<--{$list.name}-->" style="width:500px;" name="name">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">所在位置</label>
+                <div class="row">
+                    <div class="col-md-1">
+                        <select class="form-control m-b prov" id="prov" name="prov" style="width:100px" >
+                            <{volist name="area_prov"  id="prov"}>
+                                <{if condition="$list.province == $prov"}>
+                                    <option value="<--{$prov}-->" selected="">
+                                        <--{$prov}-->
+                                    </option>
+                                <{else /}>
+                                    <option value="<--{$prov}-->">
+                                        <--{$prov}-->
+                                    </option>
+                                <{/if}>
+                            <{/volist}>
+                        </select>
+                    </div>
+                    <div class="col-md-1">
+                        <select class="form-control m-b city" name="city" style="width:100px" id="city">
+                            <option value="<--{$list.city}-->">
+                                <--{$list.city}-->
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col-md-1">
+                        <select class="form-control m-b dist" name="dist" style="width:100px" id="dist">
+                            <option value="<--{$list.dist}-->">
+                                <--{$list.dist}-->
+                            </option>
+                        </select>
+                    </div>
+                    <input type="hidden" value="__ROOT__/Home/Index/getAreaInfo" id="areaurl">
+                </div>
+            </div>
+
+            <div class="hr-line-dashed"></div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">产品或服务描述</label>
+                <div class="col-sm-10">
+                    <input type="text" placeholder="请描述公司的情况" class="form-control" style="width:500px;height:100px" value="<--{$list.desc}-->" name="desc">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">所属行业</label>
+                <div class="col-sm-10">
+                  <select class="form-control m-b" name="industry" style="width:150px" id="industry">
+                      <{volist name="industry"  id="indu"}>
+                        <{if condition="$list.industry == $indu"}>
+                            <option value="<--{$indu}-->" selected="">
+                                <--{$prov}-->
+                            </option>
+                        <{else /}>
+                            <option value="<--{$indu}-->">
+                                <--{$indu}-->
+                            </option>
+                        <{/if}>
+                      <{/volist}>
+                  </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">产品链接</label>
+                <div class="col-sm-10">
+                    <input type="text" placeholder="如果没有可以不填" class="form-control" style="width:500px;" value="<--{$list.addr}-->" name="addr">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">融资阶段</label>
+                <div class="col-sm-10">
+                  <select class="form-control m-b" name="financing" style="width:120px" id="financing">
+                    <{volist name="financing"  id="fina"}>
+                      <{if condition="$list.financing == $fina"}>
+                          <option value="<--{$fina}-->" selected="">
+                              <--{$fina}-->
+                          </option>
+                      <{else /}>
+                          <option value="<--{$fina}-->">
+                              <--{$fina}-->
+                          </option>
+                      <{/if}>
+                    <{/volist}>
+                  </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">负 责 人</label>
+                <div class="col-sm-10">
+                    <input type="text" placeholder="不能为空或少于2个字" class="form-control" style="width:500px;" value="<--{$list.principal}-->" name="principal">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">联系方式</label>
+                <div class="col-sm-10">
+                    <input type="text" placeholder="不能为空且必须全为数字" class="form-control" style="width:500px;" value="<--{$list.mobile}-->" name="mobile">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">企 划 书</label>
+                <div class="col-sm-10">
+                    <input type="hidden" value="<--{$list.prospectus}-->" name="old_prospectus">
+                    <div  class="col-sm-10">
+                      <input id="" type="text" value="<--{$list.prospectus}-->" style="width:500px;" readonly="">
+                      <input id="" type="file" value="" name="prospectus">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <button class="btn btn-primary" type="submit">提交保存</button>
+                </div>
+            </div>
+    </form>
+</div>
+<!-- ==========================我是分隔线=============================== -->
+            </div>
+        </div>
+    </div>
+</div>
+<{include file="./tpl/Cms/Public/footer_us.html" /}>
+        </div>
+    </div>
+</div>
+<{include file="./tpl/Cms/Public/footer.html" /}>
+<script type="text/javascript">
+
+    /**
+     * [三级联动地图]
+     * @type {[type]}
+     */
+    var areaurl= $("#areaurl").val();
+    /*改变省份时*/
+    $(".prov").change(function(){
+        /*市:city */
+        queryArea(areaurl,$(".prov").val(),1,".city");
+
+        /*区:dist*/
+        setTimeout('queryArea(areaurl,$(".city").val(),2,".dist")',100);
+    });
+
+    /*改变城市时*/
+    $(".city").change(function(){
+        /*区:dist*/
+        queryArea(areaurl,$(".city").val(),2,".dist");
+        /*查询内容*/
+        setTimeout('showInfo(showurl);',200);
+    });
+
+    /*改变县区*/
+    $(".dist").change(function(){
+        /*查询内容*/
+        setTimeout('showInfo(showurl);',200);
+    });
+
+    /**
+     * [查询地图信息]
+     * @method queryArea
+     * @author 大业
+     * @create 2016-08-19
+     * @param  {[string]} url [访问地址]
+     * @param  {[string]} name [地区名称]
+     * @param  {[int]} type [地区类型]
+     * @param  {[string]} key [要修改的class]
+     * @return {[int]} [0]
+     */
+    function queryArea(url,name,type,key)
+    {
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {'name':name,'type':type,'mark':1},
+            dataType: "json",
+            success: function(e){
+                var html = '';
+                $.each(e.data,function(k,v){
+                    html +="<option id="+key.substr(1)+"_"+k+" value='"+v+"'>"+v+"</option>";
+                });
+                $(key).html(html);
+            }
+        });
+        return 0;
+    }
+</script>

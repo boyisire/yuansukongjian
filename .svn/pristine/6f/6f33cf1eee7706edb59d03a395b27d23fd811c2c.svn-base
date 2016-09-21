@@ -1,0 +1,102 @@
+[ 2016-08-25T10:00:52+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-25T10:00:53+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-25T10:42:12+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-25T10:45:46+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-25T16:13:25+08:00 ] ::1 /yuansukongjian/Form/indexEntry
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+ERR: 无法加载模块:Form
+
+[ 2016-08-25T16:13:35+08:00 ] ::1 /yuansukongjian/index.php/Form/indexEntry
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+ERR: 无法加载模块:Form
+
+[ 2016-08-25T16:14:01+08:00 ] ::1 /yuansukongjian/Form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+ERR: 无法加载模块:Form
+
+[ 2016-08-25T16:14:34+08:00 ] ::1 /yuansukongjian/Form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+ERR: 无法加载模块:Form
+
+[ 2016-08-25T16:14:51+08:00 ] ::1 /yuansukongjian/Form
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+ERR: 无法加载模块:Form
+
+[ 2016-08-25T16:20:14+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/home/entry/images/right.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-25T16:34:24+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/home/entry/images/error.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-25T16:49:07+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/images/home/detail/address-icon.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-25T16:49:07+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/images/home/detail/privilege-tab-icon.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000654s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-25T16:49:46+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/images/home/detail/address-icon.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-25T16:49:46+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/images/home/detail/privilege-tab-icon.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-25T17:05:53+08:00 ] ::1 /YuanSuKongJian/index.php/Index/details/id
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+ERR: 无法加载模块:Index
+
+[ 2016-08-25T17:06:14+08:00 ] ::1 /YuanSuKongJian/index.php/Index/details/id
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+ERR: 无法加载模块:Index
+

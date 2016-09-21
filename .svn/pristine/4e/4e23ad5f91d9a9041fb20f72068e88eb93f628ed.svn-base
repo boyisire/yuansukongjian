@@ -1,0 +1,28 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>活动结束, 亚杰国际创业音乐节</title>
+    <meta content="亚杰国际创业音乐节，亚杰，创业音乐节" name="description">
+    <script src="/yuansukongjian/tpl/Public/js/jquery/jquery-1.7.2.min.js"></script>
+</head>
+<body style="overflow:hidden;">
+<img src="/yuansukongjian/tpl/Public/images/home/activity/sorry.png" alt="" style="width: 3.6rem;margin: 1.3rem auto 0;display: block">
+<!--<button style="width: 1.575rem;height: 0.44rem;background-color: #09f;border: 0;border-radius: 4px;font-size: 0.17rem;color: #fff;margin: .5rem auto 0;display: block" onclick='javascript:window.location.href="/yuansukongjian/Home/Activity/votes";'>查看最新结果</button>-->
+<a href="javascript:;" onclick="userCount();"><img src="/yuansukongjian/tpl/Public/images/home/activity/view-logo.png" alt="" style="display: block;margin: 0.5rem auto"></a>
+<p style="color: #999;text-align: center;font-size: 0.13rem;">元素周期－创业服务平台 提供技术支持</p>
+<script type="text/javascript">
+    document.documentElement.style.fontSize = window.innerWidth / 3.75 + 'px';
+    function userCount(){
+		$.ajax({url:"/yuansukongjian/Home/Activity/corpsCount",type:"POST",data:{id:1,cid:10,status:6},dataType:"json",success:function(s){
+			location.href="<?php echo U('Home/MakerChina/index');?>";
+		}
+		});
+	}
+</script>
+<div style="display:none;"><script src="http://s11.cnzz.com/z_stat.php?id=1259888140&web_id=1259888140 " language="JavaScript"></script>
+</body>
+</html>

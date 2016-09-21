@@ -1,0 +1,201 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+        <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>战队投票统计图表</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="<--{:U('Cms/Index/index')}-->">主页</a>
+                        </li>
+                        <li>
+                            <a>战队投票统计图表</a>
+                        </li>
+                        <li>
+                            <strong>图表显示</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+          
+            <div class="wrapper wrapper-content animated fadeInRight">
+              
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>中国地图</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                   
+                                   
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                               <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                               <div style="float:left;">
+                               <p style="width: 1000px;height:35px;line-height:35px;font-size:18px;font-weight:bold;">战队<font color="green">总票数</font>显示图</p>
+    <div id="main" style="width: 1000px;height:400px;"></div>
+    </div>
+     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+      <div style="float:left;">
+                               <p style="width: 1000px;height:35px;line-height:35px;font-size:18px;font-weight:bold;">战队<font color="red">真实票数</font>显示图</p>
+    <div id="mains" style="width: 1000px;height:400px;"></div>
+    </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+        </div>
+    </div>
+
+
+    </div>
+<script src="__PUBLIC_JS__/public/echarts.min.js"></script>
+    <script src="__PUBLIC_JS__/jquery/jquery-1.7.2.min.js"></script>
+   <{include file="./tpl/Cms/Public/footer.html" /}>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main')),
+        data = [<--{$votes}-->],
+        // 指定图表的配置项和数据
+		
+		option = {
+		    color: ['#000'],
+		    tooltip : {
+		        trigger: 'axis',
+		        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+		            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+		        }
+		    },
+		    grid: {
+		        left: '3%',
+		        right: '4%',
+		        bottom: '3%',
+		        containLabel: true
+		    },
+		    xAxis : [
+		        {
+		            type : 'category',
+		            data : [<--{$corps_name}-->],
+		            axisTick: {
+		                alignWithLabel: true
+		            },
+					axisLabel:{  
+						interval: 0  
+					} 
+		        }
+		    ],
+		    yAxis : [
+		        {
+		            type : 'value'
+		        }
+		    ],
+		    series : [
+		        {
+		            name:'直接访问',
+		            type:'bar',
+		            barWidth: '40%',
+		            label: {
+		                normal: {
+		                    show: true,
+		                    position: 'top'
+		                }
+		            },
+		            data:[]
+		        }
+		    ]
+		},
+		updateData = function(data){
+			option.series[0].data = data;
+        	// 使用刚指定的配置项和数据显示图表
+        	myChart.setOption(option);
+        };
+        setInterval(function(){
+        	$.ajax({
+				 url: "__URL__/ajaxIndex",  
+		         type: "POST",
+		         data:{cid:'',id: ''},
+		         dataType: "json",
+		         success:function(s){ 
+		        	 updateData(s.votes);
+		        	 updateDatas(s.real_corps);
+		         }
+			});
+        	
+        }, 1000);
+        
+        updateData(data);
+     // 基于准备好的dom，初始化echarts实例
+        var myCharts = echarts.init(document.getElementById('mains')),
+        datas = [<--{$real_corps}-->],
+        // 指定图表的配置项和数据
+		
+		options = {
+		    color: ['#000'],
+		    tooltip : {
+		        trigger: 'axis',
+		        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+		            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+		        }
+		    },
+		    grid: {
+		        left: '3%',
+		        right: '4%',
+		        bottom: '3%',
+		        containLabel: true
+		    },
+		    xAxis : [
+		        {
+		            type : 'category',
+		            data : [<--{$corps_name}-->],
+		            axisTick: {
+		                alignWithLabel: true
+		            },
+					axisLabel:{  
+						interval: 0  
+					} 
+		        }
+		    ],
+		    yAxis : [
+		        {
+		            type : 'value'
+		        }
+		    ],
+		    series : [
+		        {
+		            name:'直接访问',
+		            type:'bar',
+		            barWidth: '20%',
+		            label: {
+		                normal: {
+		                    show: true,
+		                    position: 'top'
+		                }
+		            },
+		            data:[]
+		        }
+		    ]
+		},
+		updateDatas = function(datas){
+			options.series[0].data = datas;
+        	// 使用刚指定的配置项和数据显示图表
+        	myCharts.setOption(options);
+        };
+      
+        updateDatas(datas);
+    </script>

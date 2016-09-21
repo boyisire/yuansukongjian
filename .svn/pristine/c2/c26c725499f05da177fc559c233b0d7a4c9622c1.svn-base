@@ -1,0 +1,185 @@
+<?php
+/*************************************************
+ * file description
+ * @filename:           FormController.class.php
+ * @desc:               元素空间 -- 表单提交
+ * @tables:             [room_info;]
+ * @date:               2016-8-16
+ * @author:             大业
+ * @version:            v1.0
+ *************************************************/
+namespace Home\Controller;
+use Common\Controller\HomeBaseController;
+class FormController extends HomeBaseController{
+
+    /**
+     * [空间主申请主页]
+     * @method indexRoom
+     * @author 大业
+     * @create 2016-08-22
+     * @return [type] [description]
+     */
+    public function indexRoom()
+    {
+        //环境配置
+        $EnvCfg['title']='元素空间合作';
+
+        //标签列表
+        $AdvantageList= D('AdvantageInfo')->getAdvantageInfo();
+        $this->assign('EnvCfg'  ,$EnvCfg);
+        $this->assign('tags'    ,$AdvantageList);
+        $this->display();
+    }
+
+
+    /**
+     * [创业者申请入口]
+     * @method indexEntry
+     * @author 安然
+     * @create 2016-08-22
+     * @return [type] [description]
+     */
+    public function indexEntry()
+    {
+        //空间ID
+        $rid=I('id');
+        echo "欢迎来申请空间[$rid]";
+    }
+
+
+    /**
+     * [接受空间主表单提交项]
+     * @method acceptRoom
+     * @author 大业
+     * @create 2016-08-17
+     * @return [type] [description]
+     */
+    public function acceptRoom()
+    {
+        //校验空间名称
+        $CheckRes = $this->checkForm('name',I('name'),2);
+        if($CheckRes['code'] != 200){
+            $this->error("空间名称",'indexRoom');
+            exit;
+        }
+
+        $name = I('name');
+        $desc = I('desc');
+        $privile = I('privile');
+        $prov = I('prov');
+        $city = I('city');
+        $dist = I('dist');
+        $addr = I('addr');
+        $linkman = I('linkman');
+        $mobile = I('mobile');
+        $advantage = I('advantage');
+        $station = I('station');
+        $square = I('square');
+
+        dump($addr);
+        dump($advantage);
+        dump($square);
+        echo "form requst!!!";
+       exit;
+
+       //logo文件上传判断
+
+       //空间图片上传判断
+       //先插表，取得记录ID列表
+       $path='./Upload/Home/RoomInfo';
+       upload_image($path);
+
+       $data = array(
+            'uid'   => I('uid'),
+            'room_name'   => I('name'),
+            'room_desc'   => I('desc'),
+            'room_logo'   => $FileLogo,//该处需要取文件
+            'room_location_province' => I('province'),
+            'room_location_city' => I('city'),
+            'room_location_county' => I('county'),
+            'room_addr' => I('addr'),
+            'room_linkman' => I('linkman'),
+            'room_mobile' => I('mobile'),
+            'room_price_station' => I('station'),
+            'room_price_square' => I('square'),
+            'room_privile' => I('privile'),
+            'room_advantage' => $TabList, //ID列表
+            'is_contact' => 0,
+            'is_pass' => 0,
+            'is_del' => 0,
+            'add_time' => time(),
+
+       );
+       //添加数据记录
+       $Res = D('RoomInfo')->addData($data);
+       if($Res){
+            $this->success('记录添加成功','xxxx');
+       }else{
+            $this->error('记录添加失败','xxxx');
+       }
+    }
+
+
+    /**
+     * [表单校验]
+     * @method checkForm
+     * @author 大业
+     * @create 2016-08-23
+     * @param  [string] $name [校验项目名称]
+     * @param  [string] $value [校验值]
+     * @param  int $lenth [校验值长度,可选]
+     * @return [array] [返回码+报错信息]
+     */
+    private function checkForm($name,$value,$lenth=2)
+    {
+        $CheckList=array(
+            'name',     //名称
+            'money',    //金额
+            'mobile',   //手机
+        );
+
+        if(empty($name)){
+            return array('code'=>100,'msg'=>'名称不能为空!');
+        }
+
+        if(!in_array($name,$CheckList)){
+            return array('code'=>101,'msg'=>'名称不存在!');
+        }
+
+        /*校验名称：
+         *   名称不能为空或者少于2个字
+         */
+        if($name=='name'){
+            if(empty($value)){
+                return array('code'=>102,'msg'=>'不能为空值!');
+            }
+
+            if(strlen($value) <= $lenth){
+                return array('code'=>103,'msg'=>"不能少于 $lenth 个字符!");
+            }
+        }
+
+        /*校验金额：
+         *   金额必须为数字
+         */
+        if($name=='money'){
+            if(!is_numeric($value)){
+                return array('code'=>104,'msg'=>'不是数字!');
+            }
+        }
+
+        /*校验手机：
+         *   手机必须为11位且全为数字
+         *   过滤部分非法格式
+         */
+        if($name=='mobile'){
+            if (strlen($value) != 11 || ! preg_match('/^1[3|4|5|7|8][0-9]\d{4,8}$/', $value )){
+                return array('code'=>105,'msg'=>"手机号检验失败!");
+            }
+        }
+
+       return array('code'=>200,'msg'=>"[$name] 校验通过!");
+    }
+
+}
+

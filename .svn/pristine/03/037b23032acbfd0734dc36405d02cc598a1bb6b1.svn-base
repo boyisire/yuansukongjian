@@ -1,0 +1,304 @@
+<!--============== 公共头部信息 ===================-->
+<{include file="./tpl/Home/Public/header.html" /}>
+<!--============== 本页独自引用部分 ===================-->
+<script type="text/javascript" src="__PUBLIC_JS__/public/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/home/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=cuiOV686Gtz3LZE5wewD5xOs4I56UDox"></script>
+<link rel="stylesheet" href="__PUBLIC_CSS__/home/detail/detail.css">
+
+<style type="text/css">
+    /* css 重置 */
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    body {
+        background: #fff;
+        font: normal 12px/22px 苹方;
+    }
+
+    img {
+        border: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    /* 本例子css */
+    .slideBox {
+        width: 1210px;
+        height: 506px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #ddd;
+    }
+
+    .slideBox .bd {
+        position: relative;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .slideBox .bd li {
+        zoom: 1;
+        vertical-align: middle;
+        position: relative;
+    }
+
+    .slideBox .bd img {
+        width: 1210px;
+        height: 506px;
+        display: block;
+    }
+
+    /* 下面是前/后按钮代码，如果不需要删除即可 */
+    .slideBox .prev,
+    .slideBox .next {
+        position: absolute;
+        left: 3%;
+        top: 50%;
+        margin-top: -25px;
+        display: block;
+        width: 32px;
+        height: 40px;
+        background: url(__PUBLIC_IMAGES__/home/detail/slider-arrow.png) -110px 5px no-repeat;
+        filter: alpha(opacity=50);
+        opacity: 0.5;
+    }
+
+    .slideBox .next {
+        left: auto;
+        right: 3%;
+        background-position: 8px 5px;
+    }
+
+    .slideBox .prev:hover,
+    .slideBox .next:hover {
+        filter: alpha(opacity=100);
+        opacity: 1;
+    }
+
+    .slideBox .prevStop {
+        display: none;
+    }
+
+    .slideBox .nextStop {
+        display: none;
+    }
+
+</style>
+
+</head>
+<body>
+<div id="de-main">
+    <div id="slideBox" class="slideBox">
+        <div class="bd">
+            <ul>
+                <{if condition="$pngs == ''"}>
+                    <li>
+                        <!--默认轮播图片-->
+                        <img src="__PUBLIC_IMAGES__/home/detail/banner.png"/>
+                        <div class="de-particular">
+                            <div>
+                                <p class="de-SBI-name"><--{$list.name}--></p>
+                                <p class="de-iconaddress"></p>
+                                <p class="de-address"><--{$list.province}-->·<--{$list.city}-->·<--{$list.district}--></p>
+                            </div>
+                            <div class="de-privilege">
+                                <p class="de-privilege-tab">优惠政策：</p>
+                                <p class="de-privilege-p"><span><--{$list.privile}--></span>
+                                </p>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="de-youhui">
+                                <p class="de-icon-privilege"></p>
+                                <{volist name="list.advantage" id="vo"}>
+                                    <p class="de-advantage"><--{$vo.name}--></p>
+                                <{/volist}>
+                            </div>
+                            <div class="de-money">
+                                <p><span><--{$list.station}--></span>元/月/工位</p>
+                                <p><span><--{$list.square}--></span>元/天/平米</p>
+                            </div>
+
+                            <!--根据通过状态来，定义显示文字和样式-->
+                            <{if condition="$list.is_pass eq 1"}>
+                                <div class="de-requesting">
+                                    申请中
+                                </div>
+                            <{elseif condition="$list.is_pass eq 2" /}>
+                                <div class="de-request-succ">
+                                    申请通过
+                                </div>
+                            <{elseif condition="$list.is_pass eq 3" /}>
+                                <div class="de-request-erro">
+                                    申请失败
+                                </div>
+                            <{else /}>
+                                <div class="de-request">
+                                    <a href="__ROOT__/Home/Form/indexEntry/id/<--{$list.id}-->" >立即申请</a>
+                                </div>
+                            <{/if}>
+                        </div>
+                    </li>
+
+                <{else /}>
+                    <{volist name="pngs" id="png"}>
+                    <li>
+                        <!--取表slide_picture信息-->
+                        <img src="__PUBLIC_UPLOAD__/<--{$png}-->"/>
+                        <div class="de-particular">
+                            <div>
+                                <p class="de-SBI-name"><--{$list.name}--></p>
+                                <p class="de-iconaddress"></p>
+                                <p class="de-address"><--{$list.province}-->·<--{$list.city}-->·<--{$list.district}--></p>
+                            </div>
+                            <div class="de-privilege">
+                                <p class="de-privilege-tab">优惠政策：</p>
+                                <p class="de-privilege-p"><span><--{$list.privile}--></span>
+                                </p>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="de-youhui">
+                                <p class="de-icon-privilege"></p>
+                                <{volist name="list.advantage" id="vo"}>
+                                    <p class="de-advantage"><--{$vo.name}--></p>
+                                <{/volist}>
+                            </div>
+                            <div class="de-money">
+                                <p><span><--{$list.station}--></span>元/月/工位</p>
+                                <p><span><--{$list.square}--></span>元/天/平米</p>
+                            </div>
+                            <!--根据通过状态来，定义显示文字和样式-->
+                            <{if condition="$list.is_pass eq 1"}>
+                                <div class="de-requesting">
+                                    申请中
+                                </div>
+                            <{elseif condition="$list.is_pass eq 2" /}>
+                                <div class="de-request-succ">
+                                    申请通过
+                                </div>
+                            <{elseif condition="$list.is_pass eq 3" /}>
+                                <div class="de-request-erro">
+                                    申请失败
+                                </div>
+                            <{else /}>
+                                <div class="de-request">
+                                    <a href="__ROOT__/Home/Form/indexEntry/id/<--{$list.id}-->" >立即申请</a>
+                                </div>
+                            <{/if}>
+
+                        </div>
+                    </li>
+                    <{/volist}>
+                <{/if}>
+                <!-- <li><img src="__PUBLIC_IMAGES__/home/detail/banner.png"/>
+                    <div class="de-particular">
+                        <div>
+                            <p class="de-SBI-name">弈投孵化器</p>
+                            <p class="de-iconaddress"></p>
+                            <p class="de-address">广东·深圳市·南山区</p>
+                        </div>
+                        <div class="de-privilege">
+                            <p class="de-privilege-tab">优惠政策：</p>
+                            <p class="de-privilege-p"><span>场地满500平米减50平米，税收优惠，配套设施齐全优惠政策场地满500平米减50平米，税收优惠...</span>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="de-youhui">
+                            <p class="de-icon-privilege"></p>
+                            <p class="de-advantage">大咖导师</p>
+                            <p class="de-advantage">距离地铁近</p>
+                            <p class="de-advantage">大咖导师</p>
+                            <p class="de-advantage">距离地铁近</p>
+                            <p class="de-advantage">大咖导师</p>
+                            <p class="de-advantage">距离地铁近</p>
+                            <p class="de-advantage">大咖导师</p>
+                            <p class="de-advantage">距离地铁近</p>
+                            <p class="de-advantage">大咖导师</p>
+                        </div>
+                        <div class="de-money">
+                            <p><span>20000</span>元/月/工位</p>
+                            <p><span>190</span>元/天/平米</p>
+                        </div>
+                        <div class="de-requesting">
+                            申请通过
+                        </div>
+                    </div>
+                </li>
+                <li><img src="__PUBLIC_IMAGES__/home/detail/banner.png"/>
+                    <div class="de-particular">
+                        <div>
+                            <p class="de-SBI-name">弈投孵化器</p>
+                            <p class="de-iconaddress"></p>
+                            <p class="de-address">广东·深圳市·南山区</p>
+                        </div>
+                        <div class="de-privilege">
+                            <p class="de-privilege-tab">优惠政策：</p>
+                            <p class="de-privilege-p"><span>场地满500平米减50平米，税收优惠，配套设施齐全优惠政策场地满500平米减50平米，税收优惠...</span>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="de-youhui">
+                            <p class="de-icon-privilege"></p>
+                            <p class="de-advantage">大咖导师</p>
+                            <p class="de-advantage">距离地铁近</p>
+                            <p class="de-advantage">大咖导师</p>
+                            <p class="de-advantage">距离地铁近</p>
+                            <p class="de-advantage">大咖导师</p>
+                            <p class="de-advantage">距离地铁近</p>
+                            <p class="de-advantage">大咖导师</p>
+                            <p class="de-advantage">距离地铁近</p>
+                            <p class="de-advantage">大咖导师</p>
+                        </div>
+                        <div class="de-money">
+                            <p><span>1000</span>元/月/工位</p>
+                            <p><span>100</span>元/天/平米</p>
+                        </div>
+                        <div class="de-request-right">
+                            申请中
+                        </div>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+        <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+        <a class="prev" href="javascript:void(0)"></a>
+        <a class="next" href="javascript:void(0)"></a>
+    </div>
+    <div class="de-introduction">
+        <div class="de-introduction-title">
+            <div><p class="de-blue"></p> 简介</div>
+        </div>
+        <p class="de-company">  &nbsp;&nbsp;&nbsp;&nbsp;   <--{$list.desc}--> </p>
+    </div>
+    <div class="de-introduction">
+        <div class="de-introduction-title">
+            <div><p class="de-blue"></p> 地址</div>
+        </div>
+        <p class="de-company"><--{$list.addr}--></p>
+        <input type="hidden" value="<--{$list.addr}-->" id="addrinfo">
+        <div id="allmap"></div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(".slideBox").slide({mainCell: ".bd ul", autoPlay: true});
+
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+    var local = new BMap.LocalSearch(map, {
+        renderOptions:{map: map}
+    });
+    /*local.search("北京市朝阳区华膳园国际文化传媒产业园");*/
+    local.search($("#addrinfo").val());
+</script>
+
+<!--============== 尾部信息 ===================-->
+<{include file="./tpl/Home/Public/footer.html" /}>

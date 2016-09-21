@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <{if condition="$data.code eq '200'"}>
+    	<title>恭喜您《创客中国》资料提交成功</title>
+        <meta content="恭喜您《创客中国》资料提交成功" name="description">
+    <{else/}>
+        <title>对不起《创客中国》资料提交失败</title>
+        <meta content="对不起《创客中国》资料提交失败" name="description">
+    <{/if}>
+
+</head>
+<body style="overflow:hidden;">
+<{if condition="$data.code eq '200'"}>
+    <img src="__HOME_IMAGES__/activity/voteright.png" alt="" style="width: 0.65rem;margin: 1.3rem auto 0;display: block">
+    <p style="font-size: 0.2rem;color: #333;text-align: center">恭喜您《创客中国》资料提交成功</p>
+    <p style="font-size: 0.15rem;color: #333;text-align: center">请等待元素君审核,在此期间请您保持电话畅通。</p>
+<{else/}>
+    <img src="__PUBLIC_IMAGES__/home/Form/succeed-error.png" alt="" style="width: 0.65rem;margin: 1.3rem auto 0;display: block">
+    <p style="font-size: 0.2rem;color: #333;text-align: center">对不起《创客中国》资料提交失败</p>
+    <p style="font-size: 0.15rem;color: #333;text-align: center">失败详情：<--{$data.msg}--> (<--{$data.code}-->)</p>
+    <p style="font-size: 0.15rem;color: #333;text-align: center">邮件：bp@yuansuzhouqi.cn</p>
+    <p style="font-size: 0.15rem;color: #333;text-align: center">电话：010-51078040</p>
+
+<{/if}>
+<a href="<--{:U('Home/Activity/actindex')}-->"><img src="__HOME_IMAGES__/MakerChina/phone/yajie-logo.png" alt="" style="display: block;margin: 0.5rem auto"></a>
+<p style="color: #999;text-align: center;font-size: 0.13rem;">元素周期－创业服务平台 提供技术支持</p>
+<script type="text/javascript">
+	document.documentElement.style.fontSize = window.innerWidth / 3.75 + 'px'
+</script>
+<div style="display:none;"><script src="http://s11.cnzz.com/z_stat.php?id=1259888140&web_id=1259888140 " language="JavaScript"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<?php
+namespace Common\Model;
+use Think\Model;
+/**
+ * 基础model
+ */
+class BaseModel extends Model{
+
+    /**
+     * 添加数据
+     * @param  array $data  添加的数据
+     * @return int          新增的数据id
+     */
+    public function addData($data){
+        // 去除键值首尾的空格
+        foreach ($data as $k => $v) {
+            $data[$k]=trim($v);
+        }
+        $id=$this->add($data);
+        return $id;
+    }
+
+    /**
+     * 修改数据
+     * @param   array   $map    where语句数组形式
+     * @param   array   $data   数据
+     * @return  boolean         操作是否成功
+     */
+    public function editData($map,$data){
+   		if (empty($map)) {
+            die('where为空的危险操作');
+        }
+        // 去除键值首尾的空格
+        foreach ($data as $k => $v) {
+        	$data[$k]=trim($v);
+        }
+        dump($map);dump($data);
+        $result=$this->where($map)->save($data);
+        return $result;
+    }
+    /**
+     * 修改一个类型数据
+     * @param   array   $map    where语句数组形式
+     * @param   string  $key     字段名称
+     * @param   string   $val   数据
+     * @return  boolean         操作是否成功
+     * @author lushijun
+     * @time 2016-8-17
+     */
+    public function editFieldData($map,$key,$val){
+    	if (empty($map)) {
+    		die('where为空的危险操作');
+    	}
+    	$result=$this->where($map)->setField($key,$val);
+    	return $result;
+    }
+    /**
+     * 删除数据
+     * @param   array   $map    where语句数组形式
+     * @return  boolean         操作是否成功
+     */
+    public function deleteData($map){
+        if (empty($map)) {
+            die('where为空的危险操作');
+        }
+        $result=$this->where($map)->delete();
+        return $result;
+    }
+
+    /**
+     * 数据排序
+     * @param  array $data   数据源
+     * @param  string $id    主键
+     * @param  string $order 排序字段
+     * @return boolean       操作是否成功
+     */
+    public function orderData($data,$id='id',$order='order_number'){
+        foreach ($data as $k => $v) {
+            $v=empty($v) ? null : $v;
+            $this->where(array($id=>$k))->save(array($order=>$v));
+        }
+        return true;
+    }
+
+
+    /**
+     * 获取一条数据
+     * @param  array $where  条件
+     * @param  string $field 查询内容
+     * @return array       返回数据
+     * @author lushijun
+     * @time   2016-8-12
+     */
+    public function findData($where,$field){
+    	if (empty($where)) {
+    		die('where为空的危险操作');
+    	}
+    	if(empty($field)){
+    		$field="*";
+    	}
+    	$result=$this->field($field)->where($where)->find();
+    	return $result;
+    }
+	 /**
+     * 获取一条数据
+     * @ 只为wp_usermeta 用户信息辅助表使用
+     * @倒序最新一条
+     * @param  array $where  条件
+     * @param  string $field 查询内容
+     * @return array       返回数据
+     * @author lushijun
+     * @time   2016-8-24
+     */
+    public function findUserMetaData($where,$field){
+    	if (empty($where)) {
+    		die('where为空的危险操作');
+    	}
+    	if(empty($field)){
+    		$field="*";
+    	}
+    	$result=$this->field($field)->where($where)->order('umeta_id desc')->limit(1)->select();
+    	return $result;
+    }
+    /**
+     * [获取所有数据,不带分页]
+     * @method selectData
+     * @author 大业
+     * @create 2016-08-16
+     * @param  [string] $field [查询字段]
+     * @param  [array] $where [查询条件]
+     * @param  [string] $field [排序条件]
+     * @return [array] [查询信息]
+     */
+    public function selectData($field='*',$where='1=1',$order='id desc')
+    {
+        //不需要分页信息时，正常查询
+        $result = $this->field($field)->where($where)->order($order)->select();
+        return $result;
+    }
+
+
+    /**
+     * [获取所有数据,带分页]
+     * @method selectPageData
+     * @author 大业
+     * @create 2016-08-18
+     * @param  array $field [查询字段]
+     * @param  array $where [查询条件]
+     * @param  string $order [排序条件]
+     * @param  int $limit [每页显示数]
+     * @return [array] [返回信息:list&&page]
+     */
+    public function selectPageData($field='*',$where='1=1',$order='id desc',$limit=10)
+    {
+        $count = $this->countData($where);
+        $pages= new \Org\Nx\Page($count,$limit);
+        $pages->setConfig('first','首页');
+        $pages->setConfig('prev','上一页');
+        $pages->setConfig('next','下一页');
+        $pages->setConfig('end','末页');
+        $result = $this
+                ->field($field)
+                ->where($where)
+                ->limit($pages->firstRow.','.$pages->listRows)
+                ->order($order)
+                ->select();
+
+        $data = array(
+            'list'=>$result,
+            'page'=>$pages->show()
+        );
+        return $data;
+    }
+
+
+    /**
+     * [获取所有数据,按具体数据个数分页]
+     * @method selectLimitData
+     * @author 大业
+     * @create 2016-08-18
+     * @param  array $field [查询字段]
+     * @param  array $where [查询条件]
+     * @param  string $order [排序条件]
+     * @param  int $startNum [起始值]
+     * @param  int $endNum [结束值]
+     * @return [array] [返回信息]
+     */
+    public function selectLimitData($field='*',$where='1=1',$order='',$startNum=0,$endNum=10)
+    {
+        $result = $this
+                ->field($field)
+                ->where($where)
+                ->limit($startNum,$endNum)
+                ->order($order)
+                ->select();
+
+        return $result;
+    }
+
+
+    /**
+     * [统计表记录数]
+     * @method countData
+     * @author 大业
+     * @create 2016-08-16
+     * @param  [string] $condition [查询条件]
+     * @return [type] [description]
+     */
+    public function countData($where)
+    {
+        if(empty($where)){
+            $cnt = $this->count();
+        }else{
+            $cnt = $this->where($where)->count();
+        }
+        return $cnt;
+    }
+
+    /**
+     * @method selectGroupData
+     * @author lushijun
+     * @create 2016-08-18
+     * @param  array $field [查询字段]
+     * @param  array $where [查询条件]
+     * @param  string $order [排序条件]
+     * @param  string $group [分组条件]
+     * @return [array] [返回信息]
+     */
+    public function selectGroupData($field='*',$where='1=1',$order='',$group)
+    {
+    	$result = $this
+    	->field($field)
+    	->where($where)
+    	->order($order)
+    	->group($group)
+    	->select();
+    	return $result;
+    }
+
+
+
+}

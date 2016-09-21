@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>亚杰国际创业音乐节</title>
+    <meta content="亚杰国际创业音乐节，亚杰，创业音乐节" name="description">
+    <script src="__PUBLIC_JS__/jquery/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="__HOME_CSS__/activity/phone/reset.css">
+    <link rel="stylesheet" href="__HOME_CSS__/activity/phone/mobileheader.css">
+</head>
+<body style="overflow:hidden;">
+<header id="masthead" class="site-header">
+
+    <nav id="top-header">
+        <div class="top-nav">
+            <div id="user-profile">
+                发现创业价值！
+            </div>
+            <div id="user-profile" style="float:right;padding-right:10px;">
+               <?php if(!empty($login_uid) && !empty($login_nick_name) && $login_is_login =='1'){?>
+             欢迎来到元素周期：&nbsp;<font color="#3e94a5 "><?php echo $login_nick_name;?></font>
+			  		&nbsp;|<a href="http://www.yuansuzhouqi.cn/usecenter.html">用户中心</a>
+
+										<span class="nav-set">
+				 	<span class="nav-login">
+				 					 	|<a href="http://www.yuansuzhouqi.cn/wp-login.php?action=logout" title=""> 退出</a>
+										</span>
+				</span>
+
+            <?php }else{?>
+                <a href="http://www.yuansuzhouqi.cn/wp-login.php?action=register">注册</a>
+
+                <span class="nav-set">
+				 	<span class="nav-login">|<a href="http://www.yuansuzhouqi.cn/wp-login.php">登录</a></span>
+				</span>
+			<?php }?>
+            </div>
+            <!--<ul class="default-menu"><li><a href="http://www.yuansuzhouqi.cn/wp-admin/nav-menus.php">设置菜单</a></li></ul>-->
+        </div>
+    </nav><!-- #top-header -->
+
+    <div id="menu-box">
+        <div id="top-menu">
+            <hgroup class="logo-site">
+                <p class="site-title">
+                    <a href="http://www.yuansuzhouqi.cn/"><img
+                            src="http://www.yuansuzhouqi.cn/wp-content/uploads/2016/06/220-50-logo-2.png"
+                            alt="元素周期"></a>
+                </p>
+            </hgroup><!-- .logo-site -->
+
+            <div id="site-nav-wrap">
+                <!-- <div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close">×</a></div>-->
+                <nav id="site-nav" class="main-nav">
+                    <a href="#sidr-main" id="navigation-toggle" class="bars"><i class="fa fa-bars" id="fa-fontsize"></i></a>
+                </nav><!-- #site-nav -->
+            </div><!-- #site-nav-wrap -->
+            <div class="clear"></div>
+        </div><!-- #top-menu -->
+    </div><!-- #menu-box -->
+</header>
+<div id="search-main" style="display: none;">
+    <div id="searchbar">
+        <ul id="menu-menu-1" class="down-menu nav-menu sf-js-enabled sf-arrows"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6"><a href="http://www.yuansuzhouqi.cn">元素首页</a></li>
+            <li id="menu-item-45" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-45"><a href="http://www.yuansuzhouqi.cn/archives/category/element-information/">元素资讯</a></li>
+            <li id="menu-item-46" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46"><a href="http://www.yuansuzhouqi.cn/archives/category/element-newinformation/">元素快讯</a></li>
+            <li id="menu-item-22" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22"><a href="http://www.yuansuzhouqi.cn/archives/category/element-marvellous/">元素科技</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>

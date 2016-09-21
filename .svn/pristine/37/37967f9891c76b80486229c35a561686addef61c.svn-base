@@ -1,0 +1,591 @@
+[ 2016-08-27T10:22:54+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/entryCheck
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001439s ]
+NOTIC: [8] Undefined index: nick_name C:\wamp\www\YuanSuKongJian\Application\Common\Controller\CmsBaseController.class.php 第 48 行.
+NOTIC: [8] Undefined index: sh C:\wamp\www\YuanSuKongJian\Application\Cms\Controller\SpaceController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `kj_entry_check` [ RunTime:0.0321s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_entry_check` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `kj_entry_check` WHERE ( 1=1 ) ORDER BY `add_time` LIMIT 0,1   [ RunTime:1.2196s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0146s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0184s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0123s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0145s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0079s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0138s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0193s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0075s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 27 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0053s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id=0 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0081s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php 第 27 行.
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 28 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0051s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id=0 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0117s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php 第 28 行.
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 29 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0042s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id=0 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0096s ]
+NOTIC: [8] Undefined offset: 0 C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php 第 29 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001208s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001460s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given C:\wamp\www\YuanSuKongJian\Runtime\Cache\Cms\9539ad1791b8fcfdb76bfd064bcca944.php 第 459 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081922s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005766s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006071s ]
+
+[ 2016-08-27T10:22:54+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+
+[ 2016-08-27T10:22:54+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001036s ]
+
+[ 2016-08-27T14:14:28+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+
+[ 2016-08-27T14:14:28+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+
+[ 2016-08-27T17:55:47+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/entryCheck
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001072s ]
+NOTIC: [8] Undefined index: nick_name C:\wamp\www\YuanSuKongJian\Application\Common\Controller\CmsBaseController.class.php 第 48 行.
+NOTIC: [8] Undefined index: sh C:\wamp\www\YuanSuKongJian\Application\Cms\Controller\SpaceController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `kj_entry_check` [ RunTime:0.0108s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_entry_check` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0034s ]
+SQL: SELECT * FROM `kj_entry_check` WHERE ( 1=1 ) ORDER BY `add_time` LIMIT 0,1   [ RunTime:0.0091s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0116s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0107s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0098s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0094s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0112s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0081s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 27 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0036s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id=1 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 27 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0041s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id=1 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0045s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 28 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0053s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id=1 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0049s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 28 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id=1 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0038s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 29 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0072s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id=1 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0058s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 29 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0032s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id=1 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0056s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000858s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000963s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given C:\wamp\www\YuanSuKongJian\Runtime\Cache\Cms\9539ad1791b8fcfdb76bfd064bcca944.php 第 459 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021835s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021954s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000755s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000973s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001067s ]
+
+[ 2016-08-27T17:55:47+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+
+[ 2016-08-27T17:55:47+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+
+[ 2016-08-27T17:55:52+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/projectDetail/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+NOTIC: [8] Undefined index: nick_name C:\wamp\www\YuanSuKongJian\Application\Common\Controller\CmsBaseController.class.php 第 48 行.
+SQL: SHOW COLUMNS FROM `kj_entry_check` [ RunTime:0.0229s ]
+NOTIC: [2] Missing argument 2 for Common\Model\BaseModel::findData(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 80 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\BaseModel.class.php 第 93 行.
+SQL: SELECT * FROM `kj_entry_check` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0237s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 81 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0051s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id = 2 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0062s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 81 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0045s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id = 2 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0040s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 82 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0033s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id = 2 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0049s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 82 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0039s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id = 2 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0117s ]
+SQL: SHOW COLUMNS FROM `kj_operation_subsidiary` [ RunTime:0.0242s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_operation_subsidiary` WHERE `type` = '2' AND `r_id` = '2' ORDER BY `id` desc  [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0188s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0647s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0305s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0219s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0089s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0249s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0133s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0084s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0141s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0191s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0161s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0119s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0168s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0169s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0166s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0127s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0127s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0166s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0412s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0128s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0184s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0357s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0243s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0242s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0246s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0123s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0329s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0234s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0276s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0246s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0224s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0237s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0226s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0241s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0144s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0186s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0154s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0157s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0164s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0155s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0162s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0205s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0159s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0166s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0145s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0145s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0180s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0152s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0148s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0135s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0164s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0141s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0188s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0160s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0224s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0155s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0145s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0085s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0146s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0128s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0043s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000946s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058037s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058295s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001389s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001541s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001415s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001629s ]
+
+[ 2016-08-27T17:55:52+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/projectDetail/id/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+
+[ 2016-08-27T17:55:52+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/projectDetail/id/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+
+[ 2016-08-27T17:56:08+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/downUserFile/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000868s ]
+NOTIC: [8] Undefined index: nick_name C:\wamp\www\YuanSuKongJian\Application\Common\Controller\CmsBaseController.class.php 第 48 行.
+SQL: SHOW COLUMNS FROM `kj_entry_check` [ RunTime:0.0151s ]
+SQL: SELECT `company_prospectus` FROM `kj_entry_check` WHERE ( id=2 ) LIMIT 1   [ RunTime:0.0295s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001763s ]
+
+[ 2016-08-27T17:56:31+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/projectDetail/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+NOTIC: [8] Undefined index: nick_name C:\wamp\www\YuanSuKongJian\Application\Common\Controller\CmsBaseController.class.php 第 48 行.
+SQL: SHOW COLUMNS FROM `kj_entry_check` [ RunTime:0.0241s ]
+NOTIC: [2] Missing argument 2 for Common\Model\BaseModel::findData(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 80 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\BaseModel.class.php 第 93 行.
+SQL: SELECT * FROM `kj_entry_check` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0076s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0234s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 81 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0041s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id = 2 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0055s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 81 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0051s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id = 2 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0053s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 82 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0031s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id = 2 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0044s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 82 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0029s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id = 2 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0069s ]
+SQL: SHOW COLUMNS FROM `kj_operation_subsidiary` [ RunTime:0.0173s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_operation_subsidiary` WHERE `type` = '2' AND `r_id` = '2' ORDER BY `id` desc  [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0149s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0179s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0168s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0192s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0155s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0079s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0114s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0111s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0126s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0162s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0116s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0113s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0128s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0126s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0136s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0119s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0117s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0119s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0114s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0129s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0113s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0119s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0121s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0116s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0114s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0117s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0113s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0133s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0123s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0511s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0281s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0244s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0162s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0166s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0135s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0123s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0112s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0109s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0147s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0112s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0147s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0152s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0162s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0180s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0099s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0131s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0122s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0160s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0182s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0145s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0169s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0129s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0144s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0125s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0169s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 2 ) LIMIT 1   [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0172s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0147s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000813s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000965s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048235s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001141s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001288s ]
+
+[ 2016-08-27T17:56:31+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/projectDetail/id/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+
+[ 2016-08-27T17:56:31+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/projectDetail/id/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+
+[ 2016-08-27T17:56:40+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/projectDetail/id/6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+NOTIC: [8] Undefined index: nick_name C:\wamp\www\YuanSuKongJian\Application\Common\Controller\CmsBaseController.class.php 第 48 行.
+SQL: SHOW COLUMNS FROM `kj_entry_check` [ RunTime:0.0239s ]
+NOTIC: [2] Missing argument 2 for Common\Model\BaseModel::findData(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 80 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\BaseModel.class.php 第 93 行.
+SQL: SELECT * FROM `kj_entry_check` WHERE ( id = 6 ) LIMIT 1   [ RunTime:0.0082s ]
+SQL: SHOW COLUMNS FROM `kj_room_info` [ RunTime:0.0192s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 81 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id = 6 ) LIMIT 1   [ RunTime:0.0031s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id = 6 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0069s ]
+NOTIC: [2] Missing argument 2 for Common\Model\RoomInfoModel::getInfo(), called in C:\wamp\www\YuanSuKongJian\Application\Common\Model\entry_checkModel.class.php on line 82 and defined C:\wamp\www\YuanSuKongJian\Application\Common\Model\RoomInfoModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_room_info` WHERE ( id = 6 ) LIMIT 1   [ RunTime:0.0058s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_id`,`room_name`,`room_desc`,`room_logo`,`room_location_province`,`room_location_city`,`room_location_district`,`room_addr`,`room_linkman`,`room_mobile`,`room_price_station`,`room_price_square`,`room_privile`,`room_advantage`,`is_contact`,`is_pass`,`is_del`,`add_time` FROM `kj_room_info` WHERE ( id = 6 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `kj_operation_subsidiary` [ RunTime:0.0167s ]
+NOTIC: [2048] Only variables should be passed by reference C:\wamp\www\YuanSuKongJian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_operation_subsidiary` WHERE `type` = '2' AND `r_id` = '6' ORDER BY `id` desc  [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0152s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0206s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0187s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0170s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0075s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0158s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0117s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0148s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0177s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0155s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0155s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0114s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0105s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0115s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0184s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0138s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0129s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0112s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0149s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0131s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0113s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0159s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0119s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0122s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0125s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0132s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0081s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0106s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0086s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0095s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0095s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0097s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0107s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0086s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0085s ]
+SQL: SELECT `id`,`user_login`,`user_nicename`,`display_name`,`user_email`,`user_status`,`user_mobile` FROM `wp_users` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0041s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001846s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002310s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064656s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001284s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001761s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001936s ]
+
+[ 2016-08-27T17:56:40+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/projectDetail/id/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+
+[ 2016-08-27T17:56:40+08:00 ] ::1 /YuanSuKongJian/index.php/Cms/Space/projectDetail/id/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+

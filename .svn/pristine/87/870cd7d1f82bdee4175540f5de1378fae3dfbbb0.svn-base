@@ -1,0 +1,442 @@
+<?php if (!defined('THINK_PATH')) exit();?><!--============== 公共头部信息 ===================-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script src="/YuanSuKongJian/tpl/Public/js/public/jquery-3.0.0.min.js"></script>
+    <link rel="stylesheet" href="/YuanSuKongJian/tpl/Public/css/home/header.css">
+    <link rel="stylesheet" href="/YuanSuKongJian/tpl/Public/css/home/reset.css">
+    <link href="/YuanSuKongJian/tpl/Public/css/public/page.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<header id="masthead" class="site-header">
+
+    <nav id="top-header">
+        <div class="top-nav">
+            <div id="user-profile">
+                发现创业价值！
+            </div>
+            <div id="user-profile" style="float:right;padding-right:10px;">
+                <a href="http://www.yuansuzhouqi.cn/wp-login.php?action=register">注册</a>
+                <!--<a href="usereg.html">立即注册</a>-->
+
+                <span class="nav-set">
+				 	<span class="nav-login">
+				 						|<a
+                            href="http://www.yuansuzhouqi.cn/wp-login.php?redirect_to=http%3A%2F%2Fwww.yuansuzhouqi.cn">登录</a>
+										</span>
+				</span>
+            </div>
+            <!--<ul class="default-menu"><li><a href="http://www.yuansuzhouqi.cn/wp-admin/nav-menus.php">设置菜单</a></li></ul>-->
+        </div>
+    </nav><!-- #top-header -->
+
+    <div id="menu-box">
+        <div id="top-menu">
+            <span class="nav-search"><img src="/YuanSuKongJian/tpl/Public/images/home/iconseek.png" style="width: 30px" alt=""></span>
+            <span class="mobile-login"><a href="#login" id="login-mobile"><i class="fa-user fa-fontsize"></i>
+			</a>
+			</span>
+            <hgroup class="logo-site">
+                <h1 class="site-title">
+                    <a href="http://www.yuansuzhouqi.cn/"><img
+                            src="http://www.yuansuzhouqi.cn/wp-content/uploads/2016/06/220-50-logo-2.png"
+                            alt="元素周期"></a>
+                </h1>
+            </hgroup><!-- .logo-site -->
+
+            <div id="site-nav-wrap">
+                <div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close">×</a></div>
+                <nav id="site-nav" class="main-nav">
+                    <a href="#sidr-main" id="navigation-toggle" class="bars"><i class="fa-fontsize fa-bars"></i></a>
+                    <div class="menu-menu-1-container">
+                        <ul id="menu-menu-1" class="down-menu nav-menu sf-js-enabled sf-arrows">
+                            <li id="menu-item-6"
+                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-6">
+                                <a href="http://www.yuansuzhouqi.cn">元素首页</a></li>
+                            <li id="menu-item-45"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-45"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-information/">元素资讯</a>
+                            </li>
+                            <li id="menu-item-46"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-newinformation/">元素快讯</a>
+                            </li>
+                            <li id="menu-item-22"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-marvellous/">元素科技</a>
+                            </li>
+                            <li id="menu-item-852"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-852"><a
+                                    href="http://www.yuansuzhouqi.cn/fuhua.html">申请孵化</a></li>
+                        </ul>
+                    </div>
+                </nav><!-- #site-nav -->
+            </div><!-- #site-nav-wrap -->
+            <div class="clear"></div>
+        </div><!-- #top-menu -->
+    </div><!-- #menu-box -->
+</header>
+<div id="search-main">
+    <div id="searchbar">
+        <form method="get" id="searchform" action="http://www.yuansuzhouqi.cn/">
+            <input value="" name="s" id="s" placeholder="输入搜索内容" required="" type="text">
+            <button type="submit" id="searchsubmit">搜索</button>
+        </form>
+    </div>
+    <div class="clear"></div>
+</div>
+<script>
+     function BottomJumpPage() {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop != 0) {  //滚动到头部部执行事件
+           $('#menu-box').addClass('shadow');
+           $('#search-main').addClass('shadow');
+        }else {
+            $('#menu-box').removeClass('shadow');
+            $('#search-main').removeClass('shadow');
+        }
+    }
+    $(window).scroll(BottomJumpPage);
+    $('.nav-search').click(function () {
+        if ($('#search-main').is(":hidden")){
+            $('#search-main').show()
+        }else {
+            $('#search-main').hide()
+        }
+    })
+</script>
+</body>
+</html>
+
+<!--============== 本页独自引用部分 ===================-->
+    <link rel="stylesheet" href="/YuanSuKongJian/tpl/Public/css/home/Form/teamwork.css">
+    <link rel="stylesheet" href="/YuanSuKongJian/tpl/Public/css/home/Form/zyupload-1.0.0.min.css">
+   <!--  <script type="text/javascript" src="/YuanSuKongJian/tpl/Public/js/public/home/zyupload-1.0.0.min.js"></script>
+    <script type="text/javascript" src="/YuanSuKongJian/tpl/Public/js/public/public/jquery.cityselect.js"></script>
+    <script type="text/javascript" src="/YuanSuKongJian/tpl/Public/js/public/home/teamwork.js"></script> -->
+</head>
+<body>
+<div id="te-main">
+    <form action="/YuanSuKongJian/Home/Form/acceptRoom" method="post" enctype="multipart/form-data" name="RoomForm">
+        <h1 class="te-h1">填写元素空间合作信息</h1>
+        <div class="te-logo-upload">
+            <div class="te-logo-upload-title">空间LOGO图片：</div>
+            <div>
+                <a href="javascript:;" class="te-a-upload">
+                    <input type="file" name="" id="">点击上传LOGO   尺寸300*300   文件最大3M
+                </a>
+            </div>
+            <div class="te-lg-warn">请上传LOGO</div>
+        </div>
+        <div class="clear"></div>
+        <div class="te-room">
+            <div class="te-room-name">
+                空间名称：
+            </div>
+            <div>
+                <input type="text" name="name" id="name" placeholder="&nbsp;&nbsp;不能为空或少于2个字">
+            </div>
+            <div class="te-room-warn">
+                <div class="te-room-right" id="right1"></div>
+                <div class="te-room-error" id="error1">
+                    <p class="te-image-error"></p>
+                    <p>不能为空或少于2个字 </p>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-presentation">
+                <div class="te-room-name">
+                    简介：
+                </div>
+                <div>
+                    <textarea name="desc" id="presentation" placeholder="&nbsp;&nbsp;请简述一下贵公司的空间情况。（100字以上）"></textarea>
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right2"></div>
+                    <div class="te-room-error" id="error2">
+                        <p class="te-image-error"></p>
+                        <p>不能为空或少于50个字 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-uploads">
+                <div class="te-room-name">
+                    上传空间图片：
+                </div>
+                <div style="font-size: 18px;font-weight: bold;color: #999;line-height: 40px;width: 334px">
+                    (规格尺寸1210*400，最大尺寸10M）
+                </div>
+                <div class="te-room-error">
+                    <p class="te-image-error"></p>
+                    <p> 请至少上传一张照片</p>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="zyupload" class="zyupload"></div>
+        <div class="te-down-main">
+            <div class="te-preferential">
+                <div class="te-room-name">
+                    优惠政策：
+                </div>
+                <div>
+                    <textarea name="privile" id="preferential" placeholder="&nbsp;&nbsp;选填"></textarea>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-address">
+                <div class="te-room-name">
+                    空间位置：
+                </div>
+                <div>
+                    <div id="city">
+                        <select class="prov" name="prov">
+                            <option value ="北京">北京</option>
+                        </select>
+                        <select class="city" name="city">
+                            <option value ="北京">北京</option>
+                        </select>
+                        <select class="dist" name="dist">
+                            <option value ="东城区">东城区</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    详细地址：
+                </div>
+                <div>
+                    <input type="text" name="addr" id="address" placeholder="&nbsp;&nbsp;不能为空或少于6个字">
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right3"></div>
+                    <div class="te-room-error" id="error3">
+                        <p class="te-image-error"></p>
+                        <p>不能为空或少于6个字 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    负责人：
+                </div>
+                <div>
+                    <input type="text" name="linkman" id="principal" placeholder="&nbsp;&nbsp;不能为空或少于2个字">
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right4"></div>
+                    <div class="te-room-error" id="error4">
+                        <p class="te-image-error"></p>
+                        <p>不能为空或少于2个字 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    手机号：
+                </div>
+                <div>
+                    <input type="text" name="mobile" id="phone" placeholder="&nbsp;&nbsp;请填写正确的手机号">
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right5"></div>
+                    <div class="te-room-error" id="error5">
+                        <p class="te-image-error"></p>
+                        <p>请填写正确的手机号 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    优势特色：
+                </div>
+                <input type="hidden" name="advantage" value="1,2,3">
+                <div style="width: 450px;">
+                    <?php if(is_array($tags)): $i = 0; $__LIST__ = $tags;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tab): $mod = ($i % 2 );++$i;?><div class="te-tips" value="<?php echo ($tab["id"]); ?>">
+                            <?php echo ($tab["name"]); ?>
+                            <p></p>
+                        </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div style="position: relative">
+                <p style="font-size: 18px;color: #cd0e22;font-weight: bold;text-align: center;">提示：以下是招租类型及价格，至少填写一项</p>
+                <div class="te-room-warn" style="float: left; position: absolute;right: 225px;top: -8px;">
+                    <div class="te-room-right" id="right6"></div>
+                    <div class="te-room-error" id="error6">
+                        <p class="te-image-error"></p>
+                        <p>请至少填写一项招租价格 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="te-room-money">
+                <div class="te-money-name">
+                    每工位价格：
+                </div>
+                <div>
+                    <input type="text" name="station" id="men-money">&nbsp;&nbsp;&nbsp;元/月
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-money">
+                <div class="te-money-name">
+                    每平米价格：
+                </div>
+                <div>
+                    <input type="text" name="square" id="area-money">&nbsp;&nbsp;&nbsp;元/天
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <input type="submit" class="te-submit"/>
+    </form>
+</div>
+<!-- <script>
+    $("#city").citySelect({
+        url: "js/city.min.js",
+        prov: "山东", //省份
+        city: "聊城", //城市
+        dist: "临清市", //区县
+        nodata: "none" //当子集无数据时，隐藏select
+    });
+</script> -->
+<script type="text/javascript">
+ /*   $("#city").citySelect({
+        url: "/YuanSuKongJian/tpl/Public/js/public/city.min.js",
+        prov: "北京", //省份
+        city: "东城区", //城市
+        dist: "东城区", //区县
+        nodata: "none" //当子集无数据时，隐藏select
+    });*/
+
+
+var areaurl= $("#areaurl").val();
+var showurl= $("#showurl").val();
+/**
+ * [初始化加载地图信息]
+ * @method
+ * @author 大业
+ * @create 2016-08-19
+ * @param  {String} ){        prov_name [description]
+ * @return {[type]} [description]
+ */
+/*$(document).ready(function(){
+    //省:prov
+    prov_name ='中国';
+    queryArea(areaurl,prov_name,0,".prov");
+    //市:city
+    setTimeout('queryArea(areaurl,$("#prov_0").val(),1,".city")',1000);
+    //区:dist
+    setTimeout('queryArea(areaurl,$("#city_0").val(),2,".dist")',2000);
+});*/
+
+//初始化
+var area= {
+    'prov':$(".prov").val(),
+    'city':$(".city").val(),
+    'dist':$(".dist").val()
+};
+var area;
+/*改变省份时*/
+$(".prov").change(function(){
+    //alert($(".prov").val());
+    /*市:city */
+    queryArea(areaurl,$(".prov").val(),1,".city");
+
+    /*区:dist*/
+    //queryArea(areaurl,$(".city").val(),2,".dist");
+    setTimeout('queryArea(areaurl,$(".city").val(),2,".dist")',100);
+
+    /*查询内容*/
+    setTimeout('showInfo(showurl);',200);
+    //showInfo(showurl,area);
+});
+
+/*改变城市时*/
+$(".city").change(function(){
+    //alert($(".prov").val());
+    /*区:dist*/
+    queryArea(areaurl,$(".city").val(),2,".dist");
+    /*查询内容*/
+    setTimeout('showInfo(showurl);',200);
+});
+
+/*改变县区*/
+$(".dist").change(function(){
+    /*查询内容*/
+    setTimeout('showInfo(showurl);',200);
+});
+
+/**
+ * [查询地图信息]
+ * @method queryArea
+ * @author 大业
+ * @create 2016-08-19
+ * @param  {[string]} url [访问地址]
+ * @param  {[string]} name [地区名称]
+ * @param  {[int]} type [地区类型]
+ * @param  {[string]} key [要修改的class]
+ * @return {[int]} [0]
+ */
+function queryArea(url,name,type,key)
+{
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: {'name':name,'type':type,'mark':1},
+        dataType: "json",
+        success: function(e){
+            var html = '';
+            $.each(e.data,function(k,v){
+                html +="<option id="+key.substr(1)+"_"+k+" value='"+v+"'>"+v+"</option>";
+            });
+            $(key).html(html);
+        }
+    });
+    return 0;
+}
+</script>
+<!--============== 尾部信息 ===================-->
+<style>
+    #colophon {
+        background: #fff;
+        position: relative;
+        width: auto;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.03);
+    }
+
+    .site-info {
+        text-align: center;
+        margin: 0 50px;
+        padding: 15px 0;
+    }
+
+    .add-info {
+        padding: 5px 0;
+        display: block;
+    }
+</style>
+<footer id="colophon" class="site-footer" role="contentinfo">
+
+    <div class="site-info">
+        <a href="http://www.yuansuzhouqi.cn/archives/112">关于我们</a>&nbsp; |&nbsp;&nbsp; <a
+            href="http://www.yuansuzhouqi.cn/archives/292">投稿须知</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a
+            href="http://www.yuansuzhouqi.cn/archives/288">创业报道</a> <span class="add-info">
+				©2016 &nbsp; 元素周期&nbsp; 版权所有&nbsp; 京ICP备16028512号-2							</span>
+    </div><!-- .site-info -->
+</footer>
+</body>
+</html>

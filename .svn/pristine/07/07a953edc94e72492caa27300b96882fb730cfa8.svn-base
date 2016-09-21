@@ -1,0 +1,77 @@
+<!--============== 公共头部信息 ===================-->
+<{include file="./tpl/Home/Public/header.html" /}>
+    <style>
+        #su-main {
+            width: 1210px;
+            height: 1100px;
+            background-color: #fff;
+            margin: 10px auto;
+            border: 1px solid transparent;
+        }
+
+        #su-main p {
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #su-main p > a {
+            color: #3cb1f0;
+        }
+        .su-btn{
+            margin: 120px auto 0;
+            width: 334px;
+            height: 40px;
+            border-radius: 4px;
+            background-color: #3cb1f0;
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer !important;
+        }
+    </style>
+</head>
+<body>
+<div id="su-main">
+<{if condition="$data.code eq '200'"}>
+    <img src="__PUBLIC_IMAGES__/home/Form/succeed-right.png" alt="" style="margin: 216px auto 75px;display: block">
+    <{elseif condition="$data.code eq '211'"/}>
+    <img src="__PUBLIC_IMAGES__/home/Form/succeed-right.png" alt="" style="margin: 216px auto 75px;display: block;position: relative;left: -195px;top: 126px">
+  <{else /}>
+   <img src="__PUBLIC_IMAGES__/home/Form/succeed-error.png" alt="" style="margin: 216px auto 75px;display: block">
+  <{/if}>
+    <p style="font-size: 34px;color: #333;margin-bottom: 40px"><{if condition="$data.code eq '200' || $data.code eq '211'"}>恭喜您 <{else /}>对不起<{/if}>，<--{$data.msg}--></p>
+    <{if condition="$data.code eq '200'"}>
+    <p style="font-size: 24px;color: #999;font-weight: bold;text-align: center;">请等待后台审核,元素君将在3天之内与您进行电话确认,在此期间请您保持电话畅通。</p>
+    <p style="font-size: 24px;color: #999;font-weight: bold;text-align: center;">查看最新状态请在“<a
+            href="http://www.yuansuzhouqi.cn/usecenter.html">用户中心-><{if condition="$data.type eq '1'"}>我的申请<{else /}>空间管理<{/if}></a>”中查看</p>
+    <{elseif condition="$data.code eq '211'"/}>
+    <p style="font-size: 24px;color: #999;font-weight: bold;text-align: center;">请等待<a href="<--{$data.url}-->">“<--{$roonName}-->”</a>业主审核，在此审核期间请</p>
+    <p style="font-size: 24px;color: #999;font-weight: bold;text-align: center;">保持电话畅通,查看最新状态请在“
+        <a href="http://www.yuansuzhouqi.cn/usecenter.html">用户中心->入驻空间</a>”中查看</p>
+    <{else /}>
+     <{if condition="$data.type eq '2'"}>
+      <p style="font-size: 24px;color: #999;font-weight: bold;text-align: center;">失败详情：<--{$data.error}--></p>
+      <{/if}>
+   	  <p style="font-size: 24px;color: #999;font-weight: bold;text-align: center;">邮件：kongjian@yuansuzhouqi.cn&nbsp;&nbsp;电话：010-51078040</p>
+     <{/if}>
+    <{if condition="$data.code eq '200'"}>
+    	<{if condition="$data.con eq '1'"}>
+   	 		<div class="su-btn clickURL">继续添加</div>
+   	 	<{else /}>
+   	 		<div class="su-btn clickURL">返回列表</div>
+   	 	<{/if}>
+    <{elseif condition="$data.code eq '211'"/}>
+    <div class="su-btn"><a href="{:U('Index/index')}" style="color:#ffffff;">继续申请</div>
+    <{else /}>
+    	<div class="su-btn clickURL">重新添加</div>
+    <{/if}>
+</div>
+<script type="text/javascript">
+    $(".clickURL").click(function(){
+        location.href="<--{$data.url}-->";
+    })
+</script>
+<!--============== 尾部信息 ===================-->
+<{include file="./tpl/Home/Public/footer.html" /}>

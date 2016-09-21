@@ -1,0 +1,102 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+        <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>空间状态</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">空间管理</a>
+                        </li>
+                        <li>
+                            <a>空间合作</a>
+                        </li>
+                        <li>
+                            <strong>空间状态</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+                </div>
+            </div>
+            <!--正文部分-->
+            <form action="__URL__/ModifyStatus" >
+                <label>空间状态：</label>
+                <{if condition="$data.status != 2"}>
+                    <input type="radio" name="status" value="1" checked>通过申请</input>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="status" value="2" >拒绝申请</input>
+                <{else /}>
+                    <input type="radio" name="status" value="1" >通过申请</input>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="status" value="2" checked>拒绝申请</input>
+                <{/if}>
+
+                <p>
+
+                <label>内容描述：</label>
+                <textarea name="desc"></textarea>
+                <p>
+                <input type="hidden" name="uid" value="<--{$data.uid}-->">
+                <input type="hidden" name="rid" value="<--{$data.rid}-->">
+                <input type="submit" value="提交">
+            </form>
+
+
+            <!-- 底部信息 -->
+            <{include file="./tpl/Cms/Public/footer_us.html" /}>
+        </div>
+    </div>
+
+
+    </div>
+    <{include file="./tpl/Cms/Public/footer.html" /}>
+    <!-- Data Tables -->
+    <script src="__ADMIN_JS__/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="__ADMIN_JS__/plugins/dataTables/dataTables.bootstrap.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function () {
+            $('.dataTables-example').dataTable();
+
+            /* Init DataTables */
+            var oTable = $('#editable').dataTable();
+
+            /* Apply the jEditable handlers to the table */
+            oTable.$('td').editable('../example_ajax.php', {
+                "callback": function (sValue, y) {
+                    var aPos = oTable.fnGetPosition(this);
+                    oTable.fnUpdate(sValue, aPos[0], aPos[1]);
+                },
+                "submitdata": function (value, settings) {
+                    return {
+                        "row_id": this.parentNode.getAttribute('id'),
+                        "column": oTable.fnGetPosition(this)[2]
+                    };
+                },
+
+                "width": "90%",
+                "height": "100%"
+            });
+
+
+        });
+
+        function fnClickAddRow() {
+            $('#editable').dataTable().fnAddData([
+                "Custom row",
+                "New row",
+                "New row",
+                "New row",
+                "New row"]);
+
+        }
+    </script>
+
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script><!--统计代码，可删除-->
+
+</body>
+
+</html>

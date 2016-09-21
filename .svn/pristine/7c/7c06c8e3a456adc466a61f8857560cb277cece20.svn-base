@@ -1,0 +1,18 @@
+[ 2016-09-08T09:14:01+08:00 ] 192.168.0.15 /yuansukongjian/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+ERR: 无法加载模块:Img
+
+[ 2016-09-08T09:14:01+08:00 ] 192.168.0.15 /yuansukongjian/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+ERR: 无法加载模块:Img
+
+[ 2016-09-08T09:14:01+08:00 ] 192.168.0.15 /yuansukongjian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+ERR: 无法加载模块:Tpl
+

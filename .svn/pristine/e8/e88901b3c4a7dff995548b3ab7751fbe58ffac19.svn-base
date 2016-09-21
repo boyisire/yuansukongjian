@@ -1,0 +1,86 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+       <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="wrapper wrapper-content">
+                <div class="row">
+                 
+                    <div class="col-lg-9 animated fadeInRight">
+                        <div class="mail-box-header">
+                            <div class="pull-right tooltip-demo">
+                              
+                                <a href="__URL__/index" class="btn btn-danger btn-sm"><i class="fa fa-times"></i> 返回列表</a>
+                            </div>
+                            <h2>
+                    修改战队成员信息
+                </h2>
+                        </div>
+                        <div class="mail-box">
+
+
+                            <div class="mail-body">
+
+                           <form action="__URL__/updateMember" method="post" class="form-horizontal" enctype="multipart/form-data">
+                          			 <input type="hidden" name="cid" value="<--{$list.cid}-->">
+                          			 <input type="hidden" name="id" value="<--{$list.id}-->">
+                           			<div class="form-group">
+                                        <label class="col-sm-2 control-label">所属战队：</label>
+
+                                        <div class="col-sm-10">
+                                           <--{$corps.corps_name}-->
+                                        </div>
+                                    </div>
+                           			<div class="form-group">
+                                        <label class="col-sm-2 control-label">成员名称：</label>
+
+                                        <div class="col-sm-10">
+                                            <input type="text" name="user_name" class="form-control" placeholder="请输入成员名称" value="<--{$list.user_name}-->">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">成员说明：</label>
+
+                                        <div class="col-sm-10">
+                                            <input type="text" name="user_dec" class="form-control" placeholder="请输入成员说明" value="<--{$list.user_dec}-->">
+                                        </div>
+                                    </div>
+ 
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">战队排序：</label>
+
+                                        <div class="col-sm-10">
+                                            <input type="text" name="is_sort" class="form-control" value="<--{$list.is_sort}-->">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">是否显示：</label>
+
+                                        <div class="col-sm-10">
+                                            <input type="radio" name="is_show"  value="1" <{if condition="$list.is_show eq '1'"}>checked<{/if}>>是&nbsp;&nbsp;
+                                            <input type="radio" name="is_show"  value="2" <{if condition="$list.is_show eq '2'"}>checked<{/if}>>否
+                                        </div>
+                                    </div>
+                         
+
+                            </div>
+                            <div class="mail-body text-right tooltip-demo">
+                                <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-reply"></i> 保存</button>
+                                <!-- <a href="mailbox.html" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Discard email"><i class="fa fa-times"></i> 放弃</a>
+                                <a href="mailbox.html" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Move to draft folder"><i class="fa fa-pencil"></i> 存为草稿</a> -->
+                            </div>
+                            </form>
+                            <div class="clearfix"></div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+        </div>
+    </div>
+    </div>
+
+  <{include file="./tpl/Cms/Public/footer.html" /}>

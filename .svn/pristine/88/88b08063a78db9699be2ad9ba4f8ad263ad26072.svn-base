@@ -1,0 +1,115 @@
+<?php
+/*************************************************
+ * file description
+ * @filename:           IndexController.class.php
+ * @desc:               元素空间 -- 主页
+ * @tables:             [room_info;]
+ * @date:               2016-8-16
+ * @author:             大业
+ * @version:            v1.0
+ *************************************************/
+namespace Home\Controller;
+use Common\Controller\HomeBaseController;
+class IndexController extends HomeBaseController{
+
+    /**
+     * [首页列表展示页]
+     * @method index
+     * @author 大业
+     * @create 2016-08-17
+     * @return [type] [description]
+     */
+	public function index()
+    {
+            $Uid=6;
+        $Rid=1;
+        $ShowInfo=D('RoomInfo')->showInfo($Uid,$Rid,$SeachBox);
+        dump($ShowInfo);
+        exit;
+        $res=D('AreasInfo')->getAreaName('武威');
+        dump($res);
+        $Uid=6;
+        $Rid=1;
+        $AjaxFlag='2';
+        //查询条件处理
+        $SeachInfo=array(
+            'province'  => '甘肃',//省
+            'city'      => '武威',//市
+            'district'  => '凉州',//县
+            'advantage' => '2,3,4',//标签
+        );
+        $SeachBox = $this->fmtSerach($SeachInfo);
+        //选择位置
+        $AdvantageList= D('AdvantageInfo')->getAdvantageName();
+        //选择标签
+        $AdvantageList= D('AdvantageInfo')->getAdvantageName();
+        dump($AdvantageName);
+        //取列表信息.[info=信息,page=分页]
+        $ShowInfo=D('RoomInfo')->showInfo($Uid,$Rid,$SeachBox);
+        if($AjaxFlag==1){
+            echo "AJAX 操作!";
+        }else{
+            dump($ShowInfo);
+            $this->assign('showinfo',$ShowInfo);
+            //$this->display();
+        }
+
+    }
+
+
+    /**
+     * [显示空间详情]
+     * @method details
+     * @author 大业
+     * @create 2016-08-17
+     * @return [type] [description]
+     */
+    public function details()
+    {
+        $uid=6;
+        $rid=1;
+        $ShowInfo=D('RoomInfo')->showInfo($uid,$rid,$SeachBox)['info'][0];
+        p($ShowInfo);
+    }
+
+
+
+    /**
+     * [格式化筛选条件]
+     * @method fmtSerach
+     * @author 大业
+     * @create 2016-08-17
+     * @param  [array] $SeachInfo [要筛选的内容]
+     * @return [string] [查询条件语句]
+     */
+    private function fmtSerach($SeachInfo)
+    {
+        $SeachBox='1=1';
+        //空间位置-省
+        if(!empty($SeachInfo['province'])){
+            $SeachBox=$SeachBox." and room_location_province='".$SeachInfo['province']."'";
+        }
+        //空间位置-市
+        if(!empty($SeachInfo['city'])){
+            $SeachBox=$SeachBox." and room_location_city='".$SeachInfo['city']."'";
+        }
+        //空间位置-县
+        if(!empty($SeachInfo['county'])){
+            $SeachBox=$SeachBox." and room_location_district='".$SeachInfo['district']."'";
+        }
+        //标签信息
+        if(!empty($SeachInfo['advantage'])){
+            foreach (explode(',', $SeachInfo['advantage']) as $key => $value) {
+                $SeachBox=$SeachBox." and find_in_set('".$value."',room_advantage)";
+            }
+        }
+        if($SeachBox === '1=1'){
+            return null;
+        }
+        return $SeachBox;
+    }
+
+
+
+}
+

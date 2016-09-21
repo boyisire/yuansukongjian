@@ -1,0 +1,31 @@
+<style>
+    #colophon {
+        background: #fff;
+        position: relative;
+        width: auto;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.03);
+    }
+
+    .site-info {
+        text-align: center;
+        margin: 0 50px;
+        padding: 15px 0;
+    }
+
+    .add-info {
+        padding: 5px 0;
+        display: block;
+    }
+</style>
+<footer id="colophon" class="site-footer" role="contentinfo">
+
+    <div class="site-info">
+        <a href="http://www.yuansuzhouqi.cn/archives/112">关于我们</a>&nbsp; |&nbsp;&nbsp; <a
+            href="http://www.yuansuzhouqi.cn/archives/292">投稿须知</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a
+            href="http://www.yuansuzhouqi.cn/archives/288">创业报道</a> <span class="add-info">
+				©2016 &nbsp; 元素周期&nbsp; 版权所有&nbsp; 京ICP备16028512号-2							</span>
+    </div><!-- .site-info -->
+</footer>
+</body>
+</html>

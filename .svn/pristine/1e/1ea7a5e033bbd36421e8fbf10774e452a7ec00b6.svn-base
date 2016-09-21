@@ -1,0 +1,24 @@
+[ 2016-09-16T23:52:45+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.1035s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 75 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000564s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000975s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019911s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001318s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001679s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001894s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002265s ]
+

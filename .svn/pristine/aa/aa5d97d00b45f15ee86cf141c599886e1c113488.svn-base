@@ -1,0 +1,69 @@
+<?php
+/*************************************************
+ * file description
+ * @filename:           SlidePictureModel.class.php
+ * @desc:               空间图片信息表
+ * @tables:             [kj_slide_picture]
+ * @date:               2016-8-22
+ * @author:             大业
+ * @version:            v1.0
+ *************************************************/
+namespace Common\Model;
+use Common\Model\BaseModel;
+class SlidePictureModel extends BaseModel{
+
+    /**
+     * [空间轮播图片信息表]
+     * @method getInfo
+     * @author 大业
+     * @create 2016-08-22
+     * @param  [string] $ListID [查询条件]
+     * @return [array] [标签名称]
+     */
+    private function getInfo($condtion)
+    {
+        if(empty($condtion)){
+            $where = 'is_del=0 ';
+        }else{
+            $where = 'is_del=0 and '.$condtion;
+        }
+
+        $field = array(
+            'id',           //自增ID
+            'room_id',      //空间ID
+            'png_url',      //图片地址
+            'sortord',      //排序方式
+            //'is_del',       //是否删除：0-未删 1-删除
+            //'add_time',     //添加时间
+        );
+        $order = 'sortord desc';
+        return $this->selectData($field,$where,$order);
+    }
+
+
+    /**
+     * [根据空间ID获取轮播图片信息]
+     * @method getSlidePng
+     * @author 大业
+     * @create 2016-08-22
+     * @param  [int] $rid [空间ID]
+     * @return [array] [图片地址信息]
+     */
+    public function getSlidePng($rid)
+    {
+        $Names ='';
+        $where ='';
+        if(!empty($rid)){
+            $where = 'room_id in ('.trim($rid,',').')';
+        }
+        $Info = $this->getInfo($where);
+        if($Info){
+            foreach ($Info as $key => $value) {
+                $Infos[$value['id']] = $value['png_url'];
+            }
+        }
+        return  $Infos;
+    }
+
+
+}

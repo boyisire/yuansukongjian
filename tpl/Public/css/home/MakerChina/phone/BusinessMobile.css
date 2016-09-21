@@ -1,0 +1,224 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.bu-banner-btn a {
+	text-decoration: none;
+	color: #f9f9fc;
+}
+
+.bu-banner {
+	width: 100%;
+	height: 2.2rem;
+	background-image: url(../../../../images/home/MakerChina/phone/bu-banner.png);
+	background-size: 100%;
+	overflow: hidden;
+}
+
+.bu-banner-btn {
+	width: 3.62rem;
+	height:0.6rem;
+	background-color: rgba(11, 136, 196, 0.9);
+	border-radius: 5px;
+	text-align: center;
+	color: #f9f9fc;
+	font-size: 0.3rem;
+	line-height: 0.6rem;
+	font-family: "Microsoft YaHei";
+	position: fixed;
+	bottom: 0;
+	left: calc((100% - 3.62rem) / 2);
+	z-index: 9;
+	margin-bottom: 0.1rem;
+}
+
+.bu-roughly {
+	width: 100%;
+	height: 3rem;
+	position: relative;
+}
+
+.bu-roughly-msg {
+	width: 3.46rem;
+	height: 3rem;
+	background-color: rgba(245, 243, 244, 0.9);
+	position: absolute;
+	top: -0.225rem;
+	left: calc((100% - 3.46rem) / 2);
+}
+
+.bu-roughly-msg h1 {
+	font-size: 0.18rem;
+	color: #505163;
+	text-align: center;
+	margin-top: 0.225rem;
+}
+
+.bu-roughly-msg p {
+	text-align: left;
+	width: 3rem;
+	line-height: 0.3rem;
+	font-size: 0.12rem;
+	margin: 0 auto;
+	color: #666;
+	letter-spacing: 1px;
+}
+
+.bu-message {
+	width: 100%;
+	height: 3.125rem;
+	background-image: url(../../../../images/home/MakerChina/phone/bu-message.png);
+	background-size: 100%;
+	margin: 0.25rem 0;
+	position: relative;
+}
+
+.bu-message-text {
+	width: 2.5rem;
+	height: 3.5rem;
+	background-color: rgba(225, 221, 223, 0.8);
+	overflow: hidden;
+	position: absolute;
+	top: -0.2rem;
+	right: 0.18rem;
+}
+
+.bu-message-text > h1 {
+	font-size: 0.18rem;
+	color: #252539;
+	margin: 0.275rem 0 0.1rem 0.2rem;
+}
+
+.bu-message-text h2 {
+	font-size: 0.12rem;
+	font-family: "Arial";
+	color: #fff;
+	text-align: center;
+	width: 1rem;
+	height: 0.175rem;
+	background-color: #020202;
+	line-height: 0.175rem;
+	letter-spacing: 2px;
+	margin: 0 0 0.2rem 0.2rem;
+}
+
+.bu-message-text p {
+	font-size: 0.11rem;
+	color: #343434;
+	line-height: 0.24rem;
+	margin-left: 0.2rem;
+}
+
+.bu-superiority{
+	font-family:"Microsoft YaHei";
+}
+.bu-invest {
+	width: 100%;
+	height: 1.7rem;
+}
+
+.bu-invest img {
+	float: left;
+}
+
+.bu-invest-title {
+	font-size: 0.12rem;
+	float: left;
+	color: #666;
+	margin-top: 0.15rem;
+	margin-left:0.15rem;
+	margin-bottom: 0.175rem;
+}
+
+.bu-invest-title > span {
+	font-size: 0.18rem;
+	font-weight:bold;
+	color: #282f4b;
+}
+.bu-invest-text{
+	font-size: 0.1rem;
+	color: #666;
+	width: 1.65rem;
+	float: left;
+	margin-left:0.15rem;
+	line-height: 0.15rem;
+}
+.bu-experience{
+	width: 100%;
+	height: 1.7rem;
+}
+.bu-experience-title{
+	font-size: 0.12rem;
+	float: right;
+	color: #666;
+	margin-right:0.15rem;
+	margin-top: 0.175rem;
+}
+.bu-experience-title > span {
+	font-size: 0.18rem;
+	font-weight:bold;
+	color: #282f4b;
+
+}
+.bu-experience-text{
+	font-size: 0.1rem;
+	color: #666;
+	width: 1.65rem;
+	float: right;
+	margin-right:0.15rem;
+	margin-top:0.15rem;
+	text-align: right;
+	letter-spacing: 1px;
+	line-height: 0.15rem;
+}
+.bu-super1,.bu-super2{
+	width: 3.62rem;
+	position: relative;
+	height: 1.28rem;
+	margin: 0 auto;
+}
+.bu-super1-text,.bu-super2-text{
+	width: 2.66rem;
+	height: 0.735rem;
+	border: 0.05rem solid #e5e5e5;
+	border-radius: 0.1rem;
+	position: absolute;
+	top:calc((1.28rem - 0.735rem) / 2);
+	right: 0;
+	z-index: -1;
+	background-color: #f2f0f1;
+}
+.bu-super1-text-p,.bu-super2-text-p{
+	font-size: 0.1rem;
+	color: #666;
+	width:2.2rem;
+	float: right;
+	margin-top: 0.05rem;
+	line-height: 0.14rem;
+}
+.bu-super1-text-p span,.bu-super2-text-p span{
+	font-size: 0.12rem;
+	font-weight: bold;
+}
+.bu-super2-text{
+	left: 0;
+}
+.bu-super2-text-p{
+	float: left;
+	margin-left: 0.05rem;
+}
+.bu-Mr-yuan{
+	width: 100%;
+	height: 2.55rem;
+	background-image: url(../../../../images/home/MakerChina/phone/bu-yuan.png);
+	background-size:100%;
+	margin-top: 0.2rem;
+}
+.bu-down{
+	height: 3.25rem;
+	width: 100%;
+	background-image: url(../../../../images/home/MakerChina/phone/bu-down.png);
+	background-size:100%;
+	margin-bottom: 0.8rem;
+}

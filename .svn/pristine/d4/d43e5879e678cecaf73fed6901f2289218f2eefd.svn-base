@@ -1,0 +1,68 @@
+<!--============== 公共头部信息 ===================-->
+<{include file="./tpl/Home/Public/header.html" /}>
+<style>
+    #su-main {
+        width: 1210px;
+        height: 800px;
+        background-color: #fff;
+        margin: 10px auto;
+        border: 1px solid transparent;
+    }
+
+    #su-main p {
+        font-weight: bold;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    #su-main p > a {
+        color: #3cb1f0;
+    }
+
+    .su-btn {
+        margin: 100px auto 0;
+        width: 334px;
+        height: 40px;
+        border-radius: 4px;
+        background-color: #3cb1f0;
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer !important;
+    }
+</style>
+</head>
+<body>
+<div id="su-main">
+    <{if condition="$data.code eq '200'"}>
+    <div>
+        <img src="__PUBLIC_IMAGES__/home/Form/succeed-right.png" alt=""
+             style="margin: 2% auto 75px;display: block;position: relative;left: -3px;top: 70px">
+        <p style="font-size: 34px;color: #333;margin:5% 5px 40px 5px;">恭喜您</p>
+        <p style="font-size: 34px;color: #333;margin:-2% 5px 40px 5px;">《创客中国》资料提交成功</p>
+        <p class="clear"></p>
+        <p style="font-size: 24px;color: #999;font-weight: bold;text-align: center;">
+            请等待元素君审核,在此期间请您保持电话畅通。</p>
+        <!-- <p style="font-size: 24px;color: #999;font-weight: bold;text-align: center;">查看最新状态请在“<a
+                href="http://www.yuansuzhouqi.cn/usecenter.html">用户中心->中查看</p> -->
+    </div>
+    <{else /}>
+        <p style="font-size: 34px;color: #333;text-align: center; width: auto;margin:6% auto 5%; height: 70px;" ><img
+                src="__PUBLIC_IMAGES__/home/Form/succeed-error.png" alt="" style='height: 57px'>
+           <span style="line-height: 57px;"> 对不起，<--{$data.msg}--></span></p>
+
+            <p class="clear"></p>
+            <p style="font-size: 24px;color: #999;font-weight: bold;text-align: center;">失败详情：<--{$data.msg}--> (<--{$data.code}-->)</p>
+            <p style="font-size: 24px;color: #999;font-weight: bold;text-align: center;">邮件：bp@yuansuzhouqi.cn&nbsp;&nbsp;电话：010-51078040</p>
+            <div class="su-btn clickURL">重新添加</div>
+    <{/if}>
+
+</div>
+<script type="text/javascript">
+    $(".clickURL").click(function () {
+        location.href = "__URL__/register/aid/<--{$data.aid}-->";
+    })
+</script>
+<!--============== 尾部信息 ===================-->
+<{include file="./tpl/Home/Public/footer.html" /}>

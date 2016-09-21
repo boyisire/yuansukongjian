@@ -1,0 +1,276 @@
+<{include file="./tpl/Home/Public/phone_header.html" /}>
+<div class="h5-head">
+    <div class="h5-head1"></div>
+    <div class="h5-headbg">
+	    <div class="h5-page1"></div>
+	    <div class="h5-page2"></div>
+    </div>
+</div>
+<div class="page2">
+    <div class="cast1">
+        <div class="cast cast-border">
+            <div class="cast-Co-name cast-Co-name1"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>包炬强</span> <span class="cast-men-Co">微&nbsp;车</span></p>
+                <p class="cast-men-name"><span>袁文辉</span> <span class="cast-men-Co" >小鱼儿科技</span></p>
+                <p class="cast-men-name"><span>李晓光</span> <span class="cast-men-Co">优才学院</span></p>
+                <p class="cast-men-name"><span>张建林</span> <span class="cast-men-Co">星客多</span></p>
+                <p class="cast-men-name"><span>陈艾华 </span> <span class="cast-men-Co">想象传媒</span></p>
+            </div>
+        </div>
+        <div class="cast cast-border">
+            <div class="cast-Co-name cast-Co-name2"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>汪&nbsp;&nbsp;&nbsp;&thinsp;璐     </span> <span class="cast-men-Co">达晨创投</span>
+                </p>
+                <p class="cast-men-name"><span>毛靖翔   </span> <span class="cast-men-Co">米&nbsp;趣</span></p>
+                <p class="cast-men-name"><span>陈艺超   </span> <span class="cast-men-Co">游戏多</span></p>
+                <p class="cast-men-name"><span>贾建强      </span> <span class="cast-men-Co">6人游旅行</span></p>
+                <p class="cast-men-name"><span>杨金鑫   </span> <span class="cast-men-Co">FAMIKU</span></p>
+            </div>
+        </div>
+    </div>
+    <div id="page2-1">
+        <div class="cast cast-border" style="border-top: 1px solid #707070">
+            <div class="cast-Co-name cast-Co-name3"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>张晋巍     </span> <span class="cast-men-Co">凹凸教育</span></p>
+                <p class="cast-men-name"><span>李&nbsp;&nbsp;&nbsp;&thinsp;白   </span> <span class="cast-men-Co">百看早教</span></p>
+                <p class="cast-men-name"><span>凌&nbsp;&nbsp;&nbsp;&thinsp;敏   </span> <span class="cast-men-Co">声讨TV</span></p>
+                <p class="cast-men-name"><span>郑杰甫 </span> <span class="cast-men-Co">校&nbsp;宝</span></p>
+                <p class="cast-men-name"><span>陈&nbsp;&nbsp;&nbsp;&thinsp;庆   </span> <span class="cast-men-Co">智慧流</span>
+                </p>
+            </div>
+        </div>
+        <div class="cast" style="border-top: 1px solid #707070;border-left:1px solid #bfbfbf;">
+            <div class="cast-Co-name cast-Co-name4"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>付健忠</span> <span class="cast-men-Co">集结号资本</span></p>
+                <p class="cast-men-name"><span>高&nbsp;&nbsp;&nbsp;&thinsp;巍   </span> <span class="cast-men-Co">百宝香</span></p>
+                <p class="cast-men-name"><span>杨&nbsp;&nbsp;&nbsp;&thinsp;光   </span> <span class="cast-men-Co">皮皮互娱</span></p>
+                <p class="cast-men-name"><span>周&nbsp;&nbsp;&nbsp;&thinsp;可	      </span> <span
+                        class="cast-men-Co">华谊兄弟</span></p>
+                <p class="cast-men-name"><span>朱其民   </span> <span class="cast-men-Co">聪明传媒</span></p>
+            </div>
+        </div>
+        <div class="cast cast-border">
+            <div class="cast-Co-name cast-Co-name5"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>胡厚舒</span> <span class="cast-men-Co">钱图无限</span></p>
+                <p class="cast-men-name"><span>韩泽峻</span> <span class="cast-men-Co">加气助手</span></p>
+                <p class="cast-men-name"><span>郑海卿</span> <span class="cast-men-Co">车锐科技</span></p>
+                <p class="cast-men-name"><span>段&nbsp;&nbsp;&nbsp;&thinsp;彬</span> <span class="cast-men-Co">高手互娱</span></p>
+                <p class="cast-men-name"><span>王&nbsp;&nbsp;&nbsp;&thinsp;波</span> <span class="cast-men-Co">星河互联</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="cast2">
+        <div class="cast cast-border">
+            <div class="cast-Co-name cast-Co-name6"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>肖&nbsp;&nbsp;&nbsp;&thinsp;竞</span> <span class="cast-men-Co">蜥蜴时尚</span></p>
+                <p class="cast-men-name"><span>于&nbsp;&nbsp;&nbsp;&thinsp;涵 </span> <span class="cast-men-Co">容么么</span></p>
+                <p class="cast-men-name"><span>王&nbsp;&nbsp;&nbsp;&thinsp;晟  </span> <span class="cast-men-Co">艺朵教育</span>
+                </p>
+                <p class="cast-men-name"><span>苏&nbsp;&nbsp;&nbsp;&thinsp;娟 </span> <span class="cast-men-Co">她生活</span></p>
+                <p class="cast-men-name"><span>孙梦婉   </span> <span class="cast-men-Co">罗藤国际</span></p>
+            </div>
+        </div>
+        <div class="cast cast-border">
+            <div class="cast-Co-name cast-Co-name7"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>程&nbsp;&nbsp;&nbsp;&thinsp;丹</span> <span class="cast-men-Co">OneFit</span>
+                </p>
+                <p class="cast-men-name"><span>罗志文</span> <span class="cast-men-Co">亿&nbsp;盟</span></p>
+                <p class="cast-men-name"><span>金小钱</span> <span class="cast-men-Co">投&nbsp;后</span></p>
+                <p class="cast-men-name"><span>殷志远 </span> <span class="cast-men-Co">兰雅迪</span></p>
+                <p class="cast-men-name"><span>韦永勇</span> <span class="cast-men-Co">律动乐器</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="page2-2">
+        <div class="cast cast-border" style="border-top: 1px solid #707070;">
+            <div class="cast-Co-name cast-Co-name8"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>李&nbsp;&nbsp;&nbsp;&thinsp;汪</span> <span class="cast-men-Co">木薯科技</span></p>
+                <p class="cast-men-name"><span>沈&nbsp;&nbsp;&nbsp;&thinsp;洋</span> <span class="cast-men-Co">爱殿别墅</span></p>
+                <p class="cast-men-name"><span>韩力达</span> <span class="cast-men-Co">黄馍馍</span></p>
+                <p class="cast-men-name"><span>陆晓霖</span> <span class="cast-men-Co">心福利</span></p>
+                <p class="cast-men-name"><span>蒋&nbsp;&nbsp;&nbsp;&thinsp;昀</span> <span class="cast-men-Co">爱回扣网</span>
+                </p>
+            </div>
+        </div>
+        <div class="cast" style="border-top: 1px solid #707070;border-left:1px solid #bfbfbf;">
+            <div class="cast-Co-name cast-Co-name9"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>刘晓彤</span> <span class="cast-men-Co">界&nbsp;面</span></p>
+                <p class="cast-men-name"><span>宋&nbsp;&nbsp;&nbsp;&thinsp;笛   </span> <span class="cast-men-Co">经济观察报</span></p>
+                <p class="cast-men-name"><span>刘珍妮</span> <span class="cast-men-Co">新京报</span></p>
+                <p class="cast-men-name"><span>蔡鹏程</span> <span class="cast-men-Co">钛媒体</span></p>
+                <p class="cast-men-name"><span>苑&nbsp;&nbsp;&nbsp;&thinsp;晶</span> <span class="cast-men-Co">投资家</span></p>
+            </div>
+        </div>
+        <div class="cast cast-border">
+            <div class="cast-Co-name cast-Co-name10"></div>
+            <div class="cast-Co"></div>
+            <div class="cast-nameAndCo">
+                <p class="cast-men-name"><span>周家杰</span> <span class="cast-men-Co">恭喜发车</span></p>
+                <p class="cast-men-name"><span>王昭赢 </span> <span class="cast-men-Co">送姜科技</span></p>
+                <p class="cast-men-name"><span>赵&nbsp;&nbsp;&nbsp;&thinsp;亮</span> <span class="cast-men-Co">明特金融</span></p>
+                <p class="cast-men-name"><span>倪&nbsp;&nbsp;&nbsp;&thinsp;梦</span> <span class="cast-men-Co">翼展科技</span></p>
+                <p class="cast-men-name"><span>赵&nbsp;&nbsp;&nbsp;&thinsp;明</span> <span class="cast-men-Co">MissCandy</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page3">
+    <img src="__HOME_IMAGES__/activity/supermens2.png" alt="" style="width:3.75rem;">
+</div>
+<div class="h5-teams">
+    <div class="h5-voteing">
+        <h2><img src="__HOME_IMAGES__/activity/guangfang.png"></h2>
+        <div class="clear"></div>
+        <img src="__HOME_IMAGES__/activity/h5-RCcode-min.png" ontouchend="userCount();" style="display: block;width: 1.425rem;margin: 0.4rem auto 0.25rem">
+        <p style="font-size: 0.2rem">长按二维码进入官方投票通道</p>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    document.documentElement.style.fontSize = window.innerWidth / 3.75 + 'px'
+
+    function BottomJumpPage() {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop != 0) {  //滚动到头部部执行事件
+            $('#menu-box').addClass('shadow');
+            $('#search-main').addClass('shadow');
+        }else {
+            $('#menu-box').removeClass('shadow');
+            $('#search-main').removeClass('shadow');
+        }
+    }
+    $(window).scroll(BottomJumpPage);
+    $('#site-nav').click(function () {
+        if ($('#search-main').is(":hidden")){
+            $('#search-main').show()
+        }else {
+            $('#search-main').hide()
+        }
+    })
+    function userCount(){
+		$.ajax({url:"__URL__/corpsCount",type:"POST",data:{id:1,cid:10,status:2},dataType:"json",success:function(s){}});
+	}
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+//alert(location.href.split('#')[0]);
+		//错误信息配置 回调区域
+		wx.config({
+			debug: false,  //调试模式 true-弹出错误信息
+			appId: "<--{$signPackage['appId']}-->",			//根据签名包获取
+			timestamp: "<--{$signPackage['timestamp']}-->",		//根据签名包获取
+			nonceStr: "<--{$signPackage['nonceStr']}-->",		//根据签名包获取
+			signature: "<--{$signPackage['signature']}-->",	//根据签名包获取
+			jsApiList: [
+				// 所有要调用的 API 都要加到这个列表中
+				'getLocation',
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage',
+				'onMenuShareQQ',
+				'onMenuShareWeibo',
+				'onMenuShareQZone'
+			  ]
+		});
+	
+	
+		// 所有要调用的 API 都要加到这个列表中
+		wx.checkJsApi({
+			jsApiList: [
+				'getLocation',
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage',
+				'onMenuShareQQ',
+				'onMenuShareWeibo',
+				'onMenuShareQZone'
+			],
+	
+			success: function (res) {
+			}
+		}); 
+		wx.ready(function(){
+			wx.onMenuShareTimeline({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    link: '<--{$url}-->/home/activity/actindex/ct/1/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			        // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareAppMessage({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声',
+			    link: '<--{$url}-->/home/activity/actindex/ct/2/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    type: '', // 分享类型,music、video或link，不填默认为link
+			    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+			    success: function () { 
+			        // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareQQ({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声', // 分享描述
+			    link: '<--{$url}-->/home/activity/actindex/ct/3/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			       // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			       // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareWeibo({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声', // 分享描述
+			    link: '<--{$url}-->/home/activity/actindex/ct/4/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			       // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+			wx.onMenuShareQZone({
+			    title: '<--{$login_nick_name}-->邀请你参加“亚杰国际创业音乐节”投票', // 分享标题
+			    desc: '一次创投圈的年度盛事，一次创投圈和音乐圈的跨界碰撞，一次创业者的集体发声', // 分享描述
+			    link: '<--{$url}-->/home/activity/actindex/ct/5/cu/<--{$login_uid}-->', // 分享链接
+			    imgUrl: '<--{$url}-->/tpl/Public/images/home/activity/weixin.png', // 分享图标
+			    success: function () { 
+			       // 用户确认分享后执行的回调函数
+			    },
+			    cancel: function () { 
+			        // 用户取消分享后执行的回调函数
+			    }
+			});
+	  });
+</script>
+</body>
+</html>

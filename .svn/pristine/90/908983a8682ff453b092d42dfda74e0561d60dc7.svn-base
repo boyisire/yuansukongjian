@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="teamwork.css">
+    <link rel="stylesheet" href="zyupload-1.0.0.min.css">
+    <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="js/zyupload-1.0.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cityselect.js"></script>
+    <script type="text/javascript" src="js/teamwork.js"></script>
+</head>
+<body>
+<div id="te-main">
+    <from name="myForm">
+        <h1 class="te-h1">填写元素空间合作信息</h1>
+        <div class="te-logo-upload">
+            <div class="te-logo-upload-title">空间LOGO图片：</div>
+            <div>
+                <a href="javascript:;" class="te-a-upload">
+                    <input type="file" name="" id="">点击上传LOGO   尺寸300*300   文件最大3M
+                </a>
+            </div>
+            <div class="te-lg-warn">请上传LOGO</div>
+        </div>
+        <div class="clear"></div>
+        <div class="te-room">
+            <div class="te-room-name">
+                空间名称：
+            </div>
+            <div>
+                <input type="text" name="name" id="name" placeholder="&nbsp;&nbsp;不能为空或少于2个字">
+            </div>
+            <div class="te-room-warn">
+                <div class="te-room-right" id="right1"></div>
+                <div class="te-room-error" id="error1">
+                    <p class="te-image-error"></p>
+                    <p>不能为空或少于2个字 </p>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-presentation">
+                <div class="te-room-name">
+                    简介：
+                </div>
+                <div>
+                    <textarea id="presentation" placeholder="&nbsp;&nbsp;请简述一下贵公司的空间情况。（100字以上）"></textarea>
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right2"></div>
+                    <div class="te-room-error" id="error2">
+                        <p class="te-image-error"></p>
+                        <p>不能为空或少于50个字 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-uploads">
+                <div class="te-room-name">
+                    上传空间图片：
+                </div>
+                <div style="font-size: 18px;font-weight: bold;color: #999;line-height: 40px;width: 334px">
+                    (规格尺寸1210*400，最大尺寸10M）
+                </div>
+                <div class="te-room-error">
+                    <p class="te-image-error"></p>
+                    <p> 请至少上传一张照片</p>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="zyupload" class="zyupload"></div>
+        <div class="te-down-main">
+            <div class="te-preferential">
+                <div class="te-room-name">
+                    优惠政策：
+                </div>
+                <div>
+                    <textarea id="preferential" placeholder="&nbsp;&nbsp;选填"></textarea>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-address">
+                <div class="te-room-name">
+                    空间位置：
+                </div>
+                <div>
+                    <div id="city">
+                        <select class="prov"></select>
+                        <select class="city" disabled="disabled"></select>
+                        <select class="dist" disabled="disabled"></select>
+                    </div>
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    详细地址：
+                </div>
+                <div>
+                    <input type="text" name="" id="address" placeholder="&nbsp;&nbsp;不能为空或少于6个字">
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right3"></div>
+                    <div class="te-room-error" id="error3">
+                        <p class="te-image-error"></p>
+                        <p>不能为空或少于6个字 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    负责人：
+                </div>
+                <div>
+                    <input type="text" name="" id="principal" placeholder="&nbsp;&nbsp;不能为空或少于2个字">
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right4"></div>
+                    <div class="te-room-error" id="error4">
+                        <p class="te-image-error"></p>
+                        <p>不能为空或少于2个字 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    手机号：
+                </div>
+                <div>
+                    <input type="text" name="" id="phone" placeholder="&nbsp;&nbsp;请填写正确的手机号">
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right5"></div>
+                    <div class="te-room-error" id="error5">
+                        <p class="te-image-error"></p>
+                        <p>请填写正确的手机号 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    优势特色：
+                </div>
+                <div style="width: 450px;">
+                    <div class="te-tips">
+                        距离地铁近
+                        <p></p>
+                    </div>
+                    <div class="te-tips">
+                        距离地铁近
+                        <p></p>
+                    </div>
+                    <div class="te-tips">
+                        距离地铁近
+                        <p></p>
+                    </div>
+                    <div class="te-tips">
+                        距离地铁近
+                        <p></p>
+                    </div>
+                    <div class="te-tips">
+                        距离地铁近
+                        <p></p>
+                    </div>
+                    <div class="te-tips">
+                        距离地铁近
+                        <p></p>
+                    </div>
+                    <div class="te-tips">
+                        距离地铁近
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div style="position: relative">
+                <p style="font-size: 18px;color: #cd0e22;font-weight: bold;text-align: center;">提示：以下是招租类型及价格，至少填写一项</p>
+                <div class="te-room-warn" style="float: left; position: absolute;right: 225px;top: -8px;">
+                    <div class="te-room-right" id="right6"></div>
+                    <div class="te-room-error" id="error6">
+                        <p class="te-image-error"></p>
+                        <p>请至少填写一项招租价格 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="te-room-money">
+                <div class="te-money-name">
+                    每工位价格：
+                </div>
+                <div>
+                    <input type="text" name="" id="men-money">&nbsp;&nbsp;&nbsp;元/月
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-money">
+                <div class="te-money-name">
+                    每平米价格：
+                </div>
+                <div>
+                    <input type="text" name="" id="area-money">&nbsp;&nbsp;&nbsp;元/天
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <input type="submit" class="te-submit">
+    </from>
+</div>
+<script>
+    $("#city").citySelect({
+        url: "js/city.min.js",
+        prov: "山东", //省份
+        city: "聊城", //城市
+        dist: "临清市", //区县
+        nodata: "none" //当子集无数据时，隐藏select
+    });
+</script>
+</body>
+</html>

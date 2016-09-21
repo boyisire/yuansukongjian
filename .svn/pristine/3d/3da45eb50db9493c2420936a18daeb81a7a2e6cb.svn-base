@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-cn">
+<header>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>亚杰国际创业音乐节</title>
+    <meta content="亚杰国际创业音乐节，亚杰，创业音乐节" name="description">
+    <link rel="stylesheet" href="__HOME_CSS__/activity/tongji.css">
+    <script src="__PUBLIC_JS__/public/echarts.min.js"></script>
+    <script src="__PUBLIC_JS__/jquery/jquery-1.7.2.min.js"></script>
+</header>
+<body style="overflow:hidden;">
+<div id="all">
+    <img src="__HOME_IMAGES__/activity/header.png" style="display: block;width: 557px;margin: 78px auto 0" alt="">
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div class="div1">
+        <p class="tong-text tong-text1">人气歌王</p>
+        <div id="main" style="width: 1600px;height:800px;"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main')),
+            // 指定图表的配置项和数据
+			data = [<--{$votes}-->],
+            // 指定图表的配置项和数据
+            option = {
+				color: ['#c60611'],
+				tooltip: {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'shadow'
+					}
+				},
+				grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+				xAxis: {
+                    type: 'value',
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff',
+							fontSize:'18'
+                        }
+                    },
+                    splitLine: false,
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff' //坐标轴线颜色
+                        }
+                    }
+                },
+                yAxis: {
+                    type: 'category',
+                    data: [<--{$corps_name}-->],
+                    axisLine: {
+                        lineStyle: {
+                            color: '#fff'//坐标轴线颜色
+							
+                        }
+                    },
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff',
+							fontSize:'18'
+                        }
+                    }
+
+                },
+				series: [
+					{
+						
+						name: '综合得分',
+                        type: 'bar',
+                        stack: '总量',
+                        barWidth: '60px',
+						label: {
+							normal: {
+								show: true,
+								position: 'right',
+								textStyle: {
+									color: '#fff',
+									fontSize:'18'
+								}
+							}
+						},
+						itemStyle: {
+                            normal: {
+								color: function(params) {
+									// build a color map as your need.
+										var colorList = [
+									   '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+									   '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD'
+										];
+										return colorList[params.dataIndex]
+								}
+							}
+                        },
+                        data: []
+						
+					}
+				]
+            };
+		    setInterval(function(){
+		    	$.ajax({
+					 url: "__URL__/ajaxIndex",  
+			         type: "POST",
+			         data:{cid:'',id: ''},
+			         dataType: "json",
+			         success:function(s){ 
+			        	
+			        	 updateData(s);
+			         }
+				});
+		    	
+		    }, 1000);
+			updateData = function (data) {
+				option.series[0].data = data;
+				// 使用刚指定的配置项和数据显示图表
+				myChart.setOption(option);
+			};
+			updateData(data);
+</script>
+</body>
+</html>

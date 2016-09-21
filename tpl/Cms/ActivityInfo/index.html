@@ -1,0 +1,248 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+        <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="wrapper wrapper-content">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content mailbox-content">
+                                <div class="file-manager">
+                                    <a class="btn btn-block btn-primary compose-mail" href="__URL__/add">添加战队</a>
+                                    <div class="space-25"></div>
+                                   <!-- <h5>文件夹</h5>
+                                    <ul class="folder-list m-b-md" style="padding: 0">
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-inbox "></i> 收件箱 <span class="label label-warning pull-right">16</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-envelope-o"></i> 发信</a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-certificate"></i> 重要</a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-file-text-o"></i> 草稿 <span class="label label-danger pull-right">2</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-trash-o"></i> 垃圾箱</a>
+                                        </li>
+                                    </ul> --> 
+                                    <h5>分类</h5>
+                                    <ul class="category-list" style="padding: 0">
+                                        <li>
+                                            <a href="__URL__/index"> <i class="fa fa-circle text-navy"></i> 全部战队</a>
+                                        </li>
+                                        <li>
+                                            <a href="__URL__/index/is_show/1"> <i class="fa fa-circle text-danger"></i> 使用中</a>
+                                        </li>
+                                        <li>
+                                            <a href="__URL__/index/is_show/2"> <i class="fa fa-circle text-primary"></i> 已暂停</a>
+                                        </li>
+                                        <!-- <li>
+                                            <a href="mail_compose.html#"> <i class="fa fa-circle text-info"></i> 广告</a>
+                                        </li>
+                                        <li>
+                                            <a href="mail_compose.html#"> <i class="fa fa-circle text-warning"></i> 客户端</a>
+                                        </li> -->
+                                    </ul>
+
+                                    <!-- <h5 class="tag-title">标签</h5>
+                                    <ul class="tag-list" style="padding: 0">
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 朋友</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 工作</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 家庭</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 孩子</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 假期</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 音乐</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 照片</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 电影</a>
+                                        </li>
+                                    </ul> -->
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 animated fadeInRight">
+                        <div class="mail-box-header">
+
+                            <form method="get" action="__URL__/index" class="pull-right mail-search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-sm" name="serach_name" placeholder="搜索战队名称">
+                                    <div class="input-group-btn">
+                                        <button type="submit" class="btn btn-sm btn-primary">
+                                            搜索
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <h2>
+                    所有战队 (<?php echo count($result['list']);?>)
+                </h2>
+                            <div class="mail-tools tooltip-demo m-t-md">
+                                <div class="btn-group pull-right">
+                                    <div class="b_page"><--{$result['page']}--></div>
+
+                                </div>
+                                 <!-- <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="刷新邮件列表"><i class="fa fa-refresh"></i> 刷新</button>
+                               <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="标为已读"><i class="fa fa-eye"></i> 
+                                </button>
+                                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="标为重要"><i class="fa fa-exclamation"></i> 
+                                </button> 
+                                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="删除短信"><i class="fa fa-trash-o"></i> 
+                                </button>-->
+
+                            </div>
+                        </div>
+                        <div class="mail-box">
+
+                            <table class="table table-hover table-mail">
+                                <tbody>
+                                    <tr class="unread">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-subject">战队图片
+                                        </td>
+                                        <td class="mail-ontact">战队信息
+                                        </td>
+                                        <td class="mail-subject">当前分贝
+                                        </td>
+                                        <td class="mail-subject">当前排名
+                                        </td>
+
+                                        
+                                        <td class="text-right mail-date">操作</td>
+                                    </tr>
+									<{volist name="result['list']" id="vo" key="k"}>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                           
+                                        </td>
+                                         <td class="mail-ontact"> <img src="__PUBLIC_UPLOAD__<--{$vo.corps_images}-->" width="120" height="90"><br/><br/>
+                                         <{empty name="vo.child"}>
+                	暂未添加战队成员
+                <{else /}>
+                	<{volist name="vo['child']" id="child"}>
+                	<{if condition="$child.is_show eq '1'"}>战队成员：<font color="green">显示</font><{else /}><font color="red">不显示</font><{/if}>|<--{$child.user_name}-->&nbsp;|&nbsp;<--{$child.user_dec}-->&nbsp;&nbsp;<a href="__URL__/editMember/id/<--{$child.id}-->/cid/<--{$vo.id}-->" style="color:blue;">修改</a>&nbsp;|&nbsp;<a href="__URL__/delMember/id/<--{$child.id}-->" style="color:blue;" onclick="if(confirm('确定删除这个战队成员吗?')==false)return false;">删除</a><br/><br/>
+                	<{/volist}>
+                <{/empty}>    
+                                        </td>
+                                        <td class="mail-ontact">
+                                        		
+                                        		战队名称：<font color="red"><--{$vo.corps_name}--></font><br/><br/>
+                                        		战队票数：<font color="red"><span id="vt<--{$vo.id}-->"><--{$vo.corps_votes}--></span></font>&nbsp;张<br/><br/>
+                                        		战队排名：第&nbsp;<font style="font-size:16px;" color="red"><span id="ming<--{$vo.id}-->"><--{$k}--></span></font>&nbsp;名<br/><br/>
+                                        		输入票数：<input type="text" name="votes" id="votes<--{$vo.id}-->" style="width:100px;" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" ><br/><br/>
+                                       票数操作：<input  type="radio" name="check<--{$vo.id}-->" id="check" value="1" checked/>&nbsp;增加&nbsp;<!--<input type="radio" name="" id="check" value="2">&nbsp;减去--><br/><br/>
+                                     点击操作：<button type="button" onclick="ajaxChange('<--{$vo.id}-->');"><font color="green">提交</font></button><br/>	
+                                        </td>
+                                         <td class="mail-ontact">                              		
+                                         当前分贝：<span id="fb<--{$vo.id}-->"><{if condition="$vo.corps_fb eq ''"}>暂无分贝值<{else /}><--{$vo.corps_fb}--><{/if}></span><br/><br/>
+                                      修改分贝：<input type="text" name="corps_fb" id="corps_fb<--{$vo.id}-->" style="width:100px;"><br/><br/>
+                操作分贝:<button type="button" onclick="ajaxCorps('<--{$vo.id}-->')">保存</button>
+                                        </td>
+                                        <td class="mail-ontact">
+                                        战队投票分值：<font style="font-size:16px;" color="red"><--{$vo.votes_val}--></font><br/><br/>
+                                        战队分贝分值：<font style="font-size:16px;" color="red"><--{$vo.fb_val}--></font><br/><br/>
+                                        战队总分值：<font style="font-size:16px;" color="red"><--{$vo.all_val}--></font><br/><br/>
+                               战队显示排序：第&nbsp;<font style="font-size:16px;" color="red"><--{$vo.is_sort}-->&nbsp;</font>个<br/><br/>
+                                        		战队状态：<{if condition="$vo.is_show eq '1'"}><font color="green">使用中</font><{else /}><font color="red">已暂停</font><{/if}><br/><br/>
+                                        		添加时间：<--{$vo.add_time|date='Y-m-d H:i:s',###}--><br/>
+          
+                                       
+                                        </td>
+
+                                        
+                                        <td class="text-right mail-date"><a href="__URL__/edit/id/<--{$vo.id}-->" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>&nbsp;<a href="__URL__/del/id/<--{$vo.id}-->" class="btn btn-white btn-sm" onclick="if(confirm('确定删除这个战队信息吗?')==false)return false;"><i class="fa fa-trash-o"></i> 删除 </a><br/><br/><a href="__URL__/addMember/id/<--{$vo.id}-->" class="btn btn-white btn-sm"><i class="fa fa-plus"></i>添加战队成员</a></td>
+                                    </tr>
+                                    <{/volist}>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+        </div>
+    </div>
+    </div>
+<{include file="./tpl/Cms/Public/footer.html" /}>
+ <script>
+	function ajaxChange(id){
+		if(id !==''){
+		   var cname="check"+id;
+		   var data = {
+			         id:id,
+			         votes:$("#votes"+id).val(),
+			         type:$("input[name="+cname+"]:checked").val()
+			};
+		   if(data.votes !=''){
+				$.ajax({
+					url:"__URL__/checkVotes",
+					type:"POST",
+					data:data,
+					dataType:"json",
+					success:function(s){
+						if(s.code =='200'){
+							alert('投票成功,当前名次：第'+s.sort+" 名,当前票数："+s.data+" 张");
+							$("#vt"+id).html(s.data);
+							$("#ming"+id).html(s.sort);
+						}else{
+							alert(s.msg);
+						}
+					}
+					
+				});
+		   }else{
+			   alert("票数不能为空");
+		   }
+		}else{
+			alert("没找到id");
+		}
+	}
+	function ajaxCorps(id){
+		if(id !==''){
+		   var cname="check"+id;
+		   var data = {
+			         id:id,
+			         corps_fb:$("#corps_fb"+id).val()
+			};
+		   if(data.corps_fb !=''){
+				$.ajax({
+					url:"__URL__/checkCorpsFb",
+					type:"POST",
+					data:data,
+					dataType:"json",
+					success:function(s){
+						if(s.code =='200'){
+							alert('分贝值修改成功!');
+							$("#fb"+id).html(s.data);
+						}else{
+							alert(s.msg);
+						}
+					}
+					
+				});
+		   }else{
+			   alert("分贝值不能为空");
+		   }
+		}else{
+			alert("没找到id");
+		}
+	}
+</script>

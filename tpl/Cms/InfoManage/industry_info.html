@@ -1,0 +1,207 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body class="fixed-navigation">
+    <div id="wrapper">
+        <{include file="./tpl/Cms/Public/left.html" /}>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>信息管理</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">信息管理</a>
+                    </li>
+                    <li>
+                        <a>行业信息</a>
+                    </li>
+                    <li>
+                        <strong>行业列表</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+            </div>
+        </div>
+
+        <div class="main" style="width:1500px;height:400px;">
+            <div class="wrapper wrapper-content animated fadeInRight" style="width:1100px;position:absolute;">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>列表 <small>分类，查找</small></h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="table_data_tables.html#">选项1</a>
+                                        </li>
+                                        <li><a href="table_data_tables.html#">选项2</a>
+                                        </li>
+                                    </ul>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <table class="table table-striped table-bordered table-hover dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>行业名称</th>
+                                            <th>行业描述</th>
+                                            <th>排序方式</th>
+                                            <th>使用状态</th>
+                                            <th>添加时间</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>电子商务</th>
+                                            <th>电子商务行业描述</th>
+                                            <th>0</th>
+                                            <th>启用</th>
+                                            <th>2017-09-01 12:23:23</th>
+                                            <th>编辑 删除</th>
+                                        </tr>
+                                        <!-- <{foreach name="list" item="vo" key="k"}> -->
+                                        <tr>
+                                            <td>1</td>
+                                            <td>电子商务</td>
+                                            <td>电子商务描述</td>
+                                            <td>0</td>
+                                            <td>
+                                                <{if condition="$vo['is_pass'] == 1"}>
+                                                    <font color="red">禁用</font>
+                                                <{else /}>
+                                                    <font color="green">启用</font>
+                                                <{/if}>
+                                            </td>
+                                            <td><--{1473318785|date='Y-m-d',###}--></td>
+                                            <td>
+                                                <a href="__ROOT__/Home/Index/details/id/<--{$vo.id}-->" target="_blank"><button id="yl">预览</button></a>&nbsp;
+                                                <a href="__ROOT__/Cms/Symbiosis/editForm/id/<--{$vo.id}-->"><button id="bj">编辑</button></a>&nbsp;
+                                                <a href="__ROOT__/Cms/Symbiosis/delData/id/<--{$vo.id}-->"><button id="sc">删除</button></a>&nbsp;
+                                                <a href="__ROOT__/Cms/Symbiosis/RoomStatus/uid/<--{$vo.uid}-->/rid/<--{$vo.id}-->" target="_top"><button id="tg">通过/未通过</button></a>&nbsp;
+                                                <a href="__ROOT__/Cms/Space/entryCheck/uid/<--{$vo.uid}-->/rid/<--{$vo.id}-->" target="_top"><button id="tg">申请管理</button></a>&nbsp;
+                                            </td>
+                                        </tr>
+                                       <!--  <{/foreach}> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--PHP分页处理-->
+                 <--{$page}-->
+
+             <div class="wrapper wrapper-content animated fadeInRight" style="width:530px;position:absolute;margin-left:1115px;margin-top:-360px;">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>表单 <small>新增，修改</small></h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="table_data_tables.html#">选项1</a>
+                                        </li>
+                                        <li><a href="table_data_tables.html#">选项2</a>
+                                        </li>
+                                    </ul>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <label class="col-sm-3 control-label">行业名称：</label>
+                                <div class="col-sm-9">
+                                    <input name="" class="form-control" placeholder="请输入行业名称" type="text"> <span class="help-block m-b-none"></span>
+                                </div>
+
+                                <label class="col-sm-3 control-label">行业描述：</label>
+                                <div class="col-sm-9">
+                                    <input name="" class="form-control" placeholder="请输入行业描述" type="text"> <span class="help-block m-b-none"></span>
+                                </div>
+
+                                <label class="col-sm-3 control-label">排序方式：</label>
+                                <div class="col-sm-9">
+                                    <input name="" class="form-control" placeholder="请输入排序方式" type="text"> <span class="help-block m-b-none"></span>
+                                </div>
+                                <div class="col-sm-12 col-sm-offset-3">
+                                    <button class="btn btn-primary" type="submit">保存内容</button>
+                                    <button class="btn btn-white" type="submit">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+             </div>
+
+             </div>
+             <hr>
+        </div>
+        <!-- 底部信息 -->
+        <{include file="./tpl/Cms/Public/footer_us.html" /}>
+    </div>
+    </div>
+    <{include file="./tpl/Cms/Public/footer.html" /}>
+    <!-- Data Tables -->
+    <script src="__ADMIN_JS__/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="__ADMIN_JS__/plugins/dataTables/dataTables.bootstrap.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function () {
+            $('.dataTables-example').dataTable();
+
+            /* Init DataTables */
+            var oTable = $('#editable').dataTable();
+
+            /* Apply the jEditable handlers to the table */
+            oTable.$('td').editable('../example_ajax.php', {
+                "callback": function (sValue, y) {
+                    var aPos = oTable.fnGetPosition(this);
+                    oTable.fnUpdate(sValue, aPos[0], aPos[1]);
+                },
+                "submitdata": function (value, settings) {
+                    return {
+                        "row_id": this.parentNode.getAttribute('id'),
+                        "column": oTable.fnGetPosition(this)[2]
+                    };
+                },
+
+                "width": "90%",
+                "height": "100%"
+            });
+
+
+        });
+
+        function fnClickAddRow() {
+            $('#editable').dataTable().fnAddData([
+                "Custom row",
+                "New row",
+                "New row",
+                "New row",
+                "New row"]);
+
+        }
+    </script>
+
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script><!--统计代码，可删除-->
+
+</body>
+
+</html>

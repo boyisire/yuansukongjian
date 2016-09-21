@@ -1,0 +1,163 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+        <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="wrapper wrapper-content">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content mailbox-content">
+                                <div class="file-manager">
+                                    <a class="btn btn-block btn-primary compose-mail" href="__URL__/add">写信</a>
+                                    <div class="space-25"></div>
+                                   <!-- <h5>文件夹</h5>
+                                    <ul class="folder-list m-b-md" style="padding: 0">
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-inbox "></i> 收件箱 <span class="label label-warning pull-right">16</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-envelope-o"></i> 发信</a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-certificate"></i> 重要</a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-file-text-o"></i> 草稿 <span class="label label-danger pull-right">2</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-trash-o"></i> 垃圾箱</a>
+                                        </li>
+                                    </ul> --> 
+                                    <h5>分类</h5>
+                                    <ul class="category-list" style="padding: 0">
+                                        <li>
+                                            <a href="__URL__/index/sms_type/1"> <i class="fa fa-circle text-navy"></i> 验证码</a>
+                                        </li>
+                                        <li>
+                                            <a href="__URL__/index/sms_type/2"> <i class="fa fa-circle text-danger"></i> 系统短信</a>
+                                        </li>
+                                        <li>
+                                            <a href="__URL__/index/sms_type/3"> <i class="fa fa-circle text-primary"></i> 审核短信</a>
+                                        </li>
+                                        <!-- <li>
+                                            <a href="mail_compose.html#"> <i class="fa fa-circle text-info"></i> 广告</a>
+                                        </li>
+                                        <li>
+                                            <a href="mail_compose.html#"> <i class="fa fa-circle text-warning"></i> 客户端</a>
+                                        </li> -->
+                                    </ul>
+
+                                    <!-- <h5 class="tag-title">标签</h5>
+                                    <ul class="tag-list" style="padding: 0">
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 朋友</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 工作</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 家庭</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 孩子</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 假期</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 音乐</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 照片</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 电影</a>
+                                        </li>
+                                    </ul> -->
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 animated fadeInRight">
+                        <div class="mail-box-header">
+
+                            <form method="get" action="__URL__/index" class="pull-right mail-search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-sm" name="like_content" placeholder="搜索短信内容">
+                                    <div class="input-group-btn">
+                                        <button type="submit" class="btn btn-sm btn-primary">
+                                            搜索
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <h2>
+                    收件箱 (<?php echo count($list['list']);?>)
+                </h2>
+                            <div class="mail-tools tooltip-demo m-t-md">
+                                <div class="btn-group pull-right">
+                                    <div class="b_page"><--{$list['page']}--></div>
+
+                                </div>
+                                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="刷新邮件列表"><i class="fa fa-refresh"></i> 刷新</button>
+                                <!-- <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="标为已读"><i class="fa fa-eye"></i> 
+                                </button>
+                                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="标为重要"><i class="fa fa-exclamation"></i> 
+                                </button> 
+                                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="删除短信"><i class="fa fa-trash-o"></i> 
+                                </button>-->
+
+                            </div>
+                        </div>
+                        <div class="mail-box">
+
+                            <table class="table table-hover table-mail">
+                                <tbody>
+                                    <tr class="unread">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact">接受用户
+                                        </td>
+                                        <td class="mail-subject"><a href="mail_detail.html">短信内容</a>
+                                        </td>
+                                        <td class="">短信状态
+                                        </td>
+                                         <td class="">发送时间
+                                        </td>
+                                        <td class="text-right mail-date">操作</td>
+                                    </tr>
+									<{volist name="list['list']" id="vo"}>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-ontact"><--{$vo.user_name}-->  <span class="label label-warning pull-right" style="<--{$vo.background}-->"><--{$vo.sms_name}--></span> 
+                                        </td>
+                                        <td class="mail-subject"><--{$vo.sms_desc}-->
+                                        </td>
+                                        <td class=""><--{$vo.sms_status}--></td>
+                                        <td class=""><--{$vo.send_time|date='Y-m-d H:i:s',###}--></td>
+                                        <td class="text-right mail-date"><button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="删除短信"><i class="fa fa-trash-o"></i> 
+                                </button></td>
+                                    </tr>
+                                    <{/volist}>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+        </div>
+    </div>
+    </div>
+<{include file="./tpl/Cms/Public/footer.html" /}>
+    <!-- iCheck -->
+    <script src="__ADMIN_JS__/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>

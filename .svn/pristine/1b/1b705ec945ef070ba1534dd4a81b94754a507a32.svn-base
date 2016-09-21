@@ -1,0 +1,205 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+<div id="wrapper">
+    <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-sm-4">
+                    <h2>项目详情</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">主页</a>
+                        </li>
+                        <li>
+                            <strong>项目详情</strong>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="wrapper wrapper-content animated fadeInUp">
+                        <div class="ibox">
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="m-b-md">
+                                            <a href="project_detail.html#" class="btn btn-white btn-xs pull-right">编辑项目</a>
+                                            <h2><--{$showInfo.company_name}--></h2>
+                                        </div>
+                                        <dl class="dl-horizontal">
+                                            <dt>状态：</dt> 
+                                            <dd><span class="label label-primary">
+                                                <{switch name="showInfo.rent_status"}>
+                                                    <{case value="1"}>未操作<{/case}>
+                                                    <{case value="2"}>未通过<{/case}>
+                                                    <{case value="3"}>通过<{/case}>
+                                                    <{case value="4"}>成交<{/case}>
+                                                    <{default /}>-
+                                                <{/switch}>
+                                            </span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-5">
+                                        <dl class="dl-horizontal">
+
+                                            <dt>申请人：</dt>
+                                            <dd><--{$showInfo.company_person}--></dd>
+                                            <dt>申请人手机号：</dt>
+                                            <dd><--{$showInfo.company_phone}--></dd>
+                                            <dt>寻租类型：</dt>
+                                            <dd><{switch name="showInfo.rent_type"}>
+                                                <{case value="1"}>工位<{/case}>
+                                                <{case value="2"}>面积<{/case}>
+                                                <{default /}>-
+                                                <{/switch}>
+                                            </dd>
+                                            <dt>寻租标准：</dt>
+                                            <dd><{switch name="showInfo.rent_type"}>
+                                                <{case value="1"}><--{$showInfo.rent_number}--> 个<{/case}>
+                                                    <{case value="2"}><--{$showInfo.rent_number}--> 平米<{/case}>
+                                                <{default /}>-
+                                                <{/switch}>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="col-lg-7" id="cluster_info">
+                                        <dl class="dl-horizontal">
+                                            <dt>申请的孵化器：</dt>
+                                            <dd><--{$showInfo.room_name}--></dd>
+                                            <dt>空间业主：</dt>
+                                            <dd><--{$showInfo.room_user}--></dd>
+                                            <dt>创建于：</dt>
+                                            <dd><--{$showInfo.add_time|date='Y年m月d日 H:i',###}--></dd>
+                                            <dt>公司地址：</dt>
+                                            <dd><--{$showInfo.company_address}--></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="row m-t-sm">
+                                    <div class="col-lg-12">
+                                        <div class="panel blank-panel">
+                                            <div class="panel-heading">
+                                                <div class="panel-options">
+                                                    <ul class="nav nav-tabs">
+                                                        <li><a href="project_detail.html#tab-1" data-toggle="tab">备注列表</a>
+                                                        </li>
+                                                        <li class=""><a href="project_detail.html#tab-2" data-toggle="tab">添加备注</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel-body">
+
+                                                <div class="tab-content">
+                                                    <div class="tab-pane" id="tab-2">
+                                                        <div class="feed-activity-list">
+                                                            <div class="feed-element">
+                                                                <div class="form-group">
+                                                                    <form action="__URL__/getRemark" method="post">
+                                                                        <input type="hidden" name="productId" value="<--{$showInfo.id}-->">
+                                                                        <label class="col-sm-2 control-label">备注</label>
+                                                                        <div class="col-sm-10">
+                                                                            <input type="text" name="remark" class="form-control"> <span class="help-block m-b-none">填写需备注的内容</span>
+                                                                        </div>
+                                                                        <label class="col-sm-2 control-label">是否联系</label>
+                                                                        <br/>
+                                                                        <div class="radio">
+                                                                            <label>
+                                                                                <input type="radio" checked="" value="1" id="optionsRadios1" name="optionsRadios">已拨打</label>
+                                                                        </div>
+                                                                        <label class="col-sm-2 control-label"></label>
+                                                                        <div class="radio">
+                                                                            <label>
+                                                                                <input type="radio" value="2" id="optionsRadios2" name="optionsRadios">未拨打</label>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <div class="col-sm-4 col-sm-offset-2">
+                                                                                <button class="btn btn-primary" type="submit">保存内容</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="tab-pane active" id="tab-1">
+
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>操作类型</th>
+                                                                    <th>操作人员</th>
+                                                                    <th>操作内容</th>
+                                                                    <th>操作时间</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <{volist name='showInfoRemark' id='ramark'}>
+                                                                <tr>
+                                                                    <td>
+                                                                        <span class="label label-primary"><i class="fa"></i>
+                                                                            <{switch name="ramark.op_type"}>
+                                                                                <{case value="1"}>修改<{/case}>
+                                                                                <{case value="2"}>删除<{/case}>
+                                                                                <{case value="3"}>通过<{/case}>
+                                                                                <{case value="4"}>未通过<{/case}>
+                                                                                <{case value="5"}>确认成交<{/case}>
+                                                                                <{case value="6"}>添加<{/case}>
+                                                                                <{default /}>-
+                                                                            <{/switch}>
+                                                                        </span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <--{$ramark.user_name}-->
+                                                                    </td>
+                                                                    <td>
+                                                                        <--{$ramark.op_desc}-->
+                                                                    </td>
+                                                                    <td>
+                                                                        <--{$ramark.add_time|date='Y-m-d H:i:s',###}-->
+                                                                    </td>
+
+                                                                </tr>
+                                                                <{/volist}>
+
+
+                                                            </tbody>
+                                                        </table>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="wrapper wrapper-content project-manager">
+                        <h4>申请空间描述：</h4>
+                        <p class="small">
+                            <br><--{$showInfo.company_intro}-->
+                        </p>
+                        <h5>文化企划书：</h5><--{$showInfo.company_prospectus}-->
+                        <ul class="tag-list" style="padding: 0">
+                            <li><a href="project_detail.html"><i class="fa fa-tag"></i> 下载</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+    <{include file="./tpl/Cms/Public/footer_us.html" /}>
+        </div>
+    </div>
+    </div>
+<{include file="./tpl/Cms/Public/footer.html" /}>

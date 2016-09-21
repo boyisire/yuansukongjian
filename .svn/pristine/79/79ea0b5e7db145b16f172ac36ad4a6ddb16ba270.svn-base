@@ -1,0 +1,163 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+        <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="wrapper wrapper-content">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content mailbox-content">
+                                <div class="file-manager">
+                                    <a class="btn btn-block btn-primary compose-mail" href="__URL__/add">添加活动</a>
+                                    <div class="space-25"></div>
+                                   <!-- <h5>文件夹</h5>
+                                    <ul class="folder-list m-b-md" style="padding: 0">
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-inbox "></i> 收件箱 <span class="label label-warning pull-right">16</span> 
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-envelope-o"></i> 发信</a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-certificate"></i> 重要</a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-file-text-o"></i> 草稿 <span class="label label-danger pull-right">2</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailbox.html"> <i class="fa fa-trash-o"></i> 垃圾箱</a>
+                                        </li>
+                                    </ul> --> 
+                                    <h5>分类</h5>
+                                    <ul class="category-list" style="padding: 0">
+                                        <li>
+                                            <a href="__URL__/index"> <i class="fa fa-circle text-navy"></i> 全部活动</a>
+                                        </li>
+                                        <li>
+                                            <a href="__URL__/index/is_show/1"> <i class="fa fa-circle text-danger"></i>使用中</a>
+                                        </li>
+                                        <li>
+                                            <a href="__URL__/index/is_show/2"> <i class="fa fa-circle text-primary"></i>已暂停</a>
+                                        </li>
+                                        <!-- <li>
+                                            <a href="mail_compose.html#"> <i class="fa fa-circle text-info"></i> 广告</a>
+                                        </li>
+                                        <li>
+                                            <a href="mail_compose.html#"> <i class="fa fa-circle text-warning"></i> 客户端</a>
+                                        </li> -->
+                                    </ul>
+
+                                    <!-- <h5 class="tag-title">标签</h5>
+                                    <ul class="tag-list" style="padding: 0">
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 朋友</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 工作</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 家庭</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 孩子</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 假期</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 音乐</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 照片</a>
+                                        </li>
+                                        <li><a href="mail_compose.html"><i class="fa fa-tag"></i> 电影</a>
+                                        </li>
+                                    </ul> -->
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 animated fadeInRight">
+                        <div class="mail-box-header">
+
+                            <form method="get" action="__URL__/index" class="pull-right mail-search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-sm" name="search_name" placeholder="搜索短信内容">
+                                    <div class="input-group-btn">
+                                        <button type="submit" class="btn btn-sm btn-primary">
+                                            搜索
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <h2>
+                    所有活动(<?php echo count($result['list']);?>)
+                </h2>
+                            <div class="mail-tools tooltip-demo m-t-md">
+                                <div class="btn-group pull-right">
+                                    <div class="b_page"><--{$result['page']}--></div>
+
+                                </div>
+                                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left" title="刷新邮件列表"><i class="fa fa-refresh"></i> 刷新</button>
+                                <!-- <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="标为已读"><i class="fa fa-eye"></i> 
+                                </button>
+                                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="标为重要"><i class="fa fa-exclamation"></i> 
+                                </button> 
+                                <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="删除短信"><i class="fa fa-trash-o"></i> 
+                                </button>-->
+
+                            </div>
+                        </div>
+                        <div class="mail-box">
+
+                            <table class="table table-hover table-mail">
+                                <tbody>
+                                    <tr class="unread">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-subject">活动名称
+                                        </td>
+                                        <td class="mail-subject">活动模式
+                                        </td>
+                                        <td class="mail-ontact">时间一
+                                        </td>
+                                        <td class="mail-ontact">时间二
+                                        </td>
+                                         <td class="mail-subject">活动状态
+                                        </td>
+                                         <td class="mail-subject">添加时间
+                                        </td>
+                                        <td class="mail-subject">操作</td>
+                                    </tr>
+									<{volist name="result['list']" id="vo"}>
+                                    <tr class="read">
+                                        <td class="check-mail">
+                                            <input type="checkbox" class="i-checks">
+                                        </td>
+                                        <td class="mail-subject"><--{$vo.act_name}-->
+                                        </td>
+                                        <td class=""><{if condition="$vo.is_time eq '1'"}>一种时间<{else /}>两种时间<{/if}></td>
+                                        <td class="mail-ontact">开始时间：<--{$vo.start_time|date='Y-m-d H:i:s',###}--><br />
+                                        结束时间：<font color="red"><--{$vo.end_time|date='Y-m-d H:i:s',###}--></font>
+                                        </td>
+                                       <td class="mail-ontact">开始时间：<--{$vo.start_time2|date='Y-m-d H:i:s',###}--><br />
+                                        结束时间：<font color="red"><--{$vo.end_time2|date='Y-m-d H:i:s',###}--></font>
+                                        </td>
+                                        <td class="mail-subject"><{if condition="$vo.is_show eq '1'"}><font color="green">使用中</font><{else /}><font color="red">已暂停</font><{/if}></td>
+                                        <td class="mail-subject"><--{$vo.add_time|date='Y-m-d H:i:s',###}--></td>
+                                        <td class="mail-subject">
+                                            <a href="__URL__/edit/id/<--{$vo.id}-->" class="btn btn-white btn-sm"><i class="fa fa-pencil"></i> 编辑 </a>&nbsp;<a href="__URL__/del/id/<--{$vo.id}-->" class="btn btn-white btn-sm" onclick="if(confirm('确定删除这个活动吗?')==false)return false;"><i class="fa fa-trash-o"></i> 删除 </a></td>
+                                    </tr>
+                                    <{/volist}>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+        </div>
+    </div>
+    </div>
+<{include file="./tpl/Cms/Public/footer.html" /}>
+

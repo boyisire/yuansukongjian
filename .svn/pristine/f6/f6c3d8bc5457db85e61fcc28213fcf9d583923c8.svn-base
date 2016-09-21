@@ -1,0 +1,71 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<link href="__ADMIN_CSS__/plugins/dropzone/basic.css" rel="stylesheet">
+<link href="__ADMIN_CSS__/plugins/dropzone/dropzone.css" rel="stylesheet">
+<body>
+    <div id="wrapper">
+        <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>文件上传</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="<--{:U('Cms/Index/index')}-->">主页</a>
+                        </li>
+                        <li>
+                            <a>我的头像</a>
+                        </li>
+                        <li>
+                            <strong>头像上传</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeIn">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>文件上传</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                   <!--  <a class="dropdown-toggle" data-toggle="dropdown" href="form_file_upload.html#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="form_file_upload.html#">选项1</a>
+                                        </li>
+                                        <li><a href="form_file_upload.html#">选项2</a>
+                                        </li>
+                                    </ul> -->
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                       <div class="dropzone-previews">已上传头像： <img alt="image" class="img-circle" src="__PUBLIC_UPLOAD__/<?php echo $user_header;?>" height="200" width="200"/></div>
+                                <form id="my-awesome-dropzone" class="dropzone" action="__URL__/uploads_header" method="post" enctype="multipart/form-data">
+                                    <div class="dropzone-previews"><input type="file" name="user_header" value="点击上传头像"></div>
+                                    <div class="dropzone-previews" style="margin-top:30px;"><button type="submit" class="btn btn-primary pull-left">提交</button></div>
+                                </form>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+        </div>
+    </div>
+
+
+    </div>
+
+   <{include file="./tpl/Cms/Public/footer.html" /}>

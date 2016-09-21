@@ -1,0 +1,65 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+       <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-9">
+                    <h2>空间用户</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="<--{:U('Cms/Index/index')}-->">主页</a>
+                        </li>
+                        <li>
+                           空间用户
+                        </li>
+                        <li>
+                            <strong>用户管理</strong>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+             <div class="row" style="padding:30px 30px; text-align:right;font-size:16px;font-weight:blod;">
+            	<div class="b_page"><--{$show_page}--></div>
+            </div>
+                <div class="row">
+                	<{volist name="list" id="vo"}>
+                    <div class="col-lg-4">
+                        <div class="contact-box">
+                            <a href="javascript:void(0);">
+                                <div class="col-sm-4">
+                                    <div class="text-center">
+                                        <img alt="image" class="img-circle m-t-xs img-responsive" src="<--{$vo.user_header}-->" style="width:100px;height:100px;border-radius:50%;">
+                                        <div class="m-t-xs font-bold"><--{$vo.user_nicename}--></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h3><strong><--{$vo.user_nicename}--></strong></h3>
+                                
+                                    <address>
+			                            <strong>注册时间：<--{$vo.user_registered}--></strong><br>
+			                            E-mail:<--{$vo.user_email}--><br>
+			                            <abbr title="Phone">Tel:</abbr> <--{$vo.user_mobile}-->
+			                        </address>
+                                </div>
+                                <div class="clearfix"><a href=''>空间个数：（<--{$vo.room_num}-->）</a>&nbsp;&nbsp;<a href=''>入驻个数：（<--{$vo.apply_num}-->）</a></div>
+                            </a>
+                        </div>
+                    </div>
+                    <{/volist}>
+                
+                </div>
+            </div>
+            <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+        </div>
+    </div>
+    </div>
+<{include file="./tpl/Cms/Public/footer.html" /}>
+<script>
+        $(document).ready(function () {
+            $('.contact-box').each(function () {
+                animationHover(this, 'pulse');
+            });
+        });
+</script>

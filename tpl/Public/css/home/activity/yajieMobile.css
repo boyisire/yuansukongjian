@@ -1,0 +1,337 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "苹方";
+    width: 100%;
+}
+
+#mo-banner {
+    width: 100%;
+    height: 2.085rem;
+    background-image: url(../../../images/home/activity/banner1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-top: 1px solid #282828;
+    position: relative;
+}
+
+.yajie-image {
+    width: 0.17rem;
+    height: 0.17rem;
+    display: block;
+    float: left;
+    margin: 0.04rem 0.08rem 0 0.1rem;
+}
+
+.yuansu-image {
+    width: 0.17rem;
+    display: block;
+    float: left;
+    margin: 0.04rem 0.1rem 0 0.1rem;
+}
+
+.Organizers {
+    font-size: 0.08rem;
+    color: #888;
+    height: 0.2rem;
+    border: 1px solid transparent;
+    float: left;
+
+}
+
+.clear {
+    clear: both;
+}
+
+.Organizers p {
+    float: left;
+    margin-top: 0.05rem;
+}
+
+.Organizers p span {
+    font-size: 0.09rem;
+    color: #f1f1f1;
+}
+
+.mo-address {
+    font-size: 0.08rem;
+    color: #888;
+    text-align: center;
+    margin-top: 0.05rem;
+}
+
+.page1 {
+    width: 100%;
+    height: 3.4rem;
+    background-color: #fff;
+    background-image: url(../../../images/home/activity/huanhu.png);
+    background-size: 100%;
+    border-top: 1px solid #fff;
+}
+
+.page1-title {
+    font-family: "黑体";
+    width: 2.63rem;
+    height: 0.23rem;
+    font-size: 0.18rem;
+    text-align: center;
+    color: #343434;
+    margin: 0.2rem auto 0;
+    font-weight: 900;
+    margin-bottom: 0.1rem;
+}
+
+.page1-text {
+    font-size: 0.12rem;
+    color: #222;
+    text-align: center;
+    line-height: 0.25rem;
+}
+
+.page2 {
+    width: 100%;
+    height: 6.6rem;
+    background-image: url(../../../images/home/activity/cast.png);
+    background-repeat: no-repeat;
+    background-size: 104%;
+}
+
+.cast1 {
+    width: 2.65rem;
+    height: 1.57rem;
+    position: relative;
+    left: 0.63rem;
+    top: 0.4rem;
+    z-index: 1;
+}
+
+.cast {
+    width: 1.23rem;
+    height: 1.54rem;
+    float: left;
+}
+
+.cast-border {
+    border: 1px solid #bfbfbf;
+}
+
+.cast-Co-name {
+    width: 1.23rem;
+    height: 0.3rem;
+    background-image: url(../../../images/home/activity/11.png);
+    background-size: 100%;
+}
+
+.cast-Co-name1 {
+    background-position: 0 0;
+}
+
+.cast-Co-name2 {
+    background-position: 0 10%;
+}
+
+.cast-Co-name3 {
+    background-position: 0 20.5%;
+    background-color: #3a3a3a;
+}
+
+.cast-Co-name4 {
+    background-position: 0 30%;
+    background-color: #3a3a3a;
+}
+
+.cast-Co-name5 {
+    background-position: 0 40%;
+    background-color: #3a3a3a;
+}
+
+.cast-Co-name6 {
+    background-position: 0 49.5%;
+    background-color: #3a3a3a;
+}
+
+.cast-Co-name7 {
+    background-position: 0 59.5%;
+    background-color: #3a3a3a;
+}
+.cast-Co-name8 {
+    background-position: 0 68.5%;
+    background-color: #3a3a3a;
+}
+.cast-Co-name9 {
+    background-position: 0 77.5%;
+    background-color: #3a3a3a;
+}
+.cast-Co-name10 {
+    background-position: 0 88.5%;
+    background-color: #3a3a3a;
+}
+
+.cast-Co {
+    width: 1.23rem;
+    height: 0.225rem;
+    background-image: url(../../../images/home/activity/11.png);
+    background-position: -1px 98%;
+    background-size: 100%;
+    background-color: #707070;
+}
+
+.cast-nameAndCo {
+    width: 1.23rem;
+    height: 1.02rem;
+    background-color: #707070;
+    font-size: 0.12rem;
+    color: #fff;
+}
+
+.cast-men-name {
+    padding-left: 0.1rem;
+    line-height: 0.2rem;
+}
+p.cast-men-name > span:first{
+	display:inline-block;
+	width:0.36rem;
+}
+.cast-men-Co {
+    margin-left: 0.05rem;
+}
+
+#page2-1 {
+    width: 100%;
+    height: 1.6rem;
+    margin-top: 0.41rem;
+}
+
+.cast2 {
+    width: 2.52rem;
+    height: 1.55rem;
+    margin: 0 auto;
+}
+
+.page2-2 {
+    width: 100%;
+    height: 1.6rem;
+    margin-top: 0.02rem;
+}
+.page3{
+    width: 100%;
+    /*height: 5.95rem;*/
+    overflow: hidden;
+}
+.cast-guest{
+    font-size: 0.15rem;
+    color: #343434;
+    margin: 0.25rem auto 0;
+    width:2.5rem ;
+    height: 0.22rem;
+}
+
+.cast-guest img{
+    width: 0.73rem;
+    float: left;
+}
+.rotate{
+    transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+}
+.cast-guests{
+    width: 100%;
+    height: 1.35rem;
+    font-size: 0.12rem;
+    color: #343434;
+    margin-top: 0.25rem;
+    line-height: 0.2rem;
+    letter-spacing: 0.02rem;
+}
+.cast-guests1 img{
+    width: 1.6rem;
+    float: left;
+}
+.cast-guests2 img{
+     width: 1.7rem;
+     float: right;
+ }
+
+.cast-guests3 img {
+    width: 1.7rem;
+    float: left;
+}
+.laobangcai{
+    width: 3.15rem;
+    display: block;
+    margin: 0.2rem auto;
+}
+.cast-process{
+    font-size: 0.15rem;
+    font-family: '黑体';
+    width: 0.85rem;
+    text-align: center;
+    margin: 0 auto 0.2rem;
+    position: relative;
+}
+.cast-process:after,.cast-process:before{
+    content:'';
+    width: 1.4rem;
+    height: 1px;
+    border-top: 1px solid #7f7f7f;
+    position: absolute;
+    top: 0.1rem;
+
+}
+.cast-process:after{
+    left:1rem;
+}
+.cast-process:before{
+    right: 1rem ;
+}
+.cast-time{
+    font-size: 0.12rem;
+    color: #343434;
+    letter-spacing: 0.01rem;
+    width: 100%;
+    height: 4.4rem;
+}
+.cast-time-p{
+    margin: 0 0.4rem 0 0.3rem ;
+    width: 0.9rem;
+}
+.cast-time p{
+    float: left;
+}
+.cast-time-pright{
+    width: 1.9rem;
+    text-align: left;
+}
+.cast-down{
+    width: 100%;
+    height: 3.41rem;
+    background-image: url(../../../images/home/activity/down.png);
+    background-size:100%;
+    font-size: 0.12rem;
+    color: #fcfbfb;
+    text-align: center;
+    border-top: 1px solid #fff;
+	background-repeat:no-repeat;
+}
+.cast-link,.cast-link a{
+    font-size: 0.1rem;
+    color:#c3b591;
+    text-decoration: none;
+    margin-top: 0.15rem;
+    margin-bottom: 0.15rem;
+}
+.cast-button{
+    width: 1rem;
+    height: 0.44rem;
+    border: 1px solid rgba(195,181,145,0.5);
+    border-radius: 0.05rem;
+    background-color: rgba(0,0,0,0.2);
+    float: left;
+    color:#c3b591 ;
+    font-size: 0.15rem;
+}

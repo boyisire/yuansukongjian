@@ -1,0 +1,196 @@
+<?php if (!defined('THINK_PATH')) exit();?>
+<!--============== 公共头部信息 ===================-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><?php echo ($EnvCfg["title"]); ?></title>
+    <script type="text/javascript" src="/yuansukongjian/tpl/Public/js/public/jquery-1.7.2.js"></script>
+    <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/reset.css">
+      <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/header.css">
+    <link href="/yuansukongjian/tpl/Public/css/public/page.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<header id="masthead" class="site-header">
+
+    <nav id="top-header">
+        <div class="top-nav">
+            <div id="user-profile">
+                发现创业价值！
+            </div>
+            <div id="user-profile" style="float:right;padding-right:10px;">
+            <?php if(!empty($login_uid) && !empty($login_nick_name) && $login_is_login =='1'){?>
+             欢迎来到元素周期：&nbsp;<font color="#3e94a5 "><?php echo $login_nick_name;?></font>
+			  		&nbsp;|<a href="http://www.yuansuzhouqi.cn/usecenter.html">用户中心</a>
+	  	   	
+										<span class="nav-set">
+				 	<span class="nav-login">
+				 					 	|<a href="http://www.yuansuzhouqi.cn/wp-login.php?action=logout" title=""> 退出</a>
+										</span>
+				</span>
+
+            <?php }else{?>
+                <a href="http://www.yuansuzhouqi.cn/wp-login.php?action=register">注册</a>
+
+                <span class="nav-set">
+				 	<span class="nav-login">|<a href="http://www.yuansuzhouqi.cn/wp-login.php">登录</a></span>
+				</span>
+			<?php }?>
+            </div>
+        </div>
+    </nav><!-- #top-header -->
+
+    <div id="menu-box">
+        <div id="top-menu">
+            <span class="nav-search"><img src="/yuansukongjian/tpl/Public/images/home/iconseek.png" style="width: 30px" alt=""></span>
+            <span class="mobile-login"><a href="#login" id="login-mobile"><i class="fa-user fa-fontsize"></i>
+			</a>
+			</span>
+            <hgroup class="logo-site">
+                <h1 class="site-title">
+                    <a href="http://www.yuansuzhouqi.cn/"><img
+                            src="/yuansukongjian/tpl/Public/images/home/220-50-logo-2.png"
+                            alt="元素周期"></a>
+                </h1>
+            </hgroup><!-- .logo-site -->
+
+            <div id="site-nav-wrap">
+                <div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close">×</a></div>
+                <nav id="site-nav" class="main-nav">
+                    <a href="#sidr-main" id="navigation-toggle" class="bars"><i class="fa-fontsize fa-bars"></i></a>
+                    <div class="menu-menu-1-container">
+                        <ul id="menu-menu-1" class="down-menu nav-menu sf-js-enabled sf-arrows">
+                            <li id="menu-item-6"
+                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-6">
+                                <a href="http://www.yuansuzhouqi.cn">元素首页</a></li>
+                            <li id="menu-item-45"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-45"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-information/">元素资讯</a>
+                            </li>
+                            <li id="menu-item-46"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-newinformation/">元素快讯</a>
+                            </li>
+                            <li id="menu-item-22"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-marvellous/">元素科技</a>
+                            </li>
+                            <li id="menu-item-852"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-852"><a
+                                    href="http://www.yuansuzhouqi.cn/fuhua.html">申请孵化</a></li>
+                        </ul>
+                    </div>
+                </nav><!-- #site-nav -->
+            </div><!-- #site-nav-wrap -->
+            <div class="clear"></div>
+        </div><!-- #top-menu -->
+    </div><!-- #menu-box -->
+</header>
+<div id="search-main">
+    <div id="searchbar">
+        <form method="get" id="searchform" action="http://www.yuansuzhouqi.cn/">
+            <input value="" name="s" id="s" placeholder="输入搜索内容" required="" type="text">
+            <button type="submit" id="searchsubmit">搜索</button>
+        </form>
+    </div>
+    <div class="clear"></div>
+</div>
+<script>
+     function BottomJumpPage() {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop != 0) {  //滚动到头部部执行事件
+           $('#menu-box').addClass('shadow');
+           $('#search-main').addClass('shadow');
+        }else {
+            $('#menu-box').removeClass('shadow');
+            $('#search-main').removeClass('shadow');
+        }
+    }
+    $(window).scroll(BottomJumpPage);
+    $('.nav-search').click(function () {
+        if ($('#search-main').is(":hidden")){
+            $('#search-main').show()
+        }else {
+            $('#search-main').hide()
+        }
+    })
+</script>
+</body>
+</html>
+
+<!--============== 本页独自引用部分 ===================-->
+<link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/activity/yajiePC.css">
+<script src="/yuansukongjian/tpl/Public/js/jquery/jquery-1.7.2.min.js"></script>
+<body>
+<!--头部结束-->
+<div id="ya-banner">
+    
+</div>
+<div id="ya-page1">
+    <p class="ya-happy">为<span>创业</span>喝彩 为摇滚狂欢</p>
+    <p class="ya-happy-text" style="margin-top: 35px;">第一届亚杰国际创业音乐节九月与大家见面，激情不灭创业不止，</p>
+    <p class="ya-happy-text">第一届亚杰国际创业音乐节-新长征路上的创业将于2016年9月17日在海淀区北京科技大学奥运馆开唱。</p>
+    <p class="ya-happy-text">亚杰汇国际创业音乐节由亚杰创始人俱乐部、北京元素周期联合举办，10支创业队伍带着理想与激情为创业开唱，为摇滚呐喊。</p>
+    <p class="ya-happy-text">更有老帮菜乐队，青山资本创始人张野，最强大脑中国队长王峰，演艺明星黄小蕾倾情加入。</p>
+    <p class="ya-happy-text">这是一次创投圈的年度盛事，一次创投圈的音乐跨界碰撞，一次创业者们的集体狂欢，</p>
+    <p class="ya-happy-text">40位创始人，10位投资人，20首经典曲目同台演绎，精彩开场。</p>
+    <div class="ya-round"></div>
+</div>
+<div id="ya-page2">
+    <p class="ya-rock"><span>Rock</span>&演出阵容</p>
+    <img src="/yuansukongjian/tpl/Public/images/home/activity/pc/CoAndName.png" alt="" style="display: block;margin: 34px auto 0;">
+    <div class="ya-round ya-round1"></div>
+</div>
+<div id="ya-page3">
+    <p class="ya-guest">特邀嘉宾</p>
+    <div class="ya-guests">
+        <div class="miss-huang">
+            <img src="/yuansukongjian/tpl/Public/images/home/activity/pc/huang.png" alt="">
+            <p>黄小蕾：特邀演出嘉宾 统和天成董事长 中国内地女演员,制片人，导演北京电影学院表演学系学士北京电影学院金融投资总裁班2013清华EMBA硕士亚杰商会摇篮计划第九期学员。</p>
+        </div>
+        <div class="mr-zhang">
+            <img src="/yuansukongjian/tpl/Public/images/home/activity/pc/zhang.png" alt="">
+            <p>张野 :特邀演出嘉宾 青山资本创始人</p>
+        </div>
+        <div class="mr-wang">
+            <img src="/yuansukongjian/tpl/Public/images/home/activity/pc/wang.png" alt="">
+            <p>王峰:摇篮明星嘉宾 ,摇篮计划第10期 ,世界记忆大师 ,世界脑力锦标赛总冠军,《最强大脑中国队长,东方巨龙教育创始人.</p>
+        </div>
+        <p class="clear"></p>
+        <img src="/yuansukongjian/tpl/Public/images/home/activity/pc/laobangcai.png" alt="" style="display: block;margin: 70px auto;">
+    </div>
+</div>
+<div class="superman"></div>
+<div class="ya-flow">
+    <p class="ya-guest">活动流程</p>
+    <img src="/yuansukongjian/tpl/Public/images/home/activity/pc/fourcircle.png" alt="" style="margin-left: 289px;margin-right: 130px; float: left">
+    <p class="ya-flow-p"><span>18:00-19:00</span><span>观众入场，演出嘉宾候场</span></p>
+    <p class="ya-flow-p"><span>19:00-19:10</span><span>VCR开场，rococo乐队开唱</span></p>
+    <p class="ya-flow-p"><span>19:10-19:40</span><span>创投战队表演（3个战队，每队演唱2首歌曲</span></p>
+    <p class="ya-flow-p"><span>19:40-19:50</span><span>观众投票</span></p>
+    <p class="ya-flow-p" style="margin-top: 40px;"><span>19:50-20:00</span><span>老帮菜乐队表演，创投大佬直播秀互动 </span></p>
+    <p class="ya-flow-p"><span>20:00-20:30</span><span>创投战队表演（3个战队，每队演唱2首歌曲） </span></p>
+    <p class="ya-flow-p"><span>20:30-20:40</span><span>观众投票</span></p>
+    <p class="ya-flow-p" style="margin-top: 40px;"><span>20:40-20:50</span><span>特邀嘉宾表演，美女直播秀互动</span></p>
+    <p class="ya-flow-p"><span>20:50-21:30</span><span>创投战队表演（4个战队，每队演唱2首歌曲）</span></p>
+    <p class="ya-flow-p"><span>21:30-21:40</span><span>观众投票、史上最不专业音乐评审投票及点评</span></p>
+    <p class="ya-flow-p"><span>21:40-22:00</span><span>创始人歌曲串烧</span></p>
+    <p class="ya-flow-p" style="margin-top: 40px;"><span>22:00-22:20</span><span>公布PK积分榜、冠亚季军颁奖</span></p>
+    <p class="ya-flow-p"><span>22:20-22:30</span><span>惊喜嘉宾登场，压轴演出，千人大合唱</span></p>
+    <p class="ya-flow-p"><span>22:30 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span>谢幕，退场</span></p>
+</div>
+<div class="ya-dowm">
+    <p style="margin-top: 60px">摇滚与创业生长于在骨子里的信念 ，创业与音乐有着太多的共通之处，摇滚独立思考，相信自己，相信梦想。</p>
+    <p>而创业有一股永不停歇的激情，是一种人生态度，更是种人生哲学。带着梦想与激情谱写新创业路上的摇滚，</p>
+    <p>第一届亚杰国际创业音乐节主办方亚杰创始人俱乐部负责人表示，</p>
+    <p>我们希望通过音乐节，链接创业者，将创业精神与摇滚精神跨界融合，打造首个专属于创业圈的音乐节，</p>
+    <p>为创业路上的孤单摸爬滚打的“造梦人”带来一次激情与梦想齐飞的音乐之旅！</p>
+    <div class="ya-buttons">
+    <button class="ya-button" style="margin-left: 415px" onclick="javascript:window.open('http://www.wpiao.cn/Project/ProjectDetails?id=1725&type=&rurl=/Home/Index#baidutuiguang&wwj')">点击购票</button>
+    <button class="ya-button" style="margin-left: 70px" onclick='javascript:window.location.href="/yuansukongjian/Home/Activity/actIndex";'>战队投票</button>
+    </div>
+</div>
+
+</body>
+</html>

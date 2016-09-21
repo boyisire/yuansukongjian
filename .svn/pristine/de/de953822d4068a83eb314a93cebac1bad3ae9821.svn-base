@@ -1,0 +1,60 @@
+[ 2016-09-06T11:54:17+08:00 ] 127.0.0.1 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+ERR: 无法加载模块:Yuansukongjian
+
+[ 2016-09-06T11:54:17+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-09-06T11:59:33+08:00 ] 127.0.0.1 /Upload/Home/logo/2016-09-05/57cd3110050d9.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+ERR: 无法加载模块:Upload
+
+[ 2016-09-06T11:59:33+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-09-06T14:38:47+08:00 ] 192.168.0.15 /yuansukongjian/tpl/Public/images/home/activity/banner.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-09-06T14:38:48+08:00 ] 192.168.0.15 /yuansukongjian/tpl/Public/images/home/activity/banner.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-09-06T14:38:50+08:00 ] 192.168.0.15 /yuansukongjian/tpl/Public/images/home/activity/banner.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-09-06T15:10:16+08:00 ] 192.168.0.15 /yuansukongjian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-09-06T15:10:19+08:00 ] 192.168.0.15 /yuansukongjian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-09-06T16:13:29+08:00 ] ::1 /yuansukongjian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+ERR: 无法加载模块:Tpl
+

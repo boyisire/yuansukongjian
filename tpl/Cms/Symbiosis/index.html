@@ -1,0 +1,181 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+        <{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>空间列表</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index.html">空间管理</a>
+                        </li>
+                        <li>
+                            <a>空间合作</a>
+                        </li>
+                        <li>
+                            <strong>空间列表</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>基本 <small>分类，查找</small></h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="table_data_tables.html#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="table_data_tables.html#">选项1</a>
+                                        </li>
+                                        <li><a href="table_data_tables.html#">选项2</a>
+                                        </li>
+                                    </ul>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div>
+                                    <table class="table">
+                                        <tr>
+                                            <td style="margin-left:0px;width:10px"><a href="__ROOT__/Cms/Symbiosis/index">
+                                                <button class="btn btn-success m-r-sm" type="button">全部 【<--{$cntNum.all}-->】</button>
+                                            </a></td>
+                                            <td style="margin-left:-100px;width:10px"><a href="__ROOT__/Cms/Symbiosis/index/is_pass/1">
+                                            <button class="btn btn-warning m-r-sm" type="button">已处理 【<--{$cntNum.use}-->】</button>
+                                            </a></td>
+                                            <td ><a href="__ROOT__/Cms/Symbiosis/index/is_pass/0"><button class="btn btn-danger m-r-sm" type="button">未处理 【<--{$cntNum.unuse}-->】</button>
+                                            </a></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <table class="table table-striped table-bordered table-hover dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="radio"></th>
+                                            <th>申请用户</th>
+                                            <th>时间</th>
+                                            <th>空间名称</th>
+                                            <th>负责人</th>
+                                            <th>电话</th>
+                                            <th>地址</th>
+                                            <th>状态</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <{foreach name="list" item="vo" key="k"}>
+                                        <tr>
+                                            <td><input type="radio"></td>
+                                            <td><--{$vo.user_name}--></td>
+                                            <td><--{$vo.add_time|date='Y-m-d',###}--></td>
+                                            <td><--{$vo.name}--></td>
+                                            <td><--{$vo.linkman}--></td>
+                                            <td><--{$vo.mobile}--></td>
+                                            <td><--{$vo.addr}--></td>
+                                            <td>
+                                                <{if condition="$vo['is_pass'] == 0"}>
+                                                    <font color="#3cb1f0">申请中</font>
+                                                <{elseif condition="$vo['is_pass'] == 1" /}>
+                                                    <font color="#3cf040">申请通过</font>
+                                                <{else /}>
+                                                    <font color="red">申请失败</font>
+
+                                                <{/if}>
+                                            </td>
+                                            <td>
+                                                <a href="__ROOT__/Home/Index/details/id/<--{$vo.id}-->" target="_blank"><button id="yl">预览</button></a>&nbsp;
+                                                <a href="__ROOT__/Cms/Symbiosis/editForm/id/<--{$vo.id}-->"><button id="bj">编辑</button></a>&nbsp;
+                                                <a href="__ROOT__/Cms/Symbiosis/delData/id/<--{$vo.id}-->"><button id="sc">删除</button></a>&nbsp;
+                                                <a href="__ROOT__/Cms/Symbiosis/RoomStatus/uid/<--{$vo.uid}-->/rid/<--{$vo.id}-->" target="_top"><button id="tg">通过/未通过</button></a>&nbsp;
+                                                <a href="__ROOT__/Cms/Space/entryCheck/uid/<--{$vo.uid}-->/rid/<--{$vo.id}-->" target="_top"><button id="tg">申请管理</button></a>&nbsp;
+                                            </td>
+                                        </tr>
+                                        <{/foreach}>
+
+                                        <!-- <tr class="gradeC">
+                                            <td>Trident</td>
+                                            <td>Internet Explorer 5.0
+                                            </td>
+                                            <td>Win 95+</td>
+                                            <td class="center">5</td>
+                                            <td class="center">C</td>
+                                        </tr> -->
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--PHP分页处理-->
+                 <--{$page}-->
+
+            <!-- 底部信息 -->
+            <{include file="./tpl/Cms/Public/footer_us.html" /}>
+        </div>
+    </div>
+
+
+    </div>
+    <{include file="./tpl/Cms/Public/footer.html" /}>
+    <!-- Data Tables -->
+    <script src="__ADMIN_JS__/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="__ADMIN_JS__/plugins/dataTables/dataTables.bootstrap.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function () {
+            $('.dataTables-example').dataTable();
+
+            /* Init DataTables */
+            var oTable = $('#editable').dataTable();
+
+            /* Apply the jEditable handlers to the table */
+            oTable.$('td').editable('../example_ajax.php', {
+                "callback": function (sValue, y) {
+                    var aPos = oTable.fnGetPosition(this);
+                    oTable.fnUpdate(sValue, aPos[0], aPos[1]);
+                },
+                "submitdata": function (value, settings) {
+                    return {
+                        "row_id": this.parentNode.getAttribute('id'),
+                        "column": oTable.fnGetPosition(this)[2]
+                    };
+                },
+
+                "width": "90%",
+                "height": "100%"
+            });
+
+
+        });
+
+        function fnClickAddRow() {
+            $('#editable').dataTable().fnAddData([
+                "Custom row",
+                "New row",
+                "New row",
+                "New row",
+                "New row"]);
+
+        }
+    </script>
+
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script><!--统计代码，可删除-->
+
+</body>
+
+</html>

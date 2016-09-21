@@ -1,0 +1,52 @@
+<?php
+namespace Common\Model;
+use Common\Model\BaseModel;
+/**
+ * 短信表model
+ * @使用表 sms_info
+ */
+class Sms_infoModel extends BaseModel{
+	/**
+	 * 获取所有的短信信息
+	 */
+	public function sendSmsSelect($data){
+		if(!empty($data['like'])){
+			$where['sms_desc']=array('like',"%".$data['like']."%");
+		}
+		if(!empty($data['sms_type'])){
+			$where['sms_type']=array('eq',$data['sms_type']);
+		}
+		$result=$this->selectPageData('*',$where,'',16);
+		if($result['list']){
+			foreach($result['list'] as $key=>$val){
+				if($val['sms_type'] =='1'){
+					$result['list'][$key]['sms_name']="验证码";
+					$result['list'][$key]['background']="background-color:#1ab394";
+				}elseif($val['sms_type'] =='2'){
+					$result['list'][$key]['sms_name']="系统短信";
+					$result['list'][$key]['background']="background-color:#EF5352";
+				}else{
+					$result['list'][$key]['sms_name']="审核短信";
+					$result['list'][$key]['background']="background-color:#337ab7";
+				}
+				if($val['sms_status'] =='1'){
+					$result['list'][$key]['sms_status']="<font color='green'>发送成功</font>";
+				}else{
+					$result['list'][$key]['sms_status']="<font color='red'>发送失败</font>";
+				}
+			}
+		}
+		return $result;
+	}
+	/**
+	 * 发送短信操作
+	 */
+	public function sendUserSms($data){
+		if(empty($data)){
+			return "";
+		}
+		foreach($data as $key=>$val){
+			
+		}
+	}
+}

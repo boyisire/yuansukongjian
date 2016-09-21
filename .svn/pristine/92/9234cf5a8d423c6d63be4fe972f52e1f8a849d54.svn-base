@@ -1,0 +1,198 @@
+[ 2016-08-18T11:10:37+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T11:12:26+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T11:40:45+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T13:38:22+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000534s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T13:45:13+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T13:45:56+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T13:46:03+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T13:47:24+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T13:48:53+08:00 ] ::1 /YuanSuKongJian/index.php/YuanSuKongJian/index.php/Cms/Space/entryCheck/p/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+ERR: 无法加载模块:YuanSuKongJian
+
+[ 2016-08-18T13:49:05+08:00 ] ::1 /YuanSuKongJian/index.php/YuanSuKongJian/index.php/Cms/Space/entryCheck/p/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+ERR: 无法加载模块:YuanSuKongJian
+
+[ 2016-08-18T14:01:03+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T14:35:16+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000855s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T14:46:06+08:00 ] ::1 /YuanSuKongJian/index.php/YuanSuKongJian/index.php/Cms/Space/entryCheck/p/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+ERR: 无法加载模块:YuanSuKongJian
+
+[ 2016-08-18T14:46:18+08:00 ] ::1 /YuanSuKongJian/index.php/YuanSuKongJian/index.php/Cms/Space/entryCheck/p/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+ERR: 无法加载模块:YuanSuKongJian
+
+[ 2016-08-18T14:46:25+08:00 ] ::1 /YuanSuKongJian/index.php/YuanSuKongJian/index.php/Cms/Space/entryCheck/p/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+ERR: 无法加载模块:YuanSuKongJian
+
+[ 2016-08-18T14:47:24+08:00 ] ::1 /YuanSuKongJian/index.php/YuanSuKongJian/index.php/Cms/Space/entryCheck/p/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+ERR: 无法加载模块:YuanSuKongJian
+
+[ 2016-08-18T14:49:58+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T14:55:44+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T15:04:08+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T15:16:01+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T15:18:48+08:00 ] ::1 /YuanSuKongJian/YuanSuKongJian/Public/Css/page.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+ERR: 无法加载模块:YuanSuKongJian
+
+[ 2016-08-18T15:18:50+08:00 ] ::1 /YuanSuKongJian/YuanSuKongJian/Public/Css/page.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+ERR: 无法加载模块:YuanSuKongJian
+
+[ 2016-08-18T15:18:54+08:00 ] ::1 /YuanSuKongJian/YuanSuKongJian/Public/Css/page.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+ERR: 无法加载模块:YuanSuKongJian
+
+[ 2016-08-18T15:19:31+08:00 ] ::1 /YuanSuKongJian/YuanSuKongJian/Public/Css/page.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+ERR: 无法加载模块:YuanSuKongJian
+
+[ 2016-08-18T15:19:42+08:00 ] ::1 /YuanSuKongJian/YuanSuKongJian/Public/Css/page.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+ERR: 无法加载模块:YuanSuKongJian
+
+[ 2016-08-18T15:20:01+08:00 ] ::1 /YuanSuKongJian/YuanSuKongJian/Public/Css/page.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+ERR: 无法加载模块:YuanSuKongJian
+
+[ 2016-08-18T15:21:10+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/page.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T15:25:44+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T15:26:29+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T15:34:16+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T16:22:45+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T16:23:16+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+ERR: 无法加载模块:Tpl
+
+[ 2016-08-18T17:00:22+08:00 ] ::1 /YuanSuKongJian/tpl/Public/css/cms/font-awesome/fonts/fontawesome-webfont.woff2?v=4.3.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+ERR: 无法加载模块:Tpl
+

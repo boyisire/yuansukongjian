@@ -1,0 +1,1533 @@
+[ 2016-09-17T12:22:29+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000091s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001786s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013166s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013668s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0739s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0254s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0764s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0217s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0638s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0492s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_votes` [ RunTime:0.0468s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_votes` WHERE `user_id` = '4' AND `cid` = '1' AND `add_time` < '1474106400' ORDER BY `add_time` asc LIMIT 1   [ RunTime:0.0288s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001561s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001955s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104448s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.104723s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.012921s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013095s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.054596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.054814s ]
+
+[ 2016-09-17T12:22:34+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0046s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0059s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0045s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0049s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_votes` [ RunTime:0.0045s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_votes` WHERE `user_id` = '4' AND `cid` = '1' AND `add_time` < '1474106400' ORDER BY `add_time` asc LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000493s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000634s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029858s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000589s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000975s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001106s ]
+
+[ 2016-09-17T12:23:00+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000699s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0048s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0049s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0046s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_votes` [ RunTime:0.0048s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_votes` WHERE `user_id` = '4' AND `cid` = '1' AND `add_time` < '1474106400' ORDER BY `add_time` asc LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000519s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000669s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028719s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028899s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000767s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000894s ]
+
+[ 2016-09-17T12:23:12+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0158s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0046s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0048s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0153s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_votes` [ RunTime:0.0053s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_votes` WHERE `user_id` = '4' AND `cid` = '1' AND `add_time` < '1474106400' ORDER BY `add_time` asc LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001267s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001523s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036041s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000882s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001262s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001513s ]
+
+[ 2016-09-17T12:25:51+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/over
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000650s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065048s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065153s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000667s ]
+
+[ 2016-09-17T12:35:47+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/over
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000279s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007094s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007197s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000575s ]
+
+[ 2016-09-17T12:35:57+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/over
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006661s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006763s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+
+[ 2016-09-17T12:36:19+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/over
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000931s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009593s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000616s ]
+
+[ 2016-09-17T12:37:01+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/over
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006386s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006488s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000623s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000721s ]
+
+[ 2016-09-17T12:45:04+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/over
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000925s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001169s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000391s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010108s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010244s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000719s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000846s ]
+
+[ 2016-09-17T12:48:54+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/over
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001134s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010394s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000562s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000653s ]
+
+[ 2016-09-17T12:56:58+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/over
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001083s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006432s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006533s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2016-09-17T12:59:13+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0157s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0649s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0053s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0053s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-17T12:59:55+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0051s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0051s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0051s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0049s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2016-09-17T12:59:56+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0326s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0048s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0069s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-17T13:00:20+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/over
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000299s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009211s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000745s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000875s ]
+
+[ 2016-09-17T13:00:23+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0053s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0050s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0058s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-17T13:00:23+08:00 ] 192.168.0.15 /yuansukongjian/Home/Activity/over.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015837s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015948s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000656s ]
+
+[ 2016-09-17T13:00:23+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0374s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0059s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0051s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0052s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-17T13:00:23+08:00 ] 192.168.0.15 /yuansukongjian/Home/Activity/over.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006332s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2016-09-17T13:00:41+08:00 ] 192.168.0.15 /yuansukongjian/Home/Activity/over.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001134s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000238s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007337s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007446s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2016-09-17T13:00:47+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0145s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.1005s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0009s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0009s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0009s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0009s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0009s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0010s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0102s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0101s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `kj_activity_votes` [ RunTime:0.0103s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_votes` WHERE `user_id` = '4' AND `cid` = '1' AND `add_time` < '1474106400' ORDER BY `add_time` asc LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000884s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001106s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029261s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029418s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000640s ]
+
+[ 2016-09-17T13:00:48+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000753s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0079s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0086s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0005s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0058s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_votes` [ RunTime:0.0161s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_votes` WHERE `user_id` = '4' AND `cid` = '1' AND `add_time` < '1474106400' ORDER BY `add_time` asc LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001459s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037193s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037429s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001108s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001728s ]
+
+[ 2016-09-17T13:01:51+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000939s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0055s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0065s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0055s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0055s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000857s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001090s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031012s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031215s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000932s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001473s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001737s ]
+
+[ 2016-09-17T13:01:52+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000827s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002197s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0058s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0054s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0059s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0058s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000839s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001050s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031157s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031366s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001258s ]
+
+[ 2016-09-17T13:02:01+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0052s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0142s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0060s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0054s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000894s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001113s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031710s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001051s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001354s ]
+
+[ 2016-09-17T13:02:24+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001049s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0055s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0330s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0159s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0118s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000786s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000975s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040584s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040871s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000983s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002076s ]
+
+[ 2016-09-17T13:02:43+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0049s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0061s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0054s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0057s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000549s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000688s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033306s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033503s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000712s ]
+
+[ 2016-09-17T13:03:10+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0061s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0050s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0055s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0060s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000384s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000490s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014910s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+
+[ 2016-09-17T13:03:50+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0053s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0056s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0052s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0051s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001590s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042790s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000904s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000926s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001114s ]
+
+[ 2016-09-17T13:03:52+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001027s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001249s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0062s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0063s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0063s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0070s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000526s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000723s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019027s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000808s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000940s ]
+
+[ 2016-09-17T13:03:52+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0063s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0066s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0068s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0056s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000407s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000513s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017081s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000674s ]
+
+[ 2016-09-17T13:04:04+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0059s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0048s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0055s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0051s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000394s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000486s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013620s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013727s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000856s ]
+
+[ 2016-09-17T13:05:13+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0059s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0050s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0053s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0055s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_votes` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `kj_activity_votes` WHERE `user_id` = '4' AND `cid` = '1' AND ( `add_time` >= '1474106400' AND `add_time` < '1474120800'  ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined property: stdClass::$access_token E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 70 行.
+NOTIC: [8] Undefined property: stdClass::$ticket E:\wamp\www\yuansukongjian\ThinkPHP\Library\Org\WeiXin\Weixinapi.class.php 第 51 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000371s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000470s ]
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 93 行.
+NOTIC: [8] Undefined index: user_mobile E:\wamp\www\yuansukongjian\Runtime\Cache\Home\91ead6d451be9cf11ef5e14533f0f72f.php 第 170 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014149s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000486s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000622s ]
+
+[ 2016-09-17T13:06:53+08:00 ] 192.168.0.15 /yuansukongjian/Home/Activity/corpsCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_user_countModel::insertUserData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 52 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_user_countModel.class.php 第 14 行.
+NOTIC: [8] Undefined index: phone E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_user_countModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: user E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_user_countModel.class.php 第 23 行.
+NOTIC: [8] Undefined variable: user E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_user_countModel.class.php 第 24 行.
+SQL: INSERT INTO `kj_activity_user_count` (`ip`,`add_time`,`time_status`,`cookie_name`,`phone`,`pid`,`from`) VALUES ('192.168.0.15','1474088813','3','1474088813yjact1921680159880','','0','0') [ RunTime:0.0712s ]
+
+[ 2016-09-17T13:06:53+08:00 ] 192.168.0.15 /yuansukongjian/Home/Activity/corpsA
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0053s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `user_mobile` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-09-17T13:06:55+08:00 ] 192.168.0.15 /yuansukongjian/Home/Activity/corpsCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0052s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 55 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`time_status` FROM `kj_activity_user_count` WHERE `cookie_name` = '1474088813yjact1921680159880' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `kj_activity_user_count` SET `time_status`='4' WHERE `id` = 1 [ RunTime:0.0684s ]
+
+[ 2016-09-17T13:07:32+08:00 ] 192.168.0.15 /yuansukongjian/home/activity/votes
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info` [ RunTime:0.0056s ]
+NOTIC: [2] Missing argument 2 for Common\Model\Activity_infoModel::selectActivityData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 146 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_infoModel.class.php 第 148 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_info` WHERE `is_show` = '1' ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kj_activity_info_user` [ RunTime:0.0047s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 1 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 2 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 3 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 4 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 5 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 6 ORDER BY `is_sort` asc  [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 7 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 8 ORDER BY `is_sort` asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 9 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `id`,`user_name`,`user_dec`,`is_show` FROM `kj_activity_info_user` WHERE `is_show` = '1' AND `cid` = 10 ORDER BY `is_sort` asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wp_users` [ RunTime:0.0057s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\UsersModel.class.php on line 63 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT `ID`,`user_mobile`,`user_nicename`,`user_email`,`user_registered` FROM `wp_users` WHERE `ID` = '4' ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `kj_activity` [ RunTime:0.0047s ]
+NOTIC: [2] Missing argument 3 for Common\Model\BaseModel::findData(), called in E:\wamp\www\yuansukongjian\Application\Home\Controller\ActivityController.class.php on line 157 and defined E:\wamp\www\yuansukongjian\Application\Common\Model\BaseModel.class.php 第 94 行.
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity` WHERE `id` = 1 ORDER BY `id` desc LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2016-09-17T13:07:32+08:00 ] 192.168.0.15 /yuansukongjian/Home/Activity/over.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006261s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006357s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000476s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000562s ]
+

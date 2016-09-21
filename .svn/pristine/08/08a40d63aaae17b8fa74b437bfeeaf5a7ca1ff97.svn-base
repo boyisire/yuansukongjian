@@ -1,0 +1,80 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+			<{include file="./tpl/Cms/Public/left.html" /}>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>我的信息</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="<--{:U('Cms/Index/index')}-->">主页</a>
+                        </li>
+                        <li>
+                            <a>我的信息</a>
+                        </li>
+                        <li>
+                            <strong>修改密码</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+               
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>修改密码</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <form class="form-horizontal m-t" id="signupForm" method="post" action="__URL__/updatePassword">
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">原密码：</label>
+                                        <div class="col-sm-8">
+                                            <input id="lastname" name="password" class="form-control" type="password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">新密码：</label>
+                                        <div class="col-sm-8">
+                                            <input id="username" name="new_password" class="form-control" type="password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">重复密码：</label>
+                                        <div class="col-sm-8">
+                                            <input id="email" name="res_password" class="form-control" type="password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-8 col-sm-offset-3">
+                                            <button class="btn btn-primary" type="submit">提交</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+             <{include file="./tpl/Cms/Public/footer_us.html" /}>
+
+        </div>
+    </div>
+
+
+    </div>
+<{include file="./tpl/Cms/Public/footer.html" /}>

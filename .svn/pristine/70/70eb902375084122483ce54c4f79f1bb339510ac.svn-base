@@ -1,0 +1,573 @@
+<!--============== 公共头部信息 ===================-->
+<{include file="./tpl/Home/Public/header.html" /}>
+<!--============== 本页独自引用部分 ===================-->
+<link rel="stylesheet" href="__PUBLIC_CSS__/home/Form/teamwork.css">
+<link rel="stylesheet" href="__PUBLIC_CSS__/home/Form/zyupload-1.0.0.min.css">
+<script type="text/javascript" src="__PUBLIC_JS__/home/zyupload-1.0.0.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/home/teamwork.js"></script>
+<script type="text/javascript" src="__PUBLIC_JS__/home/jquery.form.min.js"></script>
+
+<style type="text/css">
+    .zyupload .upload_choose{
+        height: 150px;
+    }
+    </style>
+</head>
+<body>
+<div id="te-main">
+    <form tag="RoomForm" action="<--{:U('home/form/acceptRoom')}-->" method="post" enctype="multipart/form-data" name="RoomForm">
+        <h1 class="te-h1">填写元素空间合作信息</h1>
+        <input type="hidden" name="id" value="<--{$list.id}-->">
+        <div class="te-logo-upload">
+            <div class="te-logo-upload-title">空间LOGO图片：</div>
+            <div>
+                <input type="hidden" value="<--{$list.logo}-->" name="old_logo">
+                <a href="javascript:;" id="localImagId" class="te-a-upload" onchange="javascript:setImagePreview();">
+                    <{if condition="$list.logo neq ''"}>
+                        <img id="previewss" src="__ROOT__<--{$list.logo}-->" width="170" height="170" />
+                    <{else /}>
+                        <img id="previewss" src="__PUBLIC_IMAGES__/home/Form/te-logo.png" width="170" height="170" />
+                    <{/if}>
+                    <input type="file" name="logo" id="logo"> 
+                </a>
+
+            </div>
+            <div class="te-room-warn">
+                <div class="te-room-right" id="right0" style="margin-top:70px;margin-left:-20px"></div>
+                <div class="te-room-error" id="error0" style="margin-top:70px;margin-left:-20px">
+                    <p class="te-image-error"></p>
+                    <p>请上传LOGO</p>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="te-room">
+            <div class="te-room-name">
+                空间名称：
+            </div>
+            <div>
+                <input type="text" name="name" id="name" placeholder="&nbsp;&nbsp;不能为空或少于2个字" value="<--{$list.name}-->">
+            </div>
+            <div class="te-room-warn">
+                <div class="te-room-right" id="right1"></div>
+                <div class="te-room-error" id="error1">
+                    <p class="te-image-error"></p>
+                    <p>不能为空或少于2个字 </p>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-presentation">
+                <div class="te-room-name">
+                    简介：
+                </div>
+                <div>
+                    <textarea name="desc" id="presentation" placeholder="&nbsp;&nbsp;请简述一下贵公司的空间情况。（100字以上）"  ><--{$list.desc}--></textarea>
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right2"></div>
+                    <div class="te-room-error" id="error2">
+                        <p class="te-image-error"></p>
+                        <p>不能为空或少于50个字 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-uploads">
+                <input type="hidden" id="url_add" value="__URL__/addPicFile/rid/<--{$list.id}-->">
+                <input type="hidden" id="roomid" value="<--{$list.id}-->">
+                <input type="hidden" id="url_piclist" value="__URL__/getSlidePicList">
+                 <input type="hidden" id="url_del" value="__URL__/delPicFile">
+                <div class="te-room-name">
+                    上传空间图片：
+                </div>
+                <div style="font-size: 18px;font-weight: bold;color: #999;line-height: 40px;width: 334px">
+                    (规格尺寸1210*400，最大尺寸10M）
+                </div>
+                <div class="te-room-error">
+                    <p class="te-image-error"></p>
+                    <p> 请至少上传一张图片</p>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="zyupload" class="zyupload"></div>
+        <div class="te-down-main">
+            <div class="te-preferential">
+                <div class="te-room-name">
+                    优惠政策：
+                </div>
+                <div>
+                    <textarea name="privile" id="preferential" placeholder="&nbsp;&nbsp;选填"  ><--{$list.privile}--></textarea>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-address">
+                <div class="te-room-name">
+                    空间位置：
+                </div>
+                <div>
+                    <input type="hidden" value="__ROOT__/Home/Index/getAreaInfo" id="areaurl">
+                    <div id="city">
+                        <select class="prov" name="prov" >
+                            <{volist name="AreaProv"  id="prov"}>
+                                <{if condition="$list.province == $prov"}>
+                                    <option value="<--{$prov}-->" selected="">
+                                        <--{$prov}-->
+                                    </option>
+                                <{else /}>
+                                    <option value="<--{$prov}-->">
+                                        <--{$prov}-->
+                                    </option>
+                                <{/if}>
+                            <{/volist}>
+                            <!-- <option value ="北京">北京</option> -->
+                        </select>
+                        <select class="city" name="city">
+                            <option value="<--{$list.city}-->">
+                                <--{$list.city}-->
+                            </option>
+                        </select>
+                        <select class="dist" name="dist">
+                            <option value="<--{$list.district}-->">
+                                <--{$list.district}-->
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    详细地址：
+                </div>
+                <div>
+                    <input type="text" name="addr" id="address" placeholder="&nbsp;&nbsp;不能为空或少于6个字" value="<--{$list.addr}-->">
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right3"></div>
+                    <div class="te-room-error" id="error3">
+                        <p class="te-image-error"></p>
+                        <p>不能为空或少于6个字 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    负责人：
+                </div>
+                <div>
+                    <input type="text" name="linkman" id="principal" placeholder="&nbsp;&nbsp;不能为空或少于2个字" value="<--{$list.linkman}-->">
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right4"></div>
+                    <div class="te-room-error" id="error4">
+                        <p class="te-image-error"></p>
+                        <p>不能为空或少于2个字 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    手机号：
+                </div>
+                <div>
+                    <input type="text" name="mobile" id="phone" placeholder="&nbsp;&nbsp;请填写正确的手机号" value="<--{$list.mobile}-->">
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right5"></div>
+                    <div class="te-room-error" id="error5">
+                        <p class="te-image-error"></p>
+                        <p>请填写正确的手机号 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    优势特色：
+                </div>
+                <input type="hidden" name="advantage" id="advantage" value="<--{$list.tags}-->">
+                <div style="width: 450px;" id="home-tab">
+                    <{volist name="Ptags" id="p_tag"}>
+                    <div
+                        <{in name="p_tag.id" value="$Stags"}>
+                            class="te-tips SB-250"
+                        <{else /}>
+                             class="te-tips"
+                        <{/in}>
+                        value="<--{$p_tag.id}-->">
+                        <--{$p_tag.name}-->
+                        <p
+                        <{in name="p_tag.id" value="$Stags"}>
+                            class="te-tips-p"
+                        <{else /}>
+                            class=""
+                        <{/in}>
+                         data-id="<--{$p_tag.id}-->"></p>
+                    </div>
+                    <{/volist}>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div style="position: relative">
+                <p style="font-size: 18px;color: #cd0e22;font-weight: bold;text-align: center;">提示：以下是招租类型及价格，至少填写一项</p>
+                <div class="te-room-warn" style="float: left; position: absolute;right: 225px;top: -8px;">
+                    <div class="te-room-right" id="right6"></div>
+                    <div class="te-room-error" id="error6">
+                        <p class="te-image-error"></p>
+                        <p>请至少填写一项招租价格 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="te-room-money">
+                <div class="te-money-name">
+                    每工位价格：
+                </div>
+                <div>
+                    <input type="text" name="station" id="station" value="<--{$list.station}-->">&nbsp;&nbsp;&nbsp;元/月
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-money">
+                <div class="te-money-name">
+                    每平米价格：
+                </div>
+                <div>
+                    <input type="text" name="square" id="square" value="<--{$list.square}-->">&nbsp;&nbsp;&nbsp;元/天
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <input type="hidden" id="upurl" value="<--{:U('home/form/message')}-->">
+        <input type="hidden" id="acceptUrl" value="__URL__/modifyForm" >
+        <input type="button" class="te-submit" id="submit" value="提交" onclick="submitForm()"/>
+    </form>
+
+</div>
+
+<script type="text/javascript">
+//页面加载时需装载的内容
+/**
+ * [页面自动加截空间图片]
+ * @method
+ * @author 大业
+ * @create 2016-08-26
+ * @return {[type]} [description]
+ */
+$(document).ready(function(){
+    window.funBindHoverEvent = function () {
+        $(".upload_append_list").hover(function (e) {
+            $(this).find(".file_bar").addClass("file_hover")
+        }, function (e) {
+            $(this).find(".file_bar").removeClass("file_hover")
+        })
+    };
+
+    var url     = $("#url_piclist").val();
+    var roomid  = $("#roomid").val();
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: {'id':roomid},
+        dataType: "json",
+        success: function(e){
+            $("#preview").html(e.data);
+            funBindHoverEvent()
+        }
+    });
+
+});
+
+
+
+/**
+ * [删除图片文件]
+ * @method delFile
+ * @author 大业
+ * @create 2016-08-26
+ * @param  {[obj]} obj [对象]
+ * @param  {[int]} id [图片ID]
+ * @return {[type]} [description]
+ */
+function delFile(obj,id){
+    var delurl  = $("#url_del").val();
+    var roomid  = $("#roomid").val();
+    var delfile = $("#file_name_"+id).val();
+    $.ajax({
+        type: "POST",
+        url: delurl,
+        data: {'id':id,'roomid':roomid,'delfile':delfile},
+        dataType: "json",
+        success: function(e){
+            //alert('文件['+e.data+'] '+e.msg);
+        }
+    });
+    //清空删除文件
+    $("#uploadList_"+id).removeClass("upload_append_list").html('');
+}
+
+
+//AJAX表单提交
+function submitForm()
+{
+    var name = $('#name'),
+        regex = /^[1][3|4|5|7|8][\d]{9}$/;
+    var file_form = $("[tag='RoomForm']");
+    //var show_img = $("[tag='show_photo_upload_img']");
+    var acceptUrl= $("#acceptUrl").val();
+    var options = {
+        type : 'post',
+        url : acceptUrl,
+        dataType: 'json',
+        contentType: "application/json; charset=utf-8",
+        beforeSubmit:function(){
+        //提交前,在此处可以做表单验证
+            //校验空间Logo
+            var x = $('#logo').val();
+            if (x == '') {
+                $('#right0').hide();
+                $('#error0').show();
+                return false;
+            } else {
+                $('#error0').hide();
+                $('#right0').show();
+            }
+            var y1 = $('.preferential998').val();
+            if(y1 != ''){
+                $('#right110').show();
+            }
+
+            //校验空间名称
+            var x = $('#name').val();
+            if (x == '') {
+                $('#right1').hide();
+                $('#error1').show();
+                return false;
+            } else if (x.length < 2) {
+                $('#right1').hide();
+                $('#error1').show();
+                return false;
+            } else {
+                $('#error1').hide();
+                $('#right1').show();
+            }
+
+            //校验空间描述
+            var x = $('#presentation').val();
+            if (x == '') {
+                $('#right2').hide();
+                $('#error2').show();
+                return false;
+            } else if (x.length < 50) {
+                $('#right2').hide();
+                $('#error2').show();
+                return false;
+            } else {
+                $('#error2').hide();
+                $('#right2').show();
+            }
+
+            //校验地址
+            var x = $('#address').val();
+            if (x == '') {
+                $('#right3').hide();
+                $('#error3').show();
+                return false;
+            } else if (x.length < 6) {
+                $('#right3').hide();
+                $('#error3').show();
+                return false;
+            } else {
+                $('#error3').hide();
+                $('#right3').show();
+            }
+
+            //负责人
+            var x = $('#principal').val();
+            if (x == '') {
+                $('#right4').hide();
+                $('#error4').show();
+                return false;
+            } else if (x.length < 2) {
+                $('#right4').hide();
+                $('#error4').show();
+                return false;
+            } else {
+                $('#error4').hide();
+                $('#right4').show();
+            }
+
+            //手机号
+            var x = $('#phone').val();
+            if (x == '') {
+                $('#right5').hide();
+                $('#error5').show();
+                return false;
+            } else if (!regex.test(x)) {
+                $('#right5').hide();
+                $('#error5').show();
+                return false;
+            } else {
+                $('#error5').hide();
+                $('#right5').show();
+            }
+
+
+            //校验工位金额
+            var y = $('#station').val();
+            if (y == '') {
+                $('#right6').hide();
+                $('#error6').show();
+            } else {
+                $('#right6').show();
+                $('#error6').hide();
+            }
+
+            //招租价格校验
+            var y = $('#square').val();
+            var z = $('#station').val();
+            if (y == '' || z == '') {
+                $('#right6').hide();
+                $('#error6').show();
+            } else {
+                $('#right6').show();
+                $('#error6').hide();
+            }
+
+        },
+        success:function(e) {
+            var eCode= e.code;
+            var eMsg = e.msg;
+            var eData= e.data;
+            if(eCode != 0){
+                if(eData == 0){
+                	//alert(eMsg);
+                }else{
+                    alert(eCode+':'+eMsg+':'+eData);
+                }
+            }else{
+                //alert(e.data);
+                //空间轮播图片上传
+                $("#uploadForm").attr('action',url_add);
+                if (ZYFILE.funReturnNeedFiles().length > 0) {
+                    //alert('开始上传空间图片');
+                    $("#fileSubmit").click();
+                }
+            }
+            if(ZYFILE.funReturnNeedFiles().length > 0){
+
+            }else{
+           	 	location.href="<--{:U('home/form/message')}-->";
+            }
+        },
+        error:function(XmlHttpRequest, textStatus, errorThrown){
+            //alert(textStatus);
+            alert(errorThrown);
+        }
+    };
+    //表单提交
+    file_form.ajaxSubmit(options);
+}
+
+
+
+/**
+ * [三级联动地图]
+ * @type {[type]}
+ */
+var areaurl= $("#areaurl").val();
+/*改变省份时*/
+$(".prov").change(function(){
+    /*市:city */
+    queryArea(areaurl,$(".prov").val(),1,".city");
+
+    /*区:dist*/
+    setTimeout('queryArea(areaurl,$(".city").val(),2,".dist")',100);
+});
+
+/*改变城市时*/
+$(".city").change(function(){
+    /*区:dist*/
+    queryArea(areaurl,$(".city").val(),2,".dist");
+});
+
+/*改变县区*/
+$(".dist").change(function(){
+    /*查询内容*/
+    //setTimeout('showInfo(showurl);',200);
+});
+
+
+/**
+ * [查询地图信息]
+ * @method queryArea
+ * @author 大业
+ * @create 2016-08-19
+ * @param  {[string]} url [访问地址]
+ * @param  {[string]} name [地区名称]
+ * @param  {[int]} type [地区类型]
+ * @param  {[string]} key [要修改的class]
+ * @return {[int]} [0]
+ */
+function queryArea(url,name,type,key)
+{
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: {'name':name,'type':type,'mark':1},
+        dataType: "json",
+        success: function(e){
+            var html = '';
+            $.each(e.data,function(k,v){
+                html +="<option id="+key.substr(1)+"_"+k+" value='"+v+"'>"+v+"</option>";
+            });
+            $(key).html(html);
+        }
+    });
+    return 0;
+}
+</script>
+<script type="text/javascript">
+function setImagePreview(avalue) {
+    var docObj = document.getElementById("logo");
+    var imgObjPreview = document.getElementById("previewss");
+    //div
+    var divs = document.getElementById("localImag");
+    if (docObj.files && docObj.files[0]) {
+        //火狐下，直接设img属性
+        imgObjPreview.style.display = 'block';
+        imgObjPreview.style.width = '170px';
+        imgObjPreview.style.height = '170px';
+        //imgObjPreview.src = docObj.files[0].getAsDataURL();
+        //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+       imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+    } else {
+        //IE下，使用滤镜
+        docObj.select();
+        var imgSrc = document.selection.createRange().text;
+        var localImagId = document.getElementById("localImag");
+        //必须设置初始大小
+        localImagId.style.width = "170px";
+        localImagId.style.height = "170px";
+        //图片异常的捕捉，防止用户修改后缀来伪造图片
+        try {
+            localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+            localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+        } catch(e) {
+            alert("您上传的图片格式不正确，请重新选择!");
+            return false;
+        }
+        imgObjPreview.style.display = 'none';
+        document.selection.empty();
+    }
+    return true;
+}
+
+</script>
+<!--============== 尾部信息 ===================-->
+<{include file="./tpl/Home/Public/footer.html" /}>

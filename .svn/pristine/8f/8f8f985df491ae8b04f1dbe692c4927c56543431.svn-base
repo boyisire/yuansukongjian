@@ -1,0 +1,15 @@
+<?php
+namespace Cms\Controller;
+use Common\Controller\CmsBaseController;
+/**
+ * 后台首页控制器
+ */
+class UserController extends CmsBaseController{
+	/**
+	 * 首页
+	 */
+	public function index(){
+		// 分配菜单数据
+		$this->display();
+	}
+}

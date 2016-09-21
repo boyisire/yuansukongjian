@@ -1,0 +1,61 @@
+<?php
+/*************************************************
+ * file description
+ * @filename:           IndexController.class.php
+ * @desc:               元素空间 -- 主页
+ * @tables:             [room_info;]
+ * @date:               2016-8-16
+ * @author:             大业
+ * @version:            v1.0
+ *************************************************/
+namespace Home\Controller;
+use Common\Controller\HomeBaseController;
+class IndexController extends HomeBaseController{
+
+    /**
+     * [首页列表展示页]
+     * @method index
+     * @author 大业
+     * @create 2016-08-17
+     * @return [type] [description]
+     */
+	public function index()
+    {
+        $Uid=6;
+        $SeachBox='';
+        $AjaxFlag='2';
+
+        //取列表信息.[info=信息,page=分页]
+        $ShowInfo=D('RoomInfo')->showInfo($Uid,$SeachBox);
+        if($AjaxFlag==1){
+            echo "AJAX 操作!";
+        }else{
+            dump($ShowInfo);
+            $this->assign('showinfo',$ShowInfo);
+            //$this->display();
+        }
+
+    }
+
+
+    /**
+     * [显示空间详情]
+     * @method details
+     * @author 大业
+     * @create 2016-08-17
+     * @return [type] [description]
+     */
+    public function details()
+    {
+        $uid=6;
+        $rid=1;
+        $ShowInfo=D('RoomInfo')->showInfo($uid,$rid,$SeachBox)['info'][0];
+        p($ShowInfo);
+    }
+
+
+
+
+
+}
+

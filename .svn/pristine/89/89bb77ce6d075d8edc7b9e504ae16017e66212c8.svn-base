@@ -1,0 +1,229 @@
+<?php
+/*************************************************
+ * file description
+ * @filename:           FormController.class.php
+ * @desc:               元素空间 -- 表单提交
+ * @tables:             [room_info;]
+ * @date:               2016-8-16
+ * @author:             大业
+ * @version:            v1.0
+ *************************************************/
+namespace Home\Controller;
+use Common\Controller\HomeBaseController;
+class FormController extends HomeBaseController{
+
+    /**
+     * [空间主申请主页]
+     * @method indexRoom
+     * @author 大业
+     * @create 2016-08-22
+     * @return [type] [description]
+     */
+    public function indexRoom()
+    {
+        //环境配置
+        $EnvCfg['title']='元素空间合作';
+
+        //标签列表
+        $AdvantageList= D('AdvantageInfo')->getAdvantageInfo();
+        $this->assign('EnvCfg'  ,$EnvCfg);
+        $this->assign('tags'    ,$AdvantageList);
+        $this->display();
+    }
+
+
+    /**
+     * [创业者申请入口]
+     * @method indexEntry
+     * @author 安然
+     * @create 2016-08-22
+     * @return [type] [description]
+     */
+    public function indexEntry()
+    {
+        if(I('entryId')){
+            $entry_id = I('entryId');
+            $room_id = I('roomId');
+            $info = D('entry_check')->getFind($entry_id);
+            $this->assign('info',$info);
+            $this->assign('entryId',$entry_id);
+        }
+        //环境配置
+        $EnvCfg['title']='元素空间申请入住';
+        $this->assign('EnvCfg'  ,$EnvCfg);
+        //空间ID
+        $rid=I('id');
+        $this->assign('rid',$rid);
+        $this->display();
+    }
+    /**
+     * [接受申请或者修改申请入住表单提交项]
+     * @method acceptEntry
+     * @author zhanganran
+     * @create 2016-08-25
+     * @return [type] [description]
+     */
+    public function acceptEntry(){
+        $save = I();
+        if(empty($save['entryId'])){
+            $save['user_id'] = 1;
+            $save['add_time'] = time();
+            $save['temporary'] = $_FILES['company_prospectus'];
+            $info = D('entry_check')->addEntry($save);
+        }else{
+            $save = I();
+            $save['temporary'] = $_FILES['company_prospectus'];
+            $info = D('entry_check')->saveEntry($save);
+        }
+        if($info['result'] == 400){
+            $this->redirect("Home/Index/details/id/{$save['room_id']}");
+        }else{
+            if(!empty($info['id'])&&!empty($save['room_id'])){
+                //创业者名称
+                $condition = "id = ".$info['id'];
+                $entryName = D('entry_check')->getFindInfo($condition,'company_person');
+                $sendSMS = $this->recordSMS($save['room_id'],$entryName);
+            }
+            $this->redirect("Home/Index/details/id/{$save['room_id']}");
+        }
+    }
+
+    /**
+     * [发送并记录短信信息]
+     * @method recordSMS
+     * @author 大业
+     * @create 2016-08-24
+     * @param  [int] $rid [空间ID]
+     * @param  [int] $entryName [创业者姓名]
+     * @return [boole] [成功/失败]
+     */
+    private function recordSMS($rid,$entryName)
+    {
+        //取得空间信息[空间名,空间联系人,联系方式]
+        $info  = D('RoomInfo')->showInfo('',$rid,'','common')['list'][0];
+        $phone = $info['mobile'];
+        $value = array($entryName,$info['name']);
+        $templ = C('SMS_TEMPLATE')['CYZ_Apply'];
+        //手机号+空间名称+模版号
+        $sendRes = sendSMS($phone,$value,$templ);
+        if($sendRes['code'] == 200){
+            //查询发送的短信内容:模版号+传入值
+            $smsDesc = querySMS($templ,$value);
+            $smsData = array(
+                'sms_desc'   => $smsDesc,
+                'sms_status' => 1,
+                'sms_type'   => 3, //操作类型：1-验证码 2-系统消息 3-审核消息
+                'accept_user'=> $info['user_id'],
+                'send_time'  => time(),
+            );
+            //写入短信记录表
+            D('Sms_info')->addData($smsData);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    /**
+     * [接受空间主表单提交项]
+     * @method acceptRoom
+     * @author 大业
+     * @create 2016-08-17
+     * @return [type] [description]
+     */
+    public function acceptRoom()
+    {
+        echo "form requst!!!";
+       //logo文件上传判断
+
+       //空间图片上传判断
+       //先插表，取得记录ID列表
+       $path='./Upload/Home/RoomInfo';
+       upload_image($path);
+
+       $FileLogo='Upload/Home/1.txt';
+
+       $data = array(
+            'uid'                   => I('uid'),
+            'room_name'             => I('name'),
+            'room_desc'             => I('desc'),
+            'room_logo'             => $FileLogo,
+            'room_location_province'=> I('prov'),
+            'room_location_city'    => I('city'),
+            'room_location_district'=> I('dist'),
+            'room_addr'             => I('addr'),
+            'room_linkman'          => I('linkman'),//联系人
+            'room_mobile'           => I('mobile'), //手机号
+            'room_price_station'    => I('station'), //每工位价
+            'room_price_square'     => I('square'),  //每平米价
+            'room_privile'          => I('privile'), //优惠政策
+            'room_advantage'        => I('advantage'), //ID列表
+            'is_contact'            => 0,
+            'is_pass'               => 0,
+            'is_del'                => 0,
+            'add_time'              => time(),
+       );
+
+       //表单校验
+       $res = 1;//$this->verifyRoomForm($data);
+       if($res){
+            //添加表单数据
+           $Res = D('RoomInfo')->addData($data);
+           if($Res){
+                echo "添加成功";
+                //$this->success('记录添加成功','xxxx');
+           }else{
+                echo "添加失败!";
+                //$this->error('记录添加失败','xxxx');
+           }
+
+           //添加图片信息
+       }
+
+    }
+
+
+    /**
+     * [验证表单信息]
+     * @method verifyForm
+     * @author 大业
+     * @create 2016-08-24
+     * @param  [array] $data [验证的数据]
+     * @return [boole] [true/false]
+     */
+    private function verifyRoomForm($data)
+    {
+        //校验空间名称
+        $CheckRes = checkRule('name',$data['room_mobile']);
+        if($CheckRes['code'] != 200){
+            $this->error("空间名称",'indexRoom');
+            return false;
+        }
+
+        //校验手机号
+        $CheckRes = checkRule('mobile',$data['room_mobile']);
+        if($CheckRes['code'] != 200){
+            $this->error($CheckRes['msg'],'indexRoom');
+            return false;
+        }
+
+        //校验每工位金额
+        $CheckRes = checkRule('money',$data['room_price_station']);
+        if($CheckRes['code'] != 200){
+            $this->error($CheckRes['msg'],'indexRoom');
+            return false;
+        }
+
+        //校验每平米金额
+        $CheckRes = checkRule('money',$data['room_price_square']);
+        if($CheckRes['code'] != 200){
+            $this->error($CheckRes['msg'],'indexRoom');
+            return false;
+        }
+
+        return true;
+    }
+
+
+}
+

@@ -1,0 +1,43 @@
+[ 2016-09-13T11:26:44+08:00 ] 192.168.0.15 /yuansukongjian/Cms/ActivityInfo/user_echart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+SQL: SHOW COLUMNS FROM `kj_activity_user_count` [ RunTime:0.0114s ]
+SQL: SELECT count(time_status) as num,`time_status` FROM `kj_activity_user_count` GROUP BY time_status  [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `kj_activity_user_count` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\wamp\www\yuansukongjian\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `kj_activity_user_count` WHERE ( 1=1 ) ORDER BY `id` desc LIMIT 0,10   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 2 for curl_get_contents(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_user_countModel.class.php on line 58 and defined E:\wamp\www\yuansukongjian\Application\Common\Common\function.php 第 765 行.
+NOTIC: [2] Missing argument 3 for curl_get_contents(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_user_countModel.class.php on line 58 and defined E:\wamp\www\yuansukongjian\Application\Common\Common\function.php 第 765 行.
+NOTIC: [8] Use of undefined constant _USERAGENT_ - assumed '_USERAGENT_' E:\wamp\www\yuansukongjian\Application\Common\Common\function.php 第 773 行.
+NOTIC: [8] Use of undefined constant _REFERER_ - assumed '_REFERER_' E:\wamp\www\yuansukongjian\Application\Common\Common\function.php 第 774 行.
+NOTIC: [2] Missing argument 2 for curl_get_contents(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_user_countModel.class.php on line 58 and defined E:\wamp\www\yuansukongjian\Application\Common\Common\function.php 第 765 行.
+NOTIC: [2] Missing argument 3 for curl_get_contents(), called in E:\wamp\www\yuansukongjian\Application\Common\Model\Activity_user_countModel.class.php on line 58 and defined E:\wamp\www\yuansukongjian\Application\Common\Common\function.php 第 765 行.
+NOTIC: [8] Use of undefined constant _USERAGENT_ - assumed '_USERAGENT_' E:\wamp\www\yuansukongjian\Application\Common\Common\function.php 第 773 行.
+NOTIC: [8] Use of undefined constant _REFERER_ - assumed '_REFERER_' E:\wamp\www\yuansukongjian\Application\Common\Common\function.php 第 774 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001366s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001634s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038931s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039126s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000817s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000959s ]
+
+[ 2016-09-13T11:26:44+08:00 ] 192.168.0.15 /yuansukongjian/Cms/ActivityInfo/img/a4.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+
+[ 2016-09-13T11:26:44+08:00 ] 192.168.0.15 /yuansukongjian/Cms/ActivityInfo/img/a7.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+

@@ -1,0 +1,190 @@
+<{include file="./tpl/Cms/Public/header.html" /}>
+<body>
+    <div id="wrapper">
+    <{include file="./tpl/Cms/Public/left.html" /}>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>空间合作</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html">空间管理</a>
+                    </li>
+                    <li>
+                        <a>空间合作</a>
+                    </li>
+                    <li>
+                        <strong>空间编辑</strong>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>编辑空间信息 <small>请谨慎处理</small></h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="form_basic.html#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <!-- <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="form_basic.html#">选项1</a>
+                                        </li>
+                                        <li><a href="form_basic.html#">选项2</a>
+                                        </li>
+                                    </ul> -->
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+    <!-- ==========================正文表单=============================== -->
+                            <div class="ibox-content">
+                                <form method="get" class="form-horizontal" action="__URL__/modifyForm">
+                                    <input type="hidden" name="id" value="<--{$list.id}-->">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">空间头像</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" placeholder="占位!!!" class="form-control" style="width:500px;" name="logo">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">空间名称</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" value="<--{$list.name}-->" style="width:500px;" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="hr-line-dashed"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">空间描述</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" placeholder="请简述一下贵公司的空间情况。（100字以上）" class="form-control" style="width:500px;height:100px" value="<--{$list.desc}-->" name="desc">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">优惠政策</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" placeholder="可选" class="form-control" style="width:500px;height:100px" value="<--{$list.privile}-->" name="privile">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">上传空间图片</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" placeholder="占位!!!" class="form-control" style="width:500px;">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">空间位置</label>
+                                        <div class="row">
+                                            <div class="col-md-1">
+                                                <select class="form-control m-b" name="prov" style="width:90px">
+                                                    <option><--{$list.province}--></option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <select class="form-control m-b" name="city" style="width:90px">
+                                                    <option><--{$list.city}--></option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <select class="form-control m-b" name="dist" style="width:90px">
+                                                    <option><--{$list.district}--></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">详细地址</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" placeholder="不能为空或少于6个字" class="form-control" style="width:500px;" value="<--{$list.addr}-->" name="addr">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">负责人</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" placeholder="不能为空或少于2个字" class="form-control" style="width:500px;" value="<--{$list.linkman}-->" name="linkman">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">手机号</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" placeholder="请填写正确的电话或手机号" class="form-control" style="width:500px;" value="<--{$list.mobile}-->" name="mobile">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">优势特色</label>
+                                        <div class="col-sm-10">
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" value="1" id="inlineCheckbox1" name="advantage">地铁近</label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" value="2" id="inlineCheckbox2" name="advantage">上班近</label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" value="3" id="inlineCheckbox3" checked="" name="advantage">福利好</label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" value="4" id="inlineCheckbox4" checked="" name="advantage">水果多</label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" value="5" id="inlineCheckbox5" name="advantage">好轻松</label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" value="6" id="inlineCheckbox6" name="advantage">爱加班</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">每工位价格</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" value="<--{$list.station}-->" style="width:100px;" name="station"> &nbsp;元/月
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">每平米价格</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" value="<--{$list.square}-->" style="width:100px;" name="square">&nbsp;元/天
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <button class="btn btn-primary" type="submit">提交保存</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+    <!-- ==========================我是分隔线=============================== -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <{include file="./tpl/Cms/Public/footer.html" /}>
+        </div>
+    </div>
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js?v=3.4.0"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/hplus.js?v=2.2.0"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+
+</body>
+
+</html>

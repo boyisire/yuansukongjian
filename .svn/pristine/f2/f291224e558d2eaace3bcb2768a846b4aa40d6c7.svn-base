@@ -1,0 +1,697 @@
+<?php if (!defined('THINK_PATH')) exit();?><!--============== 公共头部信息 ===================-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><?php echo ($EnvCfg["title"]); ?></title>
+    <script type="text/javascript" src="/YuanSuKongJian/tpl/Public/js/public/jquery-1.7.2.js"></script>
+    <link rel="stylesheet" href="/YuanSuKongJian/tpl/Public/css/home/reset.css">
+      <link rel="stylesheet" href="/YuanSuKongJian/tpl/Public/css/home/header.css">
+    <link href="/YuanSuKongJian/tpl/Public/css/public/page.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<header id="masthead" class="site-header">
+
+    <nav id="top-header">
+        <div class="top-nav">
+            <div id="user-profile">
+                发现创业价值！
+            </div>
+            <div id="user-profile" style="float:right;padding-right:10px;">
+            <?php if(!empty($login_uid) && !empty($login_nick_name) && $login_is_login =='1'){?>
+             欢迎来到元素周期：&nbsp;<font color="#3e94a5 "><?php echo $login_nick_name;?></font>
+			  		&nbsp;|<a href="http://www.yuansuzhouqi.cn/usecenter.html">用户中心</a>
+	  	   	
+										<span class="nav-set">
+				 	<span class="nav-login">
+				 					 	|<a href="http://www.yuansuzhouqi.cn/wp-login.php?action=logout" title=""> 退出</a>
+										</span>
+				</span>
+
+            <?php }else{?>
+                <a href="http://www.yuansuzhouqi.cn/wp-login.php?action=register">注册</a>
+
+                <span class="nav-set">
+				 	<span class="nav-login">|<a href="http://www.yuansuzhouqi.cn/wp-login.php">登录</a></span>
+				</span>
+			<?php }?>
+            </div>
+        </div>
+    </nav><!-- #top-header -->
+
+    <div id="menu-box">
+        <div id="top-menu">
+            <span class="nav-search"><img src="/YuanSuKongJian/tpl/Public/images/home/iconseek.png" style="width: 30px" alt=""></span>
+            <span class="mobile-login"><a href="#login" id="login-mobile"><i class="fa-user fa-fontsize"></i>
+			</a>
+			</span>
+            <hgroup class="logo-site">
+                <h1 class="site-title">
+                    <a href="http://www.yuansuzhouqi.cn/"><img
+                            src="http://www.yuansuzhouqi.cn/wp-content/uploads/2016/06/220-50-logo-2.png"
+                            alt="元素周期"></a>
+                </h1>
+            </hgroup><!-- .logo-site -->
+
+            <div id="site-nav-wrap">
+                <div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close">×</a></div>
+                <nav id="site-nav" class="main-nav">
+                    <a href="#sidr-main" id="navigation-toggle" class="bars"><i class="fa-fontsize fa-bars"></i></a>
+                    <div class="menu-menu-1-container">
+                        <ul id="menu-menu-1" class="down-menu nav-menu sf-js-enabled sf-arrows">
+                            <li id="menu-item-6"
+                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-6">
+                                <a href="http://www.yuansuzhouqi.cn">元素首页</a></li>
+                            <li id="menu-item-45"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-45"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-information/">元素资讯</a>
+                            </li>
+                            <li id="menu-item-46"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-newinformation/">元素快讯</a>
+                            </li>
+                            <li id="menu-item-22"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-marvellous/">元素科技</a>
+                            </li>
+                            <li id="menu-item-852"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-852"><a
+                                    href="http://www.yuansuzhouqi.cn/fuhua.html">申请孵化</a></li>
+                        </ul>
+                    </div>
+                </nav><!-- #site-nav -->
+            </div><!-- #site-nav-wrap -->
+            <div class="clear"></div>
+        </div><!-- #top-menu -->
+    </div><!-- #menu-box -->
+</header>
+<div id="search-main">
+    <div id="searchbar">
+        <form method="get" id="searchform" action="http://www.yuansuzhouqi.cn/">
+            <input value="" name="s" id="s" placeholder="输入搜索内容" required="" type="text">
+            <button type="submit" id="searchsubmit">搜索</button>
+        </form>
+    </div>
+    <div class="clear"></div>
+</div>
+<script>
+     function BottomJumpPage() {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop != 0) {  //滚动到头部部执行事件
+           $('#menu-box').addClass('shadow');
+           $('#search-main').addClass('shadow');
+        }else {
+            $('#menu-box').removeClass('shadow');
+            $('#search-main').removeClass('shadow');
+        }
+    }
+    $(window).scroll(BottomJumpPage);
+    $('.nav-search').click(function () {
+        if ($('#search-main').is(":hidden")){
+            $('#search-main').show()
+        }else {
+            $('#search-main').hide()
+        }
+    })
+</script>
+</body>
+</html>
+
+<!--============== 本页独自引用部分 ===================-->
+<link rel="stylesheet" href="/YuanSuKongJian/tpl/Public/css/home/Form/teamwork.css">
+<link rel="stylesheet" href="/YuanSuKongJian/tpl/Public/css/home/Form/zyupload-1.0.0.min.css">
+<script type="text/javascript" src="/YuanSuKongJian/tpl/Public/js/home/zyupload-1.0.0.min.js"></script>
+<script type="text/javascript" src="/YuanSuKongJian/tpl/Public/js/home/teamwork.js"></script>
+<script type="text/javascript" src="/YuanSuKongJian/tpl/Public/js/home/jquery.form.min.js"></script>
+
+<style type="text/css">
+    .zyupload .upload_choose{
+        height: 150px;
+    }
+    </style>
+</head>
+<body>
+<div id="te-main">
+    <form tag="RoomForm" action="<?php echo U('home/form/acceptRoom');?>" method="post" enctype="multipart/form-data" name="RoomForm">
+        <h1 class="te-h1">填写元素空间合作信息</h1>
+        <input type="hidden" name="id" value="<?php echo ($list["id"]); ?>">
+        <div class="te-logo-upload">
+            <div class="te-logo-upload-title">空间LOGO图片：</div>
+            <div>
+                <input type="hidden" value="<?php echo ($list["logo"]); ?>" name="old_logo">
+                <a href="javascript:;" id="localImagId" class="te-a-upload" onchange="javascript:setImagePreview();">
+                    <?php if($list["logo"] != ''): ?><img id="previewss" src="/YuanSuKongJian<?php echo ($list["logo"]); ?>" width="170" height="170" />
+                    <?php else: ?>
+                        <img id="previewss" src="/YuanSuKongJian/tpl/Public/images/home/Form/te-logo.png" width="170" height="170" /><?php endif; ?>
+                    <input type="file" name="logo" id="logo"> 
+                </a>
+
+            </div>
+            <div class="te-lg-warn">请上传LOGO,尺寸300*300   文件最大3M</div>
+        </div>
+        <div class="clear"></div>
+        <div class="te-room">
+            <div class="te-room-name">
+                空间名称：
+            </div>
+            <div>
+                <input type="text" name="name" id="name" placeholder="&nbsp;&nbsp;不能为空或少于2个字" value="<?php echo ($list["name"]); ?>">
+            </div>
+            <div class="te-room-warn">
+                <div class="te-room-right" id="right1"></div>
+                <div class="te-room-error" id="error1">
+                    <p class="te-image-error"></p>
+                    <p>不能为空或少于2个字 </p>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-presentation">
+                <div class="te-room-name">
+                    简介：
+                </div>
+                <div>
+                    <textarea name="desc" id="presentation" placeholder="&nbsp;&nbsp;请简述一下贵公司的空间情况。（100字以上）"  ><?php echo ($list["desc"]); ?></textarea>
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right2"></div>
+                    <div class="te-room-error" id="error2">
+                        <p class="te-image-error"></p>
+                        <p>不能为空或少于50个字 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-uploads">
+                <input type="hidden" id="url_add" value="/YuanSuKongJian/index.php/Home/Edit/addPicFile/rid/<?php echo ($list["id"]); ?>">
+                <input type="hidden" id="roomid" value="<?php echo ($list["id"]); ?>">
+                <input type="hidden" id="url_piclist" value="/YuanSuKongJian/index.php/Home/Edit/getSlidePicList">
+                 <input type="hidden" id="url_del" value="/YuanSuKongJian/index.php/Home/Edit/delPicFile">
+                <div class="te-room-name">
+                    上传空间图片：
+                </div>
+                <div style="font-size: 18px;font-weight: bold;color: #999;line-height: 40px;width: 334px">
+                    (规格尺寸1210*400，最大尺寸10M）
+                </div>
+                <div class="te-room-error">
+                    <p class="te-image-error"></p>
+                    <p> 请至少上传一张照片</p>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="zyupload" class="zyupload"></div>
+        <div class="te-down-main">
+            <div class="te-preferential">
+                <div class="te-room-name">
+                    优惠政策：
+                </div>
+                <div>
+                    <textarea name="privile" id="preferential" placeholder="&nbsp;&nbsp;选填"  ><?php echo ($list["privile"]); ?></textarea>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-address">
+                <div class="te-room-name">
+                    空间位置：
+                </div>
+                <div>
+                    <input type="hidden" value="/YuanSuKongJian/Home/Index/getAreaInfo" id="areaurl">
+                    <div id="city">
+                        <select class="prov" name="prov" >
+                            <?php if(is_array($AreaProv)): $i = 0; $__LIST__ = $AreaProv;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$prov): $mod = ($i % 2 );++$i; if($list["province"] == $prov): ?><option value="<?php echo ($prov); ?>" selected="">
+                                        <?php echo ($prov); ?>
+                                    </option>
+                                <?php else: ?>
+                                    <option value="<?php echo ($prov); ?>">
+                                        <?php echo ($prov); ?>
+                                    </option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                            <!-- <option value ="北京">北京</option> -->
+                        </select>
+                        <select class="city" name="city">
+                            <option value="<?php echo ($list["city"]); ?>">
+                                <?php echo ($list["city"]); ?>
+                            </option>
+                        </select>
+                        <select class="dist" name="dist">
+                            <option value="<?php echo ($list["district"]); ?>">
+                                <?php echo ($list["district"]); ?>
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    详细地址：
+                </div>
+                <div>
+                    <input type="text" name="addr" id="address" placeholder="&nbsp;&nbsp;不能为空或少于6个字" value="<?php echo ($list["addr"]); ?>">
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right3"></div>
+                    <div class="te-room-error" id="error3">
+                        <p class="te-image-error"></p>
+                        <p>不能为空或少于6个字 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    负责人：
+                </div>
+                <div>
+                    <input type="text" name="linkman" id="principal" placeholder="&nbsp;&nbsp;不能为空或少于2个字" value="<?php echo ($list["linkman"]); ?>">
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right4"></div>
+                    <div class="te-room-error" id="error4">
+                        <p class="te-image-error"></p>
+                        <p>不能为空或少于2个字 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    手机号：
+                </div>
+                <div>
+                    <input type="text" name="mobile" id="phone" placeholder="&nbsp;&nbsp;请填写正确的手机号" value="<?php echo ($list["mobile"]); ?>">
+                </div>
+                <div class="te-room-warn">
+                    <div class="te-room-right" id="right5"></div>
+                    <div class="te-room-error" id="error5">
+                        <p class="te-image-error"></p>
+                        <p>请填写正确的手机号 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-detailed-add">
+                <div class="te-room-name">
+                    优势特色：
+                </div>
+                <input type="hidden" name="advantage" id="advantage" value="<?php echo ($list["tags"]); ?>">
+                <div style="width: 450px;" id="home-tab">
+                    <?php if(is_array($Ptags)): $i = 0; $__LIST__ = $Ptags;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$p_tag): $mod = ($i % 2 );++$i;?><div
+                        <?php if(in_array(($p_tag["id"]), is_array($Stags)?$Stags:explode(',',$Stags))): ?>class="te-tips SB-250"
+                        <?php else: ?>
+                             class="te-tips"<?php endif; ?>
+                        value="<?php echo ($p_tag["id"]); ?>">
+                        <?php echo ($p_tag["name"]); ?>
+                        <p
+                        <?php if(in_array(($p_tag["id"]), is_array($Stags)?$Stags:explode(',',$Stags))): ?>class="te-tips-p"
+                        <?php else: ?>
+                            class=""<?php endif; ?>
+                         data-id="<?php echo ($p_tag["id"]); ?>"></p>
+                    </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div style="position: relative">
+                <p style="font-size: 18px;color: #cd0e22;font-weight: bold;text-align: center;">提示：以下是招租类型及价格，至少填写一项</p>
+                <div class="te-room-warn" style="float: left; position: absolute;right: 225px;top: -8px;">
+                    <div class="te-room-right" id="right6"></div>
+                    <div class="te-room-error" id="error6">
+                        <p class="te-image-error"></p>
+                        <p>请至少填写一项招租价格 </p>
+                    </div>
+                </div>
+            </div>
+            <div class="te-room-money">
+                <div class="te-money-name">
+                    每工位价格：
+                </div>
+                <div>
+                    <input type="text" name="station" id="station" value="<?php echo ($list["station"]); ?>">&nbsp;&nbsp;&nbsp;元/月
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="te-room-money">
+                <div class="te-money-name">
+                    每平米价格：
+                </div>
+                <div>
+                    <input type="text" name="square" id="square" value="<?php echo ($list["square"]); ?>">&nbsp;&nbsp;&nbsp;元/天
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <input type="hidden" id="upurl" value="<?php echo U('home/form/message');?>">
+        <input type="hidden" id="acceptUrl" value="/YuanSuKongJian/index.php/Home/Edit/modifyForm" >
+        <input type="button" class="te-submit" id="submit" value="提交" onclick="submitForm()"/>
+    </form>
+
+</div>
+
+<script type="text/javascript">
+//页面加载时需装载的内容
+/**
+ * [页面自动加截空间图片]
+ * @method
+ * @author 大业
+ * @create 2016-08-26
+ * @return {[type]} [description]
+ */
+$(document).ready(function(){
+    window.funBindHoverEvent = function () {
+        $(".upload_append_list").hover(function (e) {
+            $(this).find(".file_bar").addClass("file_hover")
+        }, function (e) {
+            $(this).find(".file_bar").removeClass("file_hover")
+        })
+    };
+
+    var url     = $("#url_piclist").val();
+    var roomid  = $("#roomid").val();
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: {'id':roomid},
+        dataType: "json",
+        success: function(e){
+            $("#preview").html(e.data);
+            funBindHoverEvent()
+        }
+    });
+
+});
+
+
+
+/**
+ * [删除图片文件]
+ * @method delFile
+ * @author 大业
+ * @create 2016-08-26
+ * @param  {[obj]} obj [对象]
+ * @param  {[int]} id [图片ID]
+ * @return {[type]} [description]
+ */
+function delFile(obj,id){
+    var delurl  = $("#url_del").val();
+    var roomid  = $("#roomid").val();
+    var delfile = $("#file_name_"+id).val();
+    $.ajax({
+        type: "POST",
+        url: delurl,
+        data: {'id':id,'roomid':roomid,'delfile':delfile},
+        dataType: "json",
+        success: function(e){
+            //alert('文件['+e.data+'] '+e.msg);
+        }
+    });
+    //清空删除文件
+    $("#uploadList_"+id).removeClass("upload_append_list").html('');
+}
+
+
+//AJAX表单提交
+function submitForm()
+{
+    var name = $('#name'),
+        regex = /^[1][3|4|5|7|8][\d]{9}$/;
+    var file_form = $("[tag='RoomForm']");
+    //var show_img = $("[tag='show_photo_upload_img']");
+    var acceptUrl= $("#acceptUrl").val();
+    var options = {
+        type : 'post',
+        url : acceptUrl,
+        dataType: 'json',
+        contentType: "application/json; charset=utf-8",
+        beforeSubmit:function(){
+        //提交前,在此处可以做表单验证
+            //校验空间Logo
+            /*var x = $("#logo").val();
+            if (x == '') {
+                $(".te-lg-warn").attr('style',"color:red");
+                return false;
+            } else {
+                $(".te-lg-warn").attr('style',"");
+            }*/
+
+            //校验空间名称
+            var x = $('#name').val();
+            if (x == '') {
+                $('#right1').hide();
+                $('#error1').show();
+                return false;
+            } else if (x.length < 2) {
+                $('#right1').hide();
+                $('#error1').show();
+                return false;
+            } else {
+                $('#error1').hide();
+                $('#right1').show();
+            }
+
+            //校验空间描述
+            var x = $('#presentation').val();
+            if (x == '') {
+                $('#right2').hide();
+                $('#error2').show();
+                return false;
+            } else if (x.length < 50) {
+                $('#right2').hide();
+                $('#error2').show();
+                return false;
+            } else {
+                $('#error2').hide();
+                $('#right2').show();
+            }
+
+            //校验地址
+            var x = $('#address').val();
+            if (x == '') {
+                $('#right3').hide();
+                $('#error3').show();
+                return false;
+            } else if (x.length < 6) {
+                $('#right3').hide();
+                $('#error3').show();
+                return false;
+            } else {
+                $('#error3').hide();
+                $('#right3').show();
+            }
+
+            //负责人
+            var x = $('#principal').val();
+            if (x == '') {
+                $('#right4').hide();
+                $('#error4').show();
+                return false;
+            } else if (x.length < 2) {
+                $('#right4').hide();
+                $('#error4').show();
+                return false;
+            } else {
+                $('#error4').hide();
+                $('#right4').show();
+            }
+
+            //手机号
+            var x = $('#phone').val();
+            if (x == '') {
+                $('#right5').hide();
+                $('#error5').show();
+                return false;
+            } else if (!regex.test(x)) {
+                $('#right5').hide();
+                $('#error5').show();
+                return false;
+            } else {
+                $('#error5').hide();
+                $('#right5').show();
+            }
+
+
+            //校验工位金额
+            var y = $('#station').val();
+            if (y == '') {
+                $('#right6').hide();
+                $('#error6').show();
+            } else {
+                $('#right6').show();
+                $('#error6').hide();
+            }
+
+            //招租价格校验
+            var y = $('#square').val();
+            var z = $('#station').val();
+            if (y == '' || z == '') {
+                $('#right6').hide();
+                $('#error6').show();
+            } else {
+                $('#right6').show();
+                $('#error6').hide();
+            }
+
+        },
+        success:function(e) {
+            var eCode= e.code;
+            var eMsg = e.msg;
+            var eData= e.data;
+            if(eCode != 0){
+                if(eData == 0){
+                	//alert(eMsg);
+                }else{
+                    alert(eCode+':'+eMsg+':'+eData);
+                }
+            }else{
+                //alert(e.data);
+                //空间轮播图片上传
+                $("#uploadForm").attr('action',url_add);
+                if (ZYFILE.funReturnNeedFiles().length > 0) {
+                    //alert('开始上传空间图片');
+                    $("#fileSubmit").click();
+                }
+            }
+            if(ZYFILE.funReturnNeedFiles().length > 0){
+
+            }else{
+           	 	location.href="<?php echo U('home/form/message');?>";
+            }
+        },
+        error:function(XmlHttpRequest, textStatus, errorThrown){
+            //alert(textStatus);
+            alert(errorThrown);
+        }
+    };
+    //表单提交
+    file_form.ajaxSubmit(options);
+}
+
+
+
+/**
+ * [三级联动地图]
+ * @type {[type]}
+ */
+var areaurl= $("#areaurl").val();
+/*改变省份时*/
+$(".prov").change(function(){
+    /*市:city */
+    queryArea(areaurl,$(".prov").val(),1,".city");
+
+    /*区:dist*/
+    setTimeout('queryArea(areaurl,$(".city").val(),2,".dist")',100);
+});
+
+/*改变城市时*/
+$(".city").change(function(){
+    /*区:dist*/
+    queryArea(areaurl,$(".city").val(),2,".dist");
+});
+
+/*改变县区*/
+$(".dist").change(function(){
+    /*查询内容*/
+    //setTimeout('showInfo(showurl);',200);
+});
+
+
+/**
+ * [查询地图信息]
+ * @method queryArea
+ * @author 大业
+ * @create 2016-08-19
+ * @param  {[string]} url [访问地址]
+ * @param  {[string]} name [地区名称]
+ * @param  {[int]} type [地区类型]
+ * @param  {[string]} key [要修改的class]
+ * @return {[int]} [0]
+ */
+function queryArea(url,name,type,key)
+{
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: {'name':name,'type':type,'mark':1},
+        dataType: "json",
+        success: function(e){
+            var html = '';
+            $.each(e.data,function(k,v){
+                html +="<option id="+key.substr(1)+"_"+k+" value='"+v+"'>"+v+"</option>";
+            });
+            $(key).html(html);
+        }
+    });
+    return 0;
+}
+</script>
+<script type="text/javascript">
+function setImagePreview(avalue) {
+    var docObj = document.getElementById("logo");
+    var imgObjPreview = document.getElementById("previewss");
+    //div
+    var divs = document.getElementById("localImag");
+    if (docObj.files && docObj.files[0]) {
+        //火狐下，直接设img属性
+        imgObjPreview.style.display = 'block';
+        imgObjPreview.style.width = '170px';
+        imgObjPreview.style.height = '170px';
+        //imgObjPreview.src = docObj.files[0].getAsDataURL();
+        //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+       imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+    } else {
+        //IE下，使用滤镜
+        docObj.select();
+        var imgSrc = document.selection.createRange().text;
+        var localImagId = document.getElementById("localImag");
+        //必须设置初始大小
+        localImagId.style.width = "170px";
+        localImagId.style.height = "170px";
+        //图片异常的捕捉，防止用户修改后缀来伪造图片
+        try {
+            localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+            localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+        } catch(e) {
+            alert("您上传的图片格式不正确，请重新选择!");
+            return false;
+        }
+        imgObjPreview.style.display = 'none';
+        document.selection.empty();
+    }
+    return true;
+}
+
+</script>
+<!--============== 尾部信息 ===================-->
+<style>
+    #colophon {
+        background: #fff;
+        position: relative;
+        width: auto;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.03);
+    }
+
+    .site-info {
+        text-align: center;
+        margin: 0 50px;
+        padding: 15px 0;
+    }
+
+    .add-info {
+        padding: 5px 0;
+        display: block;
+    }
+</style>
+<footer id="colophon" class="site-footer" role="contentinfo">
+
+    <div class="site-info">
+        <a href="http://www.yuansuzhouqi.cn/archives/112">关于我们</a>&nbsp; |&nbsp;&nbsp; <a
+            href="http://www.yuansuzhouqi.cn/archives/292">投稿须知</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a
+            href="http://www.yuansuzhouqi.cn/archives/288">创业报道</a> <span class="add-info">
+				©2016 &nbsp; 元素周期&nbsp; 版权所有&nbsp; 京ICP备16028512号-2							</span>
+    </div><!-- .site-info -->
+</footer>
+</body>
+</html>

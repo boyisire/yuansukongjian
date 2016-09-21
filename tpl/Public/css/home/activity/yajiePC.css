@@ -1,0 +1,212 @@
+@charset "utf-8";
+#ya-banner {
+    background-image: url(../../../images/home/activity/pc/banner.png);
+    width: 100%;
+    height: 1064px;
+    /*background-size: 100%;*/
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top: 1px solid #101010;
+}
+
+#ya-Organizers {
+    width: 700px;
+    height: 170px;
+    margin: 790px auto 0;
+    font-size: 16px;
+    color: #999;
+    letter-spacing: 2px;
+}
+
+#ya-Organizers img, #ya-Organizers p {
+    float: left;
+}
+
+#ya-Organizers p > span {
+    font-size: 18px;
+    color: #d5d5d5;
+}
+
+#ya-page1 {
+    width: 100%;
+    height: 415px;
+    background-color: #fff;
+    border-top: 1px solid #fff;
+    position: relative;
+}
+
+.ya-happy {
+    font-size: 30px;
+    font-family: "黑体";
+    width: 442px;
+    height: 58px;
+    text-align: center;
+    color: #343434;
+    margin: 57px auto 0;
+    font-weight: 900;
+    letter-spacing: 3px;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.ya-happy span, .ya-rock span {
+    color: #e12414;
+}
+
+.ya-happy-text {
+    font-size: 14px;
+    font-family: "PingFang SC Regular", "Microsoft YaHei";
+    color: #666;
+    text-align: center;
+    line-height: 35px;
+}
+
+.ya-round {
+    width: 52px;
+    height: 52px;
+    border-radius: 26px;
+    background-color: #fff;
+    position: absolute;
+    left: calc((100% - 52px) / 2);
+    left: -webkit-calc((100% - 52px) / 2);
+    left: -moz-calc((100% - 52px) / 2);
+    bottom: -26px;
+    z-index: 99;
+}
+
+#ya-page2 {
+    width: 100%;
+    height: 730px;
+    background-color: #ebebeb;
+    border-top: 1px solid #fff;
+    position: relative;
+}
+
+.ya-rock {
+    font-size: 36px;
+    font-family: "黑体";
+    width: 367px;
+    height: 58px;
+    text-align: center;
+    color: #343434;
+    margin: 57px auto 0;
+    font-weight: 900;
+    letter-spacing: 3px;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.ya-round1 {
+    background-color: #ebebeb;
+    bottom: -13px;
+}
+
+#ya-page3 {
+    width: 100%;
+    height: 1080px;
+
+}
+.ya-guest{
+    font-family: "Microsoft YaHei";
+    font-size: 36px;
+    color: #666;
+    width: 170px;
+    font-weight: 900;
+    margin: 80px auto 20px;
+    text-align: center;
+    height: 40px;
+    position: relative;
+}
+.ya-guest:after,.ya-guest:before{
+    content: '';
+    width: 362px;
+    height: 1px;
+    border-top: 1px solid #7f7f7f;
+    position: absolute;
+    top: 16px;
+}
+.ya-guest:after{
+    left: 200px;
+}
+.ya-guest:before{
+    right: 204px;
+}
+.miss-huang,.mr-zhang,.mr-wang{
+    color: #666666;
+    width: 370px;
+    float: left;
+    text-align: left;
+    letter-spacing: 3px;
+}
+.ya-guests{
+    width: 1210px;
+    margin: 0 auto;
+    height: 570px;
+}
+.miss-huang{
+    margin-left: 54px;
+    width: 366px;
+}
+.mr-zhang{
+    margin-left: 39px;
+    margin-top: 200px;
+    text-align: center !important;
+}
+.superman{
+    width: 100%;
+    height: 692px;
+    background-image: url(../../../images/home/activity/pc/supermans.png);
+    background-position: center;
+}
+.ya-flow{
+    width: 1210px;
+    margin: 0 auto;
+    height: 810px;
+    border-top: 1px solid #fff;
+    color: #666;
+}
+.ya-flow-p{
+    line-height: 36px;
+    letter-spacing: 3px;;
+}
+.ya-flow-p span:first-child{
+    margin-right: 140px;
+}
+.ya-dowm{
+    width: 100%;
+    height: 430px;
+    background-image: url(../../../images/home/activity/pc/down.png);
+    background-position: center;
+    font-size: 16px;
+    color: #fcfbfb;
+    text-align: center;
+    border-top: 1px solid #fff;
+    line-height: 35px;
+    letter-spacing: 3px;
+    background-repeat:no-repeat;
+}
+.ya-button{
+    width: 120px;
+    height: 36px;
+    border: 1px solid rgba(195,181,145,0.5);
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.2);
+    float: left;
+    color: #c3b591;
+    font-size: 0.15rem;
+    cursor: pointer;
+}
+.ya-buttons{
+    width: 1210px;
+    margin: 50px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+

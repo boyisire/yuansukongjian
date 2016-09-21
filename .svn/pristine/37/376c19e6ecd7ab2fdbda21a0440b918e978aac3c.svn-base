@@ -1,0 +1,207 @@
+<?php if (!defined('THINK_PATH')) exit();?><!--============== 公共头部信息 ===================-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><?php echo ($EnvCfg["title"]); ?></title>
+    <script type="text/javascript" src="/yuansukongjian/tpl/Public/js/public/jquery-1.7.2.js"></script>
+    <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/reset.css">
+      <link rel="stylesheet" href="/yuansukongjian/tpl/Public/css/home/header.css">
+    <link href="/yuansukongjian/tpl/Public/css/public/page.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+<header id="masthead" class="site-header">
+
+    <nav id="top-header">
+        <div class="top-nav">
+            <div id="user-profile">
+                发现创业价值！
+            </div>
+            <div id="user-profile" style="float:right;padding-right:10px;">
+            <?php if(!empty($login_uid) && !empty($login_nick_name) && $login_is_login =='1'){?>
+             欢迎来到元素周期：&nbsp;<font color="#3e94a5 "><?php echo $login_nick_name;?></font>
+			  		&nbsp;|<a href="http://www.yuansuzhouqi.cn/usecenter.html">用户中心</a>
+	  	   	
+										<span class="nav-set">
+				 	<span class="nav-login">
+				 					 	|<a href="http://www.yuansuzhouqi.cn/wp-login.php?action=logout" title=""> 退出</a>
+										</span>
+				</span>
+
+            <?php }else{?>
+                <a href="http://www.yuansuzhouqi.cn/wp-login.php?action=register">注册</a>
+
+                <span class="nav-set">
+				 	<span class="nav-login">|<a href="http://www.yuansuzhouqi.cn/wp-login.php">登录</a></span>
+				</span>
+			<?php }?>
+            </div>
+        </div>
+    </nav><!-- #top-header -->
+
+    <div id="menu-box">
+        <div id="top-menu">
+            <span class="nav-search"><img src="/yuansukongjian/tpl/Public/images/home/iconseek.png" style="width: 30px" alt=""></span>
+            <span class="mobile-login"><a href="#login" id="login-mobile"><i class="fa-user fa-fontsize"></i>
+			</a>
+			</span>
+            <hgroup class="logo-site">
+                <h1 class="site-title">
+                    <a href="http://www.yuansuzhouqi.cn/"><img
+                            src="http://www.yuansuzhouqi.cn/wp-content/uploads/2016/06/220-50-logo-2.png"
+                            alt="元素周期"></a>
+                </h1>
+            </hgroup><!-- .logo-site -->
+
+            <div id="site-nav-wrap">
+                <div id="sidr-close"><a href="#sidr-close" class="toggle-sidr-close">×</a></div>
+                <nav id="site-nav" class="main-nav">
+                    <a href="#sidr-main" id="navigation-toggle" class="bars"><i class="fa-fontsize fa-bars"></i></a>
+                    <div class="menu-menu-1-container">
+                        <ul id="menu-menu-1" class="down-menu nav-menu sf-js-enabled sf-arrows">
+                            <li id="menu-item-6"
+                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-6">
+                                <a href="http://www.yuansuzhouqi.cn">元素首页</a></li>
+                            <li id="menu-item-45"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-45"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-information/">元素资讯</a>
+                            </li>
+                            <li id="menu-item-46"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-newinformation/">元素快讯</a>
+                            </li>
+                            <li id="menu-item-22"
+                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-22"><a
+                                    href="http://www.yuansuzhouqi.cn/archives/category/element-marvellous/">元素科技</a>
+                            </li>
+                            <li id="menu-item-852"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-852"><a
+                                    href="http://www.yuansuzhouqi.cn/fuhua.html">申请孵化</a></li>
+                        </ul>
+                    </div>
+                </nav><!-- #site-nav -->
+            </div><!-- #site-nav-wrap -->
+            <div class="clear"></div>
+        </div><!-- #top-menu -->
+    </div><!-- #menu-box -->
+</header>
+<div id="search-main">
+    <div id="searchbar">
+        <form method="get" id="searchform" action="http://www.yuansuzhouqi.cn/">
+            <input value="" name="s" id="s" placeholder="输入搜索内容" required="" type="text">
+            <button type="submit" id="searchsubmit">搜索</button>
+        </form>
+    </div>
+    <div class="clear"></div>
+</div>
+<script>
+     function BottomJumpPage() {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop != 0) {  //滚动到头部部执行事件
+           $('#menu-box').addClass('shadow');
+           $('#search-main').addClass('shadow');
+        }else {
+            $('#menu-box').removeClass('shadow');
+            $('#search-main').removeClass('shadow');
+        }
+    }
+    $(window).scroll(BottomJumpPage);
+    $('.nav-search').click(function () {
+        if ($('#search-main').is(":hidden")){
+            $('#search-main').show()
+        }else {
+            $('#search-main').hide()
+        }
+    })
+</script>
+</body>
+</html>
+
+    <style>
+        #su-main {
+            width: 1210px;
+            height: 1100px;
+            background-color: #fff;
+            margin: 10px auto;
+            border: 1px solid transparent;
+        }
+
+        #su-main p {
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #su-main p > a {
+            color: #3cb1f0;
+        }
+        .su-btn{
+            margin: 120px auto 0;
+            width: 334px;
+            height: 40px;
+            border-radius: 4px;
+            background-color: #3cb1f0;
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer !important;
+        }
+    </style>
+</head>
+<body>
+<div id="su-main">
+<?php if($data["code"] == '200'): ?><img src="/yuansukongjian/tpl/Public/images/home/Form/succeed-right.png" alt="" style="margin: 216px auto 75px;display: block">
+  <?php else: ?>
+   <img src="/yuansukongjian/tpl/Public/images/home/Form/succeed-error.png" alt="" style="margin: 216px auto 75px;display: block"><?php endif; ?>
+    <p style="font-size: 34px;color: #333;margin-bottom: 40px"><?php if($data["code"] == '200'): ?>恭喜您 <?php else: ?>对不起<?php endif; ?>，<?php echo ($data["msg"]); ?></p>
+    <?php if($data["code"] == '200'): ?><p style="font-size: 24px;color: #999;font-weight: bold;text-align: center;">请等待元素君3天之内电话审核，期间</p>
+    <p style="font-size: 24px;color: #999;font-weight: bold;text-align: center;">请等待保持畅通查看最新状态请在“<a
+            href="http://www.yuansuzhouqi.cn/usecenter.html">用户中心-><?php if($data["type"] == '1'): ?>我的申请<?php else: ?>我的空间<?php endif; ?></a>”中查看</p>
+     <?php else: ?>
+     <?php if($data["type"] == '2'): ?><p style="font-size: 24px;color: #999;font-weight: bold;text-align: center;">失败详情：<?php echo ($data["error"]); ?></p><?php endif; ?>
+   	  <p style="font-size: 24px;color: #999;font-weight: bold;text-align: center;">邮件：kongjian@yuansuzhouqi.cn&nbsp;&nbsp;电话：010-51078040</p><?php endif; ?>
+    <?php if($data["code"] == '200'): if($data["con"] == '1'): ?><div class="su-btn">继续添加</div>
+   	 	<?php else: ?>
+   	 		<div class="su-btn">返回列表</div><?php endif; ?>
+    <?php else: ?>
+    	<div class="su-btn">从新添加</div><?php endif; ?>
+</div>
+<script type="text/javascript">
+    $(".su-btn").click(function(){
+        location.href="<?php echo ($data["url"]); ?>";
+    })
+</script>
+<!--============== 尾部信息 ===================-->
+<style>
+    #colophon {
+        background: #fff;
+        position: relative;
+        width: auto;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.03);
+    }
+
+    .site-info {
+        text-align: center;
+        margin: 0 50px;
+        padding: 15px 0;
+    }
+
+    .add-info {
+        padding: 5px 0;
+        display: block;
+    }
+</style>
+<footer id="colophon" class="site-footer" role="contentinfo">
+
+    <div class="site-info">
+        <a href="http://www.yuansuzhouqi.cn/archives/112">关于我们</a>&nbsp; |&nbsp;&nbsp; <a
+            href="http://www.yuansuzhouqi.cn/archives/292">投稿须知</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a
+            href="http://www.yuansuzhouqi.cn/archives/288">创业报道</a> <span class="add-info">
+				©2016 &nbsp; 元素周期&nbsp; 版权所有&nbsp; 京ICP备16028512号-2							</span>
+    </div><!-- .site-info -->
+</footer>
+</body>
+</html>
